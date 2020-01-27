@@ -54,7 +54,6 @@ router.post('/sign-up', (req, res) => {
 });
 
 router.post('/sign-in', (req, res) => {
-                      
     passport.authenticate('local', (err, user, info) => {
         const userData = {
             email: user[0].email,
@@ -95,6 +94,30 @@ router.get('/description', passport.authenticate('jwt', { session: false }), (re
         .then(data => res.status(200).json(data))
 })
 
+router.get('/description/:id', passport.authenticate('jwt', { session: false }), (req, res) => {
+    models
+        .description
+        .findAll({
+            where: { description_id: req.params.id }
+        })
+        .then(data => res.status(200).json(data))
+})
+
+router.put('/description/:id', passport.authenticate('jwt', { session: false }), (req, res) => {
+    models
+        .description
+        .update(
+            {
+                text: req.body.text,
+                link: req.body.link
+            }, {
+            where: { description_id: req.params.id },
+            returning: true
+        })
+        .then(data => res.status(200).json({ data, msg: 'Me did gud (: !' }))
+
+})
+
 router.post('/description', passport.authenticate('jwt', { session: false }), (req, res) => {
     let myDescription = {
         text: req.body.text,
@@ -131,9 +154,16 @@ router.get('/coupons/:id', passport.authenticate('jwt', { session: false }), (re
     models
         .coupons
         .findAll({
-            user_id: req.params.id
+            where: { coupon_id: req.params.id }
         })
         .then(data => res.status(200).json(data))
+})
+
+router.get('/locations', passport.authenticate('jwt', { session: false }), (req, res) => {
+    models
+        .locations
+        .findAll()
+        .then(data => res.status(200).json({ data, msg: 'Me did gud (: !' }))
 })
 
 module.exports = router;

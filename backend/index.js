@@ -18,5 +18,5 @@ models
         // { force: true }
         )
     .then(() =>
-        app.listen(port, () => console.log(`Im on ${port}`))
+        app.listen(port, () => console.log(`Im on ${port}`)) 
     )

@@ -14,7 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     category_id: DataTypes.INTEGER
   }, {});
   quizzes.associate = function (models) {
-    quizzes.hasMany(models.description)
+
+
   };
   return quizzes;
 };
