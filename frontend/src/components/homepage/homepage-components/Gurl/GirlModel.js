@@ -1,7 +1,7 @@
 import React from 'react';
 import * as img from '../../../../assets/img/Kool_Gurl.jpg';
 import { Link, withRouter } from 'react-router-dom'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Modal } from 'react-bootstrap'
 import { Button } from 'react-bootstrap';
 import data from '../info_modal/my_fake_db';
 
@@ -75,12 +75,12 @@ class GirlModel extends React.Component {
                 move: true
             })
         } else this.setState({ move: false });
-        if(this.props.loginState === true) {
+        if (this.props.loginState === true) {
             this.setState({
                 login: true
             })
         } else this.setState({ login: false });
-        if(this.props.signupState === true) {
+        if (this.props.signupState === true) {
             this.setState({
                 login: true
             })
@@ -95,13 +95,17 @@ class GirlModel extends React.Component {
     prepareQuiz = () => {
         this.props.history.push('/quiz');
     }
-
+    handleModal = () => {
+        this.setState({
+            isHovered: false
+        })
+    }
     render() {
 
-        
+
         const contentClass = this.state.isHovered ? "hover-question" : "not-hovered-question";
         const moveOrNot = this.state.move === true ? "move-Gurl" : "gurlContainer";
-            
+
 
         return (
             <Container fuild>
@@ -131,7 +135,10 @@ class GirlModel extends React.Component {
 
                             <div className='info-g-first-bttn' variant="outline-secondary">Pozitioneaza cursorul pe punctele de pe model pentru mai multe detalii</div>
                             <div className='info-g-second-bttn' variant="outline-secondary">Atinge punctele de pe model pentru mai multe detalii</div>
+
+                           
                             <div className={contentClass}>
+                                <button className="close" onClick={this.handleModal}></button>
                                 <img src={check} width="50px" height="50px" className="check" alt='check_img' />
                                 <p className="hover-text">{this.state.info}</p>
                                 <Button className="onhover-quiz-bttn" variant="outline-dark" onClick={this.prepareQuiz}>Participa si castiga</Button>
