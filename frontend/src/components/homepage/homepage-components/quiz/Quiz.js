@@ -6,7 +6,7 @@ import Navigation from '../navbar/NavBar';
 import Footer from '../footer/Footer';
 import data from '../info_modal/my_fake_db';
 
-
+import { connect } from 'react-redux';
 
 class Quiz extends React.Component {
     constructor(props) {
@@ -26,25 +26,39 @@ class Quiz extends React.Component {
         }
     }
 
+
+    /////componentDidMount(){WelcomeTO/B}
+
     render() {
+
         return (
             <Container fluid>
                 <Navigation />
-                <Row noGutters>
-                    <Col>
-                        <h1 className="quiz-title">Concurs Techir</h1>
-                        <h6 className="quiz-desc">Participa, raspunzand la intrebare si poti castiga reduceri la produsele tale favorite.</h6>
-                        <Question
-                            question={this.state.question} image={this.state.image} answers={this.state.answers} discount={this.state.discount}
-                            modalSuccessDescription={this.state.modalSuccessDescription} modalSuccessLastMessage={this.state.modalSuccessLastMessage}
-                            modalFailureDescription={this.state.modalFailureDescription} modalFailureLastMessage={this.state.modalFailureLastMessage}
-                        />
+                {this.props.token ?
+                    <Row noGutters>
+                        <Col>
+                            <h1 className="quiz-title">Concurs Techir</h1>
+                            <h6 className="quiz-desc">Participa, raspunzand la intrebare si poti castiga reduceri la produsele tale favorite.</h6>
+                            <Question
+                                question={this.state.question} image={this.state.image} answers={this.state.answers} discount={this.state.discount}
+                                modalSuccessDescription={this.state.modalSuccessDescription} modalSuccessLastMessage={this.state.modalSuccessLastMessage}
+                                modalFailureDescription={this.state.modalFailureDescription} modalFailureLastMessage={this.state.modalFailureLastMessage}
+                            />
 
-                    </Col>
-                </Row>
+                        </Col>
+                    </Row>
+                    : null}
             </Container>
         )
     }
 }
 
-export default withRouter(Quiz);
+const mapStateToProps = state => {
+    return {
+        token: state.authentication.token,
+    }
+}
+
+export default withRouter(
+    connect(mapStateToProps)
+        (Quiz));

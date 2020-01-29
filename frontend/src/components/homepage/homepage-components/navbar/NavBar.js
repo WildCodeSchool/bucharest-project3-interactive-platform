@@ -7,6 +7,9 @@ import Login from '../login/Login';
 import Signup from '../signup/SignUp';
 import SignUp from "../signup/SignUp";
 
+import { connect } from 'react-redux';
+
+
 
 class Navigation extends React.Component {
     loginCounter = 0;
@@ -15,6 +18,8 @@ class Navigation extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            isUserlogged: false,
+
             isShownLogin: false,
             isShownSignup: false
         }
@@ -22,33 +27,30 @@ class Navigation extends React.Component {
         this.showSignUp = this.showSignUp.bind(this);
     }
 
-
     showLogIn(event) {
         event.preventDefault();
-        this.loginCounter += 1;
-        if (this.loginCounter % 2 === 0) {
-            this.props.onClickLogin('login');
-        } else if (this.loginCounter % 2 !== 0) {
-            this.props.onClickLogin(false);
-        }
+
         this.setState({
             isShownLogin: !this.state.isShownLogin,
-
+            isShownSignup: false,
         })
 
     }
     showSignUp(event) {
         event.preventDefault();
-        this.signinCounter += 1;
-        if (this.signinCounter % 2 === 0) {
-            this.props.onClickSignup('signup');
-        } else if (this.signinCounter % 2 !== 0) {
-            this.props.onClickSignup(false);
-        }
+
         this.setState({
-            isShownSignup: !this.state.isShownSignup
+            isShownSignup: !this.state.isShownSignup,
+            isShownLogin: false
 
         })
+    }
+
+    disconnectUser = (event) => {
+        event.preventDefault()
+        this.props.dispatch({ type: "DELETE_LOGIN_SESSION", })
+        this.props.history.push('/')
+
     }
 
     render() {
@@ -66,24 +68,47 @@ class Navigation extends React.Component {
         return (
             <div>
                 <Navbar bg="light" expand="lg">
-                    <Navbar.Brand ><a href="https://wildcodeschool.github.io/bucharest-project3-interactive-platform"><img src={logo} alt="techir-logo" className="logo-t"></img></a></Navbar.Brand>
+                    <Navbar.Brand >
+                        <Link exact to="/">
+                            <img src={logo} alt="techir-logo" className="logo-t" />
+                        </Link>
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="mr-auto nav-items">
-                            <Link className="nav-link" onClick={this.showLogIn}>Conectare</Link>
-                            <Link className="nav-link" onClick={this.showSignUp}>Creeaza cont</Link>
-                        </Nav>
-                    </Navbar.Collapse>
+
+                    {!this.props.isUserLogged ?
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav className="mr-auto nav-items">
+                                <Link className="nav-link" onClick={this.showLogIn}>Conectare</Link>
+                                <Link className="nav-link" onClick={this.showSignUp}>Creeaza cont</Link>
+                            </Nav>
+                        </Navbar.Collapse> :
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav className="mr-auto nav-items">
+                                <Link className="nav-link" onClick={this.disconnectUser}>Deconectare</Link>
+                            </Nav>
+                        </Navbar.Collapse>
+                    }
                 </Navbar>
-                {/* {login}
-                {signup} */}
+                {!this.props.isUserLogged && this.state.isShownLogin && !this.state.isShownSignup ? <Login /> : null}
+                {!this.props.isUserLogged && this.state.isShownSignup && !this.state.isShownLogin ? <SignUp /> : null}
             </div>
         );
     }
 }
 
 
-export default Navigation;
+const mapStateToProps = state => {
+    return {
+        // user: state.authentication.user,
+        token: state.authentication.token,
+        msg: state.authentication.msg,
+        isUserLogged: state.authentication.isUserLogged
+    }
+}
+
+export default withRouter(
+    connect(mapStateToProps)
+        (Navigation));
 
 
 

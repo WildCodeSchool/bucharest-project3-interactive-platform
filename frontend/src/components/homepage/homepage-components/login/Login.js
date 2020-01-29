@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Modal, Row, Col, Form, Container } from 'react-bootstrap';
 import Quiz from '../quiz/Quiz';
-import { Switch, Route, withRouter, BrowserRouter as Router } from 'react-router-dom';
-import Adminplatform from '../../../admin/AdminPlatform';
+import { withRouter, BrowserRouter as Router } from 'react-router-dom';
+// import Adminplatform from '../../../admin/AdminPlatform';
 
 import { connect } from 'react-redux';
 
@@ -18,12 +18,14 @@ class Login extends React.Component {
         }
         this.onChangeEmail = this.onChangeEmail.bind(this)
         this.onChangePass = this.onChangePass.bind(this)
+
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
     onChangeEmail(e) {
         const email = e.target.value;
         this.setState({ email: email })
-
     }
+
     onChangePass(e) {
         const pass = e.target.value;
         this.setState({ password: pass })
@@ -40,6 +42,13 @@ class Login extends React.Component {
         //     this.props.history.push(userPath);
         // } else this.props.history.push(userPath);
 
+
+
+
+    }
+
+    handleSubmit(event) {
+        event.preventDefault()
 
         fetch('/authentication/sign-in',
             {
@@ -59,18 +68,22 @@ class Login extends React.Component {
                         type: "CREATE_LOGIN_SESSION",
                         // user: res.user,
                         token: res.token,
-                        msg: res.msg
+                        msg: res.msg,
+                        isUserLogged: true
                     }
                 )
-                this.props.history.push('/quiz');
+                // this.props.history.push('/quiz');
             })
             .catch(error => console.log(error))
-
     }
 
-
     render() {
-        console.log(JSON.stringify(this.props.user) + '\n' + this.props.token + '\n' + this.props.msg)
+        console.log(
+            // JSON.stringify(
+            // this.props
+            // )
+            //  + '\n' + this.props.token + '\n' + this.props.msg
+        )
 
         return (
             <Container fluid>
@@ -78,7 +91,7 @@ class Login extends React.Component {
                 <Row>
                     <Col className='py-3'  >
                         <div id='user-form' >
-                            <Form>
+                            <Form onSubmit={this.handleSubmit}>
                                 <Form.Group controlId="formBasicEmail">
                                     <Form.Control className="myinput" onChange={this.onChangeEmail} type="email" placeholder="Email" size='sm' />
                                 </Form.Group>
@@ -105,6 +118,7 @@ const mapStateToProps = state => {
         // user: state.authentication.user,
         token: state.authentication.token,
         msg: state.authentication.msg,
+        isUserLogged: state.authentication.isUserLogged
     }
 }
 
