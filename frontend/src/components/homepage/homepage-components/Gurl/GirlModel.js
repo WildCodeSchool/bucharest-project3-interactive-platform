@@ -75,12 +75,12 @@ class GirlModel extends React.Component {
                 move: true
             })
         } else this.setState({ move: false });
-        if(this.props.loginState === true) {
+        if (this.props.loginState === true) {
             this.setState({
                 login: true
             })
         } else this.setState({ login: false });
-        if(this.props.signupState === true) {
+        if (this.props.signupState === true) {
             this.setState({
                 login: true
             })
@@ -98,47 +98,47 @@ class GirlModel extends React.Component {
 
     render() {
 
-        
+
         const contentClass = this.state.isHovered ? "hover-question" : "not-hovered-question";
         const moveOrNot = this.state.move === true ? "move-Gurl" : "gurlContainer";
-            
+
 
         return (
             <Container fuild>
                 <Row noGutters>
-                    <Col>
-                        <div className='model'>
-                            {!this.state.isHidden ?
-                                <div className={moveOrNot}>
-                                    <img src={img} alt='model' className='gurl' />
-                                    {points.map((e, i) => {
-                                        return <div className={'spinner ' + e} key={i}
-                                            onMouseEnter={this.handleHover}
-                                            onMouseLeave={this.handleLeaveHover}
-                                        // onClick={() => this.handleClick(e)}
-                                        >
 
-                                            <div className="multi-ripple">
-                                                <div></div>
-                                                <div></div>
-                                            </div>
+                    <div className='model'>
+                        {!this.state.isHidden ?
+                            <div className={moveOrNot}>
+                                <img src={img} alt='model' className='gurl' />
+                                {points.map((e, i) => {
+                                    return <div className={'spinner ' + e} key={i}
+                                        onMouseEnter={this.handleHover}
+                                        onMouseLeave={this.handleLeaveHover}
+                                    // onClick={() => this.handleClick(e)}
+                                    >
 
+                                        <div className="multi-ripple">
+                                            <div></div>
+                                            <div></div>
                                         </div>
 
-                                    })}
-                                </div>
-                                : null}
+                                    </div>
 
-                            <div className='info-g-first-bttn' variant="outline-secondary">Pozitioneaza cursorul pe punctele de pe model pentru mai multe detalii</div>
-                            <div className='info-g-second-bttn' variant="outline-secondary">Atinge punctele de pe model pentru mai multe detalii</div>
-                            <div className={contentClass}>
-                                <img src={check} width="50px" height="50px" className="check" alt='check_img' />
-                                <p className="hover-text">{this.state.info}</p>
-                                <Button className="onhover-quiz-bttn" variant="outline-dark" onClick={this.prepareQuiz}>Participa si castiga</Button>
-                                <Button className="onhover-findoutMore-bttn" variant="outline-secondary" href={this.state.blogLink}>Afla detalii</Button>
+                                })}
                             </div>
+                            : null}
+
+                        <div className='info-g-first-bttn' variant="outline-secondary">Pozitioneaza cursorul pe punctele de pe model pentru mai multe detalii</div>
+                        <div className='info-g-second-bttn' variant="outline-secondary">Atinge punctele de pe model pentru mai multe detalii</div>
+                        <div className={contentClass}>
+                            <img src={check} width="50px" height="50px" className="check" alt='check_img' />
+                            <p className="hover-text">{this.state.info}</p>
+                            <Button className="onhover-quiz-bttn" variant="outline-dark" onClick={this.prepareQuiz}>Participa si castiga</Button>
+                            <Button className="onhover-findoutMore-bttn" variant="outline-secondary" href={this.state.blogLink}>Afla detalii</Button>
                         </div>
-                    </Col>
+                    </div>
+
                 </Row>
             </Container>
         );

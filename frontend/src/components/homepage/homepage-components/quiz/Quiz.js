@@ -1,6 +1,6 @@
 import React from 'react';
-import {Container, Row, Col} from 'react-bootstrap';
-import {withRouter,  BrowserRouter  as Router} from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
+import { withRouter, BrowserRouter as Router } from 'react-router-dom';
 import Question from './Question';
 import Navigation from '../navbar/NavBar';
 import Footer from '../footer/Footer';
@@ -20,36 +20,28 @@ class Quiz extends React.Component {
             modalFailureLastMessage: 'Iti multumim ca iei parte parte impreuna cu noi in aceasta minunta experiata, cea de a cunoaste mama natura <3',
             question: "Care sunt proprietatile acestui sapun?",
             image: "http://www.techir.ro/wp-content/uploads/2016/12/tricolor1.png",
-            answers: ["Actiune hranitoare","Actiune exfolianta"],            
+            answers: ["Actiune hranitoare", "Actiune exfolianta"],
             firstQuestionCorrect: true,
             secondQuestionCorrect: false
-         
         }
-
-
     }
-
-
 
     render() {
         return (
-            
             <Container fluid>
-            <Navigation/>
-            <Row noGutters>
-            <Col>
-         
-                <h1 className="quiz-title">Concurs Techir</h1>
-                <h6 className="quiz-desc">Participa, raspunzand la intrebare si poti castiga reduceri la produsele tale favorite.</h6>
-                <Question
-                    question={this.state.question} image={this.state.image} answers={this.state.answers} discount={this.state.discount}
-                    modalSuccessDescription={this.state.modalSuccessDescription} modalSuccessLastMessage={this.state.modalSuccessLastMessage}
-                    modalFailureDescription={this.state.modalFailureDescription} modalFailureLastMessage={this.state.modalFailureLastMessage}
-                />
+                <Navigation />
+                <Row noGutters>
+                    <Col>
+                        <h1 className="quiz-title">Concurs Techir</h1>
+                        <h6 className="quiz-desc">Participa, raspunzand la intrebare si poti castiga reduceri la produsele tale favorite.</h6>
+                        <Question
+                            question={this.state.question} image={this.state.image} answers={this.state.answers} discount={this.state.discount}
+                            modalSuccessDescription={this.state.modalSuccessDescription} modalSuccessLastMessage={this.state.modalSuccessLastMessage}
+                            modalFailureDescription={this.state.modalFailureDescription} modalFailureLastMessage={this.state.modalFailureLastMessage}
+                        />
 
-            </Col>
-            </Row>
-      
+                    </Col>
+                </Row>
             </Container>
         )
     }

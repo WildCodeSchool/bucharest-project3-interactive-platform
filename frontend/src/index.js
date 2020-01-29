@@ -18,19 +18,28 @@ import Quiz from './components/homepage/homepage-components/quiz/Quiz';
 import EditInfoCards from "./components/admin/admin-components/InfoCard/EditInfoCards";
 import QCards from './components/admin/admin-components/quiz-cards/QCards';
 
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+import reducer from './reducers'
+
+const store = createStore(reducer)
 
 const history = createBrowserHistory();
 ReactDOM.render(
-<HashRouter history={history}>
-<App />
-<Switch>
-            <Route exact path="/" component={Homepage} />
-            <Route exact path="/quiz" component={Quiz} />
-            <Route exact path="/admin" component={AdminPlatform} />
-          </Switch>
-</HashRouter>, document.getElementById('root'));
+  <Provider store={store}>
+    <HashRouter history={history}>
+      <App />
+      <Switch>
+        <Route exact path="/" component={Homepage} />
+        <Route exact path="/quiz" component={Quiz} />
+        <Route exact path="/admin" component={AdminPlatform} />
+      </Switch>
+    </HashRouter>
+  </Provider>, document.getElementById('root')
+);
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
-  

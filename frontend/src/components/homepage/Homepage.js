@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom';
 
-
 import Maps from './homepage-components/maps/Maps';
 import Navigation from './homepage-components/navbar/NavBar';
 import Quiz from './homepage-components/quiz/Quiz';
@@ -19,8 +18,6 @@ import './homepage-components/Gurl/GirlModel.css';
 import './homepage-components/signup/SignUp.css';
 import './homepage-components/maps/Maps.css';
 import AdminPlatform from '../admin/AdminPlatform';
-
-
 
 const markerData = [
     {
@@ -88,9 +85,9 @@ class Homepage extends React.Component {
         if (param === 'login') {
             this.setState({ moveToTheRight: true, showLogin: true, showSignup: false });
         } else if (param === 'signup') {
-            this.setState({ moveToTheRight: true, showLogin: false, showSignup: true});
-        } else if(param === false) {
-            this.setState({ moveToTheRight: false});
+            this.setState({ moveToTheRight: true, showLogin: false, showSignup: true });
+        } else if (param === false) {
+            this.setState({ moveToTheRight: false });
         }
         console.log("homepage: " + this.state.moveToTheRight)
     }
@@ -101,20 +98,16 @@ class Homepage extends React.Component {
         console.log("homepage: " + this.state.moveToTheRight)
         return (
             <div className="App">
-                    <Navigation onClickLogin={this.toggleMoving} onClickSignup={this.toggleMoving} loginState={showLogin} signupState={showSignup} />
-                    <GirlModel moveGirl={this.state.moveToTheRight} loginState={showLogin} signupState={showSignup} />
-                    <div style={{ height: '60vh' }}>
-                        <Maps locationData={markerData} />
-                    </div>
-                    <Parteners />
-                    <Footer />
+                <Navigation onClickLogin={this.toggleMoving} onClickSignup={this.toggleMoving} loginState={showLogin} signupState={showSignup} />
+                <GirlModel moveGirl={this.state.moveToTheRight} loginState={showLogin} signupState={showSignup} />
+                <div style={{ height: '60vh' }}>
+                    <Maps locationData={markerData} />
+                </div>
+                <Parteners />
+                <Footer />
             </div>
         )
     }
-
 }
-
-
-
 
 export default Homepage;
