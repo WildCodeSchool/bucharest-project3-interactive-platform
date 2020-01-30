@@ -25,7 +25,8 @@ class GirlModel extends React.Component {
             blogLink: "",
             move: false,
             login: false,
-            signup: false
+            signup: false,
+            dataDesc: []
         }
     }
 
@@ -52,8 +53,20 @@ class GirlModel extends React.Component {
         })
     }
     componentDidMount() {
-        this.retrieveAndSetAboutFaceInfo();
-        this.retrieveBlogLink();
+        // this.retrieveAndSetAboutFaceInfo();
+        // this.retrieveBlogLink();
+        fetch('/authentication/description/',
+        {
+            method: 'GET',
+            headers: new Headers({
+                'Content-Type': 'application/json',
+            })
+        }).then(res => res.json())
+        .then(res => {
+            this.setState({
+                dataDesc: res
+            })
+        }).catch(err => console.log(`ERROR quizData-bk: ${err}`));
     }
     handleHover = () => {
         this.setState({
@@ -97,11 +110,17 @@ class GirlModel extends React.Component {
     }
 
     render() {
-
-
+        console.log(this.state.info)
+        console.log(this.state.blogLink)
         const contentClass = this.state.isHovered ? "hover-question" : "not-hovered-question";
         const moveOrNot = this.state.move === true ? "move-Gurl" : "gurlContainer";
-
+        const descriptions = this.state.dataDesc ? this.state.dataDesc[0]: null;
+        console.log(descriptions)
+        const info = descriptions ? descriptions.text : null;
+        const link = descriptions ? descriptions.link : null;
+        console.log(info)
+        console.log(link)
+        
 
         return (
             <Container >
@@ -133,9 +152,9 @@ class GirlModel extends React.Component {
                         <div className='info-g-second-bttn' variant="outline-secondary">Atinge punctele de pe model pentru mai multe detalii</div>
                         <div className={contentClass}>
                             <img src={check} width="50px" height="50px" className="check" alt='check_img' />
-                            <p className="hover-text">{this.state.info}</p>
+                            <p className="hover-text">{info}</p>
                             <Button className="onhover-quiz-bttn" variant="outline-dark" onClick={this.prepareQuiz}>Participa si castiga</Button>
-                            <Button className="onhover-findoutMore-bttn" variant="outline-secondary" href={this.state.blogLink}>Afla detalii</Button>
+                            <Button className="onhover-findoutMore-bttn" variant="outline-secondary" href={link}>Afla detalii</Button>
                         </div>
                     </div>
 
