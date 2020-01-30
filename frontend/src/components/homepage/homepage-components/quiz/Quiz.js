@@ -70,7 +70,8 @@ class Quiz extends React.Component {
     const answer1 = quiz ? quiz.answer1 : null;
     const answer2 = quiz ? quiz.answer2 : null;
     const correct = quiz ? quiz.correct : null;
-    console.log(this.state.modalData)
+    const modal = this.state.modalData ? this.state.modalData : null;
+    console.log(modal)
 
     return (
       <Container fluid>
