@@ -110,8 +110,6 @@ class GirlModel extends React.Component {
     }
 
     render() {
-        console.log(this.state.info)
-        console.log(this.state.blogLink)
         const contentClass = this.state.isHovered ? "hover-question" : "not-hovered-question";
         const moveOrNot = this.state.move === true ? "move-Gurl" : "gurlContainer";
         const descriptions = this.state.dataDesc ? this.state.dataDesc[0]: null;

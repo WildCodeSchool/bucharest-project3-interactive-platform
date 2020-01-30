@@ -9,7 +9,8 @@ class Question extends React.Component {
         super(props)
         this.state = {
             showSuccess: false,
-            showFailure: false
+            showFailure: false,
+            correct: this.props.correct
         }
     }
 
@@ -69,7 +70,7 @@ class Question extends React.Component {
                         size="lg"
                         block
                     >
-                        {this.props.answers[0]}
+                        {this.props.answer1}
                     </Button>
 
                     <Button
@@ -79,7 +80,7 @@ class Question extends React.Component {
                         size="lg"
                         block
                     >
-                        {this.props.answers[1]}
+                        {this.props.answer2}
                     </Button>
                     {/* <QuizModal show={this.state.showSuccess} handleClose={this.handleSuccessClose}
                     title={this.props.modalSuccessTitle}  description={this.props.modalSuccessDescription}

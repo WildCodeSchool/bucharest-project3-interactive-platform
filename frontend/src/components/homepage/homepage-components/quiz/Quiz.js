@@ -9,23 +9,23 @@ class Quiz extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalData: [],
+      modalData: {},
       quizData: [],
-      entireQuiz: []
+      quizzez: {}
     };
   }
   componentDidMount() {
-    fetch("/authentication/quizz/1", {
+    fetch("/authentication/quizz", {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json"
       })
     })
       .then(res => res.json())
-      .then(res => {
-        this.setState({
-          entireQuiz: res
-        });
+        .then(res => {
+            this.setState({
+                quizzez: res
+            });
       })
       .catch(err => console.log(`ERROR quiz-modal-bk: ${err}`));
 
@@ -58,12 +58,19 @@ class Quiz extends React.Component {
       .catch(err => console.log(`ERROR quiz-modal-bk: ${err}`));
   }
   render() {
-    console.log(this.state.answers);
-    const title = this.state.quizData.title;
-    const desc = this.state.quizData.desc;
-    const quiz = this.state.entireQuiz ? this.state.entireQuiz[0] : null;
-    // console.log(title)
-    console.log(this.state.entireQuiz)
+    const quizSomeInfo = this.state.quizData ? this.state.quizData: null;
+    console.log(quizSomeInfo)
+    const title = quizSomeInfo ? quizSomeInfo.title : null;
+    const desc = quizSomeInfo ? quizSomeInfo.desc : null;
+    console.log(title)
+    const quiz = this.state.quizzez ? this.state.quizzez[0] : null;
+    console.log(quiz)
+    const question = quiz ? quiz.question : null;
+    const image = quiz ? quiz.image : null;
+    const answer1 = quiz ? quiz.answer1 : null;
+    const answer2 = quiz ? quiz.answer2 : null;
+    const correct = quiz ? quiz.correct : null;
+    console.log(this.state.modalData)
 
     return (
       <Container fluid>
@@ -73,18 +80,19 @@ class Quiz extends React.Component {
             <h1 className="quiz-title">{title}</h1>
             <h6 className="quiz-desc">{desc}</h6>
             <Question
-              question={quiz.question}
-              image={quiz.image}
-              answer1={quiz.answer1}
-              answer2={quiz.answer2}
+              question={question}
+              image={image}
+              answer1={answer1}
+              answer2={answer2}
+              correct={correct}
             //   discount={quiz.discount}
               modalSuccessDescription={this.state.modalData.successDesc}
               modalSuccessLastMessage={this.state.modalData.successLastMessage}
               modalSuccessTitle={this.state.modalData.successTitle}
               modalFailureTitle={this.state.modalData.failureTitle}
               modalFailureDescription={this.state.modalData.failureDesc}
-              modalFailureLastMessage={this.state.modalData.failureLastMessage}
-            />
+              modalFailureLastMessage={this.state.modalData.failureLastMessage} 
+            /> 
           </Col>
         </Row>
       </Container>
