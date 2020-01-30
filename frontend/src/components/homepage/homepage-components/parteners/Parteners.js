@@ -37,7 +37,7 @@ class Parteners extends React.Component {
 
     render() {
         return (
-            <Container fuild>
+            <Container >
             <Row noGutters>
                 <Col>
             <div className="parteners-container" >

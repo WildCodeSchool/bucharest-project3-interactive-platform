@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, HashRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import HashRouter from 'react-router-dom/HashRouter';
+// import HashRouter from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
 import Homepage from './components/homepage/Homepage';

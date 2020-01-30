@@ -16,6 +16,11 @@ export default function (state = {}, action) {
                 msg: 'Not Logged.',
                 isUserLogged: false
             }
+        case 'REDIRECT_TO_LOGIN':
+            return {
+                ...state,
+                redirectLogin: true
+            }
         default:
             return state;
     }

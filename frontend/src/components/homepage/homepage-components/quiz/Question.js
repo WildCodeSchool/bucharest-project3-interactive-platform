@@ -1,5 +1,5 @@
 import React from 'react';
-import {withRouter, BrowserRouter} from 'react-router-dom';
+import { withRouter, BrowserRouter } from 'react-router-dom';
 import { Button, Modal } from 'react-bootstrap';
 
 
@@ -115,7 +115,7 @@ class Question extends React.Component {
                             <img
                                 src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png"
                                 alt="logo"
-                                style={{width:'200px', height: '120px'}}
+                                style={{ width: '200px', height: '120px' }}
                             />
                         </Modal.Footer>
 
@@ -140,7 +140,7 @@ class Question extends React.Component {
                         </Modal.Body>
 
                         <Modal.Footer>
-                            <img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" alt="logo" style={{width:'200px', height: '120px'}} />
+                            <img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" alt="logo" style={{ width: '200px', height: '120px' }} />
                         </Modal.Footer>
                     </Modal>
                 </div>

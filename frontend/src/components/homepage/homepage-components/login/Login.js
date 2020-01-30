@@ -63,6 +63,7 @@ class Login extends React.Component {
             })
             .then(res => res.json())
             .then(res => {
+                console.log(res)
                 this.props.dispatch(
                     {
                         type: "CREATE_LOGIN_SESSION",
@@ -99,7 +100,7 @@ class Login extends React.Component {
                                     <Form.Control className="myinput" onChange={this.onChangePass} type="password" placeholder="Parola" size='sm' />
                                 </Form.Group>
                                 <Col>
-                                    <Button variant="outline-secondary" className='submit' type="submit" onClick={this.routeChange}>
+                                    <Button variant="outline-secondary" className='submit' type="submit">
                                         <div className='login-text'>Logare</div>
                                     </Button>
                                 </Col>

@@ -104,7 +104,7 @@ class GirlModel extends React.Component {
 
 
         return (
-            <Container fuild>
+            <Container >
                 <Row noGutters>
 
                     <div className='model'>

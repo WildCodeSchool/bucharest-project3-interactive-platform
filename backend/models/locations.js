@@ -6,9 +6,12 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true
     },
+    city: DataTypes.STRING,
+    name: DataTypes.STRING,
+    adress: DataTypes.STRING,
+    telephone: DataTypes.STRING,
     latitude: DataTypes.FLOAT,
-    longitude: DataTypes.FLOAT,
-    text: DataTypes.STRING
+    longitude: DataTypes.FLOAT
   }, {});
   locations.associate = function (models) {
     // associations can be defined here

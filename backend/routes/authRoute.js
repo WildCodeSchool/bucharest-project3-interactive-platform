@@ -7,7 +7,20 @@ const jwt = require('jsonwebtoken');
 const JWTStrategy = require('passport-jwt').Strategy;
 const ExtractJWT = require('passport-jwt').ExtractJwt;
 
+const fs = require('file-system')
+
 const models = require('../models')
+
+const sendNodemailer = require('../Services/nodemailer');
+
+const createUser = (req, res, next) => {
+    User.create(req.body, (err, results, fields) => {
+        if (err) return res.render('error', { err })
+        res.redirect('/auth/login');
+        sendNodemailer(req.body.email);
+    });
+}
+
 
 passport.use(new LocalStrategy(
     {
@@ -41,7 +54,7 @@ router.post('/sign-up', (req, res) => {
     let hashedPass = bCrypt.hashSync(req.body.password, 15);
     let todayNow = Date.now()
     const stuff = {
-        fullname: req.body.fullName,
+        fullname: req.body.fullname,
         email: req.body.email,
         password: hashedPass,
         date: todayNow,
@@ -147,7 +160,7 @@ router.post('/coupons', passport.authenticate('jwt', { session: false }), (req, 
     let code = {
         code: Math.floor(Math.random() * (Math.floor(9999999999) - Math.ceil(999999)) + Math.ceil(999999)),
         discount_value: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(20)) + Math.ceil(20)),
-        user_id: 3
+        user_id: req.body.user_id
     }
     models
         .coupons
@@ -171,11 +184,80 @@ router.get('/coupons/:id', passport.authenticate('jwt', { session: false }), (re
         .then(data => res.status(200).json(data))
 })
 
-router.get('/locations', passport.authenticate('jwt', { session: false }), (req, res) => {
+router.get('/locations', (req, res) => {
     models
         .locations
         .findAll()
         .then(data => res.status(200).json({ data, msg: 'Me did gud (: !' }))
 })
+
+router.get(
+    "/quiz-modal",
+    // passport.authenticate("jwt", { session: false }),
+    (req, res) => {
+        const modal = fs.readFileSync("./quiz-modal.json", "utf8");
+        if (modal !== undefined || modal !== null) res.status(200).json(JSON.parse(modal).array);
+        else res.status(401).json('fs.read() quiz-modal error')
+    });
+router.get(
+    "/q-title-desc",
+    //  passport.authenticate("jwt", { session: false }),
+    (req, res) => {
+        const qData = fs.readFileSync("./quiz-data.json", "utf8");
+        if (qData !== undefined || qData !== null) {
+            return res.status(200).json(JSON.parse(qData).array);
+        }
+        res.status(401).json('fs.read() q-title-desc error')
+    });
+
+const makeLocation = () => {
+    let myDescription = [
+        // {
+        //     city: 'The Pit',
+        //     name: 'Hell',
+        //     adress: 'The Abyss',
+        //     telephone: '666-666-666',
+        //     latitude: 666.666,
+        //     longitude: 666.666
+        // },
+        // {
+        //     city: 'Cities',
+        //     name: 'Names',
+        //     adress: 'Adresses',
+        //     telephone: '123-456-789',
+        //     latitude: 50.50,
+        //     longitude: 50.50
+        // },
+        {
+            city: 'Bucharest',
+            name: 'Luxury Studio',
+            adress: 'Strada Locotenent Baican Ionescu 53, București',
+            telephone: '0748 589 879',
+            latitude: 44.438540,
+            longitude: 26.140000
+        },
+        {
+            city: 'Bucharest',
+            name: 'Wild Code School',
+            adress: 'Șoseaua Nicolae Titulescu 56, București',
+            telephone: '0754 468 941',
+            latitude: 44.452450,
+            longitude: 26.076060
+        },
+        {
+            city: 'Bucharest',
+            name: 'Studio 20',
+            adress: 'alea Victoriei numarul 155 Tronson 7, Etaj 1, București',
+            telephone: '0748 777 757',
+            latitude: 44.451080,
+            longitude: 26.086990
+        }]
+    models
+        .locations
+        .create({ ...myDescription[2] })
+        .then((rez) => { rez ? res.status(200).json(rez) : res.status(500), json({ msg: 'description bad )x' }) })
+}
+// makeLocation()
+
 
 module.exports = router;

@@ -46,6 +46,18 @@ class Navigation extends React.Component {
         })
     }
 
+    toggleLogin = () => {
+        console.log('do');
+        this.loginCounter += 1;
+        if (this.loginCounter % 2 === 0) {
+            this.props.onClickLogin(false);
+            console.log('open');
+        } else if (this.counter % 2 !== 0) {
+            this.props.onClickLogin(true);
+            console.log('close');
+        }
+    }
+
     disconnectUser = (event) => {
         event.preventDefault()
         this.props.dispatch({ type: "DELETE_LOGIN_SESSION", })
@@ -54,6 +66,12 @@ class Navigation extends React.Component {
     }
 
     render() {
+        // console.log(this.props)
+        if (this.props.redirectLogin && this.state.isShownSignup) this.setState({
+            isShownLogin: !this.state.isShownLogin,
+            isShownSignup: false,
+        })
+
         const isLoggedIn = this.state.isShownLogin;
         const isSignedUp = this.state.isShownSignup;
         let login;
@@ -78,8 +96,8 @@ class Navigation extends React.Component {
                     {!this.props.isUserLogged ?
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto nav-items">
-                                <Link className="nav-link" onClick={this.showLogIn}>Conectare</Link>
-                                <Link className="nav-link" onClick={this.showSignUp}>Creeaza cont</Link>
+                                <div className="nav-link" onClick={this.showLogIn}>Conectare</div>
+                                <div className="nav-link" onClick={this.showSignUp}>Creeaza cont</div>
                             </Nav>
                         </Navbar.Collapse> :
                         <Navbar.Collapse id="basic-navbar-nav">
@@ -102,7 +120,8 @@ const mapStateToProps = state => {
         // user: state.authentication.user,
         token: state.authentication.token,
         msg: state.authentication.msg,
-        isUserLogged: state.authentication.isUserLogged
+        isUserLogged: state.authentication.isUserLogged,
+        redirectLogin: state.authentication.redirectLogin
     }
 }
 
@@ -112,11 +131,3 @@ export default withRouter(
 
 
 
-    // toggleLogin = () => {
-    //     this.loginCounter += 1;
-    //     if(this.loginCounter % 2 === 0) {
-    //         this.props.onClickLogin(false);
-    //     } else if(this.counter % 2 !== 0) {
-    //         this.props.onClickLogin(true);
-    //     }
-    // }

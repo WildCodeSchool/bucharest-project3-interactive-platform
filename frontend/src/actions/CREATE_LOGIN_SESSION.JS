@@ -1,1 +1,1 @@
-const createLoginSession = (state, action) => action.type === 'CREATE_LOGIN_SESSION' ? {} 
+// const createLoginSession = (state, action) => action.type === 'CREATE_LOGIN_SESSION' ? {} 
