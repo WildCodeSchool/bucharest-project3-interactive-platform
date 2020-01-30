@@ -11,7 +11,8 @@ class QCard extends React.Component {
             question: "",
             firstAns: "",
             secondAns: "",
-            imgLink: ""
+            imgLink: "",
+            correct: this.props.correct
         }
     }
 
@@ -23,6 +24,20 @@ class QCard extends React.Component {
 
     saveQuizQ = () => {
         console.log(this.state.imgLink + ";" + this.state.firstAns + ";" + this.state.secondAns + ";" + this.state.question + ";")
+        fetch("/authentication/description/", {
+            method: "PUT",
+            headers: new Headers({
+              "Content-Type": "application/json"
+            })
+          })
+            .then(req => {
+                req.body = {
+                    text: this.state.descOne,
+                    link: this.state.link
+                }
+            })
+            .catch(err => console.log(`ERROR adminDesc-bk: ${err}`));
+     
     }
 
 
@@ -49,7 +64,7 @@ class QCard extends React.Component {
                             <InputGroup.Checkbox aria-label="Checkbox for following text input" />
                         </InputGroup.Prepend>
                         <FormControl
-                            placeholder={this.props.answers[0]}
+                            placeholder={this.props.answer1}
                             aria-label="Username"
                             aria-describedby="basic-addon1"
                             name="firstAns"
@@ -62,7 +77,7 @@ class QCard extends React.Component {
                         </InputGroup.Prepend>
                         <FormControl
 
-                            placeholder={this.props.answers[1]}
+                            placeholder={this.props.answer2}
                             aria-label="Username"
                             aria-describedby="basic-addon1"
                             name="secondAns"
