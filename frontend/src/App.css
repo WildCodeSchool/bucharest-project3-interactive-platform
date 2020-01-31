@@ -32,6 +32,18 @@ html {
 .user-form{
   z-index: 100;
 }
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(./assets/Thirsty.ttf);
+}
+.modal-congrats {
+  font-family: myFirstFont;
+  left: 30%;
+  position: absolute;
+  font-size: 44px;
+  padding-bottom: 5px;
+}
 /*login/signup form*/
 @media (min-width: 0px) and (max-width: 400px) {
   #user-form {

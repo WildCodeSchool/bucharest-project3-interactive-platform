@@ -95,17 +95,23 @@ class Question extends React.Component {
                         onHide={this.handleSuccessClose}
                     >
                         <Modal.Header closeButton>
-                            <Modal.Title>
-                                Felicitari! Tocmai ai castigat un cupon de reducere  pe <a href='http://www.techir.ro'>Techir.ro</a>
-                            </Modal.Title>
+                            <Modal.Title >
+                               <span className="modal-congrats">Felicitari! </span> 
+                            <br/> 
+                           </Modal.Title>
                         </Modal.Header>
 
-                        <Modal.Body>
-                            {this.props.modalSuccessDescription}
-
-                            <p className="red-quiz-modal-message">
+                        <Modal.Body> <h6 className="title-message">
+                        
+                           
+                          Tocmai <span className="bold">AI CASTIGAT UN CUPON DE REDUCERE </span> pe <a href='http://www.techir.ro'>Techir.ro</a> </h6>
+                          <div className="modal-description-success">
+                            {this.props.modalSuccessDescription}</div>
+                            <div className="modal-lastm-success">
+                            <p className="bold">
                                 {this.props.modalSuccessLastMessage}
-                            </p>
+                            </p></div>
+                            <p className="modal-p">Va asteptam cu drag saptamana viitoare!</p>
                             <div class="yeey">
                                 <div class="before"></div>
                                 <div class="after"></div>
@@ -116,7 +122,7 @@ class Question extends React.Component {
                             <img
                                 src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png"
                                 alt="logo"
-                                style={{ width: '200px', height: '120px' }}
+                                style={{ width: '200px', height: '120px', left: '0px' }}
                             />
                         </Modal.Footer>
 

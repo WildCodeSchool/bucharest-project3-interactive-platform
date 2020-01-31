@@ -1,5 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
+.bold {
+  font-weight: bolder;
+}
+.modal-description-success {
+  top: 90px;
+  text-align: center;
+  width: 92%;
 
+}
+.modal-lastm-success {
+  top: 190px;
+  text-align: center
+}
+.modal-p {
+  top: 190px;
+  text-align: center
+}
+.title-message {
+  font-size:17px;
+
+  
+  text-align: center!important;
+
+}
 .quiz-container {
   margin: 0;
   padding: 0;

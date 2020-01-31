@@ -123,7 +123,6 @@ class GirlModel extends React.Component {
         return (
             <Container >
                 <Row noGutters>
-
                     <div className='model'>
                         {!this.state.isHidden ?
                             <div className={moveOrNot}>

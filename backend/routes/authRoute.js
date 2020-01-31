@@ -11,7 +11,7 @@ const fs = require("file-system");
 
 const models = require("../models");
 
-const sendNodemailer = require("../Services/nodemailer");
+const sendNodemailer = require("../services/nodemailer");
 
 const createUser = (req, res, next) => {
   User.create(req.body, (err, results, fields) => {
@@ -107,7 +107,7 @@ router.post("/sign-in", (req, res) => {
 
 router.get(
   "/quizz",
-  passport.authenticate("jwt", { session: false }),
+  // passport.authenticate("jwt", { session: false }),
   (req, res) =>
     models.quizzes.findAll().then(data => res.status(200).json(data))
 );
@@ -134,7 +134,7 @@ router.post(
 
 router.get(
   "/description",
-//   passport.authenticate("jwt", { session: false }),
+  // passport.authenticate("jwt", { session: false }),
   (req, res) => {
     models.description.findAll().then(data => res.status(200).json(data));
   }
@@ -237,7 +237,7 @@ router.get("/locations", (req, res) => {
 
 router.get(
   "/quiz-modal",
-  passport.authenticate("jwt", { session: false }),
+  // passport.authenticate("jwt", { session: false }),
   (req, res) => {
     const modal = fs.readFileSync("./assets/quiz-modal.json", "utf8");
     if (modal !== undefined || modal !== null)
@@ -247,7 +247,7 @@ router.get(
 );
 router.get(
   "/q-title-desc",
-   passport.authenticate("jwt", { session: false }),
+  //  passport.authenticate("jwt", { session: false }),
   (req, res) => {
     const qData = fs.readFileSync("./assets/quiz-data.json", "utf8");
     if (qData !== undefined || qData !== null) {

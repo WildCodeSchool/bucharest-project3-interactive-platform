@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Teamkwf.91",
-    "database": "techir",
+    "password": "",
+    "database": "",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
