@@ -10,11 +10,10 @@ module.exports = (sequelize, DataTypes) => {
     answer1: DataTypes.STRING,
     answer2: DataTypes.STRING,
     correct_answer: DataTypes.INTEGER,
-    image_link: DataTypes.STRING,
-    category_id: DataTypes.INTEGER
+    image_link: DataTypes.STRING
   }, {});
   quizzes.associate = function (models) {
-
+    quizzes.belongsTo(models.categories)
 
   };
   return quizzes;

@@ -6,10 +6,11 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true
     },
-    catergory_name: DataTypes.STRING
+    category_name: DataTypes.STRING
   }, {});
   categories.associate = function (models) {
-   categories.hasMany(models.description)
+    categories.hasOne(models.description)
+    categories.hasOne(models.quizzes)
   }
   return categories;
 };

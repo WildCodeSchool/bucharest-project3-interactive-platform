@@ -7,8 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true
     },
     text: DataTypes.STRING,
-    link: DataTypes.STRING,
-    category_id: DataTypes.INTEGER
+    link: DataTypes.STRING
   }, {});
   description.associate = function (models) {
     description.belongsTo(models.categories)
