@@ -1,0 +1,64 @@
+/* .form-control {
+  border-radius: 10px;
+}
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.login-btn {
+  border-radius: 14px;
+}
+
+.login-text {
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+#login {
+  position: absolute!important;
+  left: 4%;
+  z-index: 1000;
+} */
+
+/* @media  (max-width: 599px) {
+  #login {
+    top: 19px;
+    left: -95px;
+    width: 84vw;
+  }
+}
+
+
+@media (min-width: 600px) and (max-width: 767px) {
+  #login {
+    top: 7px;
+    left: -12px;
+    width: 60vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #login {
+    top: 30px;
+    left: -149px;
+    width: 50vw;
+  }
+}
+@media (min-width: 992px) and (max-width: 1382px) {
+  #login {
+    top: 30px;
+    left: -120px;
+    width: 40vw;
+  }
+}
+@media (min-width: 1383px) {
+  #login {
+    top: 30px;
+    left: -20px;
+    width: 35vw;
+  }
+} */
+
+

@@ -1,0 +1,268 @@
+
+#footer {
+  text-align: center;
+  color: grey!important;
+  width: 100%;
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  z-index: 100;
+  padding: 0;
+  background-color: #404040!important;
+  margin:0;
+}
+
+.footer-color {
+  background-color: #343434;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+}
+
+.contact {
+  display: inline-block;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  vertical-align: middle;
+  
+  margin: 3vh 3vw;
+  padding-right: 3vw;
+  position: absolute;
+ 
+}
+
+.brand-romanesc {
+  margin: 1%;
+  position: absolute;
+}
+
+.produse-romanesti {
+  position: absolute;
+  margin: 1%;
+}
+
+.anpc {
+  text-decoration: none;
+  color: white;
+}
+
+.politica-de-confidentialitate {
+  float: right;
+  text-decoration: none;
+  color: white;
+}
+.anpc.brand-romanesc a:hover {
+  color: #6b6b6b;
+}
+
+.anpc.brand-romanesc a:visited {
+  color: #6b6b6b;
+}
+
+.anpc.brand-romanesc a:active {
+  color: #6b6b6b;
+}
+
+.anpc.brand-romanesc a:link {
+  color: #6b6b6b;
+}
+
+@media (min-width: 0px) and (max-width: 361px) {
+  #footer {
+    height: 400px!important;
+    top: 600vh!important;
+  }
+  .contact {
+    left: 20px!important;
+  }
+  
+  .brand-romanesc {
+    height: 80px!important;
+    right: 1%!important;
+    top: 180px!important;
+  }
+  
+  .produse-romanesti {
+    height:80px!important;
+    right: 58%!important;
+    top: 180px!important;
+  }
+  .info-f {
+    left: -10px;
+    position: absolute;
+  }
+}
+.info-f {
+  left: -10px;
+  position: absolute;
+}
+
+@media (min-width: 362px) and (max-width: 540px)  {
+  #footer {
+    height: 200px;
+    top: 90vh!important;
+  }
+
+  
+  .brand-romanesc {
+    display: none;
+  }
+  
+  .produse-romanesti {
+    display: none;
+  }
+ 
+  
+}
+@media (min-width:0px) and  (max-width: 480px) {
+  #footer {
+    height: 190px!important;
+    top: 100vh!important;
+  }
+  
+  .contact {
+    left: 10px;
+    border-right: 2px solid grey;
+    border-right: 3px solid grey;
+  }
+  
+  .brand-romanesc {
+    display: none!important;
+  }
+  
+  .produse-romanesti {
+   display: none!important;
+  }
+}
+
+
+@media (min-width: 481px) and  (max-width: 600px) {
+  #footer {
+    height: 200px;
+    top: 90vh;
+  }
+  
+  .contact {
+    left: 10px;
+    border-right: 2px solid grey;
+    border-right: 3px solid grey;
+  }
+  
+  .brand-romanesc {
+    height: 60px;
+    left: 114%;
+    top: 10px;
+  }
+  
+  .produse-romanesti {
+    height:60px;
+    left: 110%;
+    top: 88px;
+  }
+  
+}
+
+@media (min-width: 601px) and  (max-width: 768px) {
+  #footer {
+    height: 200px;
+    top: 90vh;
+  }
+  
+  .contact {
+    left: 10px;
+    border-right: 2px solid grey;
+    border-right: 3px solid grey;
+  }
+  
+  .brand-romanesc {
+    height: 70px;
+    left: 114%;
+    top: 10px;
+  }
+  
+  .produse-romanesti {
+    height:70px;
+    left: 140%;
+    top: 88px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  #footer {
+    height: 200px;
+    top: 90vh;
+  }
+  
+  .contact {
+    left: 10px;
+    border-right: 2px solid grey;
+    border-right: 3px solid grey;
+  }
+  
+  .brand-romanesc {
+    height: 90px;
+    left: 114%;
+    top: 10px;
+  }
+  
+  .produse-romanesti {
+    height:90px;
+    left: 170%;
+    top: 68px;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1382px) {
+  #footer {
+    height: 200px;
+    top: 150vh;
+  }
+  
+  .contact {
+    left: 10px;
+    border-right: 2px solid grey;
+    border-right: 3px solid grey;
+  }
+  
+  .brand-romanesc {
+    height: 100px;
+    left: 118%;
+    top: 24px;
+  }
+  
+  .produse-romanesti {
+    height:100px;
+    left: 196%;
+    top: 28px;
+  }
+}
+@media(min-width: 1383px) { 
+  #footer {
+    height: 200px;
+    top: 100vh!important;
+  }
+  
+  .contact {
+    left: 10px;
+    border-right: 2px solid grey;
+    border-right: 3px solid grey;
+  }
+  
+  .brand-romanesc {
+    height: 100px;
+    left: 188%;
+    top: 24px;
+  }
+  
+  .produse-romanesti {
+    height:100px;
+    left: 266%;
+    top: 28px;
+  }
+}
+

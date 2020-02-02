@@ -1,0 +1,137 @@
+.gMap {
+  position: relative;
+}
+@font-face {
+  font-family: muchosans;
+  src: url(../../../../assets/MuchoSans.rar);
+}
+.map-msg  {
+  z-index: 1000;
+  font-family: mochosans;
+  text-align: center;
+}
+@media (min-width: 0px) and (max-width: 480px) {
+  .gMap {
+    width: 90vw !important;
+    height: 67vh !important;
+    top: 60vh;
+    left: 0.5%;
+  }
+  .map-title {
+    position: absolute;
+    top: 28vh;
+    left: 1vw;
+    font-size: 22px;
+    width: 90vw;
+  }
+  .map-msg {
+    position: absolute;
+    top: 130vh;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+  .gMap {
+    width: 90vw !important;
+    height: 70vh !important;
+    top: 50vh;
+    left: 1%;
+  }
+  .map-title {
+    position: absolute;
+    top: 28vh;
+    left: 1vw;
+    font-size: 22px;
+    width: 90vw;
+  }
+  .map-msg {
+    position: absolute;
+    top: 127vh;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+  .gMap {
+    width: 90vw !important;
+    height: 70vh !important;
+    top: 50vh;
+    left: 1%;
+  }
+  .map-title {
+    position: absolute;
+    top: 28vh;
+    left: 1vw;
+    font-size: 22px;
+    width: 90vw;
+  }
+  .map-msg {
+    position: absolute;
+    top: 127vh;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .gMap {
+    width: 90vw !important;
+    height: 70vh !important;
+    top:54vh;
+    left: 3%;
+  }
+  .map-title {
+    position: absolute;
+    top: 28vh;
+    left: 1vw;
+    font-size: 22px;
+    width: 90vw;
+  }
+  .map-msg {
+    position: absolute;
+    top: 127vh;
+    width: 80vw;
+    left: 8%;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1382px) {
+  .gMap {
+    width: 90vw !important;
+    height: 70vh !important;
+    top: 54vh;
+    left: 3%;
+  }
+  .map-title {
+    position: absolute;
+    top: 40vh;
+    left: 7vw;
+    font-size: 22px;
+    width: 80vw;
+  }
+  .map-msg {
+    position: absolute;
+    top: 127vh;
+    width: 80vw;
+    left: 8%;
+  }
+}
+
+@media (min-width: 1383px) {
+  .gMap {
+    width: 90vw !important;
+    height: 70vh !important;
+    top: 54vh;
+    left: 3%;
+  }
+  .map-title {
+    position: absolute;
+    top: 40vh;
+    left: 7vw;
+    font-size: 22px;
+    width: 80vw;
+  }
+  .map-msg {
+    position: absolute;
+    top: 127vh;
+    width: 80vw;
+    left: 6%;
+  }
+}

@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+}
+.parteners-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: flex-end;
+  justify-content: space-evenly;
+  left: 3%;
+}
+.p-img {
+  margin: 33px;
+}
+
+.logo-container {
+  top: 100px;
+}
+
+.p-mega,
+.p-carturesti,
+.p-vital,
+.p-enatural,
+.p-camara,
+.p-stam-de-vorba,
+.p-allboutique,
+.p-tastingRO,
+.p-icosmetice,
+.p-ela,
+.p-bya,
+.p-flora,
+.p-pixie,
+.p-get-well,
+.p-natura,
+.p-avalon {
+  position: absolute;
+  padding: 10px;
+}
+
+.p-title {
+  font-family: "PT Serif", serif;
+  position: absolute;
+}
+.parteners-title {
+  font-size: 33px;
+}
+.partener {
+  margin: 0!important;
+  padding: 0!important;
+}
+@media (min-width: 0px) and (max-width: 480px) {
+  .parteners-container {
+    top: 89vh;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+  .parteners-container {
+    top: 89vh;
+  }
+ 
+  
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+  .parteners-container {
+    top: 89vh;
+   left: -2vw
+  }
+  .parteners-title {
+    left: 270px!important;
+    position: absolute;
+    top: -30px;
+  }
+  
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .parteners-container {
+    top: 89vh;
+  
+  }
+
+  .parteners-title {
+    left: 270px!important;
+    position: absolute;
+    top: -30px;
+  }
+}
+@media (min-width:993px) and (max-width: 1382px) {
+  .parteners-title {
+    left: 470px!important;
+    position: absolute;
+    top: -70px;
+  }
+  .parteners-container {
+    top: 60vw;
+    left: 3vw;
+    width: 90vw;
+  }
+}
+
+@media (min-width: 1383px) {
+  .parteners-container {
+    top: 45vw;
+    left: 12vw;
+    width: 70vw;
+  }
+  .parteners-title {
+    left: 450px!important;
+    position: absolute;
+    top: -70px;
+  }
+}

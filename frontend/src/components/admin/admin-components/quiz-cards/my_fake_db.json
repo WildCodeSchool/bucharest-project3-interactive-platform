@@ -1,0 +1,67 @@
+{
+    "quiz": {
+        "face" :{
+            "firstQuestion": {
+                "question" : "Care sunt proprietatile acestui sapun?",
+                "answers": ["Actiune hranitoare","Actiune exfolianta"],
+                "correct": 0,
+                "firstQuestionImg": "http://www.techir.ro/wp-content/uploads/2016/12/tricolor1.png"
+            },
+            "secondQuestion": {
+                "question": "Care dintre cele doua variante reprezinta problemele principale de zi cu zi ale tenului?",
+                "answers": ["Praful","Impurtitatile adunate si uscarea tenului"],
+                "correct": 1,
+                "secondQuestionImg": "https://www.dermstore.com/blog/wp-content/uploads/2018/03/030918-Body-Cleansing.jpg"
+
+            }
+    },
+        "hair" :{
+            "firstQuestion": {
+                "question" : "Care sunt proprietatile acestui sampon?",
+                "answers": ["Actiune hranitoare","Actiune reparatoare"],
+                "correct": 0,
+                "firstQuestionImg": "http://www.techir.ro/wp-content/uploads/2016/12/tricolor1.png"
+
+            },
+            "secondQuestion": {
+                "question": "Care dintre cele doua variante reprezinta problemele principale de zi cu zi ale parului?",
+                "answers": ["Praful","Arderea parului datorita placii de intins parul or anything related"],
+                "correct": 0,
+                "secondQuestionImg": "https://www.dermstore.com/blog/wp-content/uploads/2018/03/030918-Body-Cleansing.jpg"
+            }
+            
+        },
+        "massage" :{
+                "firstQuestion": {
+                    "question" : "Care sunt proprietatile acestui ulei?",
+                    "answers": ["Actiune anti-inflamatoare","Actiune reparatoare"],
+                    "correct": 0,
+                    "firstQuestionImg": "http://www.techir.ro/wp-content/uploads/2016/12/tricolor1.png"
+    
+                },
+                "secondQuestion": {
+                    "question": "Care dintre cele doua variante reprezinta cea mai buna tehnica de masaj a gatului cu muschii inflamati?",
+                    "answers": ["Repede si apasat","Usor, cu ulei, apasand doar cu varful degetelor"],
+                    "correct": 1,
+                    "secondQuestionImg": "https://www.dermstore.com/blog/wp-content/uploads/2018/03/030918-Body-Cleansing.jpg"
+                }
+        },
+        "anticelulitis" :{
+            "firstQuestion": {
+                "question" : "Care sunt proprietatile acestui ulei?",
+                "answers": ["Actiune anti-inflamatoare","Actiune reparatoare"],
+                "correct": 1,
+                "firstQuestionImg": "http://www.techir.ro/wp-content/uploads/2016/12/tricolor1.png"
+
+            },
+            "secondQuestion": {
+                "question": "Care dintre cele doua variante reprezinta cea mai buna tehnica de masaj a pulpelor?",
+                "answers": ["Repede si apasat","Usor, cu ulei, cu toata mana"],
+                "correct": 1,
+                "secondQuestionImg": "https://www.dermstore.com/blog/wp-content/uploads/2018/03/030918-Body-Cleansing.jpg"
+            }
+        }
+    }
+ 
+    
+}

@@ -1,0 +1,129 @@
+/* 
+.signup-form {
+    position: absolute!important;
+    left: 4%;
+  
+}
+
+.modal-content {
+    border: 1px solid white!important;
+}
+
+.input:hover {
+    border: 1px solid rgb(177, 118, 177);
+}
+
+.mySignUp-input {
+    width: 100%;
+    font-size: 12px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 14px;
+   
+    height: 30px;
+}
+
+.mySignUp-bttn{ 
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 10px; 
+    cursor: pointer; 
+    background-color: transparent;
+    font-size: 12px;
+    height: 35px;
+    width: 130px;
+}
+
+.button:hover {
+    background-color: lightgray;
+    color: white;
+    font-weight: 700;
+    border-color:darkgray;
+}
+
+.errorMessage {
+    color: #ce1313;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 14px;
+}
+
+.message {
+    color: darkgrey;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 10px;
+    width: 100%;
+}
+
+.inputError {
+    border: #ce1313;
+}
+
+@media (max-width: 600px) {
+    .signup-form {
+        top:  180px;
+        width: 320px;  
+        left: -200px;   
+
+    }
+    .mySignUp-bttn {
+        left: 100px;
+        position: absolute;
+    }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+ .signup-form {
+    top: 160px;
+    left: 410px;
+    width: 320px;
+    position: absolute !important;
+  }
+}
+
+
+@media (min-width: 769px) and (max-height: 600px) {
+    .signup-form  {
+      top: 266px;
+      left: 60px;
+      width: 380px;
+    }
+  }
+  
+  @media (min-width: 769px) and (min-height: 601px) {
+    .signup-form  {
+      top:186px;
+      left: 530px;
+      width: 320px;
+      position: absolute !important;
+    }
+  }
+/* @media (max-width: 768px) {
+  
+.signup-form {
+  top:166px;
+  left:440px;
+  width: 260px;
+  position: absolute!important;
+
+}
+
+}
+
+@media (min-width: 768px) {
+  
+    .signup-form {
+      top: -1667px;
+      left: -80px;
+  }} */
+
+
+
+
+/* @media (min-width: 768px) and (orientation: landscape) {
+    .signup-form {
+      top: -1399px;
+      left: 4%!important;
+  } */
+
+
