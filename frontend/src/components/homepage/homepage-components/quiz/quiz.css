@@ -42,7 +42,6 @@
 
 .quiz-title {
   z-index: 10;
-  text-decoration: underline;
   font-weight: 900;
 }
 
@@ -61,6 +60,10 @@
   position: absolute;
   font-family: "PT Serif", serif;
   color: #878787;
+}
+.q-footer {
+  width: 100%;
+  top: 70vh;
 }
 @media (min-width:0px) and  (max-width: 480px) {
   .quiz-title {

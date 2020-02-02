@@ -47,5 +47,5 @@
   "devDependencies": {
     "gh-pages": "^2.2.0"
   },
-  "proxy": "http://localhost:5500"
+  "proxy": "https://infinite-hamlet-17639.herokuapp.com/"
 }

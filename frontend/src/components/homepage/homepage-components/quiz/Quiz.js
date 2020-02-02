@@ -5,6 +5,7 @@ import Question from "./Question";
 import Navigation from "../navbar/NavBar";
 import Footer from "../footer/Footer";
 import data from "../info_modal/my_fake_db";
+
 class Quiz extends React.Component {
   constructor(props) {
     super(props);
@@ -96,6 +97,11 @@ class Quiz extends React.Component {
             /> 
           </Col>
         </Row>
+        <Row>
+          <div className="q-footer">
+          <Footer/>
+          </div>
+          </Row>
       </Container>
     );
   }

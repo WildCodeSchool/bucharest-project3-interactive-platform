@@ -105,28 +105,24 @@
 @media (min-width: 362px) and (max-width: 540px)  {
   #footer {
     height: 200px;
-    top: 2000px!important;
+    top: 90vh!important;
   }
 
   
   .brand-romanesc {
-    height: 80px!important;
-    right: 1%!important;
-    top: -90px!important;
+    display: none;
   }
   
   .produse-romanesti {
-    height:80px!important;
-    right: 50%!important;
-    top: -90px!important;
+    display: none;
   }
  
   
 }
 @media (min-width:0px) and  (max-width: 480px) {
   #footer {
-    height: 200px;
-    top: 1600px;
+    height: 190px!important;
+    top: 100vh!important;
   }
   
   .contact {
@@ -148,7 +144,7 @@
 @media (min-width: 481px) and  (max-width: 600px) {
   #footer {
     height: 200px;
-    top: 1900px;
+    top: 90vh;
   }
   
   .contact {
@@ -174,7 +170,7 @@
 @media (min-width: 601px) and  (max-width: 768px) {
   #footer {
     height: 200px;
-    top: 1400px;
+    top: 90vh;
   }
   
   .contact {
@@ -199,7 +195,7 @@
 @media (min-width: 769px) and (max-width: 992px) {
   #footer {
     height: 200px;
-    top: 1400px;
+    top: 90vh;
   }
   
   .contact {
@@ -224,7 +220,7 @@
 @media (min-width: 993px) and (max-width: 1382px) {
   #footer {
     height: 200px;
-    top: 1400px;
+    top: 150vh;
   }
   
   .contact {
@@ -235,20 +231,20 @@
   
   .brand-romanesc {
     height: 100px;
-    left: 188%;
+    left: 118%;
     top: 24px;
   }
   
   .produse-romanesti {
     height:100px;
-    left: 266%;
+    left: 196%;
     top: 28px;
   }
 }
 @media(min-width: 1383px) { 
   #footer {
     height: 200px;
-    top: 1400px;
+    top: 100vh!important;
   }
   
   .contact {
@@ -269,119 +265,4 @@
     top: 28px;
   }
 }
-
-/* @media (max-width: 767px) and (orientation: landscape) {
-  #footer {
-    top: 1300px!important;
-  }
-}
-
-@media  (min-width: 768px) and (min-height: 1024px) {
-  #footer {
-    height: 980px;
-    top: 1500px;
-  }
-  
-  .contact {
-    left: 10px;
-    border-right: 2px solid grey;
-    border-right: 3px solid grey;
-  }
-  
-  .brand-romanesc {
-    height: 100px;
-    right: 3%;
-    top: 33px;
-  }
-  
-  .produse-romanesti {
-    height:80px;
-    right: 31%;
-    top: 43px;
-  }
-} */
-/* @media  (min-width: 768px) and (max-width: 1024px) {
-  #footer {
-    height: 180px;
-    top: 1300px;
-  }
-  
-  .contact {
-    left: 10px;
-    border-right: 2px solid grey;
-    border-right: 3px solid grey;
-  }
-  
-  .brand-romanesc {
-    height: 100px;
-    right: 3%;
-    top: 33px;
-  }
-  
-  .produse-romanesti {
-    height:100px;
-    right: 29%;
-    top: 30px;
-  }
-} */
-/* 
-@media  (min-width: 1025px) {
-  #footer {
-    top: 1350px!important;
- 
-  }
-  
-  .contact {
-    left: 10px;
-    border-right: 2px solid grey;
-    border-right: 3px solid grey;
-  }
-  
-  .brand-romanesc {
-    height: 130px;
-    right: 11%;
-    top: 20px;
-  }
-  
-  .produse-romanesti {
-    height:150px;
-    right: 38%;
-    top: 20px;
-  }
-} */
-/* @media  (min-width: 1025px){
-  #footer {
-    top: 1050px!important;
-
-  }
-  
-  .contact {
-    left: 10px;
-    border-right: 2px solid grey;
-    border-right: 3px solid grey;
-  }
-  
-  .brand-romanesc {
-    height: 130px;
-    right: -99%;
-    top: 20px;
-  }
-  
-  .produse-romanesti {
-    height:150px;
-    right: -233%;
-    top: 4px;
-    color: white;
-  }
-  .techir {
-    position: absolute;
-    left: 600px;
-    color: white;
-    z-index: 100;
-  }
- 
-} */
-
-
-
 

@@ -47,6 +47,7 @@ class Parteners extends React.Component {
         <Row noGutters>
             <Col>
                 <div className="parteners-container" >
+                    <h6 className="parteners-title">Parteneri Online</h6>
                     {this.state.parteners.map(partener => (
                         <div className="partener">
                             <a href={partener.link}>
