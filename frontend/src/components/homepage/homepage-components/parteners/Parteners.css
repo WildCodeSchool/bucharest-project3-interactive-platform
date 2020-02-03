@@ -118,12 +118,12 @@ body {
 
 @media (min-width: 1383px) {
   .parteners-container {
-    top: 50vw;
+    top: 800px;
     left: 12vw;
     width: 70vw;
   }
   .parteners-title {
-    left: 450px!important;
+    left: 600px!important;
     position: absolute;
     top: -70px;
   }

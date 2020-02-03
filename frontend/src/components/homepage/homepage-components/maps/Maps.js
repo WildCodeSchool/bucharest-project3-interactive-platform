@@ -57,7 +57,7 @@ class GMap extends React.Component {
                 <Row noGutters>
                     <Col>
                         <div className='map'>
-                            <p className="map-title">Pentru a afla locatia cea mai apropiata de tine si in care poti sa gasesti mai multe produse Techir, poti studia harta noastra. Iti sugeram sa contactezi locatia aleasa telefonic pentru a verifica stocul produselor dorite.</p>
+                            <p className="map-title">Pentru a afla locatia cea mai apropiata de tine si in care poti sa gasesti mai multe produse <a href="www.techir.ro">Techir</a>, poti studia harta noastra. Iti sugeram sa contactezi locatia aleasa telefonic pentru a verifica stocul produselor dorite.</p>
                             <Map google={this.props.google}
                                 zoom={12}
                                 className="gMap"

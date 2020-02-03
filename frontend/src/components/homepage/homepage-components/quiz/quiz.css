@@ -8,6 +8,10 @@
   width: 92%;
 
 }
+/* body {
+
+  background-image: url(../../../../assets//img/val-galben.svg);
+} */
 .modal-lastm-success {
   top: 190px;
   text-align: center
@@ -67,70 +71,74 @@
 }
 @media (min-width:0px) and  (max-width: 480px) {
   .quiz-title {
-   top: 6vh;
-   left: 7vw;
+   top: 100px;
+   left: 15%;
   }
   
   .quiz-desc {
-    top: 16vh;
-    left: 4vw;
+    top: 200px;
+    left: 2%;
+    text-align: center;
   }
   .q-question {
-    top: 170px;
+    top:300px;
     width: 100%!important;
     font-size: 20px;
-    left: 4%;
+    left: 3%;
     position: relative;
+    text-align: center;
   }
   
   .q-img {
-    top: 39vh;
-    left: 55px;
+   top: 390px;
+    left: 17%;
   }
   
   .q-first-ans {
-    top: 78vh;
-    left: 15vw;
+    top: 690px;
+    left: 18%;
     width: 60vw;
   }
   .q-second-ans {
-    top: 83vh;
-    left: 15vw;
+    top: 760px;
+    left: 18%;
     width: 60vw;
   }
 }
 
 @media (min-width: 481px) and  (max-width: 600px) {
   .quiz-title {
-    top: 3px;
-    left: 30%;
+    top: 50px;
+    left: 20%;
    }
    
    .quiz-desc {
-     top: 100px;
+     top: 120px;
      left: 4%;
+     text-align: center;
    }
    .q-question {
-     top: 170px;
+     top: 190px;
      width: 100%!important;
      font-size: 20px;
-     left: 6%;
+     left: 20%;
      position: relative;
+     text-align:center;
    }
    
    .q-img {
-     top: 240px;
-     left: 25px;
+     top: 280px;
+     left: 100px;
    }
    
    .q-first-ans {
-     top: 300px;
-     left: 327px;
+     top: 600px;
+     left: 35%;
      width: 220px;
    }
    .q-second-ans {
-    top: 370px;
-    left: 327px;
+    top: 670px;
+     left: 35%;
     width: 220px;
    }
 }
@@ -144,28 +152,30 @@
    .quiz-desc {
      top: 100px;
      left: 4%;
+     text-align: center;
    }
    .q-question {
+    text-align: center;
      top: 170px;
      width: 100%!important;
      font-size: 20px;
-     left: 6%;
+     left: 35%;
      position: relative;
    }
    
    .q-img {
      top: 240px;
-     left: 25px;
+     left: 49%;
    }
    
    .q-first-ans {
-     top: 300px;
-     left: 327px;
+     top: 560px;
+     left: 130px;
      width: 320px;
    }
    .q-second-ans {
-    top: 370px;
-    left: 327px;
+    top: 630px;
+    left: 130px;   
     width: 320px;
    }
 }
@@ -173,7 +183,7 @@
 @media (min-width: 769px) and (max-width: 992px) {
   .quiz-title {
     top: 3px;
-    left: 40%;
+    left: 35%;
    }
    
    .quiz-desc {

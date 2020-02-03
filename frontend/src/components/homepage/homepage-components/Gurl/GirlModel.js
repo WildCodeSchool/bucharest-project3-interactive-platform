@@ -130,9 +130,11 @@ class GirlModel extends React.Component {
             <Container >
                 <Row noGutters>
                     <div className='model'>
+
                         {!this.state.isHidden ?
                             <div className={moveOrNot}>
                                 <img src={img} alt='model' className='gurl' />
+
                                 {points.map((e, i) => {
                                     return <div className={'spinner ' + e} key={i}
                                         onMouseEnter={this.handleHover}

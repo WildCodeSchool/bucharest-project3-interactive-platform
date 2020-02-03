@@ -65,9 +65,9 @@ class Quiz extends React.Component {
     const desc = quizSomeInfo ? quizSomeInfo.desc : null;
     console.log(title)
     const quiz = this.state.quizzez ? this.state.quizzez[0] : null;
-    console.log(quiz)
+
     const question = quiz ? quiz.question : null;
-    const image = quiz ? quiz.image : null;
+    const image = quiz ? quiz.image_link : null;
     const answer1 = quiz ? quiz.answer1 : null;
     const answer2 = quiz ? quiz.answer2 : null;
     const correct = quiz ? quiz.correct : null;
@@ -81,6 +81,8 @@ class Quiz extends React.Component {
           <Col>
             <h1 className="quiz-title">{title}</h1>
             <h6 className="quiz-desc">{desc}</h6>
+            <img src="../../../../assets//img/val-galben.svg" style={{width:"100%", height:"100%", top:"700px"}} className="yellow-wave"/>
+
             <Question
               question={question}
               image={image}
