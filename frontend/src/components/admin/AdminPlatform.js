@@ -22,25 +22,32 @@ class AdminPlatform extends React.Component {
         }
     }
 
-    showCards = (param) => {
-        if(param === 'info') {
-            this.setState({
-                infoCards: true,
-                quizCards: false
-            })
-        } else if (param === 'quiz') {
-            this.setState({
-                infoCards: false,
-                quizCards: true
-            })
-        } else {
-            this.setState({
-                infoCards: false,
-                quizCards: false
-            })
-        }
-    }
 
+    componentDidMount() {
+        Promise.all([
+            fetch('/authentication/description', {
+                method: 'GET',
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            }).then(res => res.json()),
+            fetch('/authentication/quizz', {
+                method: 'GET',
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            }).then(res => res.json()),
+        ])
+            .then(res => {
+                console.log(res)
+                this.setState({
+                    infoData: res[0],
+                    quizzData: res[1]
+                })
+            }
+            )
+
+    }
 
     render() {
         const infoCards = this.state.infoCards;
@@ -48,18 +55,18 @@ class AdminPlatform extends React.Component {
         let QuizCards;
         let InfoCards;
 
-        if(infoCards) {
-            QuizCards = <EditInfoCards/>;
-        }else if(quizCards) {
-            InfoCards =<QCards/>
+        if (infoCards) {
+            QuizCards = <EditInfoCards fetchData={{ ...this.state.infoCards }} />;
+        } else if (quizCards) {
+            InfoCards = <QCards fetchData={{ ...this.state.quizCards }} />
         }
 
 
         return (
             <div>
-                    <AdminNav choose={this.showCards}/>
-                   {QuizCards}
-                   {InfoCards}
+                <AdminNav choose={this.showCards} />
+                <EditInfoCards fetchData={{ ...this.state.infoCards }} />
+                <QCards fetchData={{ ...this.state.quizCards }} />
             </div>
         )
     }

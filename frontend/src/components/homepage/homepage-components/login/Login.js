@@ -41,16 +41,11 @@ class Login extends React.Component {
         // } else if (this.state.email === 'user@user.com') {
         //     this.props.history.push(userPath);
         // } else this.props.history.push(userPath);
-
-
-
-
     }
 
     handleSubmit(event) {
         event.preventDefault()
-
-        fetch('/authentication/sign-in',
+        fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/sign-in',
             {
                 method: 'POST',
                 headers: new Headers({
