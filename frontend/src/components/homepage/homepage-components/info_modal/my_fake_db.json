@@ -1,5 +1,4 @@
-
-    {
+{
     "quiz": {
         "face": {
             "firstQuestion": {
@@ -85,7 +84,9 @@
                 "par",
                 "fata",
                 "anticelulita",
-                "masaj"
+                "masaj",
+                "maini",
+                "picioare"
             ],
             "hair": {},
             "face": {
@@ -112,5 +113,4 @@
             "avalon": "http://www.techir.ro/wp-content/uploads/2015/08/avalon.jpg"
         }
     }
-    
 }

@@ -11,15 +11,15 @@ const fs = require("file-system");
 
 const models = require("../models");
 
-const sendNodemailer = require("../services/nodemailer");
+// const sendNodemailer = require("../services/nodemailer");
 
-const createUser = (req, res, next) => {
-    User.create(req.body, (err, results, fields) => {
-        if (err) return res.render("error", { err });
-        res.redirect("/auth/login");
-        sendNodemailer(req.body.email);
-    });
-};
+// const createUser = (req, res, next) => {
+//     User.create(req.body, (err, results, fields) => {
+//         if (err) return res.render("error", { err });
+//         res.redirect("/auth/login");
+//         sendNodemailer(req.body.email);
+//     });
+// };
 
 passport.use(
     new LocalStrategy(
@@ -87,11 +87,11 @@ router.post("/sign-in", (req, res) => {
 
         const userData = {
             email: user.email,
-            password: user.passwordCREATE_LOGIN_SESSION
+            password: user.password
         };
 
         const token = jwt.sign(userData, "secretPass");
-        return res.json({
+        res.json({
             user: {
                 id: user.user_id,
                 name: user.fullname,
@@ -192,16 +192,18 @@ router.put(
         models.description
             .update(
                 {
-                    text: req.body.desctext,
-                    link: req.body.desclink
-
+                    text: req.body.text,
+                    link: req.body.link
                 },
                 {
                     where: { categoryCategoryId: req.params.id },
                     returning: true
                 }
             )
-            .then(data => res.status(200).json({ data, msg: "Me did gud (: !" }));
+            .then(data => 
+                data[1] > 0
+                ? res.status(200).json({ data, msg: "Me did gud (: !" })
+                : res.status(400).json({ data, msg: "Me did not gud (: !" }));
     }
 );
 

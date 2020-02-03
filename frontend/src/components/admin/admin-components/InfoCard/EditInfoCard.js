@@ -4,16 +4,16 @@ import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
 
+import { withRouter, BrowserRouter as Router } from 'react-router-dom';
+
+
+import { connect } from 'react-redux'
+
 class InfoCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      categ: "",
-      descOne:
-        "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele din ingrediente narurale care te vor ajuta!",
-      // descTwo: "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele din ingrediente narurale care te vor ajuta!"
-      link:
-        "http://www.techir.ro/blog-techir/proprietatile-miraculoase-ale-apei-si-namolului-din-lacul-techirghol/"
+
     };
   }
 
@@ -28,23 +28,36 @@ class InfoCard extends Component {
     });
   };
 
-//   saveInfoCards = () => {
-//     fetch("/authentication/description/", {
-//         method: "PUT",
-//         headers: new Headers({
-//           "Content-Type": "application/json"
-//         }),
-//         body: JSON.stringify({"text":this.state.descOne, "link": this.state.link})
-//     })
-//         .then((res) => res.json())
-//             .then(data => {
-//                 console.log('Success:', data);
-//             })
-//         .catch(err => console.log(`ERROR: ${err}`));
-//   }
+  handleSubmit = (event) => {
+    event.preventDefault()
+    const data = {
+      text: this.state.descOne,
+      link: this.state.link,
+
+      categoryCategoryId: this.props.data.category_id
+    }
+    console.log(this.props)
+
+    fetch(`/authentication/description/${this.props.data.category_id}`, {
+      method: "PUT",
+      headers: {
+        'Authorization': 'Bearer ' + this.props.token,
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        desctext: "this.state.descOne",
+        desclink: "this.state.link",
+    }),
+})
+      .then((res) => res.json())
+      .then(data => {
+        console.log(data)
+      })
+      .catch(err => console.log(`ERROR: ${err}`));
+  }
 
   render() {
-    // switch (this.props.description_id) {
+    // switch (this.props.data) {
     //   case 1:
     //     this.setState({ categ: "Fata" });
     //     break;
@@ -59,17 +72,19 @@ class InfoCard extends Component {
     //   case 6:
     //     this.setState({ categ: "Fata" });
     // }
+    // console.log(this.props.data)
+
     return (
       <Card style={{ width: "18rem" }}>
         <Card.Body>
-          <Card.Title>Categoria: {this.state.categ}</Card.Title>
-          <Form>
+          <Card.Title>Categoria: {this.props.data.category_name.toUpperCase()}</Card.Title>
+          <Form onSubmit={this.handleSubmit}>
             <Form.Group controlId="exampleForm.ControlTextarea1">
               <Form.Label>Descriere</Form.Label>
               <Form.Control
                 as="textarea"
                 rows="3"
-                value={this.props.text}
+                placeholder={this.props.data.category_name.toUpperCase()}
                 onChange={event => this.handleDescOne(event)}
               />
             </Form.Group>
@@ -78,18 +93,25 @@ class InfoCard extends Component {
               <Form.Control
                 as="textarea"
                 rows="3"
-                value={this.props.link}
+                placeholder={this.props.data.category_name.toUpperCase()}
                 onChange={event => this.handleLink(event)}
               />
             </Form.Group>
-          </Form>
-          <Button variant="outline-dark" style={{ width: "190px" }}>
-            Save
+
+            <Button className='submit' type='submit' variant="outline-dark" style={{ width: "190px" }}>
+              Save
           </Button>
+          </Form>
         </Card.Body>
       </Card>
     );
   }
 }
+const mapStateToProps = state => {
+  return {
+    token: state.authentication.token,
+  }
+}
 
-export default InfoCard;
+export default withRouter(connect(mapStateToProps)(InfoCard))
+

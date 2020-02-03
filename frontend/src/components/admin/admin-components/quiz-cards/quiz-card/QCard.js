@@ -27,9 +27,9 @@ class QCard extends React.Component {
         fetch("/authentication/description/", {
             method: "PUT",
             headers: new Headers({
-              "Content-Type": "application/json"
+                "Content-Type": "application/json"
             })
-          })
+        })
             .then(req => {
                 req.body = {
                     text: this.state.descOne,
@@ -37,7 +37,7 @@ class QCard extends React.Component {
                 }
             })
             .catch(err => console.log(`ERROR adminDesc-bk: ${err}`));
-     
+
     }
 
 
@@ -95,7 +95,7 @@ class QCard extends React.Component {
                         onChange={(event) => this.handleAdminInput(event)}
                     />
                     <Card.Body>
-                        <Button variant="outline-dark" className="mySaveCardQuiz-bttn" style={{width: "190px"}} type="submit" onClick={this.saveQuizQ}>Salveaza</Button>
+                        <Button variant="outline-dark" className="mySaveCardQuiz-bttn" style={{ width: "190px" }} type="submit" onClick={this.saveQuizQ}>Salveaza</Button>
                     </Card.Body>
                 </Card>
             </Col>

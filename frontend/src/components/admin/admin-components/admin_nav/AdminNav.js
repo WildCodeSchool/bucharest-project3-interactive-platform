@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import './AdminNav.css';
 import { Link } from 'react-router-dom';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import NavBar from '../../../homepage/homepage-components/navbar/NavBar';
 import Footer from '../../../homepage/homepage-components/footer/Footer';
 
@@ -32,7 +32,7 @@ class AdminNav extends React.Component {
         backgroundColor: '#696969',
         color: 'white'
     }
-    componentDidUpdate() {
+    componentDidMount() {
     }
 
     handleDescription = (e) => {
@@ -41,11 +41,11 @@ class AdminNav extends React.Component {
             descriptionBttnState: false,
             quizBttnState: true
         })
-            // let adminPath = '/admin'
-            // this.props.history.push(adminPath)
-            this.props.choose('info');
-        }
-    
+        // let adminPath = '/admin'
+        // this.props.history.push(adminPath)
+        this.props.choose('info');
+    }
+
     handleQuiz = (e) => {
         e.preventDefault();
         this.setState({
@@ -56,12 +56,12 @@ class AdminNav extends React.Component {
     }
 
     render() {
-        
+
         return (
             <div>
-            <NavBar/>
-            <Row className="admin-nav">
-                <Col className='nav-container'>
+                <NavBar />
+                <Row className="admin-nav">
+                    <Col className='nav-container'>
                         <Button variant="secondary" size="lg"
                             style={this.state.descriptionBttnState ? this.descbtnStyleActive : this.descbtnStyleInactive}
                             className="admin-desc-bttn custom-btn"
@@ -76,9 +76,9 @@ class AdminNav extends React.Component {
                         >
                             Chestionar
                         </Button>
-                </Col >
-            </Row >
-            <Footer/>
+                    </Col >
+                </Row >
+                <Footer />
             </div>
         )
     }

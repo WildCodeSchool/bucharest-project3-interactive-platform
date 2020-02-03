@@ -23,7 +23,7 @@ class AdminPlatform extends React.Component {
     }
 
     showCards = (param) => {
-        if(param === 'info') {
+        if (param === 'info') {
             this.setState({
                 infoCards: true,
                 quizCards: false
@@ -41,25 +41,23 @@ class AdminPlatform extends React.Component {
         }
     }
 
-
     render() {
         const infoCards = this.state.infoCards;
         const quizCards = this.state.quizCards;
         let QuizCards;
         let InfoCards;
 
-        if(infoCards) {
-            QuizCards = <EditInfoCards/>;
-        }else if(quizCards) {
-            InfoCards =<QCards/>
+        if (infoCards) {
+            QuizCards = <EditInfoCards />;
+        } else if (quizCards) {
+            InfoCards = <QCards />
         }
-
 
         return (
             <div>
-                    <AdminNav choose={this.showCards}/>
-                   {QuizCards}
-                   {InfoCards}
+                <AdminNav choose={this.showCards} />
+                {QuizCards}
+                {InfoCards}
             </div>
         )
     }
