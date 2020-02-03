@@ -34,7 +34,7 @@ class GMap extends React.Component {
     };
 
     componentDidMount() {
-        fetch('/authentication/locations',
+        fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/locations',
             {
                 method: 'GET',
                 headers: new Headers({

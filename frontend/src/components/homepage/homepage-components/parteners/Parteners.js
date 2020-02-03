@@ -13,7 +13,7 @@ class Parteners extends React.Component {
     }
 
     componentDidMount() {
-        fetch("/authentication/parteners",
+        fetch("https://infinite-hamlet-17639.herokuapp.com/authentication/parteners",
         {
             method: 'GET',
             headers: new Headers({

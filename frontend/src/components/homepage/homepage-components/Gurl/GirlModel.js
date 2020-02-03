@@ -56,7 +56,7 @@ class GirlModel extends React.Component {
     componentDidMount() {
         // this.retrieveAndSetAboutFaceInfo();
         // this.retrieveBlogLink();
-        fetch('/authentication/description/',
+        fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/description/',
         {
             method: 'GET',
             headers: new Headers({
