@@ -26,7 +26,6 @@ class QCard extends React.Component {
                 answer2: this.state.secondAns,
                 correct_answer: this.state.correct,
                 image_link: this.state.imgLink,
-                categoryCategoryId: this.props.category.category_id
             }),
         })
             .then(res => res.json())
