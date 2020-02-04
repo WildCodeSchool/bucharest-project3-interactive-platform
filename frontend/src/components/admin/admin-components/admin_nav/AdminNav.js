@@ -11,6 +11,10 @@ import EditInfoCards from "../InfoCard/EditInfoCards";
 import QCards from '../quiz-cards/QCards';
 import * as brand_romanesc from '../../../../assets/img/brand-romanesc.png';
 import * as produse_romanesti from '../../../../assets/img/produse-romanesti.png';
+
+
+
+
 class AdminNav extends React.Component {
     constructor(props) {
         super(props)
@@ -51,12 +55,10 @@ class AdminNav extends React.Component {
         })
     }
     render() {
+        console.log(this.props);
 
-
-        console.log(this.props.fetchedData);
-        
         return (
-            <div> 
+            <div>
                 <NavBar />
                 <Row className="admin-nav">
                     <Col className='nav-container'>
@@ -75,8 +77,8 @@ class AdminNav extends React.Component {
                         </Button>
                     </Col >
                 </Row >
-                {this.state.infoButton ? <EditInfoCards fetchData={{ ...this.props.fetchedInfo }} /> : null}
-                {this.state.quizzButton ? <QCards fetchData={{ ...this.props.fetchedQuiz}} /> : null}
+                {this.state.infoButton ? <EditInfoCards fetchData={{ ...this.props.fetchedDataInfo }} token={this.props.token} categories={this.props.categories} /> : null}
+                {this.state.quizzButton ? <QCards fetchData={{ ...this.props.fetchedDataQuiz }} token={this.props.token} categories={this.props.categories} /> : null}
             </div>
         )
     }

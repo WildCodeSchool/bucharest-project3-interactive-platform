@@ -73,11 +73,10 @@ class Login extends React.Component {
                         isUserLogged: true
                     }
                 )
-              if(res.user.email === "admin@admin.ro") {
-                this.props.history.push('/admin');
-              } else this.props.history.push('/quiz');
+
             })
             .catch(error => console.log(error))
+
     }
 
     render() {

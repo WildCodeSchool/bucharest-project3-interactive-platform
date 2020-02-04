@@ -41,6 +41,23 @@ class Homepage extends React.Component {
         }
     }
 
+
+componentDidMount(){
+    fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/categories', {
+        method: 'GET',
+        headers: new Headers({
+            'Content-Type': 'application/json'
+        })
+    })
+    .then(res => res.json())
+    .then(res =>   this.props.dispatch(
+        {
+            type: "SET_CATEGORIES",
+            categories: res
+        }
+    ))
+}
+
     render() {
         const showLogin = this.state.showLogin;
         const showSignup = this.state.showSignup;
@@ -171,9 +188,9 @@ viewBox="0 0 255.12 9.25" style={{enableBackground:'new 0 0 255.12 9.25'}} xmlSp
 
         return (
             <div className="App">
-                <Navigation onClickLogin={this.toggleMoving} onClickSignup={this.toggleMoving} loginState={showLogin} signupState={showSignup} />
+                <Navigation onClickLogin={this.toggleMoving} categories={this.state.categories} onClickSignup={this.toggleMoving} loginState={showLogin} signupState={showSignup} />
                 {wave2}
-                <GirlModel moveGirl={this.state.moveToTheRight} loginState={showLogin} signupState={showSignup} />
+                <GirlModel moveGirl={this.state.moveToTheRight} categories={this.props.categories} loginState={showLogin} signupState={showSignup} />
               
                 <div style={{ height: '60vh' }}>
                     <Maps />
@@ -186,4 +203,11 @@ viewBox="0 0 255.12 9.25" style={{enableBackground:'new 0 0 255.12 9.25'}} xmlSp
     }
 }
 
-export default Homepage;
+
+const mapStateToProps = state => {
+    return {
+        categories: state.authentication.categories
+    }
+}
+
+export default connect(mapStateToProps)(Homepage)

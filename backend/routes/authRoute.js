@@ -126,12 +126,11 @@ router.put(
                     image_link: req.body.image_link,
                     categoryCategoryId: req.body.categoryid
 
-
+ 
 
                 },
                 {
                     where: { categoryCategoryId: req.params.id },
-                    returning: true
                 }
             )
             .then(data => res.status(200).json({ data, msg: "Me did gud (: !" }));

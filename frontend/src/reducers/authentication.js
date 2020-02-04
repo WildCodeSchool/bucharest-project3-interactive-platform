@@ -21,6 +21,11 @@ export default function (state = {}, action) {
                 ...state,
                 redirectLogin: true
             }
+        case 'SET_CATEGORIES':
+            return {
+                ...state,
+                categories: action.categories,
+            }
         default:
             return state;
     }

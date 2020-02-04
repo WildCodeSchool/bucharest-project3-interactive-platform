@@ -10,6 +10,9 @@ import Parteners from '../homepage/homepage-components/parteners/Parteners';
 import SignUp from '../homepage/homepage-components/signup/SignUp';
 import Login from '../homepage/homepage-components/login/Login';
 import Quiz from '../homepage/homepage-components/quiz/Quiz';
+
+import { connect } from 'react-redux';
+
 class AdminPlatform extends React.Component {
     constructor(props) {
         super(props);
@@ -18,7 +21,9 @@ class AdminPlatform extends React.Component {
             quizCards: false
         }
     }
+
     componentDidMount() {
+        // if (this.props.user.acces_level == 1) this.props.history.push('/')
         Promise.all([
             fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/description', {
                 method: 'GET',
@@ -26,23 +31,35 @@ class AdminPlatform extends React.Component {
                     'Content-Type': 'application/json'
                 })
             }).then(res => res.json()),
+
             fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/quizz', {
                 method: 'GET',
                 headers: new Headers({
                     'Content-Type': 'application/json'
                 })
             }).then(res => res.json()),
+
+            fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/categories', {
+                method: 'GET',
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            })
+                .then(res => res.json())
         ])
             .then(res => {
-                console.log(res)
+
                 this.setState({
                     infoData: res[0],
-                    quizzData: res[1]
+                    quizzData: res[1],
+                    categories: res[2],
                 })
             }
             )
     }
     render() {
+
+
         // const infoCards = this.state.infoCards;
         // const quizCards = this.state.quizCards;
         // let QuizCards;
@@ -54,10 +71,17 @@ class AdminPlatform extends React.Component {
         // }
         return (
             <div>
-                <AdminNav fetchedDataQuiz={this.state.quizzData} fetchedInfo={this.state.infoDa} choose={this.showCards} />
+                <AdminNav fetchedDataQuiz={this.state.quizzData} categories={this.state.categories} token={this.props.token} fetchedDataInfo={this.state.infoData} choose={this.showCards} />
             </div>
         )
     }
 }
+const mapStateToProps = state => {
+    return {
+        user: state.authentication.user,
+        token: state.authentication.token,
+        isUserLogged: state.authentication.isUserLogged,
+    }
+}
 
-export default withRouter(AdminPlatform);
+export default withRouter(connect(mapStateToProps)(AdminPlatform))
