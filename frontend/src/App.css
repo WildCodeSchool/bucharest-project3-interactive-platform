@@ -1,18 +1,38 @@
+.wave {
+  position: relative;
+  top: 770px;
+  left: -4%;
+  margin: 0;
+  padding: 0;
+  width: 104%;
+}
+
+.wave2 {
+  position: relative;
+  top:1000px;
+  left: -3%;
+}
+
 .App {
   position: relative;
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
+  left: 0%;
+  width: 104%;
 }
+
 body,
 *,
 html {
   padding: 0;
   margin: 0;
 }
+
 .form-control {
   border-radius: 10px;
+  z-index: 1000;
 }
 #user-form {
   position: absolute;
@@ -37,6 +57,10 @@ html {
   font-family: myFirstFont;
   src: url(./assets/Thirsty.ttf);
 }
+.quiz-title, .qtitle {
+  font-family: myFirstFont;
+
+}
 .modal-congrats {
   font-family: myFirstFont;
   left: 30%;
@@ -49,6 +73,7 @@ html {
   #user-form {
     width: 90vw;
     left: 6%;
+    top: 160px;
   }
 }
 
@@ -56,13 +81,13 @@ html {
   #user-form {
     width: 60vw;
     left: 31%;
-    top: 22px;
+    top: 170px;
   }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
   #user-form {
-    width: 50vw;
+    width: 46vw;
     top: 20px;
     left: 48%;
   }
@@ -81,15 +106,15 @@ html {
 
 @media (min-width: 993px) and (max-width: 1382px) {
   #user-form {
-    width: 30vw;
-    top: 20px;
+    width: 28vw;
+    top: 18px;
     left: 64%;
   }
 }
 
 @media (min-width: 1383px) {
   #user-form {
-    width: 30vw;
+    width: 28vw;
     top: 20px;
     left: 64%;
   }

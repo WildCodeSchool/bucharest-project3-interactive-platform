@@ -3,7 +3,6 @@ import Button from "react-bootstrap/Button";
 import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
-
 class InfoCard extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +15,6 @@ class InfoCard extends Component {
         "http://www.techir.ro/blog-techir/proprietatile-miraculoase-ale-apei-si-namolului-din-lacul-techirghol/"
     };
   }
-
   handleDescOne = event => {
     this.setState({
       descOne: event.target.value
@@ -27,7 +25,6 @@ class InfoCard extends Component {
       link: event.target.value
     });
   };
-
 //   saveInfoCards = () => {
 //     fetch("/authentication/description/", {
 //         method: "PUT",
@@ -42,7 +39,6 @@ class InfoCard extends Component {
 //             })
 //         .catch(err => console.log(`ERROR: ${err}`));
 //   }
-
   render() {
     // switch (this.props.description_id) {
     //   case 1:
@@ -91,5 +87,4 @@ class InfoCard extends Component {
     );
   }
 }
-
 export default InfoCard;

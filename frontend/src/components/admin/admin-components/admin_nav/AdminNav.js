@@ -1,19 +1,22 @@
 import React from 'react'
-import { Button } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import './AdminNav.css';
 import { Link } from 'react-router-dom';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import NavBar from '../../../homepage/homepage-components/navbar/NavBar';
 import Footer from '../../../homepage/homepage-components/footer/Footer';
-
+import EditInfoCards from "../InfoCard/EditInfoCards";
+import QCards from '../quiz-cards/QCards';
+import * as brand_romanesc from '../../../../assets/img/brand-romanesc.png';
+import * as produse_romanesti from '../../../../assets/img/produse-romanesti.png';
 class AdminNav extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            quizBttnState: false,
-            descriptionBttnState: false
+            infoButton: false,
+            quizzButton: false
         }
     }
     descbtnStyleActive = {
@@ -32,36 +35,31 @@ class AdminNav extends React.Component {
         backgroundColor: '#696969',
         color: 'white'
     }
-    componentDidUpdate() {
-    }
-
     handleDescription = (e) => {
         e.preventDefault();
         this.setState({
-            descriptionBttnState: false,
-            quizBttnState: true
+            infoButton: !this.state.infoButton,
+            quizzButton: false
         })
-            // let adminPath = '/admin'
-            // this.props.history.push(adminPath)
-            this.props.choose('info');
-        }
-    
+    }
     handleQuiz = (e) => {
         e.preventDefault();
         this.setState({
-            quizBttnState: false,
-            descriptionBttnState: true
-        })
-        this.props.choose('quiz');
-    }
+            quizzButton: !this.state.quizzButton,
+            infoButton: false
 
+        })
+    }
     render() {
+
+
+        console.log(this.props.fetchedData);
         
         return (
-            <div>
-            <NavBar/>
-            <Row className="admin-nav">
-                <Col className='nav-container'>
+            <div> 
+                <NavBar />
+                <Row className="admin-nav">
+                    <Col className='nav-container'>
                         <Button variant="secondary" size="lg"
                             style={this.state.descriptionBttnState ? this.descbtnStyleActive : this.descbtnStyleInactive}
                             className="admin-desc-bttn custom-btn"
@@ -69,19 +67,18 @@ class AdminNav extends React.Component {
                         >
                             Descrieri
                         </Button>
-
                         <Button variant="secondary" onClick={this.handleQuiz}
                             style={this.state.quizBttnState ? this.quizbtnStyleActive : this.quizbtnStyleInactive}
                             size="lg" className="admin-quiz-bttn custom-btn"
                         >
                             Chestionar
                         </Button>
-                </Col >
-            </Row >
-            <Footer/>
+                    </Col >
+                </Row >
+                {this.state.infoButton ? <EditInfoCards fetchData={{ ...this.props.fetchedInfo }} /> : null}
+                {this.state.quizzButton ? <QCards fetchData={{ ...this.props.fetchedQuiz}} /> : null}
             </div>
         )
     }
 }
-
 export default withRouter(AdminNav);

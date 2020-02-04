@@ -50,7 +50,7 @@ class Login extends React.Component {
     handleSubmit(event) {
         event.preventDefault()
 
-        fetch('/authentication/sign-in',
+        fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/sign-in',
             {
                 method: 'POST',
                 headers: new Headers({
@@ -67,24 +67,20 @@ class Login extends React.Component {
                 this.props.dispatch(
                     {
                         type: "CREATE_LOGIN_SESSION",
-                        // user: res.user,
+                        user: res.user,
                         token: res.token,
                         msg: res.msg,
                         isUserLogged: true
                     }
                 )
-                // this.props.history.push('/quiz');
+              if(res.user.email === "admin@admin.ro") {
+                this.props.history.push('/admin');
+              } else this.props.history.push('/quiz');
             })
             .catch(error => console.log(error))
     }
 
     render() {
-        console.log(
-            // JSON.stringify(
-            // this.props
-            // )
-            //  + '\n' + this.props.token + '\n' + this.props.msg
-        )
 
         return (
             <Container fluid>
@@ -116,7 +112,7 @@ class Login extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        // user: state.authentication.user,
+        user: state.authentication.user,
         token: state.authentication.token,
         msg: state.authentication.msg,
         isUserLogged: state.authentication.isUserLogged

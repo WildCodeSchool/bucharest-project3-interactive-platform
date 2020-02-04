@@ -19,7 +19,6 @@ class Navigation extends React.Component {
         super(props)
         this.state = {
             isUserlogged: false,
-
             isShownLogin: false,
             isShownSignup: false
         }
@@ -66,6 +65,7 @@ class Navigation extends React.Component {
     }
 
     render() {
+
         // console.log(this.props)
         if (this.props.redirectLogin && this.state.isShownSignup) this.setState({
             isShownLogin: !this.state.isShownLogin,
@@ -85,12 +85,9 @@ class Navigation extends React.Component {
 
         return (
             <div>
-                <Navbar bg="light" expand="lg">
+                <Navbar bg="light" expand="lg" className="navigation">
                     <Navbar.Brand >
-                        <Link exact to="/">
-                            <img src={logo} alt="techir-logo" className="logo-t" />
-                        </Link>
-                    </Navbar.Brand>
+                        </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
                     {!this.props.isUserLogged ?
@@ -107,6 +104,10 @@ class Navigation extends React.Component {
                         </Navbar.Collapse>
                     }
                 </Navbar>
+                <div className="logo-div">
+
+                <Link to="/"><img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" width="274px" height="105px" className="logo-q"/></Link>
+                </div>
                 {!this.props.isUserLogged && this.state.isShownLogin && !this.state.isShownSignup ? <Login /> : null}
                 {!this.props.isUserLogged && this.state.isShownSignup && !this.state.isShownLogin ? <SignUp /> : null}
             </div>

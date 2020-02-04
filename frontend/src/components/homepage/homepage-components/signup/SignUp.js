@@ -95,7 +95,7 @@ class SignUp extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
 
-        fetch('/authentication/sign-up',
+        fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/sign-up',
             {
                 method: 'POST',
                 headers: new Headers({

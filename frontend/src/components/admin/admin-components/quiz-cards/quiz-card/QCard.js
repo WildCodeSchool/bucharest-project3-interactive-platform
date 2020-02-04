@@ -1,7 +1,5 @@
 import React from 'react';
 import { Col, Card, FormControl, Button, InputGroup } from 'react-bootstrap';
-
-
 class QCard extends React.Component {
     constructor(props) {
         super(props);
@@ -15,16 +13,14 @@ class QCard extends React.Component {
             correct: this.props.correct
         }
     }
-
     handleAdminInput = (e) => {
         const name = e.target.name;
         const value = e.target.value;
         this.setState({ [name]: value })
     }
-
     saveQuizQ = () => {
         console.log(this.state.imgLink + ";" + this.state.firstAns + ";" + this.state.secondAns + ";" + this.state.question + ";")
-        fetch("/authentication/description/", {
+        fetch("https://infinite-hamlet-17639.herokuapp.com/authentication/description/", {
             method: "PUT",
             headers: new Headers({
               "Content-Type": "application/json"
@@ -39,9 +35,10 @@ class QCard extends React.Component {
             .catch(err => console.log(`ERROR adminDesc-bk: ${err}`));
      
     }
-
-
     render() {
+
+        console.log(this.props.fetchData);
+        
         return (
             <Col className='card-container'>
                 <Card style={{ width: '24rem', height: '29rem' }}>
@@ -53,12 +50,11 @@ class QCard extends React.Component {
                             aria-label="Question"
                             aria-describedby="basic-addon1"
                             name="question"
-                            value={this.state.question}
+                            value={this.props.question}
                             onChange={(event) => this.handleAdminInput(event)}
                             as="textarea" rows="3"
                         />
                     </Card.Body>
-
                     <InputGroup className="mb-3  ac-f-ans">
                         <InputGroup.Prepend>
                             <InputGroup.Checkbox aria-label="Checkbox for following text input" />
@@ -76,7 +72,6 @@ class QCard extends React.Component {
                             <InputGroup.Checkbox aria-label="Checkbox for following text input" />
                         </InputGroup.Prepend>
                         <FormControl
-
                             placeholder={this.props.answer2}
                             aria-label="Username"
                             aria-describedby="basic-addon1"
@@ -102,6 +97,4 @@ class QCard extends React.Component {
         )
     }
 }
-
-
 export default QCard;

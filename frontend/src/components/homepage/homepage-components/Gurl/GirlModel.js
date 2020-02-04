@@ -125,12 +125,13 @@ class GirlModel extends React.Component {
         console.log(info)
         console.log(link)
         
+   
+        
 
         return (
             <Container >
                 <Row noGutters>
                     <div className='model'>
-
                         {!this.state.isHidden ?
                             <div className={moveOrNot}>
                                 <img src={img} alt='model' className='gurl' />
@@ -171,4 +172,6 @@ class GirlModel extends React.Component {
 }
 
 
-export default withRouter(GirlModel);
+
+export default withRouter(
+        GirlModel);

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
 import EditInfoCards from "./admin-components/InfoCard/EditInfoCards";
 import QCards from './admin-components/quiz-cards/QCards';
@@ -11,8 +10,6 @@ import Parteners from '../homepage/homepage-components/parteners/Parteners';
 import SignUp from '../homepage/homepage-components/signup/SignUp';
 import Login from '../homepage/homepage-components/login/Login';
 import Quiz from '../homepage/homepage-components/quiz/Quiz';
-
-
 class AdminPlatform extends React.Component {
     constructor(props) {
         super(props);
@@ -21,45 +18,43 @@ class AdminPlatform extends React.Component {
             quizCards: false
         }
     }
-
-    showCards = (param) => {
-        if(param === 'info') {
-            this.setState({
-                infoCards: true,
-                quizCards: false
-            })
-        } else if (param === 'quiz') {
-            this.setState({
-                infoCards: false,
-                quizCards: true
-            })
-        } else {
-            this.setState({
-                infoCards: false,
-                quizCards: false
-            })
-        }
+    componentDidMount() {
+        Promise.all([
+            fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/description', {
+                method: 'GET',
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            }).then(res => res.json()),
+            fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/quizz', {
+                method: 'GET',
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            }).then(res => res.json()),
+        ])
+            .then(res => {
+                console.log(res)
+                this.setState({
+                    infoData: res[0],
+                    quizzData: res[1]
+                })
+            }
+            )
     }
-
-
     render() {
-        const infoCards = this.state.infoCards;
-        const quizCards = this.state.quizCards;
-        let QuizCards;
-        let InfoCards;
-
-        if(infoCards) {
-            QuizCards = <EditInfoCards/>;
-        }else if(quizCards) {
-            InfoCards =<QCards/>
-        }
-
-
+        // const infoCards = this.state.infoCards;
+        // const quizCards = this.state.quizCards;
+        // let QuizCards;
+        // let InfoCards;
+        // if (infoCards) {
+        //     QuizCards = <EditInfoCards fetchData={{ ...this.state.infoCards }} />;
+        // } else if (quizCards) {
+        //     InfoCards = <QCards fetchData={{ ...this.state.quizCards }} />
+        // }
         return (
             <div>
-                    <AdminNav choose={this.showCards}/>
-                   {QuizCards}
-                   {InfoCards}
+                <AdminNav fetchedDataQuiz={this.state.quizzData} fetchedInfo={this.state.infoDa} choose={this.showCards} />
             </div>
         )
     }

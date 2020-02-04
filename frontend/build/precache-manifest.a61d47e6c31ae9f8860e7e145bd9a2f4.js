@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d6fcc980055d9ccea515462bf818b201",
+    "revision": "ff405ae7d4aaaab9eab608a11c837feb",
     "url": "/bucharest-project3-interactive-platform/index.html"
   },
   {
-    "revision": "6648cc2da67a8abf579f",
+    "revision": "360baa4b068ced7bc790",
     "url": "/bucharest-project3-interactive-platform/static/css/2.17e5ed98.chunk.css"
   },
   {
-    "revision": "07c3883325776eba238f",
-    "url": "/bucharest-project3-interactive-platform/static/css/main.2ff0d483.chunk.css"
+    "revision": "fce739641e594f5879e2",
+    "url": "/bucharest-project3-interactive-platform/static/css/main.95a8834a.chunk.css"
   },
   {
-    "revision": "6648cc2da67a8abf579f",
-    "url": "/bucharest-project3-interactive-platform/static/js/2.275b4d9a.chunk.js"
+    "revision": "360baa4b068ced7bc790",
+    "url": "/bucharest-project3-interactive-platform/static/js/2.0bbdc0ba.chunk.js"
   },
   {
     "revision": "d342664d578042145f5010e743958e89",
-    "url": "/bucharest-project3-interactive-platform/static/js/2.275b4d9a.chunk.js.LICENSE"
+    "url": "/bucharest-project3-interactive-platform/static/js/2.0bbdc0ba.chunk.js.LICENSE"
   },
   {
-    "revision": "07c3883325776eba238f",
-    "url": "/bucharest-project3-interactive-platform/static/js/main.12cbb1e3.chunk.js"
+    "revision": "fce739641e594f5879e2",
+    "url": "/bucharest-project3-interactive-platform/static/js/main.2b33ba50.chunk.js"
   },
   {
     "revision": "effed892af4dc9a049a9",
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bucharest-project3-interactive-platform/static/media/hook-1425312.3c8da878.png"
   },
   {
-    "revision": "21b15624ecc5a3bbcdf8913111313171",
-    "url": "/bucharest-project3-interactive-platform/static/media/logo_techir.21b15624.png"
+    "revision": "c2510a9258c41dfab15bde3b8a3c7e52",
+    "url": "/bucharest-project3-interactive-platform/static/media/logo_techir.c2510a92.png"
   },
   {
     "revision": "54e8ba365f0c80ecf8addb2e66e751b6",

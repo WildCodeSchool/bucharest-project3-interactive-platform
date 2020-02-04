@@ -8,6 +8,24 @@
   width: 92%;
 
 }
+
+*, body {
+  margin: 0;
+  padding: 0;
+}
+.quiz-container {
+  margin: 0;
+  padding: 0;
+  width: 110%;
+}
+.quizWave {
+  position: relative;
+  width:93%!important;
+  top: 700px;
+  left: -2%;
+  margin: 0;
+  padding: 0;
+}
 /* body {
 
   background-image: url(../../../../assets//img/val-galben.svg);
@@ -15,6 +33,15 @@
 .modal-lastm-success {
   top: 190px;
   text-align: center
+}
+.qtitle {
+  position: relative;
+  font-size: 99px;
+}
+
+.qdesc {
+position: relative;
+font-size: 33px;
 }
 .modal-p {
   top: 190px;
@@ -36,7 +63,12 @@
   position: absolute;
 }
 
-.quiz-title,
+.quiz-title {
+  position: absolute;
+  font-weight: normal;
+  color: #282828!important;
+
+}
 .quiz-desc,
 .q-question {
   font-family: "PT Serif", serif;
@@ -70,6 +102,20 @@
   top: 70vh;
 }
 @media (min-width:0px) and  (max-width: 480px) {
+
+  .qtitle {
+    top: 200px!important;
+    left:21%;
+    width: 50vw;
+    font-size: 55px;
+   }
+   
+   .qdesc {
+     top: 200px;
+     left: 19%;
+     text-align: center;
+     width: 50vw;
+   }
   .quiz-title {
    top: 100px;
    left: 15%;
@@ -107,6 +153,20 @@
 }
 
 @media (min-width: 481px) and  (max-width: 600px) {
+  
+  .qtitle {
+    top: 200px!important;
+    left: 14%;
+    width: 90vw;
+    font-size: 55px;
+   }
+   
+   .qdesc {
+     top: 300px;
+     left: 19%;
+     text-align: center;
+     width: 50vw;
+   }
   .quiz-title {
     top: 50px;
     left: 20%;
@@ -144,6 +204,20 @@
 }
 
 @media (min-width: 601px) and  (max-width: 768px) {
+    
+  .qtitle {
+    top: 200px!important;
+    left: 21%;
+    width: 90vw;
+    font-size: 55px;
+   }
+   
+   .qdesc {
+     top: 300px;
+     left: 19%;
+     text-align: center;
+     width: 50vw;
+   }
   .quiz-title {
     top: 3px;
     left: 30%;
@@ -181,6 +255,19 @@
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
+  .qtitle {
+    top: 200px!important;
+    left: 25%;
+    width: 90vw;
+    font-size: 55px;
+   }
+   
+   .qdesc {
+     top: 300px;
+     left: 22%;
+     text-align: center;
+     width: 50vw;
+   }
   .quiz-title {
     top: 3px;
     left: 35%;
@@ -216,6 +303,19 @@
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {
+  .qtitle {
+    top: 200px!important;
+    left: 33%;
+    width: 90vw;
+    font-size: 55px;
+   }
+   
+   .qdesc {
+     top: 300px;
+     left: 25%;
+     text-align: center;
+     width: 50vw;
+   }
   .quiz-title {
     top: 3px;
     left: 40%;
@@ -251,36 +351,55 @@
 }
 
 @media(min-width: 1383px) { 
+  .qtitle {
+    top: 100px!important;
+    left: 36%;
+    width: 90vw;
+    font-size: 55px;
+   }
+   
+   .qdesc {
+     top: 200px;
+     left: 23%;
+     text-align: center;
+     width: 50vw;
+   }
   .quiz-title {
-    top: 3px;
-    left: 40%;
+    top: 90px;
+    left: 50%;
+    font-size: 77px;
    }
    
    .quiz-desc {
-     top: 100px;
-     left:15%;
+     top: 200px;
+     left:48%;
+     font-size: 30px;
+     width: 30%;
    }
    .q-question {
-     top: 170px;
+     top: 330px;
      width: 100%!important;
      font-size: 30px;
-     left:49%;
+     left:202%;
      position: relative;
    }
    
    .q-img {
-     top: 270px;
-     left: 64%;
+     top: 170px;
+     left: 54%;
+     width: 400px;
+     height: 400px;
    }
+ 
    
    .q-first-ans {
-     top: 320px;
-     left: 140%;
+     top: 420px;
+     left: 202%;
      width: 520px;
    }
    .q-second-ans {
-    top: 390px;
-    left: 140%;    
+    top: 490px;
+    left: 202%;    
     width: 520px;
    }
   }
