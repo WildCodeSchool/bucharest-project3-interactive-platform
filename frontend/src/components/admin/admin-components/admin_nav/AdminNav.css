@@ -1,6 +1,18 @@
 .admin-nav {
   position: relative;
+  font-family: muchoThin;
 }
+.wave-admin { 
+  position: relative;
+  width: 104%;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: muchoThin;
+  src: url(../../../../assets/Mucho_Sans_Thin.otf);
+}
+
 .nav-container {
   min-width: 330px;
   max-width: 720px;
@@ -28,16 +40,26 @@
 
 @media (min-width: 0px) and (max-width: 400px) {
   .admin-nav {
-    top: 100px;
+    top: 140px;
     left: 6%;
   }
+  .wave-admin {
+    top: 170px;
+    left: -5px!important;
+    width: 104%;
+ } 
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
   .admin-nav {
-    top: 100px;
+    top: 150px;
     left: 4%;
   }
+  .wave-admin {
+    top: 170px;
+    left: -15px!important;
+    width: 104%;
+ } 
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
@@ -45,25 +67,45 @@
     top: 20px;
     left: 4%;
   }
+  .wave-admin {
+    top: 40px;
+    left: -20px!important;
+    width: 104%;
+ } 
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
   .admin-nav {
     top: 20px;
-    left: 10%;
+    left: 15%;
   }
+  .wave-admin {
+    top:25px;
+    left: -27px!important;
+    width: 104%;
+ } 
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {
     .admin-nav {
         top: 20px;
-        left: 20%;
+        left: 23%;
       }
+      .wave-admin {
+        top:33px;
+        left: -29px!important;
+        width: 104%;
+     } 
 }
 
 @media (min-width: 1383px) {
     .admin-nav {
         top: 20px;
-        left: 20%;
+        left: 33%;
       }
+      .wave-admin {
+        top:33px;
+        left: -59px!important;
+        width: 104%;
+     } 
 }

@@ -1,78 +1,82 @@
-.q-card {
-    /* position: relative;
-    top: 200px;
-    left: 200px; */
-    /* width: fit-content; */
+@font-face {
+  font-family: muchoThin;
+  src: url(../../../../../assets/Mucho_Sans_Thin.otf);
 }
-.card{
+
+.admin-container {
+margin: 0;
+padding: 0;
 }
 
 .ac-question {
-    position: absolute;
-    width: 320px;
-    top: 77px;
-    left: 9px;
+  position: absolute;
+  width: 320px;
+  top: 77px;
+  left: 9px;
 }
 
 .ac-f-ans {
-    position: absolute;
-    top: 200px;
-    width: 330px!important;
-    left: 8px;
+  position: absolute;
+  top: 200px;
+  width: 330px !important;
+  left: 8px;
 }
 
 .ac-s-ans {
-    position: absolute;
-    top: 260px;
-    width: 330px!important;
-    left: 8px;
+  position: absolute;
+  top: 260px;
+  width: 330px !important;
+  left: 8px;
 }
 
 .q-c-img-title {
-    position: absolute;
-    top: 319px;
-    width: 330px!important;
-    left: 19px;
-    font-family: 6px;
+  position: absolute;
+  top: 319px;
+  width: 330px !important;
+  left: 19px;
+  font-family: 6px;
+  font-family: muchoThin;
 }
 
 .ac-img-src {
-    position: absolute;
-    top: 350px;
-    width: 330px!important;
-    left: 8px;
+  position: absolute;
+  top: 350px;
+  width: 330px !important;
+  left: 8px;
 }
 
 .mySaveCardQuiz-bttn {
-    position: absolute;
-    top: 401px;
-    left: 22%;
+  position: absolute;
+  top: 401px;
+  left: 22%;
+  font-family: muchoThin;
 }
 
-.quiz-admin-cards-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
+* {
+  box-sizing: border-box;
 }
 
-/* .qcard-f-card .qcard-s-card .qcard-t-card .qcard-fo-card {
-    position: absolute;
+/* html,
+body,
+div,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+} */
+/* .quiz-admin-cards-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: muchoThin;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: flex-end;
+  justify-content: space-evenly;
 } */
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .qcard-f-card {}
-    .qcard-f-card {}
-    .qcard-f-card {}
-    .qcard-f-card {}
-}
 
-@media (min-width: 1025px) {
-    .qcard-f-card {
-        top: 500px;
-    }
-    .qcard-f-card {}
-    .qcard-f-card {}
-    .qcard-f-card {}
-}
-
-/*END OF feature/parteners*/

@@ -1,5 +1,4 @@
 import React from 'react';
-import * as data from './my_fake_db.json';
 import { Container, Row, Col } from 'react-bootstrap';
 
 

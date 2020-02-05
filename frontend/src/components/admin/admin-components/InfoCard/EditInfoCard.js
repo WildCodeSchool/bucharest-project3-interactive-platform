@@ -43,7 +43,7 @@ class InfoCard extends Component {
     console.log(this.props.token);
     
     return (
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "18rem", borderColor: '#FFBF00'}}>
         <Card.Body>
           <Card.Title>Categoria: {this.props.category.category_name}</Card.Title>
           <Form>
@@ -54,6 +54,7 @@ class InfoCard extends Component {
                 rows="3"
                 placeholder={this.props.data.text}
                 onChange={event => this.handleDescOne(event)}
+                style={{ borderColor: '#FFBF00'}}
               />
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlTextarea1">
@@ -63,11 +64,12 @@ class InfoCard extends Component {
                 rows="3"
                 placeholder={this.props.data.link}
                 onChange={event => this.handleLink(event)}
+                style={{ borderColor: '#FFBF00'}}
               />
             </Form.Group>
           </Form>
-          <Button variant="outline-dark" style={{ width: "190px" }} onClick={this.hanndleSubmit}>
-            Save
+          <Button variant="outline-warning" style={{ width: "190px", borderRadius: '12px' }} onClick={this.hanndleSubmit}>
+            Salveaza
           </Button>
         </Card.Body>
       </Card>

@@ -125,33 +125,37 @@ class SignUp extends React.Component {
                 <Row >
                     <Col >
                         <div id='user-form' >
-                            <Form onSubmit={this.handleSubmit}>
+                            <Form onSubmit={this.handleSubmit} >
                                 <div className="form-group">
                                     <input type="text" className="form-control myinput"
                                         name="name" value={this.state.name}
                                         placeholder="Nume complet"
-                                        onChange={(event) => this.handleUserInput(event)} />
+                                        onChange={(event) => this.handleUserInput(event)}
+                                        style={{ borderColor: '#FFBF00'}} />
                                 </div>
                                 <div className="form-group">
                                     <input type="email" className="form-control myinput"
                                         name="email" value={this.state.email}
                                         placeholder="Email"
-                                        onChange={(event) => this.handleUserInput(event)} />
+                                        onChange={(event) => this.handleUserInput(event)} 
+                                        style={{ borderColor: '#FFBF00'}}/>
                                 </div>
                                 <div className="form-group">
                                     <input type="password" className="form-control myinput"
                                         name="password" value={this.state.password}
                                         placeholder="Parola"
-                                        onChange={(event) => this.handleUserInput(event)} />
+                                        onChange={(event) => this.handleUserInput(event)}
+                                        style={{ borderColor: '#FFBF00'}} />
                                 </div>
                                 <div className="form-group">
                                     <input type="password" className="form-control mySignUp-input"
                                         name="confirmPassword" value={this.state.confirmPassword}
                                         placeholder="Confirma parola"
-                                        onChange={(event) => this.handleUserInput(event)} />
+                                        onChange={(event) => this.handleUserInput(event)} 
+                                        style={{ borderColor: '#FFBF00'}}/>
                                 </div>
                                 <Col>
-                                    <Button variant="outline-secondary" className="submit" type="submit"
+                                    <Button variant="outline-warning" className="submit" type="submit"
                                         disabled={!this.state.formValid}  >
                                         Creeare cont
                     </Button>

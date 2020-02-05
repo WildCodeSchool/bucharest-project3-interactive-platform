@@ -73,13 +73,13 @@ class Login extends React.Component {
                         <div id='user-form' >
                             <Form onSubmit={this.handleSubmit}>
                                 <Form.Group controlId="formBasicEmail">
-                                    <Form.Control className="myinput" onChange={this.onChangeEmail} type="email" placeholder="Email" size='sm' />
+                                    <Form.Control className="myinput" style={{ borderColor: '#FFBF00'}}  onChange={this.onChangeEmail} type="email" placeholder="Email" size='sm' />
                                 </Form.Group>
                                 <Form.Group controlId="formBasicPassword">
-                                    <Form.Control className="myinput" onChange={this.onChangePass} type="password" placeholder="Parola" size='sm' />
+                                    <Form.Control className="myinput" style={{ borderColor: '#FFBF00'}}  onChange={this.onChangePass} type="password" placeholder="Parola" size='sm' />
                                 </Form.Group>
                                 <Col>
-                                    <Button variant="outline-secondary" className='submit' type="submit">
+                                    <Button variant="outline-warning" className='submit' type="submit">
                                         <div className='login-text'>Logare</div>
                                     </Button>
                                 </Col>

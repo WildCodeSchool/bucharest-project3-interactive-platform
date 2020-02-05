@@ -13,6 +13,7 @@ import Quiz from '../homepage/homepage-components/quiz/Quiz';
 
 import { connect } from 'react-redux';
 
+
 class AdminPlatform extends React.Component {
     constructor(props) {
         super(props);
@@ -23,7 +24,6 @@ class AdminPlatform extends React.Component {
     }
 
     componentDidMount() {
-        // if (this.props.user.acces_level == 1) this.props.history.push('/')
         Promise.all([
             fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/description', {
                 method: 'GET',
@@ -58,20 +58,10 @@ class AdminPlatform extends React.Component {
             )
     }
     render() {
-
-
-        // const infoCards = this.state.infoCards;
-        // const quizCards = this.state.quizCards;
-        // let QuizCards;
-        // let InfoCards;
-        // if (infoCards) {
-        //     QuizCards = <EditInfoCards fetchData={{ ...this.state.infoCards }} />;
-        // } else if (quizCards) {
-        //     InfoCards = <QCards fetchData={{ ...this.state.quizCards }} />
-        // }
         return (
-            <div>
+            <div className="admin-container">
                 <AdminNav fetchedDataQuiz={this.state.quizzData} categories={this.state.categories} token={this.props.token} fetchedDataInfo={this.state.infoData} choose={this.showCards} />
+               
             </div>
         )
     }

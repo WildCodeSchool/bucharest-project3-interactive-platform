@@ -51,7 +51,7 @@ class Question extends React.Component {
                 </img>
                 <div className="questions-container">
                     <Button
-                        variant={this.state.showSuccess ? "success" : "outline-dark"}
+                        variant={this.state.showSuccess ? "success" : "outline-warning"}
                         className="q-first-ans"
                         onClick={this.handleSuccess}
                         size="lg"
@@ -60,7 +60,7 @@ class Question extends React.Component {
                         {this.props.answer1}
                     </Button>
                     <Button
-                        variant={this.state.showFailure ? "danger" : "outline-dark"}
+                        variant={this.state.showFailure ? "danger" : "outline-warning"}
                         onClick={this.handleFailure}
                         className="q-second-ans"
                         size="lg"
