@@ -31,22 +31,6 @@ class Login extends React.Component {
         this.setState({ password: pass })
     }
 
-    routeChange = () => {
-        // const userPath = '/quiz';
-        // const adminPath = '/admin';
-        // //    return this.props.history.push(adminPath) ? this.state.email === 'admin@admin.com' : this.props.history.push(userPath);
-
-        // if (this.state.email === 'admin@admin.com') {
-        //     this.props.history.push(adminPath);
-        // } else if (this.state.email === 'user@user.com') {
-        //     this.props.history.push(userPath);
-        // } else this.props.history.push(userPath);
-
-
-
-
-    }
-
     handleSubmit(event) {
         event.preventDefault()
 
