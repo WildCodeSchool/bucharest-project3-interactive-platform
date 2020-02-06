@@ -1,17 +1,12 @@
-.wave {
+.wave, .wave2 {
   position: relative;
-  top: 770px;
-  left: -4%;
   margin: 0;
   padding: 0;
-  width: 104%;
+  z-index: 2000px;
+
 }
 
-.wave2 {
-  position: relative;
-  top:1000px;
- 
-}
+
 
 .App {
   position: relative;
@@ -75,14 +70,16 @@ html {
     left: 9%;
     top: 30px;
   }
-  .wave2 {
+  svg.wave2 {
     top: 850px;
-    left: -16px;
-    width: 122%;
+    left: -3%;
+    width: 110%;
+    z-index: 2000;
   }
   .wave {
     top: 790px!important;
-    width: 118%;
+    left: -3%;
+    width: 110%;
   
   }
 }
@@ -93,14 +90,16 @@ html {
     left: 67%;
     top: 10px;
   }
-  .wave2 {
-    top: 850px;
-    left: -26px;
-    width: 122%;
+  svg.wave2 {
+    top: 920px;
+    left: -3%;
+    width: 110%;
+    z-index: 2000;
   }
   .wave{
     top: 1399px;
-    width: 118%;
+    left: -3%;
+    width: 110%;
   
   }
 }
@@ -115,14 +114,17 @@ html {
     height: 28px;
   }
   .wave{
-    top: 860px;
-    width: 118%;
+    top: 1600px;
+    width: 103%;
+    left: -3%;
   
   }
   svg.wave2 {
-    top: 1400px;
-    left: -26px;
-    width: 122%;
+    top: 1020px;
+    left: -3%;
+    width: 103%;
+    z-index: 2000;
+    
   }
 }
 
@@ -132,13 +134,44 @@ html {
     top: 20px;
     left: 46%;
   }
+
+  .wave {
+    top: 1600px;
+    width: 103%;
+    left: -3%;
+  
+  }
+
+  svg.wave2 {
+    top: 1140px;
+    width: 103%;
+    left: -3%;
+    z-index: 2000;
+  
+    
+  }
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {
   .form {
-    width: 28vw;
+    width: 38vw;
     top: 18px;
-    left: 64%;
+    left: 60vw;
+  }
+  .wave {
+    top: 1690px;
+    width: 103%;
+    left: -3%;
+  
+  }
+
+  svg.wave2 {
+    top: 1340px;
+    width: 103%;
+    left: -3%;
+    z-index: 2000;
+  
+    
   }
 }
 
@@ -147,5 +180,20 @@ html {
     width: 28vw;
     top: 20px;
     left: 76vw;
+  }
+  .wave {
+    top: 1760px;
+    width: 103%;
+    left: -3%;
+  
+  }
+
+  svg.wave2 {
+    top: 1400px;
+    width: 103%;
+    left: -3%;
+    z-index: 2000;
+  
+    
   }
 }

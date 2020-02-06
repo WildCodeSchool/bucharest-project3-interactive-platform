@@ -407,7 +407,7 @@
 @media (min-width: 411px) and (max-width: 600px) {
   .gurlContainer {
     left: -50%;
-    top:108px;
+    top:111px;
   }
   .gurl  {
     height: 800px;
@@ -455,7 +455,8 @@
 @media (min-width: 601px) and (max-width: 768px) {
   .gurlContainer {
     left: -50%;
-    top: 108px;
+    top: 98px;
+    z-index: 0;
   }
   .move-Gurl {
     left: -66%;
@@ -521,10 +522,7 @@
     display: none;
   }
   .info-g-second-bttn {
-    opacity: 0.3;
-    top: 91vh;
-    left: 50%;
-    width: 40vw;
+   display: none;
   }
 
   .onhover-quiz-bttn {

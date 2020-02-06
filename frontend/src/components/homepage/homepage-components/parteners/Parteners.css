@@ -65,10 +65,10 @@ body {
   padding: 0 !important;
 }
 @media (min-width: 0px) and (max-width: 400px) {
-  div.parteners-container {
+.parteners-container {
     top: 800px;
-    left: 22px !important;
-    width: 80vw !important;
+    width: 80vw;
+  
   }
 
 }
@@ -76,39 +76,42 @@ body {
 @media (min-width: 401px) and (max-width: 600px) {
   .parteners-container {
     top: 1500px;
+    width: 80vw;
+    left: 14%;
   }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
   .parteners-container {
-    top: 1000px;
+    top: 1800px;
     left: 4vw;
   }
   .parteners-title {
-    left: 210px;
+    left: 200px;
     position: absolute;
     top: -60px;
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
   .parteners-container {
-    top: 89vh;
+    top: 1800px;
+    left: 0vw;
   }
 
   .parteners-title {
-    left: 160px;
+    left: 280px;
     position: absolute;
-    top: -30px;
+    top: -70px;
   }
 }
 @media (min-width: 993px) and (max-width: 1382px) {
   .parteners-title {
-    left: 470px !important;
+    left: 370px !important;
     position: absolute;
     top: -70px;
   }
   .parteners-container {
-    top: 60vw;
+    top: 1900px;
     left: 3vw;
     width: 90vw;
   }
@@ -116,13 +119,15 @@ body {
 
 @media (min-width: 1383px) {
   .parteners-container {
-    top: 870px;
+    top: 1970px;
     left: 12vw;
     width: 70vw;
   }
   .parteners-title {
-    left: 600px !important;
+    left: 330px !important;
     position: absolute;
-    top: -70px;
+    top: -120px;
+    font-size:66px;
+    width: 100vw;
   }
 }

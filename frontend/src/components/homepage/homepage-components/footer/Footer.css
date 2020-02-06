@@ -24,15 +24,15 @@
 }
 
 .contact {
-  display: inline-block;
+  /* display: inline-block;
   margin: auto;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  vertical-align: middle;
+  vertical-align: middle; */
   
-  margin: 3vh 3vw;
-  padding-right: 3vw;
+  /* margin: 3vh 3vw;
+  padding-right: 3vw; */
   position: absolute;
  
 }
@@ -122,14 +122,15 @@
 } */
 @media (min-width:0px) and  (max-width: 400px) {
   #footer {
-    height: 190px!important;
+    height: 200px!important;
     top: 800px!important;
   }
   
   .contact {
     left: 10px;
-    border-right: 2px solid grey;
-    border-right: 3px solid grey;
+    top: 40px;
+    /* border-right: 2px solid grey;
+    border-right: 3px solid grey; */
   }
   
   .brand-romanesc {
@@ -149,9 +150,8 @@
   }
   
   .contact {
-    left: 10px;
-    border-right: 2px solid grey;
-    border-right: 3px solid grey;
+    left: 13vw;
+    top: 40px;
   }
   
   .brand-romanesc {
@@ -167,13 +167,12 @@
 @media (min-width: 601px) and  (max-width: 768px) {
   #footer {
     height: 200px;
-    top: 90vh;
+    top: 1800px;
   }
   
   .contact {
-    left: 10px;
-    border-right: 2px solid grey;
-    border-right: 3px solid grey;
+    left: 10%;
+    top: 40px;
   }
   
   .brand-romanesc {
@@ -192,13 +191,12 @@
 @media (min-width: 769px) and (max-width: 992px) {
   #footer {
     height: 200px;
-    top: 90vh;
+    top: 1900px;
   }
   
   .contact {
-    left: 10px;
-    border-right: 2px solid grey;
-    border-right: 3px solid grey;
+    left: 40px;
+    top: 40px;
   }
   
   .brand-romanesc {
@@ -217,13 +215,12 @@
 @media (min-width: 993px) and (max-width: 1382px) {
   #footer {
     height: 200px;
-    top: 150vh;
+    top: 2200px;
   }
   
   .contact {
-    left: 10px;
-    border-right: 2px solid grey;
-    border-right: 3px solid grey;
+    left: 10vw;
+    top: 60px;
   }
   
   .brand-romanesc {
@@ -241,13 +238,12 @@
 @media(min-width: 1383px) { 
   #footer {
     height: 200px;
-    top: 100vh!important;
+    top: 2200px!important;
   }
   
   .contact {
-    left: 10px;
-    border-right: 2px solid grey;
-    border-right: 3px solid grey;
+    left:150px;
+    top: 40px;
   }
   
   .brand-romanesc {
