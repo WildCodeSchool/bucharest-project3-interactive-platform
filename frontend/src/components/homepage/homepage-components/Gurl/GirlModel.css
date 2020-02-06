@@ -706,21 +706,21 @@
 
   }
   .onhover-quiz-bttn {
-    top: 155px;
+    top: 124px;
     left: 23% ;
     width: 240px;
     font-size: 16px;
     height: 50px;
   }
   .onhover-findoutMore-bttn {
-    top: 215px;
+    top: 185px;
     left: 23% ;
     width: 240px;
     height: 50px;
   }
   .hover-question {
-    height: 280px!important;
-    width: 26vw !important;
+    height: 260px!important;
+    width: 23% !important;
     left: 49% !important;
     top: 33vh!important;
     background-color: white;

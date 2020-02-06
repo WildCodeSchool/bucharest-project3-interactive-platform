@@ -205,7 +205,7 @@ font-size: 33px;
      left: 4vw;
      text-align: center;
      width: 90vw;
-     font-size: 22px;
+     font-size: 26px;
    }
   .qtitle {
    top: 300px!important;
@@ -218,7 +218,7 @@ font-size: 33px;
     text-align: center;
   }
   .q-question {
-    top:240px;
+    top:290px;
     width: 80vw!important;
     font-size: 20px;
     left: 9vw;
@@ -228,7 +228,7 @@ font-size: 33px;
   }
   
   .q-img {
-   top: 370px;
+   top: 440px;
     left: 22vw!important;
     height: 268px;
     width: 268px;
@@ -284,6 +284,8 @@ font-size: 33px;
      left: 4vw;
      text-align: center;
      width: 90vw;
+     font-size: 26px!important;
+
    }
   .qtitle {
    top: 300px!important;
@@ -296,16 +298,18 @@ font-size: 33px;
     text-align: center;
   }
   .q-question {
-    top:210px;
+    top:270px;
     width: 80vw!important;
     font-size: 20px;
     left: 9vw;
     position: relative;
     text-align: center;
+    font-size: 28px!important;
+
   }
   
   .q-img {
-   top: 300px;
+   top: 390px;
     left: 27vw!important;
     height: 288px;
     width: 288px;
@@ -315,12 +319,12 @@ font-size: 33px;
 
   
   .q-first-ans {
-    top: 680px;
+    top: 730px;
     left: 11%;
     width: 80vw;
   }
   .q-second-ans {
-    top: 760px;
+    top: 790px;
     left: 11%;
     width: 80vw;
   }
