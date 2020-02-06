@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1fb15d90ce80f34ed3575bd13905ee05",
+    "revision": "8e0772f19b9123de3d1d6b4d6afa9317",
     "url": "/bucharest-project3-interactive-platform/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bucharest-project3-interactive-platform/static/css/2.17e5ed98.chunk.css"
   },
   {
-    "revision": "aa5bfc621670f122e31a",
-    "url": "/bucharest-project3-interactive-platform/static/css/main.27a5a242.chunk.css"
+    "revision": "85d2cd1511d4ee333c02",
+    "url": "/bucharest-project3-interactive-platform/static/css/main.91a6dedb.chunk.css"
   },
   {
     "revision": "b87e5830fff96e9ec162",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bucharest-project3-interactive-platform/static/js/2.5a4f2815.chunk.js.LICENSE"
   },
   {
-    "revision": "aa5bfc621670f122e31a",
-    "url": "/bucharest-project3-interactive-platform/static/js/main.94c15827.chunk.js"
+    "revision": "85d2cd1511d4ee333c02",
+    "url": "/bucharest-project3-interactive-platform/static/js/main.4c806480.chunk.js"
   },
   {
     "revision": "effed892af4dc9a049a9",

@@ -45,11 +45,10 @@ class Question extends React.Component {
                     className="q-img"
                     src={this.props.image}
                     alt="question"
-                    width="250px"
-                    height="250px"
+                    
                 >
                 </img>
-                <div className="questions-container">
+             
                     <Button
                         variant={this.state.showSuccess ? "success" : "outline-warning"}
                         className="q-first-ans"
@@ -128,7 +127,6 @@ class Question extends React.Component {
                             <img className="modal-logo" src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" alt="logo" width="274px" height="105px"/>
                         </Modal.Footer>
                     </Modal>
-                </div>
             </div>
         )
     }

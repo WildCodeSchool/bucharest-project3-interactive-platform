@@ -629,18 +629,18 @@
     background-color: white;
   }
   .hover-text {
-    width: 26vw!important ;
+    width: 23vw!important ;
   }
   .onhover-quiz-bttn {
-    top: 160px;
-    left: 27%;
+    top: 180px;
+    left: 26%;
     width: 190px;
     font-size: 16px;
     height: 40px;
   }
   .onhover-findoutMore-bttn {
-    top: 220px;
-    left: 27%;    
+    top: 230px;
+    left: 26%;    
     width: 190px;
     height: 40px;
   }
