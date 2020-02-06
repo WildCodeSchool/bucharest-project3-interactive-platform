@@ -4,26 +4,34 @@ body {
     height: 100%;
 }
 .logo-div {
-    background-color: 	#F5F5F5;
+    background-color: 	lightgrey;
+    margin: 0;
+    padding: 0;
+   width: 100%;
+    color: #333333;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    float: none;
 }
-.logo-q {
-    position:absolute;
-    left: 18%;
 
-} 
 #basic-navbar-nav.navbar-collapse.collapse {
     height: 80px!important;
 }
 .navigation {
-    width:99%!important;
-    background-color: #282828!important;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    float: none;
 }
-.logo-t {
+/* .logo-t {
     width: 150px;
     height: 70px;
-}
+} */
 
 .nav-link {
     color: white!important;
@@ -33,6 +41,7 @@ body {
     margin-left: solid 6px;
     font-family: 'Port Lligat Sans', sans-serif;
     cursor: pointer;
+ 
 
 }
 
@@ -40,11 +49,19 @@ body {
     opacity: 1;
 }
 
+.nav-items {
+    width: 100%;
+  
+}
 
-@media  (max-width: 480px) {
-    .logo {
-        width: 90px!important;
-        top: -10px;
+.navbar-toggler-icon {
+    color: white;
+}
+
+
+/* @media  (max-width: 480px) {
+    .logo-q {
+      left: 11%;
     }
   
 
@@ -111,5 +128,5 @@ body {
         position:absolute;
         left: 41%;
     } 
-}
+} */
 

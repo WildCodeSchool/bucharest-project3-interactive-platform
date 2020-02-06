@@ -358,7 +358,7 @@
 @media (min-width: 0px) and (max-width: 410px) {
   .gurlContainer {
     left: -50%;
-    top: 100px;
+    top: 140px;
   }
   .move-Gurl {
     display: none;
@@ -367,8 +367,8 @@
     display: none;
   }
   .info-g-second-bttn {
-    top: 85vh;
-    left: 39%;
+    top: 600px;
+    left: 29%;
     width: 60%;
   }
 

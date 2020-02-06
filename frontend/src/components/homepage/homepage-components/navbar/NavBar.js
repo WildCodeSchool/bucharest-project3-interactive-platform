@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
-import { Navbar, Nav, Button } from 'react-bootstrap';
+import { Navbar, Nav, Button, Row, Col,Container } from 'react-bootstrap';
 import logo from "../../../../assets/img/logo_techir.png";
 import './NavBar.css'
 import Login from '../login/Login';
@@ -88,8 +88,10 @@ class Navigation extends React.Component {
         }
 
         return (
-            <div>
-                <Navbar bg="light" expand="lg" className="navigation">
+            <Container fluid style={{margin: 0, padding: 0}}>
+                <Row noGutters style={{margin: 0, padding: 0}}>
+                <Col>
+                <Navbar bg="dark" expand="lg" className="nav justify-content-end">
                     <Navbar.Brand >
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -108,13 +110,23 @@ class Navigation extends React.Component {
                         </Navbar.Collapse>
                     }
                 </Navbar>
+                </Col>
+                </Row>
+                <Row noGutters style={{margin: 0, padding: 0}}>
+                    <Col>
                 <div className="logo-div">
 
                     <Link to="/"><img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" width="274px" height="105px" className="logo-q" /></Link>
                 </div>
+                </Col>
+                </Row>
+                <Row noGutters style={{margin: 0, padding: 0}}>
+                    <Col xs={6} sm={6} md={4} lg={4}>
                 {!this.props.isUserLogged && this.state.isShownLogin && !this.state.isShownSignup ? <Login /> : null}
                 {!this.props.isUserLogged && this.state.isShownSignup && !this.state.isShownLogin ? <SignUp /> : null}
-            </div>
+                </Col>
+                </Row>
+               </Container>
         );
     }
 }

@@ -10,7 +10,7 @@
 .wave2 {
   position: relative;
   top:1000px;
-  left: -3%;
+ 
 }
 
 .App {
@@ -75,6 +75,16 @@ html {
     left: 10%;
     top: 160px;
   }
+  .wave2 {
+    top: 690px;
+    left: -16px;
+    width: 122%;
+  }
+  .wave{
+    top: 820px;
+    width: 118%;
+  
+  }
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
@@ -82,6 +92,11 @@ html {
     width: 60vw;
     left: 35%;
     top: 170px;
+  }
+  .wave2 {
+    top: 690px;
+    left: -26px;
+    width: 122%;
   }
 }
 
