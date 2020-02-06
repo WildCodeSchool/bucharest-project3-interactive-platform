@@ -61,57 +61,49 @@ body {
   font-size: 33px;
 }
 .partener {
-  margin: 0!important;
-  padding: 0!important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 @media (min-width: 0px) and (max-width: 480px) {
   div.parteners-container {
-    top: 890px;
-    left: 22px!important;
-    width: 80vw!important;
-    
-  }
-  .p-title {
-
+    top: 800px;
+    left: 22px !important;
+    width: 80vw !important;
   }
 
 }
 
 @media (min-width: 481px) and (max-width: 600px) {
   .parteners-container {
-    top: 89vh;
+    top: 500px;
   }
- 
-  
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
   .parteners-container {
-    top: 89vh;
-   left: -2vw
+    top: 1000px;
+    left: 4vw;
   }
+  .parteners-title {
+    left: 210px;
+    position: absolute;
+    top: -60px;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .parteners-container {
+    top: 89vh;
+  }
+
   .parteners-title {
     left: 160px;
     position: absolute;
     top: -30px;
   }
-  
 }
-@media (min-width: 769px) and (max-width: 992px) {
-  .parteners-container {
-    top: 89vh;
-  
-  }
-
+@media (min-width: 993px) and (max-width: 1382px) {
   .parteners-title {
-    left:160px;
-    position: absolute;
-    top: -30px;
-  }
-}
-@media (min-width:993px) and (max-width: 1382px) {
-  .parteners-title {
-    left: 470px!important;
+    left: 470px !important;
     position: absolute;
     top: -70px;
   }
@@ -129,7 +121,7 @@ body {
     width: 70vw;
   }
   .parteners-title {
-    left: 600px!important;
+    left: 600px !important;
     position: absolute;
     top: -70px;
   }

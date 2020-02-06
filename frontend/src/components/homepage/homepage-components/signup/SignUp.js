@@ -121,11 +121,12 @@ class SignUp extends React.Component {
 
     render() {
         return (
-            <Container fluid>
-                <Row >
-                    <Col >
+            <Container fluid style={{margin: 0, padding: 0}}>
+         
+                <Row noGutters style={{margin: 0, padding: 0}}>
+                    <Col>
                         <div id='user-form' >
-                            <Form onSubmit={this.handleSubmit} >
+                            <Form onSubmit={this.handleSubmit} className="form" >
                                 <div className="form-group">
                                     <input type="text" className="form-control myinput"
                                         name="name" value={this.state.name}

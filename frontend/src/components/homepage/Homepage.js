@@ -192,7 +192,7 @@ viewBox="0 0 255.12 9.25" style={{enableBackground:'new 0 0 255.12 9.25'}} xmlSp
                 {wave2}
                 <GirlModel moveGirl={this.state.moveToTheRight} categories={this.props.categories} loginState={showLogin} signupState={showSignup} />
               
-                <div style={{ height: '60vh' }}>
+                <div className="map">
                     <Maps />
                 </div>
                 {wave}

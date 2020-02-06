@@ -20,7 +20,7 @@
   margin: 0;
   padding: 0;
   left: 0%;
-  width: 104%;
+  width: 100%;
 }
 
 body,
@@ -34,8 +34,11 @@ html {
   border-radius: 10px;
   z-index: 1000;
 }
-#user-form {
+.form {
   position: absolute;
+  z-index: 100;
+  align-items: center;
+
 }
 .submit {
   position: absolute;
@@ -47,9 +50,6 @@ html {
   height: 35px;
   width: 130px;
   left: 30%;
-  z-index: 100;
-}
-.user-form{
   z-index: 100;
 }
 
@@ -70,49 +70,64 @@ html {
 }
 /*login/signup form*/
 @media (min-width: 0px) and (max-width: 400px) {
-  #user-form {
-    width: 60vw;
-    left: 10%;
-    top: 160px;
+  .form {
+    width: 89vw;
+    left: 9%;
+    top: 30px;
   }
   .wave2 {
-    top: 690px;
+    top: 850px;
     left: -16px;
     width: 122%;
   }
-  .wave{
-    top: 820px;
+  .wave {
+    top: 690px!important;
     width: 118%;
   
   }
 }
 
-@media (min-width: 401px) and (max-width: 600px) {
-  #user-form {
+@media (min-width: 401px) and (max-width: 599px) {
+  .form {
     width: 60vw;
-    left: 35%;
-    top: 170px;
+    left: 67%;
+    top: 10px;
   }
   .wave2 {
-    top: 690px;
+    top: 1300px;
+    left: -26px;
+    width: 122%;
+  }
+  .wave{
+    top: 470px;
+    width: 118%;
+  
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .form {
+    width: 66vw;
+    top: 20px;
+    left: 58%;
+  }
+  .myinput {
+    height: 28px;
+  }
+  .wave{
+    top: 860px;
+    width: 118%;
+  
+  }
+  svg.wave2 {
+    top: 1400px;
     left: -26px;
     width: 122%;
   }
 }
 
-@media (min-width: 601px) and (max-width: 768px) {
-  #user-form {
-    width: 46vw;
-    top: 20px;
-    left: 48%;
-  }
-  .myinput {
-    height: 28px;
-  }
-}
-
 @media (min-width: 769px) and (max-width: 992px) {
-  #user-form {
+  .form {
     width: 48vw;
     top: 20px;
     left: 46%;
@@ -120,7 +135,7 @@ html {
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {
-  #user-form {
+  .form {
     width: 28vw;
     top: 18px;
     left: 64%;
@@ -128,9 +143,9 @@ html {
 }
 
 @media (min-width: 1383px) {
-  #user-form {
+  .form {
     width: 28vw;
     top: 20px;
-    left: 64%;
+    left: 76vw;
   }
 }

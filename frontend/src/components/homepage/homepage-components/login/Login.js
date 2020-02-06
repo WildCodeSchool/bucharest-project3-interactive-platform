@@ -64,27 +64,23 @@ class Login extends React.Component {
     }
 
     render() {
-
         return (
-            <Container fluid>
+            <Container fluid style={{margin: 0, padding: 0}}>
                 {/* {this.props.isActive ? */}
-                <Row>
-                    <Col className='py-3'  >
-                        <div id='user-form' >
-                            <Form onSubmit={this.handleSubmit}>
+                <Row noGutters style={{margin: 0, padding: 0}}>
+                    <Col>
+                            <Form onSubmit={this.handleSubmit} className="form">
                                 <Form.Group controlId="formBasicEmail">
-                                    <Form.Control className="myinput" style={{ borderColor: '#FFBF00'}}  onChange={this.onChangeEmail} type="email" placeholder="Email" size='sm' />
+                                    <Form.Control className="myinput" style={{ borderColor: '#FFBF00'}}  onChange={this.onChangeEmail} type="email" placeholder="Email"  />
                                 </Form.Group>
                                 <Form.Group controlId="formBasicPassword">
-                                    <Form.Control className="myinput" style={{ borderColor: '#FFBF00'}}  onChange={this.onChangePass} type="password" placeholder="Parola" size='sm' />
+                                    <Form.Control className="myinput" style={{ borderColor: '#FFBF00'}}  onChange={this.onChangePass} type="password" placeholder="Parola"  />
                                 </Form.Group>
-                                <Col>
+                            
                                     <Button variant="outline-warning" className='submit' type="submit">
-                                        <div className='login-text'>Logare</div>
+                                       Logare
                                     </Button>
-                                </Col>
                             </Form>
-                        </div>
                     </Col>
                 </Row>
                 {/* // : null} */}
