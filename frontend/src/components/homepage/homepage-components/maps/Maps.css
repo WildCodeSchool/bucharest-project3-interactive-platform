@@ -111,20 +111,20 @@ a:hover {
   .gMap {
     width: 90vw !important;
     height: 700px!important;
-    top: 600px;;
+    top: 440px;;
     left: 3%;
   }
   .map-title {
-    top: 260px;
+    top: 160px;
     left: 7vw;
-    font-size: 33px;
+    font-size: 30px;
     width: 80vw;
   }
   .map-msg {
-    top: 1350px;
+    top: 1190px;
     width: 80vw;
     left: 7vw;
-    font-size: 33px;
+    font-size: 30px;
 
   }
 }
@@ -133,19 +133,19 @@ a:hover {
   .gMap {
     width: 90vw !important;
     height: 700px !important;
-    top: 600px;
-    left: 4%;
+    top: 500px;
+    left: 5vw;
   }
   .map-title {
     top: 200px;
-    left: 7vw;
-    font-size: 44px;
+    left: 8vw;
+    font-size: 33px;
     width: 80vw;
   }
   .map-msg {
-    top: 1400px;
+    top: 1300px;
     width: 80vw;
-    left: 9%;
-    font-size: 44px;
+    left: 8vw;
+    font-size: 33px;
   }
 }

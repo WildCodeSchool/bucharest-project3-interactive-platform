@@ -345,6 +345,7 @@
   top: 155px;
   left: 33px;
   width: 160px;
+  border-radius: 13px;  
 }
 
 .onhover-findoutMore-bttn {
@@ -352,6 +353,12 @@
   top: 155px;
   left: 238px;
   width: 160px;
+  border-radius: 13px;  
+
+}
+.bttn-text{
+  position: absolute;
+
 }
 
 @media (min-width: 0px) and (max-width: 410px) {
@@ -373,7 +380,7 @@
   }
 
   .hover-question {
-    height: 250px;
+    height: 280px;
     width: 93vw;
     left: 2%;
     top: 380px;
@@ -387,18 +394,22 @@
     top: 30px;
   }
   .onhover-quiz-bttn {
-    top: 160px;
+    top: 200px;
     left: 4%;
     width: 120px;
-    color: grey;
+  
     font-size: 14px;
     height: 60px;
   }
   .onhover-findoutMore-bttn {
-    top:160px;
+    top:200px;
     left: 53%;
     width: 120px;
     height: 60px;
+  }
+  .bttn-text{
+    left: 20%;
+    top: 20px;
   }
 }
 .hover-text {
@@ -425,7 +436,7 @@
   .hover-question {
     height: 280px;
     width: 76vw;
-    left: 16%;
+    left: 6%;
     top: 30vh;
     background-color: white;
   }
@@ -440,7 +451,6 @@
     top: 160px;
     left: 27%;
     width: 160px;
-    color: grey;
     font-size: 14px;
     height: 40px;
   }
@@ -449,6 +459,10 @@
     left: 27%;
     width: 160px;
     height: 40px;
+  }
+  .bttn-text{
+    left: 30%;
+    top: 10px;
   }
 }
 
@@ -483,10 +497,9 @@
   }
  
   .onhover-quiz-bttn {
-    top: 122px;
+    top: 129px;
     left: 10%;
     width: 160px;
-    color: grey;
     font-size: 14px;
     height: 40px;
   }
@@ -504,15 +517,19 @@
     top: 40px;
 
   }
+  .bttn-text {
+    left: 22%;
+    top: 10px;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
   .gurlContainer {
-    left: -50%;
+    left: 10vw;
     top: 108px;
   }
   .gurl {
-    height: 1000px;
+    height: 600px;
   }
   .move-Gurl {
     left: -66%;
@@ -529,7 +546,6 @@
     top: 180px;
     left: 20%;
     width: 220px;
-    color: grey;
     font-size: 16px!important;
     height: 40px;
   }
@@ -542,8 +558,8 @@
   .hover-question {
     height: 300px!important;
     width: 40vw;
-    left: 24%;
-    top: 41vh;
+    left: 33%;
+    top: 400px;
     background-color: white;
   }
   .hover-text {
@@ -553,6 +569,10 @@
   .check {
     top: 50px!important;
 
+  }
+  .bttn-text {
+    left: 33%;
+    top: 10px;
   }
   /* .onhover-quiz-bttn {
     top: 170px!important;
@@ -582,11 +602,11 @@
 
 @media (min-width: 993px) and (max-width: 1382px) {
   .gurlContainer {
-    left: 4%;
-    top: 108px;
+    left: 21vw;
+    top:0px;
   }
   .gurl {
-    height: 1199px;
+    height: 699px;
   }
   .move-Gurl {
     left: -46%;
@@ -602,30 +622,33 @@
     width: 30vw;
   }
   .hover-question {
-    height: 380px;
-    width: 29vw ;
-    left: 42% ;
-    top: 18vh;
+    height: 290px;
+    width: 33vw;
+    left: 43%;
+    top: 390px;
     background-color: white;
   }
   .hover-text {
-    width: 20vw!important ;
+    width: 26vw!important ;
   }
   .onhover-quiz-bttn {
-    top: 220px;
-    left: 20% ;
+    top: 160px;
+    left: 27%;
     width: 190px;
     font-size: 16px;
     height: 40px;
   }
   .onhover-findoutMore-bttn {
-    top: 290px ;
-    left: 20% ;
+    top: 220px;
+    left: 27%;    
     width: 190px;
     height: 40px;
   }
   
- 
+  .bttn-text {
+    left: 34%;
+    top: 10px;
+  }
   /* .onhover-quiz-bttn {
     top: 180px;
     left: 18%;
@@ -652,11 +675,11 @@
 
 @media (min-width: 1383px) {
   .gurlContainer {
-    left: 6%;
-    top: 78px;
+    left: 17vw;
+    top: 0px;
   }
   .gurl {
-    height: 1300px;
+    height: 690px;
   }
   .move-Gurl {
     left: -46%;
@@ -675,33 +698,36 @@
 
 
   .hover-text {
-    width: 20vw;
-    top: 40px;
+    width: 19vw;
+    top: 30px;
   }
   .check {
     top: 40px;
 
   }
   .onhover-quiz-bttn {
-    top: 170px;
-    left: 25% ;
-    width: 230px;
-    color: grey;
+    top: 155px;
+    left: 23% ;
+    width: 240px;
     font-size: 16px;
     height: 50px;
   }
   .onhover-findoutMore-bttn {
-    top: 230px;
-    left: 25% ;
-    width: 230px;
+    top: 215px;
+    left: 23% ;
+    width: 240px;
     height: 50px;
   }
   .hover-question {
-    height: 300px!important;
+    height: 280px!important;
     width: 26vw !important;
     left: 49% !important;
     top: 33vh!important;
     background-color: white;
   } 
+  .bttn-text {
+    left: 36%;
+    top: 10px;
+  }
 }
   

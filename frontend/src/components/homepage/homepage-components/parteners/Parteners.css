@@ -99,32 +99,32 @@ body {
   }
 
   .parteners-title {
-    left: 280px;
+    left: 36vw;
     position: absolute;
     top: -70px;
   }
 }
 @media (min-width: 993px) and (max-width: 1382px) {
   .parteners-title {
-    left: 370px !important;
+    left: 38vw !important;
     position: absolute;
     top: -70px;
   }
   .parteners-container {
-    top: 1900px;
-    left: 3vw;
+    top: 1600px;
+    left: 4vw;
     width: 90vw;
   }
 }
 
 @media (min-width: 1383px) {
   .parteners-container {
-    top: 1970px;
+    top: 1870px;
     left: 12vw;
     width: 70vw;
   }
   .parteners-title {
-    left: 330px !important;
+    left: 27vw !important;
     position: absolute;
     top: -120px;
     font-size:66px;
