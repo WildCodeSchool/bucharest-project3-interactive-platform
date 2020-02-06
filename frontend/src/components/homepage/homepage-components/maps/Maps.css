@@ -74,13 +74,14 @@ a:hover {
     left: 1%;
   }
   .map-title {
-    top: 300px;
+    top: 270px;
     left: 1vw;
     font-size: 22px;
     width: 90vw;
   }
   .map-msg {
-    top: 1170px;
+    top: 1160px;
+    font-size: 19px;
   }
 }
 
