@@ -358,7 +358,7 @@
 @media (min-width: 0px) and (max-width: 410px) {
   .gurlContainer {
     left: -50%;
-    top: 50px;
+    top: 100px;
   }
   .move-Gurl {
     display: none;
@@ -373,10 +373,10 @@
   }
 
   .hover-question {
-    height: 200px;
+    height: 250px;
     width: 93vw;
     left: 2%;
-    top: 230px;
+    top: 380px;
     background-color: white;
   }
   .hover-text {
@@ -387,7 +387,7 @@
     top: 30px;
   }
   .onhover-quiz-bttn {
-    top: 23vh;
+    top: 160px;
     left: 4%;
     width: 120px;
     color: grey;
@@ -395,7 +395,7 @@
     height: 60px;
   }
   .onhover-findoutMore-bttn {
-    top: 23vh;
+    top:160px;
     left: 53%;
     width: 120px;
     height: 60px;

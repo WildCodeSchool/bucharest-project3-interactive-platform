@@ -71,8 +71,8 @@ html {
 /*login/signup form*/
 @media (min-width: 0px) and (max-width: 400px) {
   #user-form {
-    width: 90vw;
-    left: 6%;
+    width: 60vw;
+    left: 10%;
     top: 160px;
   }
 }
@@ -80,7 +80,7 @@ html {
 @media (min-width: 401px) and (max-width: 600px) {
   #user-form {
     width: 60vw;
-    left: 31%;
+    left: 35%;
     top: 170px;
   }
 }

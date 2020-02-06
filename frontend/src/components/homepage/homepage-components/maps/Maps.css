@@ -32,7 +32,7 @@ a:hover {
 @media (min-width: 0px) and (max-width: 480px) {
   .gMap {
     width: 80vw;
-    height: 67vh;
+    height: 400px;
     top: 600px;
     left: 0%;
   
