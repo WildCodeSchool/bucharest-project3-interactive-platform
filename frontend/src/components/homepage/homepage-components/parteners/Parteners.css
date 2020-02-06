@@ -64,7 +64,7 @@ body {
   margin: 0 !important;
   padding: 0 !important;
 }
-@media (min-width: 0px) and (max-width: 480px) {
+@media (min-width: 0px) and (max-width: 400px) {
   div.parteners-container {
     top: 800px;
     left: 22px !important;
@@ -73,9 +73,9 @@ body {
 
 }
 
-@media (min-width: 481px) and (max-width: 600px) {
+@media (min-width: 401px) and (max-width: 600px) {
   .parteners-container {
-    top: 500px;
+    top: 1500px;
   }
 }
 

@@ -120,7 +120,7 @@
  
   
 } */
-@media (min-width:0px) and  (max-width: 480px) {
+@media (min-width:0px) and  (max-width: 400px) {
   #footer {
     height: 190px!important;
     top: 800px!important;
@@ -142,10 +142,10 @@
 }
 
 
-@media (min-width: 481px) and  (max-width: 600px) {
+@media (min-width: 401px) and  (max-width: 600px) {
   #footer {
     height: 200px;
-    top: 1200px;
+    top: 1700px;
   }
   
   .contact {
@@ -155,15 +155,11 @@
   }
   
   .brand-romanesc {
-    height: 60px;
-    left: 114%;
-    top: 10px;
+    display: none;
   }
   
   .produse-romanesti {
-    height:60px;
-    left: 110%;
-    top: 88px;
+    display: none;
   }
   
 }
