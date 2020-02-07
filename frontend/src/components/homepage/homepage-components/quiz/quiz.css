@@ -188,6 +188,9 @@ font-size: 33px;
     top: 100px;
     left: 10%;
   }
+  .mapq {
+    top:639px;
+    position: relative;  }
 }
 
 @media (min-width: 401px) and  (max-width: 600px) {
@@ -255,7 +258,7 @@ font-size: 33px;
 
   .quizWave {
     position: relative;
-    top: 1000px;
+    top: 970px;
     width: 100%;
   }
   .qtitle {
@@ -268,6 +271,9 @@ font-size: 33px;
     top: 100px;
     left: 10%;
   }
+  .mapq {
+    top:830px;
+    position: relative;  }
 }
 
 @media (min-width: 601px) and  (max-width: 768px) {
@@ -349,6 +355,9 @@ font-size: 33px;
     top: 100px;
     left: 10%;
   }
+  .mapq {
+    top:830px;
+    position: relative;  }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -404,9 +413,13 @@ font-size: 33px;
     left:48vw;
     width: 60%;
    }
+   .mapq {
+    top: 570px;
+    position: relative;  }
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {
+  
   .qtitle {
     top: 100px!important;
     left: 36%;
@@ -459,16 +472,22 @@ font-size: 33px;
     left:48vw;
     width: 520px;
    }
+   .mapq {
+    top: 700px;
+    position: relative;  }
 }
 
 @media(min-width: 1383px) { 
+  .mapq {
+    top: 700px;
+    position: relative;  }
   .qtitle {
     top: 100px!important;
     left: 36%;
     width: 90vw;
     font-size: 55px;
    }
-   
+  
    .qdesc {
      top: 200px;
      left: 23%;

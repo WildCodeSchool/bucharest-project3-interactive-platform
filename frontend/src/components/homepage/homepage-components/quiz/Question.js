@@ -15,7 +15,7 @@ class Question extends React.Component {
         this.setState({
             showSuccess: !this.state.showSuccess
         })
-        fetch('/authentication/quizz/answer',
+        fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/quizz/answer',
             {
                 method: 'POST',
                 headers: new Headers({

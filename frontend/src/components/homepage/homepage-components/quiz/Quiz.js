@@ -6,6 +6,7 @@ import Navigation from "../navbar/NavBar";
 import Footer from "../footer/Footer";
 import data from "../info_modal/my_fake_db";
 import { connect } from 'react-redux';
+import Maps from '../maps/Maps';
 
 
 class Quiz extends React.Component {
@@ -32,7 +33,7 @@ class Quiz extends React.Component {
       })
       .catch(err => console.log(`ERROR quiz-modal-bk: ${err}`));
 
-    fetch("/authentication/quiz-modal", {
+    fetch("https://infinite-hamlet-17639.herokuapp.com/authentication/quiz-modal", {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json"
@@ -46,7 +47,7 @@ class Quiz extends React.Component {
       })
       .catch(err => console.log(`ERROR quiz-modal-bk: ${err}`));
 
-    fetch("/authentication/q-title-desc", {
+    fetch("https://infinite-hamlet-17639.herokuapp.com/authentication/q-title-desc", {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json"
@@ -161,6 +162,9 @@ class Quiz extends React.Component {
               modalFailureDescription={this.state.modalData.failureDesc}
               modalFailureLastMessage={this.state.modalData.failureLastMessage} 
             /> 
+            <div className="mapq">
+                    <Maps />
+                </div>  
           </Col>
         </Row> : <Row noGutters> <Col>
         <h1 className="qtitle">{title}</h1>
@@ -170,6 +174,7 @@ class Quiz extends React.Component {
        
         <Row>
         {quizWave}
+        
           <div className="q-footer">
           <Footer/>
           </div>
