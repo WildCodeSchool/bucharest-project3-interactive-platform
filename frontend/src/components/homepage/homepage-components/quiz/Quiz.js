@@ -19,7 +19,7 @@ class Quiz extends React.Component {
     };
   }
   componentDidMount() {
-    fetch("/authentication/quizz", {
+    fetch("https://infinite-hamlet-17639.herokuapp.com/authentication/quizz", {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json"
@@ -125,19 +125,19 @@ class Quiz extends React.Component {
     </g>
     </svg>;
     const quizSomeInfo = this.state.quizData ? this.state.quizData: null;
-    console.log(quizSomeInfo)
+    // console.log(quizSomeInfo)
     const title = quizSomeInfo ? quizSomeInfo.title : null;
     const desc = quizSomeInfo ? quizSomeInfo.desc : null;
-    console.log(title)
+    // console.log(title)
     const quiz = this.state.quizzez ? this.state.quizzez[0] : null;
-
+console.log(this.state.quizzez + "*****")
     const question = quiz ? quiz.question : null;
     const image = quiz ? quiz.image_link : null;
     const answer1 = quiz ? quiz.answer1 : null;
     const answer2 = quiz ? quiz.answer2 : null;
     const correct = quiz ? quiz.correct : null;
     const modal = this.state.modalData ? this.state.modalData : null;
-    console.log(modal)
+    // console.log(modal)
 
     return (
       <Container className="quiz-container" fluid>
