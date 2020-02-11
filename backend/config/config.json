@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "techir_database",
-    "host": "127.0.0.1",
+    "username": "ba0e2195be36f9",
+    "password": "04d569b6",
+    "database": "heroku_b8e02cbc737a70f",
+    "host": "us-cdbr-iron-east-04.cleardb.net",
     "dialect": "mysql"
   },
   "test": {
@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "root",
-    "database": "techir_database",
-    "host": "127.0.0.1",
+    "username": "ba0e2195be36f9",
+    "password": "04d569b6",
+    "database": "heroku_b8e02cbc737a70f",
+    "host": "us-cdbr-iron-east-04.cleardb.net",
     "dialect": "mysql"
   }
 }

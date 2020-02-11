@@ -20,5 +20,5 @@ models
         // { force: true }
     )
     .then(() =>
-        app.listen(port, () => console.log(`Im on ${port}`))
+        app.listen(process.env.PORT || port, () => console.log(`Im on ${port}`))
     )

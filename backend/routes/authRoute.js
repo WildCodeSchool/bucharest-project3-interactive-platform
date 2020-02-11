@@ -6,21 +6,9 @@ const LocalStrategy = require("passport-local").Strategy;
 const jwt = require("jsonwebtoken");
 const JWTStrategy = require("passport-jwt").Strategy;
 const ExtractJWT = require("passport-jwt").ExtractJwt;
-
 const fs = require("file-system");
-
 const models = require("../models");
-
 const sendNodemailer = require("../services/nodemailer");
-
-const createUser = (req, res, next) => {
-    User.create(req.body, (err, results, fields) => {
-        if (err) return res.render("error", { err });
-        res.redirect("/auth/login");
-        sendNodemailer(req.body.email);
-    });
-};
-
 passport.use(
     new LocalStrategy(
         {
@@ -51,7 +39,6 @@ passport.use(
         }
     )
 );
-
 passport.use(
     new JWTStrategy(
         {
@@ -61,7 +48,6 @@ passport.use(
         (jwtPayload, done) => done(null, jwtPayload)
     )
 );
-
 router.post("/sign-up", (req, res) => {
     let hashedPass = bCrypt.hashSync(req.body.password, 15);
     let todayNow = Date.now();
@@ -78,18 +64,15 @@ router.post("/sign-up", (req, res) => {
             : res.status(500).json({ msg: "is bad" });
     });
 });
-
 router.post("/sign-in", (req, res) => {
     console.log(req);
     passport.authenticate("local", (err, user, info) => {
         if (err) res.status(500).send(err);
         if (!user) res.status(400).json({ msg: "It's bad" });
-
         const userData = {
             email: user.email,
             password: user.passwordCREATE_LOGIN_SESSION
         };
-
         const token = jwt.sign(userData, "secretPass");
         return res.json({
             user: {
@@ -103,15 +86,12 @@ router.post("/sign-in", (req, res) => {
         });
     })(req, res);
 });
-
 router.get(
     "/quizz",
     // passport.authenticate("jwt", { session: false }),
     (req, res) =>
         models.quizzes.findAll().then(data => res.status(200).json(data))
 );
-
-
 router.put(
     "/quizz/:id",
     passport.authenticate("jwt", { session: false }),
@@ -123,11 +103,7 @@ router.put(
                     answer1: req.body.answer1,
                     answer2: req.body.answer2,
                     correct_answer: req.body.correct_answer,
-                    image_link: req.body.image_link,
-                    categoryCategoryId: req.body.categoryid
-
-
-
+                    image_link: req.body.image_link
                 },
                 {
                     where: { categoryCategoryId: req.params.id },
@@ -137,9 +113,7 @@ router.put(
             .then(data => res.status(200).json({ data, msg: "Me did gud (: !" }));
     }
 );
-
-router.post(
-    "/quizz",
+router.post("/quizz",
     passport.authenticate("jwt", { session: false }),
     (req, res) => {
         let stuff = {
@@ -157,7 +131,28 @@ router.post(
         });
     }
 );
-
+router.post("/quizz/answer",
+    passport.authenticate("jwt", { session: false }),
+    (req, res) => {
+        let reqData = {
+            code: Math.floor(
+                Math.random() * (Math.floor(9999999999) - Math.ceil(999999)) +
+                Math.ceil(999999)
+            ),
+            discount_value: 10,
+            user_id: req.body.user_id
+        };
+        
+            models.coupons.create(reqData).then( (rez) => {
+                if (!rez) res.json("Error");
+                else {
+                sendNodemailer(req.body.email, reqData.code, reqData.discount_value);
+                res.status(200).json(reqData)
+                }
+            });
+       
+    }
+);
 router.get(
     "/description",
     // passport.authenticate("jwt", { session: false }),
@@ -172,7 +167,6 @@ router.get(
         models.categories.findAll().then(data => res.status(200).json(data));
     }
 );
-
 router.get(
     "/description/:id",
     //   passport.authenticate("jwt", { session: false }),
@@ -184,7 +178,6 @@ router.get(
             .then(data => res.status(200).json(data));
     }
 );
-
 router.put(
     "/description/:id",
     passport.authenticate("jwt", { session: false }),
@@ -194,7 +187,6 @@ router.put(
                 {
                     text: req.body.desctext,
                     link: req.body.desclink
-
                 },
                 {
                     where: { categoryCategoryId: req.params.id },
@@ -204,7 +196,6 @@ router.put(
             .then(data => res.status(200).json({ data, msg: "Me did gud (: !" }));
     }
 );
-
 router.post(
     "/description",
     passport.authenticate("jwt", { session: false }),
@@ -220,7 +211,6 @@ router.post(
         });
     }
 );
-
 router.post(
     "/coupons",
     passport.authenticate("jwt", { session: false }),
@@ -242,7 +232,6 @@ router.post(
         });
     }
 );
-
 router.get(
     "/coupons",
     passport.authenticate("jwt", { session: false }),
@@ -250,7 +239,6 @@ router.get(
         models.coupons.findAll().then(data => res.status(200).json(data));
     }
 );
-
 router.get(
     "/coupons/:id",
     passport.authenticate("jwt", { session: false }),
@@ -262,13 +250,11 @@ router.get(
             .then(data => res.status(200).json(data));
     }
 );
-
 router.get("/locations", (req, res) => {
     models.locations
         .findAll()
         .then(data => res.status(200).json({ data, msg: "Me did gud (: !" }));
 });
-
 router.get(
     "/quiz-modal",
     // passport.authenticate("jwt", { session: false }),
@@ -290,7 +276,6 @@ router.get(
         res.status(401).json("fs.read() q-title-desc error");
     }
 );
-
 router.get(
     "/parteners",
     (req, res) => {
@@ -298,7 +283,6 @@ router.get(
         if (parteners !== undefined || parteners !== null) res.status(200).json(JSON.parse(parteners).array);
         else res.status(401).json('fs.read() parteners error')
     });
-
 // const makeLocation = () => {
 //     let myDescription = [
 //         // {
@@ -347,9 +331,7 @@ router.get(
 //         //     json({ msg: "locationz bad )x" });
 //     });
 // };
-
 // const makeDescription = () => {
-
 //     const data = [{
 //         text: 'par',
 //         link: 'par',
@@ -375,10 +357,8 @@ router.get(
 //         link: 'picioare',
 //         categoryCategoryId: '6',
 //     }]
-
 //     data.forEach((e, i) => models.description.create({ ...e }))
 // }
-
 // makeCategories = () => {
 //     const cat = [{ category_name: "par" },
 //     { category_name: "fata" },
@@ -389,9 +369,7 @@ router.get(
 //     cat.forEach((e, i) => models.categories.create({ ...e }))
 //     // models.categories
 // }
-
 // makeLocation()
 // makeCategories()
 // makeDescription()
-
 module.exports = router;
