@@ -1,57 +1,151 @@
 .gMap {
   position: relative;
+  z-index: 1000;
+}
+a {
+  color: darkgoldenrod;
+  font-weight: bold;
+}
+a:hover {
+  color: darkgoldenrod;
+}
+@font-face {
+  font-family: muchosans;
+  src: url(../../../../assets/MuchoSans.rar);
+}
+.map-msg {
+  z-index: 1000;
+  font-family: mochosans;
+  text-align: center !important;
+}
+.map-title {
+  position: absolute;
+  text-align: center;
+}
+.map-msg {
+  position: absolute;
+  font-size: 22px;
 }
 
-@media (min-width: 0px) and (max-width: 480px) {
-  .gMap {
-    width: 90vw !important;
-    height: 67vh !important;
-    top: 40vh;
-    left: 0.5%;
+@media (min-width: 0px) and (max-width: 399px) {
+  .gMap,
+  .map {
+    width: 100vw;
+    height: 600px;
+    top: 450px;
+    left: 0%;
+  }
+  .map-title {
+    top: 200px;
+    left: 1vw;
+    font-size: 22px;
+    width: 90vw;
+  }
+  .map-msg {
+    top: 1090px;
   }
 }
 
-@media (min-width: 481px) and (max-width: 600px) {
+/* @media (min-width: 481px) and (max-width: 600px) {
   .gMap {
-    width: 90vw !important;
-    height: 70vh !important;
-    top: 20vh;
+    width: 90vw;
+    height: 70vh;
+    top: 600px;
     left: 1%;
   }
-}
+  .map-title {
+    top: 28vh;
+    left: 1vw;
+    font-size: 22px;
+    width: 90vw;
+  }
+  .map-msg {
+    top: 127vh;
+  }
+} */
 
-@media (min-width: 601px) and (max-width: 768px) {
+@media (min-width: 400px) and (max-width: 599px) {
   .gMap {
-    width: 90vw !important;
-    height: 70vh !important;
-    top: 20vh;
-    left: 1%;
+    width: 99vw !important;
+    height: 700px !important;
+    top: 420px;
+    left: 0%;
+  }
+  .map-title {
+    top: 190px;
+    left: 2%;
+    font-size: 22px;
+    width: 90vw;
+  }
+  .map-msg {
+    top: 1170px;
+    font-size: 19px;
+    left: 4%;
+    width: 90%;
   }
 }
 
-@media (min-width: 769px) and (max-width: 992px) {
+@media (min-width: 600px) and (max-width: 992px) {
   .gMap {
     width: 90vw !important;
-    height: 70vh !important;
-    top: 24vh;
-    left: 3%;
+    height: 700px !important;
+    top: 490px;
+    left: 4%;
+  }
+  .map-title {
+    top: 220px;
+    left: 3vw;
+    font-size: 26px;
+    width: 90vw;
+  }
+  .map-msg {
+    top: 1230px;
+    width: 80vw;
+    left: 9vw;
+    font-size: 26px;
+
   }
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {
   .gMap {
     width: 90vw !important;
-    height: 70vh !important;
-    top: 24vh;
+    height: 700px!important;
+    top: 440px;;
     left: 3%;
+  }
+  .map-title {
+    top: 160px;
+    left: 7vw;
+    font-size: 30px;
+    width: 80vw;
+  }
+  .map-msg {
+    top: 1190px;
+    width: 80vw;
+    left: 7vw;
+    font-size: 30px;
+
   }
 }
 
 @media (min-width: 1383px) {
   .gMap {
     width: 90vw !important;
-    height: 70vh !important;
-    top: 24vh;
-    left: 3%;
+    height: 700px !important;
+    top: 500px;
+    left: 5vw;
+  }
+  .map-title {
+    top: 200px;
+    left: 8vw;
+    font-size: 33px;
+    width: 80vw;
+  }
+  .map-msg {
+    top: 1300px;
+    width: 80vw;
+    left: 8vw;
+    font-size: 33px;
   }
 }

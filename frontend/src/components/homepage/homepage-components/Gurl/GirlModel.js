@@ -1,13 +1,14 @@
 import React from 'react';
 import * as img from '../../../../assets/img/Kool_Gurl.jpg';
 import { Link, withRouter } from 'react-router-dom'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Modal } from 'react-bootstrap'
 import { Button } from 'react-bootstrap';
 import data from '../info_modal/my_fake_db';
 
+
 import * as check from '../../../../assets/img/hook-1425312.png'
 
-const points = ['arm', 'leg', 'hair', 'face', 'hand', 'neck'];
+
 
 class GirlModel extends React.Component {
     constructor(props) {
@@ -25,7 +26,8 @@ class GirlModel extends React.Component {
             blogLink: "",
             move: false,
             login: false,
-            signup: false
+            signup: false,
+            dataDesc: [],
         }
     }
 
@@ -52,8 +54,20 @@ class GirlModel extends React.Component {
         })
     }
     componentDidMount() {
-        this.retrieveAndSetAboutFaceInfo();
-        this.retrieveBlogLink();
+        // this.retrieveAndSetAboutFaceInfo();
+        // this.retrieveBlogLink();
+        fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/description/',
+            {
+                method: 'GET',
+                headers: new Headers({
+                    'Content-Type': 'application/json',
+                })
+            }).then(res => res.json())
+            .then(res => {
+                this.setState({
+                    dataDesc: res
+                })
+            }).catch(err => console.log(`ERROR quizData-bk: ${err}`));
     }
     handleHover = () => {
         this.setState({
@@ -75,12 +89,12 @@ class GirlModel extends React.Component {
                 move: true
             })
         } else this.setState({ move: false });
-        if(this.props.loginState === true) {
+        if (this.props.loginState === true) {
             this.setState({
                 login: true
             })
         } else this.setState({ login: false });
-        if(this.props.signupState === true) {
+        if (this.props.signupState === true) {
             this.setState({
                 login: true
             })
@@ -95,50 +109,60 @@ class GirlModel extends React.Component {
     prepareQuiz = () => {
         this.props.history.push('/quiz');
     }
+    changeClass = () => {
+        this.setState({
+            isHovered: false
+        })
+    }
 
     render() {
-
-        
         const contentClass = this.state.isHovered ? "hover-question" : "not-hovered-question";
         const moveOrNot = this.state.move === true ? "move-Gurl" : "gurlContainer";
-            
+        const descriptions = this.state.dataDesc ? this.state.dataDesc[0] : null;
+        console.log(descriptions)
+        const info = descriptions ? descriptions.text : null;
+        const link = descriptions ? descriptions.link : null;
+        console.log(info)
+        console.log(link)
+
+        console.log(this.props.categories);
+
+
 
         return (
-            <Container fuild>
+            <Container >
                 <Row noGutters>
-                    <Col>
-                        <div className='model'>
-                            {!this.state.isHidden ?
-                                <div className={moveOrNot}>
-                                    <img src={img} alt='model' className='gurl' />
-                                    {points.map((e, i) => {
-                                        return <div className={'spinner ' + e} key={i}
-                                            onMouseEnter={this.handleHover}
-                                            onMouseLeave={this.handleLeaveHover}
-                                        // onClick={() => this.handleClick(e)}
-                                        >
+                    <div className='model'>
+                        {!this.state.isHidden ?
+                            <div className={moveOrNot}>
+                                <img src={img} alt='model' className='gurl' />
 
-                                            <div className="multi-ripple">
-                                                <div></div>
-                                                <div></div>
-                                            </div>
-
+                                {this.props.categories ? this.props.categories.map((e, i) => {
+                                    return <div className={'spinner ' + e.category_name} key={i}
+                                        onMouseEnter={this.handleHover}
+                                        onMouseLeave={this.handleLeaveHover}
+                                    // onClick={() => this.handleClick(e)}
+                                    >
+                                        <div className="multi-ripple">
+                                            <div></div>
+                                            <div></div>
                                         </div>
-
-                                    })}
-                                </div>
-                                : null}
-
-                            <div className='info-g-first-bttn' variant="outline-secondary">Pozitioneaza cursorul pe punctele de pe model pentru mai multe detalii</div>
-                            <div className='info-g-second-bttn' variant="outline-secondary">Atinge punctele de pe model pentru mai multe detalii</div>
-                            <div className={contentClass}>
-                                <img src={check} width="50px" height="50px" className="check" alt='check_img' />
-                                <p className="hover-text">{this.state.info}</p>
-                                <Button className="onhover-quiz-bttn" variant="outline-dark" onClick={this.prepareQuiz}>Participa si castiga</Button>
-                                <Button className="onhover-findoutMore-bttn" variant="outline-secondary" href={this.state.blogLink}>Afla detalii</Button>
+                                    </div>
+                                }) : null}
                             </div>
+                            : null}
+
+                        <div className='info-g-first-bttn' variant="outline-secondary">Pozitioneaza cursorul pe punctele de pe model pentru mai multe detalii</div>
+                        <div className='info-g-second-bttn' variant="outline-secondary">Atinge punctele de pe model pentru mai multe detalii</div>
+                        <div className={contentClass} >
+                            <button onClick={this.changeClass}><a href="#" class="close-thik"></a></button>
+                            <img src={check} width="50px" height="50px" className="check" alt='check_img' />
+                            <p className="hover-text">{info}</p>
+                            <Button className="onhover-quiz-bttn" variant="outline-warning" onClick={this.prepareQuiz}>Participa si castiga</Button>
+                            <Button className="onhover-findoutMore-bttn" variant="outline-warning" href={link}><span className="bttn-text">Afla detalii</span></Button>
                         </div>
-                    </Col>
+                    </div>
+
                 </Row>
             </Container>
         );
@@ -146,4 +170,6 @@ class GirlModel extends React.Component {
 }
 
 
-export default withRouter(GirlModel);
+
+export default withRouter(
+    GirlModel);

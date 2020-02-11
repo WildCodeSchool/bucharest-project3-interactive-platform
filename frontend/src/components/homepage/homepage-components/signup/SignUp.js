@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, Modal, Row, Col, Form, Container } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 
+import { connect } from 'react-redux';
+
 const FormErrors = ({ formErrors }) =>
     <div className='formErrors'>
         {Object.keys(formErrors).map((fieldName, i) => {
@@ -42,15 +44,15 @@ class SignUp extends React.Component {
             formValid: false,
             confirmPasswordValid: false
         }
-
     }
 
 
     handleUserInput = (e) => {
         const name = e.target.name;
         const value = e.target.value;
-        this.setState({ [name]: value },
-            () => { this.validateField(name, value) })
+        this.setState({ [name]: value }
+
+            , () => { this.validateField(name, value) })
         if (this.state.password === this.state.confirmPassword && this.state.password !== '' && this.state.confirmPassword !== '') {
             this.setState({
                 confirmPasswordValid: true
@@ -90,50 +92,72 @@ class SignUp extends React.Component {
             passwordValid: passwordValid
         }, this.validateForm);
     }
-    routeChange = () => {
-        let path = `/quiz`;
-        this.props.history.push(path);
-    }
+    handleSubmit = (event) => {
+        event.preventDefault()
 
+        fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/sign-up',
+            {
+                method: 'POST',
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                }),
+                body: JSON.stringify({
+                    fullname: this.state.name,
+                    email: this.state.email,
+                    password: this.state.password,
+                }),
+            })
+            .then(res => res.json())
+            .then((res) => {
+                console.log(res)
+                this.props.dispatch({ type: 'REDIRECT_TO_LOGIN' })
+            })
+            .catch(error => console.log(error))
+    }
     validateForm() {
         this.setState({ formValid: this.state.emailValid && this.state.passwordValid });
-        console.log(`email: ${this.state.name}; emai: ${this.state.email}; password: ${this.state.password};`)
+        // console.log(`email: ${this.state.name}; emai: ${this.state.email}; password: ${this.state.password};`)
     }
 
     render() {
         return (
-            <Container fluid>
-                <Row >
-                    <Col >
+            <Container fluid style={{margin: 0, padding: 0}}>
+         
+                <Row noGutters style={{margin: 0, padding: 0}}>
+                    <Col>
                         <div id='user-form' >
-                            <Form >
+                            <Form onSubmit={this.handleSubmit} className="form" >
                                 <div className="form-group">
                                     <input type="text" className="form-control myinput"
                                         name="name" value={this.state.name}
                                         placeholder="Nume complet"
-                                        onChange={(event) => this.handleUserInput(event)} />
+                                        onChange={(event) => this.handleUserInput(event)}
+                                        style={{ borderColor: '#FFBF00'}} />
                                 </div>
                                 <div className="form-group">
                                     <input type="email" className="form-control myinput"
                                         name="email" value={this.state.email}
                                         placeholder="Email"
-                                        onChange={(event) => this.handleUserInput(event)} />
+                                        onChange={(event) => this.handleUserInput(event)} 
+                                        style={{ borderColor: '#FFBF00'}}/>
                                 </div>
                                 <div className="form-group">
                                     <input type="password" className="form-control myinput"
                                         name="password" value={this.state.password}
                                         placeholder="Parola"
-                                        onChange={(event) => this.handleUserInput(event)} />
+                                        onChange={(event) => this.handleUserInput(event)}
+                                        style={{ borderColor: '#FFBF00'}} />
                                 </div>
                                 <div className="form-group">
                                     <input type="password" className="form-control mySignUp-input"
                                         name="confirmPassword" value={this.state.confirmPassword}
                                         placeholder="Confirma parola"
-                                        onChange={(event) => this.handleUserInput(event)} />
+                                        onChange={(event) => this.handleUserInput(event)} 
+                                        style={{ borderColor: '#FFBF00'}}/>
                                 </div>
                                 <Col>
-                                    <Button variant="outline-secondary" className="submit" type="submit"
-                                        disabled={!this.state.formValid} onClick={this.routeChange}>
+                                    <Button variant="outline-warning" className="submit" type="submit"
+                                        disabled={!this.state.formValid}  >
                                         Creeare cont
                     </Button>
                                 </Col>
@@ -150,5 +174,9 @@ class SignUp extends React.Component {
     }
 }
 
+const mapStateToProps = state => {
+    return {
+    }
+}
 
-export default withRouter(SignUp);
+export default withRouter(connect(mapStateToProps)(SignUp))

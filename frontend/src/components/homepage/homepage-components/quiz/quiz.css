@@ -1,5 +1,62 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
+.bold {
+  font-weight: bolder;
+}
+.modal-description-success {
+  top: 90px;
+  text-align: center;
+  width: 92%;
 
+}
+.modal-logo {
+  position: relative;
+  left: -22%!important;
+}
+*, body {
+  margin: 0;
+  padding: 0;
+}
+.quiz-container {
+  margin: 0;
+  padding: 0;
+  width: 110%;
+}
+.quizWave {
+  position: relative;
+  width:93%!important;
+  top: 700px;
+  left: -2%;
+  margin: 0;
+  padding: 0;
+}
+/* body {
+
+  background-image: url(../../../../assets//img/val-galben.svg);
+} */
+.modal-lastm-success {
+  top: 190px;
+  text-align: center
+}
+.qtitle {
+  position: relative;
+  font-size: 99px;
+}
+
+.qdesc {
+position: relative;
+font-size: 33px;
+}
+.modal-p {
+  top: 190px;
+  text-align: center
+}
+.title-message {
+  font-size:17px;
+
+  
+  text-align: center!important;
+
+}
 .quiz-container {
   margin: 0;
   padding: 0;
@@ -9,7 +66,10 @@
   position: absolute;
 }
 
-.quiz-title,
+.quiz-title {
+  position: absolute;
+
+}
 .quiz-desc,
 .q-question {
   font-family: "PT Serif", serif;
@@ -19,7 +79,6 @@
 
 .quiz-title {
   z-index: 10;
-  text-decoration: underline;
   font-weight: 900;
 }
 
@@ -39,210 +98,439 @@
   font-family: "PT Serif", serif;
   color: #878787;
 }
-@media (min-width:0px) and  (max-width: 480px) {
+.q-footer {
+  width: 100%;
+  top: 70vh;
+}
+.q-img {
+
+   transition: box-shadow .3s;
+   transition: transform .2s; /* Animation */
+
+ }
+ .q-img:hover {
+   box-shadow: 0 0 11px rgba(33,33,33,.2); 
+   transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+ }
+@media (min-width:0px) and  (max-width: 400px) {
+
   .quiz-title {
-   top: 44px;
-   left: 13%;
+    top: 50px!important;
+    left:6vw!important;
+    width: 90vw;
+    font-size: 40px;
+   }
+   
+   .quiz-desc {
+     top: 170px!important;
+     left: 1%;
+     text-align: center;
+     width: 90vw;
+   }
+  .qtitle {
+   top: 300px!important;
+   left: 15%;
   }
   
-  .quiz-desc {
-    top: 100px;
-    left: 4%;
+  .qdesc {
+    top: 330px!important;
+    left: 2%;
+    text-align: center;
   }
   .q-question {
-    top: 170px;
-    width: 100%!important;
+    top:280px;
+    width: 80vw!important;
     font-size: 20px;
-    left: 4%;
+    left: 9vw;
     position: relative;
+    text-align: center;
   }
   
   .q-img {
-    top: 240px;
-    left: 55px;
+   top: 420px;
+    left: 10vw;
+    height: 208px;
+    width: 208px;
+    z-index: 100;
+
   }
+
   
   .q-first-ans {
-    top: 510px;
-    left: 17px;
+    top: 700px;
+    left: 11%;
+    width: 80vw;
   }
   .q-second-ans {
-    top: 560px;
-    left: 17px;
+    top: 760px;
+    left: 11%;
+    width: 80vw;
   }
+  div.q-footer {
+    position: relative;
+    top: 400px!important;
+    width: 100vw;
+  }
+
+  .quizWave {
+    position: relative;
+    top: 1000px;
+    width: 100%;
+  }
+  .qtitle {
+    font-size: 44px;
+    top: 50px;
+    left: 10%;
+  }
+  .qdesc {
+    width: 80vw;
+    top: 100px;
+    left: 10%;
+  }
+  .mapq {
+    top:639px;
+    position: relative;  }
 }
 
-@media (min-width: 481px) and  (max-width: 600px) {
+@media (min-width: 401px) and  (max-width: 600px) {
+  
+  
   .quiz-title {
-    top: 3px;
-    left: 30%;
+    top: 50px!important;
+    left:17vw!important;
+    width: 90vw;
+    font-size: 46px;
    }
    
    .quiz-desc {
-     top: 100px;
-     left: 4%;
+     top: 170px!important;
+     left: 4vw;
+     text-align: center;
+     width: 90vw;
+     font-size: 26px;
    }
-   .q-question {
-     top: 170px;
-     width: 100%!important;
-     font-size: 20px;
-     left: 6%;
-     position: relative;
-   }
-   
-   .q-img {
-     top: 240px;
-     left: 25px;
-   }
-   
-   .q-first-ans {
-     top: 300px;
-     left: 327px;
-     width: 220px;
-   }
-   .q-second-ans {
-    top: 370px;
-    left: 327px;
-    width: 220px;
-   }
+  .qtitle {
+   top: 300px!important;
+   left: 15%;
+  }
+  
+  .qdesc {
+    top: 330px!important;
+    left: 2%;
+    text-align: center;
+  }
+  .q-question {
+    top:290px;
+    width: 80vw!important;
+    font-size: 20px;
+    left: 9vw;
+    position: relative;
+    text-align: center;
+    font-size: 28px;
+  }
+  
+  .q-img {
+   top: 440px;
+    left: 22vw!important;
+    height: 268px;
+    width: 268px;
+    z-index: 100;
+
+  }
+
+  
+  .q-first-ans {
+    top: 770px;
+    left: 11%;
+    width: 80vw;
+  }
+  .q-second-ans {
+    top: 840px;
+    left: 11%;
+    width: 80vw;
+  }
+  div.q-footer {
+    position: relative;
+    top: 400px!important;
+    width: 100vw;
+  }
+
+  .quizWave {
+    position: relative;
+    top: 970px;
+    width: 100%;
+  }
+  .qtitle {
+    font-size: 44px;
+    top: 50px;
+    left: 10%;
+  }
+  .qdesc {
+    width: 80vw;
+    top: 100px;
+    left: 10%;
+  }
+  .mapq {
+    top:830px;
+    position: relative;  }
 }
 
 @media (min-width: 601px) and  (max-width: 768px) {
+    
   .quiz-title {
-    top: 3px;
-    left: 30%;
+    top: 50px!important;
+    left:27vw!important;
+    width: 90vw;
+    font-size: 48px;
    }
    
    .quiz-desc {
-     top: 100px;
-     left: 4%;
+     top: 170px!important;
+     left: 4vw;
+     text-align: center;
+     width: 90vw;
+     font-size: 26px!important;
+
    }
-   .q-question {
-     top: 170px;
-     width: 100%!important;
-     font-size: 20px;
-     left: 6%;
-     position: relative;
-   }
-   
-   .q-img {
-     top: 240px;
-     left: 25px;
-   }
-   
-   .q-first-ans {
-     top: 300px;
-     left: 327px;
-     width: 320px;
-   }
-   .q-second-ans {
-    top: 370px;
-    left: 327px;
-    width: 320px;
-   }
+  .qtitle {
+   top: 300px!important;
+   left: 15%;
+  }
+  
+  .qdesc {
+    top: 330px!important;
+    left: 2%;
+    text-align: center;
+  }
+  .q-question {
+    top:270px;
+    width: 80vw!important;
+    font-size: 20px;
+    left: 9vw;
+    position: relative;
+    text-align: center;
+    font-size: 28px!important;
+
+  }
+  
+  .q-img {
+   top: 390px;
+    left: 27vw!important;
+    height: 288px;
+    width: 288px;
+    z-index: 100;
+
+  }
+
+  
+  .q-first-ans {
+    top: 730px;
+    left: 11%;
+    width: 80vw;
+  }
+  .q-second-ans {
+    top: 790px;
+    left: 11%;
+    width: 80vw;
+  }
+  div.q-footer {
+    position: relative;
+    top: 400px!important;
+    width: 100vw;
+  }
+
+  .quizWave {
+    position: relative;
+    top: 1000px;
+    width: 100%;
+  }
+  .qtitle {
+    font-size: 44px;
+    top: 50px;
+    left: 10%;
+  }
+  .qdesc {
+    width: 80vw;
+    top: 100px;
+    left: 10%;
+  }
+  .mapq {
+    top:830px;
+    position: relative;  }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
+  .qtitle {
+    top: 100px!important;
+    left: 36%;
+    width: 90vw;
+    font-size: 55px;
+   }
+   
+   .qdesc {
+     top: 200px;
+     left: 23%;
+     text-align: center;
+     width: 50vw;
+   }
   .quiz-title {
-    top: 3px;
-    left: 40%;
+    top: 60px;
+    left:25%;
+    font-size: 77px;
    }
    
    .quiz-desc {
-     top: 100px;
-     left: 9%;
+     top: 200px;
+     left: 40%;
+     font-size: 30px;
+     width: 45%;
+     text-align: center;
    }
    .q-question {
-     top: 170px;
-     width: 100%!important;
+     top: 330px;
+     width: 70%!important;
      font-size: 30px;
-     left:17%;
+     left:45vw;
      position: relative;
    }
    
    .q-img {
-     top: 270px;
-     left: 125px;
+     top: 250px;
+     left: 9%;
+     width: 30vw;
+     height: 30vw;
    }
+ 
    
    .q-first-ans {
-     top: 320px;
-     left: 427px;
-     width: 420px;
+     top: 420px;
+     left:48vw;
+     width: 60%;
    }
    .q-second-ans {
-    top: 390px;
-    left: 427px;
-    width: 420px;
+    top: 490px;
+    left:48vw;
+    width: 60%;
    }
+   .mapq {
+    top: 570px;
+    position: relative;  }
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {
+  
+  .qtitle {
+    top: 100px!important;
+    left: 36%;
+    width: 90vw;
+    font-size: 55px;
+   }
+   
+   .qdesc {
+     top: 200px;
+     left: 23%;
+     text-align: center;
+     width: 50vw;
+   }
   .quiz-title {
-    top: 3px;
-    left: 40%;
+    top: 90px;
+    left: 45%;
+    font-size: 77px;
    }
    
    .quiz-desc {
-     top: 100px;
-     left: 15%;
+     top: 200px;
+     left: 40%;
+     font-size: 30px;
+     width: 45%;
+     text-align: center;
    }
    .q-question {
-     top: 170px;
-     width: 100%!important;
+     top: 330px;
+     width: 90%!important;
      font-size: 30px;
-     left:39%;
+     left:45vw;
      position: relative;
    }
    
    .q-img {
-     top: 270px;
-     left: 39%;
-   }
-   
-   .q-first-ans {
-     top: 320px;
-     left: 110%;
-     width: 420px;
-   }
-   .q-second-ans {
-    top: 390px;
-    left: 110%;    
-    width: 420px;
-   }
-}
-
-@media(min-width: 1383px) { 
-  .quiz-title {
-    top: 3px;
-    left: 40%;
-   }
-   
-   .quiz-desc {
-     top: 100px;
-     left:15%;
-   }
-   .q-question {
      top: 170px;
-     width: 100%!important;
-     font-size: 30px;
-     left:49%;
-     position: relative;
+     left: 22%!important;
+     width: 20vw;
+     height: 20vw;
    }
-   
-   .q-img {
-     top: 270px;
-     left: 64%;
-   }
+ 
    
    .q-first-ans {
-     top: 320px;
-     left: 140%;
+     top: 420px;
+     left:48vw;
      width: 520px;
    }
    .q-second-ans {
-    top: 390px;
-    left: 140%;    
+    top: 490px;
+    left:48vw;
+    width: 520px;
+   }
+   .mapq {
+    top: 700px;
+    position: relative;  }
+}
+
+@media(min-width: 1383px) { 
+  .mapq {
+    top: 700px;
+    position: relative;  }
+  .qtitle {
+    top: 100px!important;
+    left: 36%;
+    width: 90vw;
+    font-size: 55px;
+   }
+  
+   .qdesc {
+     top: 200px;
+     left: 23%;
+     text-align: center;
+     width: 50vw;
+   }
+  .quiz-title {
+    top: 90px;
+    left: 45%;
+    font-size: 77px;
+   }
+   
+   .quiz-desc {
+     top: 200px;
+     left: 40%;
+     font-size: 30px;
+     width: 40%;
+     text-align: center;
+   }
+   .q-question {
+     top: 330px;
+     width: 100%!important;
+     font-size: 30px;
+     left:45vw;
+     position: relative;
+   }
+   
+   .q-img {
+     top: 170px;
+     left: 40%;
+     width: 20vw;
+     height: 20vw;
+   }
+ 
+   
+   .q-first-ans {
+     top: 420px;
+     left:48vw;
+     width: 520px;
+   }
+   .q-second-ans {
+    top: 490px;
+    left:48vw;
     width: 520px;
    }
   }

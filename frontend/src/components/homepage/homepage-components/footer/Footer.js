@@ -12,8 +12,8 @@ class Footer extends React.Component {
             <Container fluid style={{ paddingLeft: 0, paddingRight: 0, marginLeft: 0, marginRight: 0 }}>
                 <Row noGutters>
                     <Col>
-                        <div class="d-flex flex-column " id='footer' >
-                            <footer class="footer">
+                        <div className="d-flex flex-column " id='footer' >
+                            <footer className="footer">
                                 <div className='contact'>
                                     <h6>SC TECHIRGHIOL FARMA COSMETICS SRL</h6>
                                     <p>Nr. ord. Reg. com./aut.: J13-1885-2012</p>

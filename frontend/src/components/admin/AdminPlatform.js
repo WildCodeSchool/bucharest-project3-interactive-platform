@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
 import EditInfoCards from "./admin-components/InfoCard/EditInfoCards";
 import QCards from './admin-components/quiz-cards/QCards';
@@ -12,6 +11,8 @@ import SignUp from '../homepage/homepage-components/signup/SignUp';
 import Login from '../homepage/homepage-components/login/Login';
 import Quiz from '../homepage/homepage-components/quiz/Quiz';
 
+import { connect } from 'react-redux';
+
 
 class AdminPlatform extends React.Component {
     constructor(props) {
@@ -22,47 +23,55 @@ class AdminPlatform extends React.Component {
         }
     }
 
-    showCards = (param) => {
-        if(param === 'info') {
-            this.setState({
-                infoCards: true,
-                quizCards: false
+    componentDidMount() {
+        Promise.all([
+            fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/description', {
+                method: 'GET',
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            }).then(res => res.json()),
+
+            fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/quizz', {
+                method: 'GET',
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            }).then(res => res.json()),
+
+            fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/categories', {
+                method: 'GET',
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
             })
-        } else if (param === 'quiz') {
-            this.setState({
-                infoCards: false,
-                quizCards: true
-            })
-        } else {
-            this.setState({
-                infoCards: false,
-                quizCards: false
-            })
-        }
+                .then(res => res.json())
+        ])
+            .then(res => {
+
+                this.setState({
+                    infoData: res[0],
+                    quizzData: res[1],
+                    categories: res[2],
+                })
+            }
+            )
     }
-
-
     render() {
-        const infoCards = this.state.infoCards;
-        const quizCards = this.state.quizCards;
-        let QuizCards;
-        let InfoCards;
-
-        if(infoCards) {
-            QuizCards = <EditInfoCards/>;
-        }else if(quizCards) {
-            InfoCards =<QCards/>
-        }
-
-
         return (
-            <div>
-                    <AdminNav choose={this.showCards}/>
-                   {QuizCards}
-                   {InfoCards}
+            <div className="admin-container">
+                <AdminNav fetchedDataQuiz={this.state.quizzData} categories={this.state.categories} token={this.props.token} fetchedDataInfo={this.state.infoData} choose={this.showCards} />
+               
             </div>
         )
     }
 }
+const mapStateToProps = state => {
+    return {
+        user: state.authentication.user,
+        token: state.authentication.token,
+        isUserLogged: state.authentication.isUserLogged,
+    }
+}
 
-export default withRouter(AdminPlatform);
+export default withRouter(connect(mapStateToProps)(AdminPlatform))

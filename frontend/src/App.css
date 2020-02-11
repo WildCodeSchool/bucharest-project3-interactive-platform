@@ -1,21 +1,50 @@
+.wave, .wave2 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: 2000px;
+
+}
+.one, .two {
+  position: absolute;
+}
+.one {
+  left: 90vw;
+  top: 30px;
+}
+.two {
+  left: 80vw;
+  top: 30px;
+}
+
+
 .App {
   position: relative;
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
+  left: 0%;
+  width: 100%;
 }
+
 body,
-*,
 html {
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: 100%;
 }
+
 .form-control {
   border-radius: 10px;
+  z-index: 1000;
 }
-#user-form {
+.form {
   position: absolute;
+  z-index: 100;
+  align-items: center;
+
 }
 .submit {
   position: absolute;
@@ -29,56 +58,185 @@ html {
   left: 30%;
   z-index: 100;
 }
-.user-form{
-  z-index: 100;
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(./assets/Thirsty.ttf);
+}
+.quiz-title, .qtitle {
+  font-family: myFirstFont;
+
+}
+.modal-congrats {
+  font-family: myFirstFont;
+  left: 30%;
+  position: absolute;
+  font-size: 44px;
+  padding-bottom: 5px;
 }
 /*login/signup form*/
 @media (min-width: 0px) and (max-width: 400px) {
-  #user-form {
-    width: 90vw;
-    left: 6%;
+  .form {
+    width: 89vw;
+    left: 9%;
+    top: 30px;
+  }
+  svg.wave2 {
+    top: 845px;
+    left: -3%;
+    width: 110%;
+    z-index: 2000;
+  }
+  .wave {
+    top: 790px!important;
+    left: -3%;
+    width: 110%;
+  
+  }
+  .one {
+    top: 55px;
+    left: 4%;
+  }
+  .two {
+    top: 88px;
+    left: 4%;
   }
 }
 
-@media (min-width: 401px) and (max-width: 600px) {
-  #user-form {
+@media (min-width: 401px) and (max-width: 599px) {
+  .form {
     width: 60vw;
-    left: 31%;
-    top: 22px;
+    left: 67%;
+    top: 10px;
+  }
+  svg.wave2 {
+    top: 922px;
+    left: -3%;
+    width: 110%;
+    z-index: 2000;
+  }
+  .wave{
+    top: 1399px;
+    left: -3%;
+    width: 110%;
+  
+  }
+  .one {
+    top: 55px;
+    left: 4%;
+  }
+  .two {
+    top: 88px;
+    left: 4%;
   }
 }
 
-@media (min-width: 601px) and (max-width: 768px) {
-  #user-form {
-    width: 50vw;
+@media (min-width: 600px) and (max-width: 768px) {
+  .form {
+    width: 66vw;
     top: 20px;
-    left: 48%;
+    left: 58%;
   }
   .myinput {
     height: 28px;
   }
+  .wave{
+    top: 1600px;
+    width: 103%;
+    left: -3%;
+  
+  }
+  svg.wave2 {
+    top: 1010px;
+    left: -3%;
+    width: 103%;
+    z-index: 2000;
+    
+  }
+  .one {
+    top: 55px;
+    left: 4%;
+  }
+  .two {
+    top: 88px;
+    left: 4%;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-  #user-form {
+  .form {
     width: 48vw;
     top: 20px;
-    left: 46%;
+    left: 76%!important;
+  }
+
+  .wave {
+    top: 1600px;
+    width: 103%;
+    left: -3%;
+  
+  }
+
+  svg.wave2 {
+    top: 720px;
+    width: 103%;
+    left: -3%;
+    z-index: 2000;
+  
+    
+  }
+  .one {
+    top: 55px;
+    left: 4%;
+  }
+  .two {
+    top: 88px;
+    left: 4%;
   }
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {
-  #user-form {
-    width: 30vw;
-    top: 20px;
-    left: 64%;
+  .form {
+    width: 38vw;
+    top: 18px;
+    left: 60vw;
+  }
+  .wave {
+    top: 1490px;
+    width: 103%;
+    left: -3%;
+  
+  }
+
+  svg.wave2 {
+    top: 723px;
+    width: 103%;
+    left: -3%;
+    z-index: 2000;
+  
+    
   }
 }
 
 @media (min-width: 1383px) {
-  #user-form {
-    width: 30vw;
+  .form {
+    width: 28vw;
     top: 20px;
-    left: 64%;
+    left: 69vw;
+  }
+  .wave {
+    top: 1620px;
+    width: 103%;
+    left: -3%;
+  
+  }
+
+  svg.wave2 {
+    top: 725px;
+    width: 103%;
+    left: -3%;
+    z-index: 2000;
+  
+    
   }
 }

@@ -1,20 +1,24 @@
 import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
-import { Navbar, Nav,Button } from 'react-bootstrap';
+import { Navbar, Nav, Button, Row, Col,Container } from 'react-bootstrap';
 import logo from "../../../../assets/img/logo_techir.png";
 import './NavBar.css'
 import Login from '../login/Login';
 import Signup from '../signup/SignUp';
 import SignUp from "../signup/SignUp";
 
+import { connect } from 'react-redux';
 
-class Navigation extends React.Component  {
+
+
+class Navigation extends React.Component {
     loginCounter = 0;
     signinCounter = 0;
-    
+
     constructor(props) {
         super(props)
         this.state = {
+            isUserlogged: false,
             isShownLogin: false,
             isShownSignup: false
         }
@@ -22,76 +26,125 @@ class Navigation extends React.Component  {
         this.showSignUp = this.showSignUp.bind(this);
     }
 
-
     showLogIn(event) {
         event.preventDefault();
-        this.loginCounter += 1;
-        if(this.loginCounter % 2 === 0) {
-            this.props.onClickLogin('login');
-        } else if(this.loginCounter % 2 !== 0) {
-            this.props.onClickLogin(false);
-        }
+
         this.setState({
             isShownLogin: !this.state.isShownLogin,
-
+            isShownSignup: false,
         })
-       
+
     }
     showSignUp(event) {
         event.preventDefault();
-        this.signinCounter += 1;
-        if(this.signinCounter % 2 === 0) {
-            this.props.onClickSignup('signup');
-        } else if(this.signinCounter % 2 !== 0) {
-            this.props.onClickSignup(false);
-        }
+
         this.setState({
-            isShownSignup: !this.state.isShownSignup
+            isShownSignup: !this.state.isShownSignup,
+            isShownLogin: false
 
         })
     }
-  
+
+    toggleLogin = () => {
+        console.log('do');
+        this.loginCounter += 1;
+        if (this.loginCounter % 2 === 0) {
+            this.props.onClickLogin(false);
+            console.log('open');
+        } else if (this.counter % 2 !== 0) {
+            this.props.onClickLogin(true);
+            console.log('close');
+        }
+    }
+
+    disconnectUser = (event) => {
+        event.preventDefault()
+        this.props.dispatch({ type: "DELETE_LOGIN_SESSION", })
+        this.props.history.push('/')
+
+    }
+    componentDidMount() {
+        console.log(this.props.user);
+
+
+    }
     render() {
+
+        // console.log(this.props)
+        if (this.props.redirectLogin && this.state.isShownSignup) this.setState({
+            isShownLogin: !this.state.isShownLogin,
+            isShownSignup: false,
+        })
+
         const isLoggedIn = this.state.isShownLogin;
         const isSignedUp = this.state.isShownSignup;
         let login;
         let signup;
 
-        if(isLoggedIn) {
-            login = <Login/>;
-        }else if(isSignedUp) {
-            signup =<SignUp/>
+        if (isLoggedIn) {
+            login = <Login />;
+        } else if (isSignedUp) {
+            signup = <SignUp />
         }
-    
+
         return (
-            <div>
-            <Navbar bg="light" expand="lg">
-                <Navbar.Brand ><a href="https://wildcodeschool.github.io/bucharest-project3-interactive-platform"><img src={logo} alt="techir-logo" className="logo-t"></img></a></Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto nav-items">
-                        <Link className="nav-link"  onClick={this.showLogIn}>Conectare</Link>
-                        <Link className="nav-link" onClick={this.showSignUp}>Creeaza cont</Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
-            {login}
-            {signup}
-            </div>
+            <Container fluid style={{margin: 0, padding: 0}}>
+                <Row noGutters style={{margin: 0, padding: 0}}>
+                <Col>
+                <Navbar bg="dark" expand="lg" className="nav">
+                    <Navbar.Brand >
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+                    {!this.props.isUserLogged ?
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav className=" nav-items">
+                                <div className="nav-link one" onClick={this.showLogIn}> Conectare</div>
+                                <div className="nav-link two" onClick={this.showSignUp}> Creeaza cont</div>
+                            </Nav>
+                        </Navbar.Collapse> :
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav className=" nav-items">
+                                <Link className="nav-link one" onClick={this.disconnectUser}>Deconectare</Link>
+                            </Nav>
+                        </Navbar.Collapse>
+                    }
+                </Navbar>
+                </Col>
+                </Row>
+                <Row noGutters style={{margin: 0, padding: 0}}>
+                    <Col>
+                <div className="logo-div">
+
+                    <Link to="/"><img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" width="274px" height="105px" className="logo-q" /></Link>
+                </div>
+                </Col>
+                </Row>
+                <Row noGutters style={{margin: 0, padding: 0}}>
+                    <Col xs={6} sm={6} md={4} lg={4}>
+                {!this.props.isUserLogged && this.state.isShownLogin && !this.state.isShownSignup ? <Login /> : null}
+                {!this.props.isUserLogged && this.state.isShownSignup && !this.state.isShownLogin ? <SignUp /> : null}
+                </Col>
+                </Row>
+               </Container>
         );
     }
 }
 
 
-export default Navigation;
+const mapStateToProps = state => {
+    return {
+        // user: state.authentication.user,
+        token: state.authentication.token,
+        msg: state.authentication.msg,
+        isUserLogged: state.authentication.isUserLogged,
+        redirectLogin: state.authentication.redirectLogin
+    }
+}
+
+export default withRouter(
+    connect(mapStateToProps)
+        (Navigation));
 
 
 
-    // toggleLogin = () => {
-    //     this.loginCounter += 1;
-    //     if(this.loginCounter % 2 === 0) {
-    //         this.props.onClickLogin(false);
-    //     } else if(this.counter % 2 !== 0) {
-    //         this.props.onClickLogin(true);
-    //     }
-    // }
