@@ -1,3 +1,25 @@
+.snackFade-enter{
+opacity:0;
+}
+.snackFade-enter-active{
+opacity:1;
+transition: opacity 300ms ease-out;
+}
+.snackFade-leave{
+opacity:1;
+}
+.snackFade-leave-active{
+opacity:0;
+transition: opacity 300ms ease-out;
+}
+.snackFade-appear{
+opacity:1;
+}
+.snackFade-appear-active{
+opacity:0;
+transition: opacity 300ms ease-out;
+}
+
 .wave, .wave2 {
   position: relative;
   margin: 0;
