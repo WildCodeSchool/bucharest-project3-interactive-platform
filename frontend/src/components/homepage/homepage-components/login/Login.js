@@ -58,9 +58,11 @@ class Login extends React.Component {
                     }
                 )
 
-                localStorage.setItem('userLogged', res.user)
-                localStorage.setItem('userToken', res.user)
-                localStorage.setItem('userIsLogged', res.user)
+                localStorage.setItem('userId', res.user.id)
+                localStorage.setItem('userEmail', res.user.email)
+                localStorage.setItem('userAccesLevel', res.user.acces_level)
+                localStorage.setItem('userToken', res.token)
+                localStorage.setItem('userIsLogged', '1')
 
                 if (this.state.email === "admin@admin.ro") {
                     this.props.history.push("/admin")

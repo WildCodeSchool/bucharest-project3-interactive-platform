@@ -24,6 +24,35 @@ class AdminPlatform extends React.Component {
     }
 
     componentDidMount() {
+        if (localStorage.getItem('userToken') && localStorage.getItem('userIsLogged') === '1') {
+            if (localStorage.getItem('userAccesLevel') === '1') {
+                this.props.dispatch(
+                    {
+                        type: "CREATE_LOGIN_SESSION",
+                        user: {
+                            id: localStorage.getItem('userId'),
+                            email: localStorage.getItem('userEmail'),
+                            acces_level: 1
+                        },
+                        token: localStorage.getItem('userToken'),
+                        isUserLogged: true
+                    }
+                )
+                this.props.history.push("/admin")
+            } else {
+                this.props.dispatch(
+                    {
+                        type: "CREATE_LOGIN_SESSION",
+                        user: {
+                            id: localStorage.getItem('userId'),
+                            email: localStorage.getItem('userEmail'),
+                        },
+                        token: localStorage.getItem('userToken'),
+                        isUserLogged: true
+                    }
+                )
+            }
+        }
         Promise.all([
             fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/description', {
                 method: 'GET',
@@ -61,7 +90,6 @@ class AdminPlatform extends React.Component {
         return (
             <div className="admin-container">
                 <AdminNav fetchedDataQuiz={this.state.quizzData} categories={this.state.categories} token={this.props.token} fetchedDataInfo={this.state.infoData} choose={this.showCards} />
-               
             </div>
         )
     }
