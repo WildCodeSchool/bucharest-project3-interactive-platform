@@ -59,12 +59,12 @@ class GMap extends React.Component {
                         <div className='map'>
                             <p className="map-title">Pentru a afla locatia cea mai apropiata de tine si in care poti sa gasesti mai multe produse <a href="www.techir.ro">Techir</a>, poti studia harta noastra. Iti sugeram sa contactezi locatia aleasa telefonic pentru a verifica stocul produselor dorite.</p>
                             <Map google={this.props.google}
-                                zoom={12}
+                                zoom={7.1}
                                 className="gMap"
 
                                 initialCenter={{
-                                    lat: 44.434931,
-                                    lng: 26.102866
+                                    lat: 45.9,
+                                    lng: 25.11
                                 }}
                             >
                                 {this.state.data ? this.state.data.map((e, i) => {
