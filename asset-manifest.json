@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bucharest-project3-interactive-platform/static/css/main.db9c14bd.chunk.css",
-    "main.js": "/bucharest-project3-interactive-platform/static/js/main.103ab8ed.chunk.js",
-    "main.js.map": "/bucharest-project3-interactive-platform/static/js/main.103ab8ed.chunk.js.map",
+    "main.js": "/bucharest-project3-interactive-platform/static/js/main.bf0021ea.chunk.js",
+    "main.js.map": "/bucharest-project3-interactive-platform/static/js/main.bf0021ea.chunk.js.map",
     "runtime-main.js": "/bucharest-project3-interactive-platform/static/js/runtime-main.93642916.js",
     "runtime-main.js.map": "/bucharest-project3-interactive-platform/static/js/runtime-main.93642916.js.map",
     "static/css/2.17e5ed98.chunk.css": "/bucharest-project3-interactive-platform/static/css/2.17e5ed98.chunk.css",
     "static/js/2.b7c205a9.chunk.js": "/bucharest-project3-interactive-platform/static/js/2.b7c205a9.chunk.js",
     "static/js/2.b7c205a9.chunk.js.map": "/bucharest-project3-interactive-platform/static/js/2.b7c205a9.chunk.js.map",
     "index.html": "/bucharest-project3-interactive-platform/index.html",
-    "precache-manifest.35c0a5b70fc7c3d98c4fcefd1ab4ee38.js": "/bucharest-project3-interactive-platform/precache-manifest.35c0a5b70fc7c3d98c4fcefd1ab4ee38.js",
+    "precache-manifest.f2a8e56d8c569ed71ee74d634f83d464.js": "/bucharest-project3-interactive-platform/precache-manifest.f2a8e56d8c569ed71ee74d634f83d464.js",
     "service-worker.js": "/bucharest-project3-interactive-platform/service-worker.js",
     "static/css/2.17e5ed98.chunk.css.map": "/bucharest-project3-interactive-platform/static/css/2.17e5ed98.chunk.css.map",
     "static/css/main.db9c14bd.chunk.css.map": "/bucharest-project3-interactive-platform/static/css/main.db9c14bd.chunk.css.map",
@@ -29,6 +29,6 @@
     "static/css/2.17e5ed98.chunk.css",
     "static/js/2.b7c205a9.chunk.js",
     "static/css/main.db9c14bd.chunk.css",
-    "static/js/main.103ab8ed.chunk.js"
+    "static/js/main.bf0021ea.chunk.js"
   ]
 }
