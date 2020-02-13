@@ -62,7 +62,7 @@ class Login extends React.Component {
 
                     res.user.acces_level === 1 ?
                         this.props.history.push("/admin") :
-                        this.props.history.push("/quiz")
+                        this.props.history.push("/")
                 } else {
                     console.log(res.msg)
                     this.props.dispatch(
