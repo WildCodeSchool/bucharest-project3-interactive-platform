@@ -18,7 +18,7 @@ import EditInfoCards from "./components/admin/admin-components/InfoCard/EditInfo
 import QCards from './components/admin/admin-components/quiz-cards/QCards';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-
+import NotFoundPage from "./components/homepage/homepage-components/404/404";
 import reducer from './reducers'
 
 
@@ -33,6 +33,7 @@ ReactDOM.render(
         <Route exact path="/" component={Homepage} />
         <Route exact path="/quiz" component={Quiz} />
         <Route exact path="/admin" component={AdminPlatform} />
+        <Route path="*" component={NotFoundPage} />
       </Switch>
     </HashRouter>
   </Provider>, document.getElementById('root')
