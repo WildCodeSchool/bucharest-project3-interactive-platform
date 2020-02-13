@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
-import { Navbar, Nav, Button, Row, Col,Container } from 'react-bootstrap';
+import { Navbar, Nav, Button, Row, Col, Container } from 'react-bootstrap';
 import logo from "../../../../assets/img/logo_techir.png";
 import './NavBar.css'
 import Login from '../login/Login';
 import Signup from '../signup/SignUp';
 import SignUp from "../signup/SignUp";
-
 import { connect } from 'react-redux';
-
-
+import * as loginIcon from '../../../../assets/img/login.png';
+import * as logoutIcon from '../../../../assets/img/logout.png';
+import * as signupIcon from '../../../../assets/img/make-account.png';
 
 class Navigation extends React.Component {
     loginCounter = 0;
@@ -35,6 +35,7 @@ class Navigation extends React.Component {
         })
 
     }
+
     showSignUp(event) {
         event.preventDefault();
 
@@ -63,14 +64,12 @@ class Navigation extends React.Component {
         this.props.history.push('/')
 
     }
+
     componentDidMount() {
         console.log(this.props.user);
-
-
     }
-    render() {
 
-        // console.log(this.props)
+    render() {
         if (this.props.redirectLogin && this.state.isShownSignup) this.setState({
             isShownLogin: !this.state.isShownLogin,
             isShownSignup: false,
@@ -88,45 +87,48 @@ class Navigation extends React.Component {
         }
 
         return (
-            <Container fluid style={{margin: 0, padding: 0}}>
-                <Row noGutters style={{margin: 0, padding: 0}}>
-                <Col>
-                <Navbar bg="dark" expand="lg" className="nav">
-                    <Navbar.Brand >
-                    </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-
-                    {!this.props.isUserLogged ?
-                        <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className=" nav-items">
-                                <div className="nav-link one" onClick={this.showLogIn}> Conectare</div>
-                                <div className="nav-link two" onClick={this.showSignUp}> Creeaza cont</div>
-                            </Nav>
-                        </Navbar.Collapse> :
-                        <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className=" nav-items">
-                                <Link className="nav-link one" onClick={this.disconnectUser}>Deconectare</Link>
-                            </Nav>
-                        </Navbar.Collapse>
-                    }
-                </Navbar>
-                </Col>
-                </Row>
-                <Row noGutters style={{margin: 0, padding: 0}}>
+            <Container fluid style={{ margin: 0, padding: 0 }}>
+                <Row noGutters style={{ margin: 0, padding: 0 }}>
                     <Col>
-                <div className="logo-div">
+                        <Navbar bg="dark" expand="lg" className="nav">
+                            <Navbar.Brand >
+                            </Navbar.Brand>
+                            <Navbar.Toggle aria-controls="basic-navbar-nav" style={{borderColor: 'goldenrod' }}/>
 
-                    <Link to="/"><img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" width="274px" height="105px" className="logo-q" /></Link>
-                </div>
-                </Col>
+                            {!this.props.isUserLogged ?
+                                <Navbar.Collapse id="basic-navbar-nav">
+                                    <Nav className="nav-items">
+                                    {/* <img className="icon" src={loginIcon} style={{ width: "30px", height: '30px', color: 'white' }} /> */}
+                                        <div className="nav-link one" onClick={this.showLogIn}>| Conectare</div>
+                                        {/* <img className="icon" src={signupIcon} style={{ width: "30px", height: '30px', color: 'white' }} /> 
+                                        <img src={logoutIcon} style={{ width: "30px", height: '30px', color: 'white', top: '30px' }} /> */}
+                                        <div className="nav-link two" onClick={this.showSignUp}>| Creeaza cont</div>
+                                    </Nav>
+                                </Navbar.Collapse> :
+                                <Navbar.Collapse id="basic-navbar-nav">
+                                    <Nav className=" nav-items">
+                                        <Link className="nav-link one" onClick={this.disconnectUser}>Deconectare</Link>
+                                    </Nav>
+                                </Navbar.Collapse>
+                            }
+                        </Navbar>
+                    </Col>
                 </Row>
-                <Row noGutters style={{margin: 0, padding: 0}}>
+                <Row noGutters style={{ margin: 0, padding: 0 }}>
+                    <Col>
+                        <div className="logo-div">
+
+                            <Link to="/"><img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" width="274px" height="105px" className="logo-q" /></Link>
+                        </div>
+                    </Col>
+                </Row>
+                <Row noGutters style={{ margin: 0, padding: 0 }}>
                     <Col xs={6} sm={6} md={4} lg={4}>
-                {!this.props.isUserLogged && this.state.isShownLogin && !this.state.isShownSignup ? <Login /> : null}
-                {!this.props.isUserLogged && this.state.isShownSignup && !this.state.isShownLogin ? <SignUp /> : null}
-                </Col>
+                        {!this.props.isUserLogged && this.state.isShownLogin && !this.state.isShownSignup ? <Login /> : null}
+                        {!this.props.isUserLogged && this.state.isShownSignup && !this.state.isShownLogin ? <SignUp /> : null}
+                    </Col>
                 </Row>
-               </Container>
+            </Container>
         );
     }
 }
