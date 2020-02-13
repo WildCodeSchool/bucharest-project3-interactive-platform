@@ -47,44 +47,58 @@ class Login extends React.Component {
             })
             .then(res => res.json())
             .then(res => {
-                console.log(res)
-                this.props.dispatch(
-                    {
-                        type: "CREATE_LOGIN_SESSION",
-                        user: res.user,
-                        token: res.token,
-                        msg: res.msg,
-                        isUserLogged: true
-                    }
-                )
-                    if(this.state.email === "admin@admin.ro") {
-                        this.props.history.push("/admin")
-                    } else {
-                        this.props.history.push("/quiz")
-                    }
+                // console.log(res)
+                if (res.token) {
+                    console.log(res.msg)
+                    this.props.dispatch(
+                        {
+                            type: "CREATE_LOGIN_SESSION",
+                            user: res.user,
+                            token: res.token,
+                            msg: res.msg,
+                            isUserLogged: true
+                        }
+                    )
+
+                    res.user.acces_level === 1 ?
+                        this.props.history.push("/admin") :
+                        this.props.history.push("/")
+                } else {
+                    console.log(res.msg)
+                    this.props.dispatch(
+                        {
+                            type: "CREATE_LOGIN_SESSION",
+                            msg: res.msg,
+                            isUserLogged: false
+                        }
+                    )
+                }
             })
             .catch(error => console.log(error))
 
     }
 
+
+
+
     render() {
         return (
-            <Container fluid style={{margin: 0, padding: 0}}>
+            <Container fluid style={{ margin: 0, padding: 0 }}>
                 {/* {this.props.isActive ? */}
-                <Row noGutters style={{margin: 0, padding: 0}}>
+                <Row noGutters style={{ margin: 0, padding: 0 }}>
                     <Col>
-                            <Form onSubmit={this.handleSubmit} className="form">
-                                <Form.Group controlId="formBasicEmail">
-                                    <Form.Control className="myinput" style={{ borderColor: '#FFBF00'}}  onChange={this.onChangeEmail} type="email" placeholder="Email"  />
-                                </Form.Group>
-                                <Form.Group controlId="formBasicPassword">
-                                    <Form.Control className="myinput" style={{ borderColor: '#FFBF00'}}  onChange={this.onChangePass} type="password" placeholder="Parola"  />
-                                </Form.Group>
-                            
-                                    <Button variant="outline-warning" className='submit' type="submit">
-                                       Logare
+                        <Form onSubmit={this.handleSubmit} className="form">
+                            <Form.Group controlId="formBasicEmail">
+                                <Form.Control className="myinput" style={{ borderColor: '#FFBF00' }} onChange={this.onChangeEmail} type="email" placeholder="Email" />
+                            </Form.Group>
+                            <Form.Group controlId="formBasicPassword">
+                                <Form.Control className="myinput" style={{ borderColor: '#FFBF00' }} onChange={this.onChangePass} type="password" placeholder="Parola" />
+                            </Form.Group>
+
+                            <Button variant="outline-warning" className='submit' type="submit">
+                                Logare
                                     </Button>
-                            </Form>
+                        </Form>
                     </Col>
                 </Row>
                 {/* // : null} */}
