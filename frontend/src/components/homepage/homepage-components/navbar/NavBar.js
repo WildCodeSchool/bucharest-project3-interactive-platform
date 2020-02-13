@@ -6,6 +6,11 @@ import './NavBar.css'
 import Login from '../login/Login';
 import Signup from '../signup/SignUp';
 import SignUp from "../signup/SignUp";
+
+
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+
 import { connect } from 'react-redux';
 import * as loginIcon from '../../../../assets/img/login.png';
 import * as logoutIcon from '../../../../assets/img/logout.png';
@@ -18,6 +23,7 @@ class Navigation extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            showMsg: true,
             isUserlogged: false,
             isShownLogin: false,
             isShownSignup: false
@@ -69,7 +75,18 @@ class Navigation extends React.Component {
         console.log(this.props.user);
     }
 
+    showMsg = () => {
+        setTimeout(() => {
+            this.setState({
+                showMsg: false
+            })
+        }, 3000);
+    }
+
     render() {
+
+        console.log(this.props)
+
         if (this.props.redirectLogin && this.state.isShownSignup) this.setState({
             isShownLogin: !this.state.isShownLogin,
             isShownSignup: false,
@@ -93,16 +110,16 @@ class Navigation extends React.Component {
                         <Navbar bg="dark" expand="lg" className="nav">
                             <Navbar.Brand >
                             </Navbar.Brand>
-                            <Navbar.Toggle aria-controls="basic-navbar-nav" style={{borderColor: 'goldenrod' }}/>
+
+                            <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
                             {!this.props.isUserLogged ?
                                 <Navbar.Collapse id="basic-navbar-nav">
-                                    <Nav className="nav-items">
-                                    {/* <img className="icon" src={loginIcon} style={{ width: "30px", height: '30px', color: 'white' }} /> */}
+                                    <Nav className=" nav-items">
                                         <div className="nav-link one" onClick={this.showLogIn}>| Conectare</div>
-                                        {/* <img className="icon" src={signupIcon} style={{ width: "30px", height: '30px', color: 'white' }} /> 
-                                        <img src={logoutIcon} style={{ width: "30px", height: '30px', color: 'white', top: '30px' }} /> */}
                                         <div className="nav-link two" onClick={this.showSignUp}>| Creeaza cont</div>
+
+
                                     </Nav>
                                 </Navbar.Collapse> :
                                 <Navbar.Collapse id="basic-navbar-nav">
@@ -114,6 +131,22 @@ class Navigation extends React.Component {
                         </Navbar>
                     </Col>
                 </Row>
+
+
+                <ReactCSSTransitionGroup
+                    transitionName={'snackFade'}
+                    transitionEnter={300}
+                    transitionLeave={300}
+                    transitionAppear={true}
+                >
+                    {this.state.showMsg &&
+                        this.props.msg &&
+                        <Col style={{ height: '30px', backgroundColor: 'black', position: 'absolute', zIndex: 10, color: 'white', textAlign: 'center', }}>
+                            {this.showMsg()}
+                            <div style={{ margin: '8px' }}>   {this.props.msg} </div>
+                        </Col>}
+                </ReactCSSTransitionGroup>
+
                 <Row noGutters style={{ margin: 0, padding: 0 }}>
                     <Col>
                         <div className="logo-div">
