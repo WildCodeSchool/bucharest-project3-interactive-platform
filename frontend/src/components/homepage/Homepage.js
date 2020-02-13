@@ -43,6 +43,12 @@ class Homepage extends React.Component {
 
 
 componentDidMount(){
+const xxx = JSON.parse(localStorage.getItem('userLogged'))
+
+console.log(xxx);
+
+
+
     fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/categories', {
         method: 'GET',
         headers: new Headers({
