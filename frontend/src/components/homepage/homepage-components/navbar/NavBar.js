@@ -7,11 +7,14 @@ import Login from '../login/Login';
 import Signup from '../signup/SignUp';
 import SignUp from "../signup/SignUp";
 
+
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
+
 import { connect } from 'react-redux';
-
-
+import * as loginIcon from '../../../../assets/img/login.png';
+import * as logoutIcon from '../../../../assets/img/logout.png';
+import * as signupIcon from '../../../../assets/img/make-account.png';
 
 class Navigation extends React.Component {
     loginCounter = 0;
@@ -38,6 +41,7 @@ class Navigation extends React.Component {
         })
 
     }
+
     showSignUp(event) {
         event.preventDefault();
 
@@ -66,6 +70,7 @@ class Navigation extends React.Component {
         this.props.history.push('/')
 
     }
+
     componentDidMount() {
         console.log(this.props.user);
     }
@@ -81,6 +86,7 @@ class Navigation extends React.Component {
     render() {
 
         console.log(this.props)
+
         if (this.props.redirectLogin && this.state.isShownSignup) this.setState({
             isShownLogin: !this.state.isShownLogin,
             isShownSignup: false,
@@ -104,13 +110,16 @@ class Navigation extends React.Component {
                         <Navbar bg="dark" expand="lg" className="nav">
                             <Navbar.Brand >
                             </Navbar.Brand>
+
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
                             {!this.props.isUserLogged ?
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className=" nav-items">
-                                        <div className="nav-link one" onClick={this.showLogIn}> Conectare</div>
-                                        <div className="nav-link two" onClick={this.showSignUp}> Creeaza cont</div>
+                                        <div className="nav-link one" onClick={this.showLogIn}>| Conectare</div>
+                                        <div className="nav-link two" onClick={this.showSignUp}>| Creeaza cont</div>
+
+
                                     </Nav>
                                 </Navbar.Collapse> :
                                 <Navbar.Collapse id="basic-navbar-nav">
@@ -122,6 +131,7 @@ class Navigation extends React.Component {
                         </Navbar>
                     </Col>
                 </Row>
+
 
                 <ReactCSSTransitionGroup
                     transitionName={'snackFade'}
