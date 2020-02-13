@@ -7,7 +7,6 @@ import App from './App';
 import * as  serviceWorker from './serviceWorker';
 // import HashRouter from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-
 import Homepage from './components/homepage/Homepage';
 import Navigation from './components/homepage/homepage-components/navbar/NavBar';
 import Footer from './components/homepage/homepage-components/footer/Footer'
@@ -17,7 +16,6 @@ import Login from './components/homepage/homepage-components/login/Login';
 import Quiz from './components/homepage/homepage-components/quiz/Quiz';
 import EditInfoCards from "./components/admin/admin-components/InfoCard/EditInfoCards";
 import QCards from './components/admin/admin-components/quiz-cards/QCards';
-
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
