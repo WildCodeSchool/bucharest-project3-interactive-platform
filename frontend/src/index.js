@@ -18,6 +18,8 @@ import Quiz from './components/homepage/homepage-components/quiz/Quiz';
 import EditInfoCards from "./components/admin/admin-components/InfoCard/EditInfoCards";
 import QCards from './components/admin/admin-components/quiz-cards/QCards';
 
+import PartnersTable from "./components/homepage/PartnersTable";
+
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
@@ -35,6 +37,8 @@ ReactDOM.render(
         <Route exact path="/" component={Homepage} />
         <Route exact path="/quiz" component={Quiz} />
         <Route exact path="/admin" component={AdminPlatform} />
+        <Route exact path="/table" component={PartnersTable} />
+
       </Switch>
     </HashRouter>
   </Provider>, document.getElementById('root')

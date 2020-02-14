@@ -1,6 +1,7 @@
 import React from 'react'
 import { Map, Marker, GoogleApiWrapper, InfoWindow } from 'google-maps-react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 
 class GMap extends React.Component {
@@ -56,8 +57,11 @@ class GMap extends React.Component {
             <Container fluid>
                 <Row noGutters>
                     <Col>
+
                         <div className='map'>
                             <p className="map-title">Pentru a afla locatia cea mai apropiata de tine si in care poti sa gasesti mai multe produse <a href="www.techir.ro">Techir</a>, poti studia harta noastra. Iti sugeram sa contactezi locatia aleasa telefonic pentru a verifica stocul produselor dorite.</p>
+
+
                             <Map google={this.props.google}
                                 zoom={12}
                                 className="gMap"
@@ -95,6 +99,23 @@ class GMap extends React.Component {
                                 Nu uita! Poti comanda oricand direct din <a href="www.techir.ro">magazinul nostru online</a> pentru a putea avea acces la toate produsele noastre miraculoase.</p>
 
                         </div>
+
+                        <Link to='table' target='_blank' style={{
+                            // display:'block',
+                            position: 'absolute',
+                            top: '360px',
+                            left: '540px',
+                            zIndex:1000
+                        }}>
+                            <button style={{
+                                //  display:'block',
+                                backgroundColor: 'white',
+                                border: '3px solid darkgoldenrod',
+                                padding: '10px',
+                                borderRadius: '10px 10px'
+                            }}>Lista Parteneri</button>
+                        </Link>
+
                     </Col>
                 </Row>
 

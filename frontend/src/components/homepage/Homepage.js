@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, withRouter, Link } from 'react-router-dom';
+
 
 import Maps from './homepage-components/maps/Maps';
 import Navigation from './homepage-components/navbar/NavBar';
@@ -191,8 +192,10 @@ viewBox="0 0 255.12 9.25" style={{enableBackground:'new 0 0 255.12 9.25'}} xmlSp
                 <Navigation onClickLogin={this.toggleMoving} categories={this.state.categories} onClickSignup={this.toggleMoving} loginState={showLogin} signupState={showSignup} />
                 {wave2}
                 <GirlModel moveGirl={this.state.moveToTheRight} categories={this.props.categories} loginState={showLogin} signupState={showSignup} />
-              
+
+
                 <div className="map">
+                    
                     <Maps />
                 </div>
                 {wave}
@@ -202,7 +205,6 @@ viewBox="0 0 255.12 9.25" style={{enableBackground:'new 0 0 255.12 9.25'}} xmlSp
         )
     }
 }
-
 
 const mapStateToProps = state => {
     return {
