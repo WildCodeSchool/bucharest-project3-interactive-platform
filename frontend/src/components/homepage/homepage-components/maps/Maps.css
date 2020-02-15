@@ -1,3 +1,8 @@
+@font-face {
+  font-family: muchosanslight;
+  src: url(../../../../assets/Mucho_Sans_Light.otf);
+}
+
 .gMap {
   position: relative;
   z-index: 1000;
@@ -15,16 +20,18 @@ a:hover {
 }
 .map-msg {
   z-index: 1000;
-  font-family: mochosans;
+  font-family: muchosanslight;
   text-align: center !important;
 }
 .map-title {
   position: absolute;
   text-align: center;
+  font-family: muchosanslight;
 }
 .map-msg {
   position: absolute;
   font-size: 22px;
+  font-family: muchosanslight;
 }
 
 @media (min-width: 0px) and (max-width: 399px) {

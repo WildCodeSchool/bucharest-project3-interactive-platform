@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
+@font-face {
+  font-family: muchosanslight;
+  src: url(../../../../assets/Mucho_Sans_Light.otf);
+}
 [class*='close-'] {
   color: #777;
   font: 14px/100% arial, sans-serif;
@@ -303,6 +307,7 @@
 .onhover-quiz-bttn,
 .onhover-findoutMore-bttn {
   position: absolute;
+  font-family: muchosanslight;
 }
 #building-line-1 {
   position: absolute;

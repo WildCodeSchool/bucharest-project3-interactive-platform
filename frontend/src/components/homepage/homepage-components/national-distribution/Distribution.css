@@ -207,7 +207,7 @@ font-family: muchosans;
       }
       .distribution {
           top: 120px;
-          left: 2%;
+          left: 0%;
       }
       h3.national-dis-title {
           left: 39%;
@@ -215,7 +215,7 @@ font-family: muchosans;
       }
       .first-national-desc, 
       .second-national-desc {
-          left: 17%;
+          left: 14%;
           text-align: center;
           font-size: 26px;
           width: 70vw;
