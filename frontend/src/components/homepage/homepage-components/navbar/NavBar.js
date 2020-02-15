@@ -67,6 +67,9 @@ class Navigation extends React.Component {
     disconnectUser = (event) => {
         event.preventDefault()
         this.props.dispatch({ type: "DELETE_LOGIN_SESSION", })
+
+        localStorage.clear()
+
         this.props.history.push('/')
 
     }
@@ -110,7 +113,6 @@ class Navigation extends React.Component {
                         <Navbar bg="dark" expand="lg" className="nav">
                             <Navbar.Brand >
                             </Navbar.Brand>
-
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
                             {!this.props.isUserLogged ?
@@ -131,8 +133,6 @@ class Navigation extends React.Component {
                         </Navbar>
                     </Col>
                 </Row>
-
-
                 <ReactCSSTransitionGroup
                     transitionName={'snackFade'}
                     transitionEnter={300}

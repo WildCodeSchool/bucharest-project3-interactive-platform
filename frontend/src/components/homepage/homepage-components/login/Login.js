@@ -47,8 +47,6 @@ class Login extends React.Component {
             })
             .then(res => res.json())
             .then(res => {
-
-                // console.log(res)
                 if (res.token) {
                     console.log(res.msg)
                     this.props.dispatch(
@@ -73,7 +71,6 @@ class Login extends React.Component {
                             isUserLogged: false
                         }
                     )
-
                 }
             })
             .catch(error => console.log(error))

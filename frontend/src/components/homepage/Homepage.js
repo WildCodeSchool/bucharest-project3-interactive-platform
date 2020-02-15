@@ -42,7 +42,42 @@ class Homepage extends React.Component {
     }
 
 
-componentDidMount(){
+
+    componentDidMount() {
+        if (localStorage.getItem('userToken') && localStorage.getItem('userIsLogged') === '1') {
+            if (localStorage.getItem('userAccesLevel') === '1') {
+                this.props.dispatch(
+                    {
+                        type: "CREATE_LOGIN_SESSION",
+                        user: {
+                            id: localStorage.getItem('userId'),
+                            email: localStorage.getItem('userEmail'),
+                            acces_level: 1
+                        },
+                        token: localStorage.getItem('userToken'),
+                        isUserLogged: true
+                    }
+                )
+                this.props.history.push("/admin")
+            } else {
+                this.props.dispatch(
+                    {
+                        type: "CREATE_LOGIN_SESSION",
+                        user: {
+                            id: localStorage.getItem('userId'),
+                            email: localStorage.getItem('userEmail'),
+                        },
+                        token: localStorage.getItem('userToken'),
+                        isUserLogged: true
+                    }
+                )
+            }
+        }
+    // localStorage.getItem('userToken').length > 10 &&
+    // localStorage.getItem('userIsLogged') === '1'&&
+    // localStorage.getItem('userAccesLevel') === '1'&&
+    // this.props.history.push("/admin")
+
     fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/categories', {
         method: 'GET',
         headers: new Headers({
