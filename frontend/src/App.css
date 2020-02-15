@@ -20,7 +20,7 @@ opacity:0;
 transition: opacity 300ms ease-out;
 }
 
-.wave, .wave2 {
+.wave, .wave2, .wave3 {
   position: relative;
   margin: 0;
   padding: 0;
@@ -105,6 +105,11 @@ html {
     width: 110%;
   
   }
+  svg.wave3 {
+    top: 890px!important;
+    left: -3%;
+    width: 110%;
+  }
 
 
 }
@@ -126,6 +131,11 @@ html {
     left: -3%;
     width: 110%;
   
+  }
+  svg.wave3 {
+    top: 1590px;
+    left: -3%;
+    width: 110%;
   }
 
 }
@@ -152,6 +162,11 @@ html {
     z-index: 2000;
     
   }
+  svg.wave3 {
+    top: 1820px;
+    left: -3%;
+    width: 110%;
+  }
 
 }
 
@@ -177,6 +192,11 @@ html {
   
     
   }
+  svg.wave3 {
+    top: 1820px;
+    left: -3%;
+    width: 110%;
+  }
 
 }
 
@@ -198,8 +218,11 @@ html {
     width: 103%;
     left: -3%;
     z-index: 2000;
-  
-    
+  }
+  svg.wave3 {
+    top: 1680px;
+    left: -3%;
+    width: 110%;
   }
 }
 
@@ -223,5 +246,11 @@ html {
     z-index: 2000;
   
     
+  }
+
+  svg.wave3 {
+    top: 1899px;
+    left: -3%;
+    width: 110%;
   }
 }

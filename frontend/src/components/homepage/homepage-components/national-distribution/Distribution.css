@@ -1,0 +1,229 @@
+@font-face {
+  font-family: muchosans;
+  src: url(../../../../assets/Mucho_Sans_Light.otf);
+}
+h3.national-dis-title {
+    font-family: muchosans;
+    position: absolute;
+    font-size: 44px;
+    
+}
+
+.distribution {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: flex-end;
+  justify-content: space-evenly;
+  left: 3%;
+}
+.carturesti {
+  width: 410px;
+  height: 76px;
+}
+
+.n-partener {
+  align-self: stretch;
+}
+.first-national-desc, 
+.second-national-desc {
+position: absolute;
+font-family: muchosans;
+}
+.national {
+  position: relative;
+  top: 1900px;
+  width: 80vw;
+}
+
+@media (min-width: 0px) and (max-width: 400px) {
+  .national {
+    top:1000px;
+    width: 80vw;
+  }
+  .carturesti {
+    width: 350px !important;
+    height: 76px;
+  }
+  .distribution {
+      top: 90px;
+      left: 30px;
+  }
+  h3.national-dis-title {
+      left: 23%!important;
+      font-size: 22px;
+  }
+  .first-national-desc, 
+  .second-national-desc {
+      left: 10%;
+      text-align: center;
+      font-size: 26px;
+      width: 80vw;
+  }
+  .first-national-desc {
+    top: 820px;
+  }
+  .second-national-desc {
+      top: 1000px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+    .national {
+        top: 1700px;
+        width: 80vw;
+      }
+      .carturesti {
+        width: 350px !important;
+        height: 76px;
+      }
+      .distribution {
+          top: 100px;
+          left: 30px;
+      }
+      h3.national-dis-title {
+          left: 29%;
+          width: 100%;
+          font-size: 29px;
+      }
+      .first-national-desc, 
+      .second-national-desc {
+          left: 10%;
+          text-align: center;
+          font-size: 26px;
+          width: 80vw;
+      }
+      .first-national-desc {
+        top: 840px;
+      }
+      .second-national-desc {
+          top: 1000px;
+      }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .national {
+        top: 1900px;
+        width: 80vw;
+      }
+      .carturesti {
+        width: 350px !important;
+        height: 76px;
+      }
+      .distribution {
+          top: 100px;
+          left: 50px;
+      }
+      h3.national-dis-title {
+          left: 23%;
+          width: 100%;
+      }
+      .first-national-desc, 
+      .second-national-desc {
+          left: 10%;
+          text-align: center;
+          font-size: 26px;
+          width: 80vw;
+      }
+      .first-national-desc {
+        top: 600px;
+      }
+      .second-national-desc {
+          top: 750px;
+      }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+    .national {
+        top: 1900px;
+        width: 60vw;
+      }
+      .carturesti {
+        width: 350px !important;
+        height: 76px;
+      }
+      .distribution {
+          top: 100px;
+          left: 30%;
+      }
+      h3.national-dis-title {
+          left: 38%;
+          width: 100%;
+      }
+      .first-national-desc, 
+      .second-national-desc {
+          left: 15%;
+          text-align: center;
+          font-size: 26px;
+          width: 80vw;
+      }
+      .first-national-desc {
+        top: 640px;
+      }
+      .second-national-desc {
+          top: 770px;
+      }
+}
+@media (min-width: 993px) and (max-width: 1382px) {
+    .national {
+        top: 1780px;
+        width: 80vw;
+      }
+      .carturesti {
+        width: 350px !important;
+        height: 76px;
+      }
+      .distribution {
+          top: 120px;
+          left: 10%;
+      }
+      h3.national-dis-title {
+          left: 39%;
+          width: 100%;
+      }
+      .first-national-desc, 
+      .second-national-desc {
+          left: 10%;
+          text-align: center;
+          font-size: 26px;
+          width: 80vw;
+      }
+      .first-national-desc {
+        top: 559px;
+      }
+      .second-national-desc {
+          top: 630px;
+      }
+}
+
+@media (min-width: 1383px) {
+    .national {
+        top: 2000px;
+        width: 100vw;
+      }
+      .carturesti {
+        width: 350px !important;
+        height: 76px;
+      }
+      .distribution {
+          top: 120px;
+          left: 2%;
+      }
+      h3.national-dis-title {
+          left: 39%;
+          width: 100%;
+      }
+      .first-national-desc, 
+      .second-national-desc {
+          left: 17%;
+          text-align: center;
+          font-size: 26px;
+          width: 70vw;
+      }
+      .first-national-desc {
+        top: 590px;
+      }
+      .second-national-desc {
+          top: 680px;
+      }
+}
