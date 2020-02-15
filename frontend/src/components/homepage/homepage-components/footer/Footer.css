@@ -66,7 +66,7 @@
 @media (min-width:0px) and  (max-width: 400px) {
   #footer {
     height: 200px!important;
-    top: 800px!important;
+    top: 1500px!important;
   }
   
   .contact {
@@ -87,7 +87,7 @@
 @media (min-width: 401px) and  (max-width: 600px) {
   #footer {
     height: 200px;
-    top: 1700px;
+    top: 2400px;
   }
   
   .contact {
@@ -108,7 +108,7 @@
 @media (min-width: 601px) and  (max-width: 768px) {
   #footer {
     height: 200px;
-    top: 1800px;
+    top: 2600px;
   }
   
   .contact {
@@ -132,7 +132,7 @@
 @media (min-width: 769px) and (max-width: 992px) {
   #footer {
     height: 200px;
-    top: 1900px;
+    top: 2400px;
   }
   
   .contact {
@@ -179,7 +179,7 @@
 @media(min-width: 1383px) { 
   #footer {
     height: 200px;
-    top: 2200px!important;
+    top: 2500px!important;
   }
   
   .contact {
@@ -197,6 +197,13 @@
     height:100px;
     left: 266%;
     top: 28px;
+  }
+}
+
+@media(min-width: 1500px) {
+  #footer {
+   
+    top: 2600px!important;
   }
 }
 

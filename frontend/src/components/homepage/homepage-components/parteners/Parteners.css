@@ -33,25 +33,7 @@ body {
   top: 100px;
 }
 
-.p-mega,
-.p-carturesti,
-.p-vital,
-.p-enatural,
-.p-camara,
-.p-stam-de-vorba,
-.p-allboutique,
-.p-tastingRO,
-.p-icosmetice,
-.p-ela,
-.p-bya,
-.p-flora,
-.p-pixie,
-.p-get-well,
-.p-natura,
-.p-avalon {
-  position: absolute;
-  padding: 10px;
-}
+
 
 .p-title {
   font-family: "PT Serif", serif;
