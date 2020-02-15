@@ -47,8 +47,6 @@ class Login extends React.Component {
             })
             .then(res => res.json())
             .then(res => {
-
-                // console.log(res)
                 if (res.token) {
                     console.log(res.msg)
                     this.props.dispatch(
@@ -60,7 +58,11 @@ class Login extends React.Component {
                             isUserLogged: true
                         }
                     )
-
+                    localStorage.setItem('userId', res.user.id)
+                    localStorage.setItem('userEmail', res.user.email)
+                    localStorage.setItem('userAccesLevel', res.user.acces_level)
+                    localStorage.setItem('userToken', res.token)
+                    localStorage.setItem('userIsLogged', '1')
                     res.user.acces_level === 1 ?
                         this.props.history.push("/admin") :
                         this.props.history.push("/")
@@ -73,7 +75,6 @@ class Login extends React.Component {
                             isUserLogged: false
                         }
                     )
-
                 }
             })
             .catch(error => console.log(error))
@@ -119,3 +120,6 @@ const mapStateToProps = state => {
 }
 
 export default withRouter(connect(mapStateToProps)(Login))
+
+
+

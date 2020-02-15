@@ -18,7 +18,38 @@ class Quiz extends React.Component {
       quizzez: {}
     };
   }
+
   componentDidMount() {
+    if (localStorage.getItem('userToken') && localStorage.getItem('userIsLogged') === '1') {
+        if (localStorage.getItem('userAccesLevel') === '1') {
+            this.props.dispatch(
+                {
+                    type: "CREATE_LOGIN_SESSION",
+                    user: {
+                        id: localStorage.getItem('userId'),
+                        email: localStorage.getItem('userEmail'),
+                        acces_level: 1
+                    },
+                    token: localStorage.getItem('userToken'),
+                    isUserLogged: true
+                }
+            )
+            this.props.history.push("/admin")
+        } else {
+            this.props.dispatch(
+                {
+                    type: "CREATE_LOGIN_SESSION",
+                    user: {
+                        id: localStorage.getItem('userId'),
+                        email: localStorage.getItem('userEmail'),
+                    },
+                    token: localStorage.getItem('userToken'),
+                    isUserLogged: true
+                }
+            )
+        }
+    }
+    
     fetch("https://infinite-hamlet-17639.herokuapp.com/authentication/quizz", {
       method: "GET",
       headers: new Headers({
