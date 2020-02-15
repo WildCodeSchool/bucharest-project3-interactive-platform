@@ -47,32 +47,38 @@ class Login extends React.Component {
             })
             .then(res => res.json())
             .then(res => {
-                console.log(res)
-                this.props.dispatch(
-                    {
-                        type: "CREATE_LOGIN_SESSION",
-                        user: res.user,
-                        token: res.token,
-                        msg: res.msg,
-                        isUserLogged: true
-                    }
-                )
+                if (res.token) {
+                    console.log(res.msg)
+                    this.props.dispatch(
+                        {
+                            type: "CREATE_LOGIN_SESSION",
+                            user: res.user,
+                            token: res.token,
+                            msg: res.msg,
+                            isUserLogged: true
+                        }
+                    )
 
-                localStorage.setItem('userId', res.user.id)
-                localStorage.setItem('userEmail', res.user.email)
-                localStorage.setItem('userAccesLevel', res.user.acces_level)
-                localStorage.setItem('userToken', res.token)
-                localStorage.setItem('userIsLogged', '1')
-
-                if (this.state.email === "admin@admin.ro") {
-                    this.props.history.push("/admin")
+                    res.user.acces_level === 1 ?
+                        this.props.history.push("/admin") :
+                        this.props.history.push("/")
                 } else {
-                    this.props.history.push("/quiz")
+                    console.log(res.msg)
+                    this.props.dispatch(
+                        {
+                            type: "CREATE_LOGIN_SESSION",
+                            msg: res.msg,
+                            isUserLogged: false
+                        }
+                    )
                 }
             })
             .catch(error => console.log(error))
 
     }
+
+
+
 
     render() {
         return (

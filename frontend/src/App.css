@@ -1,3 +1,25 @@
+.snackFade-enter{
+opacity:0;
+}
+.snackFade-enter-active{
+opacity:1;
+transition: opacity 300ms ease-out;
+}
+.snackFade-leave{
+opacity:1;
+}
+.snackFade-leave-active{
+opacity:0;
+transition: opacity 300ms ease-out;
+}
+.snackFade-appear{
+opacity:1;
+}
+.snackFade-appear-active{
+opacity:0;
+transition: opacity 300ms ease-out;
+}
+
 .wave, .wave2 {
   position: relative;
   margin: 0;
@@ -5,17 +27,7 @@
   z-index: 2000px;
 
 }
-.one, .two {
-  position: absolute;
-}
-.one {
-  left: 90vw;
-  top: 30px;
-}
-.two {
-  left: 80vw;
-  top: 30px;
-}
+
 
 
 .App {
@@ -93,14 +105,8 @@ html {
     width: 110%;
   
   }
-  .one {
-    top: 55px;
-    left: 4%;
-  }
-  .two {
-    top: 88px;
-    left: 4%;
-  }
+
+
 }
 
 @media (min-width: 401px) and (max-width: 599px) {
@@ -121,14 +127,7 @@ html {
     width: 110%;
   
   }
-  .one {
-    top: 55px;
-    left: 4%;
-  }
-  .two {
-    top: 88px;
-    left: 4%;
-  }
+
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
@@ -153,14 +152,7 @@ html {
     z-index: 2000;
     
   }
-  .one {
-    top: 55px;
-    left: 4%;
-  }
-  .two {
-    top: 88px;
-    left: 4%;
-  }
+
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -185,14 +177,7 @@ html {
   
     
   }
-  .one {
-    top: 55px;
-    left: 4%;
-  }
-  .two {
-    top: 88px;
-    left: 4%;
-  }
+
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {

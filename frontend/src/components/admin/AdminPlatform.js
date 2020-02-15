@@ -53,6 +53,11 @@ class AdminPlatform extends React.Component {
                 )
             }
         }
+
+        !this.props.user ? this.props.history.push("/") :
+            this.props.user.acces_level === null && this.props.history.push("/quiz")
+
+
         Promise.all([
             fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/description', {
                 method: 'GET',
@@ -90,6 +95,8 @@ class AdminPlatform extends React.Component {
         return (
             <div className="admin-container">
                 <AdminNav fetchedDataQuiz={this.state.quizzData} categories={this.state.categories} token={this.props.token} fetchedDataInfo={this.state.infoData} choose={this.showCards} />
+
+
             </div>
         )
     }

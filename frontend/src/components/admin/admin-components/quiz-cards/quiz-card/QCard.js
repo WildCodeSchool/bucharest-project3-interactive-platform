@@ -13,7 +13,7 @@ class QCard extends React.Component {
         this.setState({ [name]: value })
     }
     saveQuizQ = () => {
-        console.log(this.state.imgLink + ";" + this.state.firstAns + ";" + this.state.secondAns + ";" + this.state.question + ";")
+        console.log(this.state.imgLink + ";" + this.state.firstAns + ";" + this.state.secondAns + ";" + this.state.question + ";" + this.state.correct)
         fetch(`https://infinite-hamlet-17639.herokuapp.com/authentication/quizz/${this.props.category.category_id}`, {
             method: "PUT",
             headers: new Headers({
@@ -47,21 +47,21 @@ class QCard extends React.Component {
                             aria-label="Question"
                             aria-describedby="basic-addon1"
                             name="question"
-                            style={{ borderColor: '#FFBF00'}}
+                            style={{ borderColor: '#FFBF00' }}
                             onChange={(event) => this.handleAdminInput(event)}
                             as="textarea" rows="3"
                         />
                     </Card.Body>
                     <InputGroup className="mb-3  ac-f-ans">
                         <InputGroup.Prepend>
-                            <InputGroup.Checkbox   onChange={() => this.setState({ correct: 1 })} aria-label="Checkbox for following text input" />
+                            <InputGroup.Checkbox onChange={() => this.setState({ correct: 1 })} aria-label="Checkbox for following text input" />
                         </InputGroup.Prepend>
                         <FormControl
                             placeholder={this.props.data.answer1}
                             aria-label="Username"
                             aria-describedby="basic-addon1"
                             name="firstAns"
-                            style={{ borderColor: '#FFBF00'}}
+                            style={{ borderColor: '#FFBF00' }}
                             onChange={(event) => this.handleAdminInput(event)}
                         />  </InputGroup>
                     <InputGroup className="mb-3  ac-s-ans">
@@ -73,7 +73,7 @@ class QCard extends React.Component {
                             aria-label="Username"
                             aria-describedby="basic-addon1"
                             name="secondAns"
-                            style={{ borderColor: '#FFBF00'}}
+                            style={{ borderColor: '#FFBF00' }}
                             onChange={(event) => this.handleAdminInput(event)}
                         /></InputGroup>
                     <Card.Title className="q-c-img-title">Link imagine:</Card.Title>
@@ -83,7 +83,7 @@ class QCard extends React.Component {
                         aria-label="Username"
                         aria-describedby="basic-addon1"
                         name="imgLink"
-                        style={{ borderColor: '#FFBF00'}}
+                        style={{ borderColor: '#FFBF00' }}
                         onChange={(event) => this.handleAdminInput(event)}
                     />
                     <Card.Body>

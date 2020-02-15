@@ -13,7 +13,7 @@ export default function (state = {}, action) {
                 ...state,
                 token: null,
                 user: '',
-                msg: 'Not Logged.',
+                msg: 'Delogare reusita.',
                 isUserLogged: false
             }
         case 'REDIRECT_TO_LOGIN':
