@@ -7,7 +7,7 @@
   src: url(../../../../assets/MuchoSans.rar);
 }
 .gMap {
-  position: relative;
+  position: absolute;
   z-index: 1000;
 }
 a {
@@ -37,55 +37,37 @@ a:hover {
 @media (min-width: 0px) and (max-width: 399px) {
   .gMap,
   .map {
-    width: 100vw;
+    width: 99vw;
     height: 600px;
-    top: 450px;
-    left: 0%;
+    top: 1150px;
+    left: -1%;
   }
   .map-title {
-    top: 200px;
-    left: 1vw;
+    top: 900px;
     font-size: 22px;
     width: 90vw;
   }
   .map-msg {
-    top: 1090px;
+    top: 1790px;
   }
 }
 
-/* @media (min-width: 481px) and (max-width: 600px) {
-  .gMap {
-    width: 90vw;
-    height: 70vh;
-    top: 600px;
-    left: 1%;
-  }
-  .map-title {
-    top: 28vh;
-    left: 1vw;
-    font-size: 22px;
-    width: 90vw;
-  }
-  .map-msg {
-    top: 127vh;
-  }
-} */
 
 @media (min-width: 400px) and (max-width: 599px) {
   .gMap {
     width: 99vw !important;
     height: 700px !important;
-    top: 420px;
+    top: 1220px;
     left: 0%;
   }
   .map-title {
-    top: 190px;
+    top: 1080px;
     left: 2%;
     font-size: 22px;
     width: 90vw;
   }
   .map-msg {
-    top: 1170px;
+    top: 1970px;
     font-size: 19px;
     left: 4%;
     width: 90%;
@@ -96,17 +78,17 @@ a:hover {
   .gMap {
     width: 90vw !important;
     height: 700px !important;
-    top: 490px;
-    left: 4%;
+    top: 1290px;
+    left: 2%;
   }
   .map-title {
-    top: 220px;
+    top: 1120px;
     left: 3vw;
     font-size: 26px;
     width: 90vw;
   }
   .map-msg {
-    top: 1230px;
+    top: 2030px;
     width: 80vw;
     left: 9vw;
     font-size: 26px;
@@ -118,17 +100,17 @@ a:hover {
   .gMap {
     width: 90vw !important;
     height: 700px!important;
-    top: 440px;;
+    top: 1240px;;
     left: 3%;
   }
   .map-title {
-    top: 160px;
+    top: 1060px;
     left: 7vw;
     font-size: 30px;
     width: 80vw;
   }
   .map-msg {
-    top: 1190px;
+    top: 2000px;
     width: 80vw;
     left: 7vw;
     font-size: 30px;
@@ -140,17 +122,17 @@ a:hover {
   .gMap {
     width: 90vw !important;
     height: 700px !important;
-    top: 500px;
+    top: 1200px;
     left: 5vw;
   }
   .map-title {
-    top: 200px;
+    top: 1020px;
     left: 8vw;
     font-size: 33px;
     width: 80vw;
   }
   .map-msg {
-    top: 1300px;
+    top: 1990px;
     width: 80vw;
     left: 8vw;
     font-size: 33px;

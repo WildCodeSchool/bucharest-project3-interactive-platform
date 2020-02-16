@@ -288,19 +288,22 @@ viewBox="0 0 255.12 9.25" style={{enableBackground:'new 0 0 255.12 9.25'}} xmlSp
 </svg>;
 
         return (
-            <div className="App">
+            <div className="App" id="page-container">
+                <div id="content-wrap">
                 <Navigation onClickLogin={this.toggleMoving} categories={this.state.categories} onClickSignup={this.toggleMoving} loginState={showLogin} signupState={showSignup} />
-                {wave2}
+                {/* {wave2} */}
                 <GirlModel moveGirl={this.state.moveToTheRight} categories={this.props.categories} loginState={showLogin} signupState={showSignup} />
               
                 <div className="map">
                     <Maps />
                 </div>
-                {wave}
+                {/* {wave} */}
                 <Parteners />
-                {wave3}
+                {/* {wave3} */}
                 <Distribution/>
+                </div>
                 <Footer />
+                
             </div>
         )
     }

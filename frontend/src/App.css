@@ -1,34 +1,69 @@
-.snackFade-enter{
-opacity:0;
-}
-.snackFade-enter-active{
-opacity:1;
-transition: opacity 300ms ease-out;
-}
-.snackFade-leave{
-opacity:1;
-}
-.snackFade-leave-active{
-opacity:0;
-transition: opacity 300ms ease-out;
-}
-.snackFade-appear{
-opacity:1;
-}
-.snackFade-appear-active{
-opacity:0;
-transition: opacity 300ms ease-out;
+
+html {
+  height: 100%;
+  box-sizing: border-box;
 }
 
-.wave, .wave2, .wave3 {
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
   position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 600px;    /* Footer height */
+}
+
+#footer {
+  position: block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;           /* Footer height */
+}
+.snackFade-enter {
+  opacity: 0;
+}
+.snackFade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-out;
+}
+.snackFade-leave {
+  opacity: 1;
+}
+.snackFade-leave-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+.snackFade-appear {
+  opacity: 1;
+}
+.snackFade-appear-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+.wave,
+.wave2,
+.wave3 {
+  position: absolute;
   margin: 0;
   padding: 0;
   z-index: 2000px;
-
 }
-
-
 
 .App {
   position: relative;
@@ -40,14 +75,6 @@ transition: opacity 300ms ease-out;
   width: 100%;
 }
 
-body,
-html {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .form-control {
   border-radius: 10px;
   z-index: 1000;
@@ -56,7 +83,6 @@ html {
   position: absolute;
   z-index: 100;
   align-items: center;
-
 }
 .submit {
   position: absolute;
@@ -72,15 +98,12 @@ html {
 }
 
 @font-face {
-  font-family: myFirstFont;
+  font-family: thirsty;
   src: url(./assets/Thirsty.ttf);
 }
-.quiz-title, .qtitle {
-  font-family: myFirstFont;
 
-}
 .modal-congrats {
-  font-family: myFirstFont;
+  font-family: thirsty;
   left: 30%;
   position: absolute;
   font-size: 44px;
@@ -100,18 +123,15 @@ html {
     z-index: 2000;
   }
   .wave {
-    top: 790px!important;
+    top: 790px !important;
     left: -3%;
     width: 110%;
-  
   }
   svg.wave3 {
-    top: 890px!important;
+    top: 890px !important;
     left: -3%;
     width: 110%;
   }
-
-
 }
 
 @media (min-width: 401px) and (max-width: 599px) {
@@ -126,18 +146,16 @@ html {
     width: 110%;
     z-index: 2000;
   }
-  .wave{
+  .wave {
     top: 1399px;
     left: -3%;
     width: 110%;
-  
   }
   svg.wave3 {
     top: 1590px;
     left: -3%;
     width: 110%;
   }
-
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
@@ -149,39 +167,35 @@ html {
   .myinput {
     height: 28px;
   }
-  .wave{
+  .wave {
     top: 1600px;
     width: 103%;
     left: -3%;
-  
   }
   svg.wave2 {
     top: 1010px;
     left: -3%;
     width: 103%;
     z-index: 2000;
-    
   }
   svg.wave3 {
     top: 1820px;
     left: -3%;
     width: 110%;
   }
-
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
   .form {
     width: 48vw;
     top: 20px;
-    left: 76%!important;
+    left: 76% !important;
   }
 
   .wave {
     top: 1600px;
     width: 103%;
     left: -3%;
-  
   }
 
   svg.wave2 {
@@ -189,15 +203,12 @@ html {
     width: 103%;
     left: -3%;
     z-index: 2000;
-  
-    
   }
   svg.wave3 {
     top: 1820px;
     left: -3%;
     width: 110%;
   }
-
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {
@@ -210,7 +221,6 @@ html {
     top: 1490px;
     width: 103%;
     left: -3%;
-  
   }
 
   svg.wave2 {
@@ -236,7 +246,6 @@ html {
     top: 1620px;
     width: 103%;
     left: -3%;
-  
   }
 
   svg.wave2 {
@@ -244,8 +253,6 @@ html {
     width: 103%;
     left: -3%;
     z-index: 2000;
-  
-    
   }
 
   svg.wave3 {

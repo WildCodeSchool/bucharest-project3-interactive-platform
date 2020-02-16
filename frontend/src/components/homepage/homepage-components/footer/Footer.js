@@ -12,7 +12,10 @@ class Footer extends React.Component {
             <Container fluid style={{ paddingLeft: 0, paddingRight: 0, marginLeft: 0, marginRight: 0 }}>
                 <Row noGutters>
                     <Col>
-                        <div className="d-flex flex-column " id='footer' >
+                    <footer className="footer-container" id="footer">
+
+                    </footer>
+                        {/* <div className="d-flex flex-column " id='footer' >
                             <footer className="footer">
                                 <div className='contact'>
                                     <h6>SC TECHIRGHIOL FARMA COSMETICS SRL</h6>
@@ -32,7 +35,7 @@ class Footer extends React.Component {
                                 </div>
 
                             </footer>
-                        </div>
+                        </div> */}
                     </Col>
                 </Row>
             </Container>

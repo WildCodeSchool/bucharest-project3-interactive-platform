@@ -1,4 +1,15 @@
-
+@font-face {
+   font-family: muchoThin;
+   src: url(../../../../assets/Mucho_Sans_Thin.otf);
+ }
+ @font-face {
+   font-family: thirsty;
+   src: url(../../../../assets/Thirsty.ttf);
+ }
+ @font-face {
+   font-family: muchosanslight;
+   src: url(../../../../assets/Mucho_Sans_Light.otf);
+ }
  .info-cards{
     text-align: center;
 
@@ -7,14 +18,14 @@
      top: 20px;
      margin: 10%;
      width: 350px!important;
-     font-family: muchoThin;
+     font-family: muchosanslight;
  }
 
  .info-cards , .quiz-admin-cards-container {
     position: relative;
 }
  @font-face {
-    font-family: muchoThin;
+    font-family: muchosanslight;
     src: url(../../../../assets/Mucho_Sans_Thin.otf);
   }
 

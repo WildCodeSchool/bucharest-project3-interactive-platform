@@ -21,7 +21,7 @@ body {
   line-height: 1;
 }
 .parteners-container {
-  position: relative;
+  position: absolute;
   display: flex;
   flex-wrap: wrap;
   padding: 5px;
@@ -53,35 +53,33 @@ body {
 }
 @media (min-width: 0px) and (max-width: 400px) {
 .parteners-container {
-    top: 800px;
+    top: 1600px;
     width: 80vw;
-  
   }
-
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
   .parteners-container {
-    top: 1500px;
+    top: 2200px;
     width: 80vw;
-    left: 14%;
+    left:4%;
   }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
   .parteners-container {
-    top: 1800px;
+    top: 2400px;
     left: 4vw;
   }
   .parteners-title {
-    left: 200px;
+    left: 160px;
     position: absolute;
     top: -60px;
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
   .parteners-container {
-    top: 1800px;
+    top: 2300px;
     left: 0vw;
   }
 
@@ -93,20 +91,20 @@ body {
 }
 @media (min-width: 993px) and (max-width: 1382px) {
   .parteners-title {
-    left: 38vw !important;
+    left: 40% !important;
     position: absolute;
     top: -70px;
   }
   .parteners-container {
-    top: 1600px;
-    left: 4vw;
+    top: 2300px;
+    left:2vw;
     width: 90vw;
   }
 }
 
 @media (min-width: 1383px) {
   .parteners-container {
-    top: 1870px;
+    top: 2470px;
     left: 12vw;
     width: 70vw;
   }
