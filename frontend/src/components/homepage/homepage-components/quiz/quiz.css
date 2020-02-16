@@ -1,4 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
+@font-face {
+  font-family: thirsty;
+  src: url(../../../../assets/Thirsty.ttf);
+}
+@font-face {
+  font-family: muchosanslight;
+  src: url(../../../../assets/Mucho_Sans_Light.otf);
+}
+.quiz-title,
+.qtitle {
+  font-family: thirsty;
+  font-weight: none!important;
+}
+
 .bold {
   font-weight: bolder;
 }
@@ -11,10 +24,6 @@
 .modal-logo {
   position: relative;
   left: -22%!important;
-}
-*, body {
-  margin: 0;
-  padding: 0;
 }
 .quiz-container {
   margin: 0;
@@ -62,24 +71,33 @@ font-size: 33px;
   padding: 0;
 }
 
-.quiz-q-container {
+.quiz-q-container,
+.quiz-title,
+.quiz-desc,
+.q-question,
+.q-first-ans,
+.q-second-ans,
+.q-img  {
   position: absolute;
-}
-
-.quiz-title {
-  position: absolute;
-
 }
 .quiz-desc,
-.q-question {
-  font-family: "PT Serif", serif;
-  position: absolute;
+.q-question,
+.q-first-ans,
+.q-second-ans {
+  font-family: muchosanslight;
+
+}
+
+.quiz-desc,
+.q-question,
+.q-first-ans,
+.q-second-ans {
   color: #878787;
 }
 
 .quiz-title {
   z-index: 10;
-  font-weight: 900;
+  font-weight: none;
 }
 
 .quiz-desc {
@@ -94,8 +112,6 @@ font-size: 33px;
 
 .q-first-ans,
 .q-second-ans {
-  position: absolute;
-  font-family: "PT Serif", serif;
   color: #878787;
 }
 .q-footer {

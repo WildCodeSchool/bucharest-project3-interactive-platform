@@ -2,7 +2,14 @@
   font-family: muchoThin;
   src: url(../../../../../assets/Mucho_Sans_Thin.otf);
 }
-
+@font-face {
+  font-family: thirsty;
+  src: url(../../../../../assets/Thirsty.ttf);
+}
+@font-face {
+  font-family: muchosanslight;
+  src: url(../../../../../assets/Mucho_Sans_Light.otf);
+}
 .admin-container {
 margin: 0;
 padding: 0;
@@ -35,7 +42,7 @@ padding: 0;
   width: 330px !important;
   left: 19px;
   font-family: 6px;
-  font-family: muchoThin;
+  font-family: muchosanslight;
 }
 
 .ac-img-src {
@@ -49,7 +56,7 @@ padding: 0;
   position: absolute;
   top: 401px;
   left: 22%;
-  font-family: muchoThin;
+  font-family: muchosanslight;
 }
 
 * {

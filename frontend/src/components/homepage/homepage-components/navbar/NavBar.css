@@ -4,8 +4,8 @@
   src: url(../../../../assets/Thirsty.ttf);
 }
 @font-face {
-  font-family: muchosans;
-  src: url(../../../../assets/Mucho_Sans_Thin.otf);
+  font-family: muchosanslight;
+  src: url(../../../../assets/Mucho_Sans_Light.otf);
 }
 body {
   width: 100%;
@@ -30,7 +30,13 @@ body {
 
 #basic-navbar-nav.navbar-collapse.collapse {
   height: 80px !important;
-  font-family: muchosans;
+  font-family: muchosanslight;
+  border: yellow;
+}
+button.navbar-toggler{
+  background-color: darkgoldenrod;
+
+
 }
 
 .navigation {
@@ -40,11 +46,11 @@ body {
 }
 
 .nav-link {
-  color: white!important;
-  font-weight: bold;
+  color: lightgrey!important;
   font-size: 22px;
   cursor: pointer;
   float: left;
+  font-family: muchosanslight;
 }
 
 @media (min-width: 996px) {

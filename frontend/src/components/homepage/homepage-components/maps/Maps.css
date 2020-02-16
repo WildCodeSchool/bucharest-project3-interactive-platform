@@ -2,7 +2,10 @@
   font-family: muchosanslight;
   src: url(../../../../assets/Mucho_Sans_Light.otf);
 }
-
+@font-face {
+  font-family: muchosans;
+  src: url(../../../../assets/MuchoSans.rar);
+}
 .gMap {
   position: relative;
   z-index: 1000;
@@ -14,10 +17,7 @@ a {
 a:hover {
   color: darkgoldenrod;
 }
-@font-face {
-  font-family: muchosans;
-  src: url(../../../../assets/MuchoSans.rar);
-}
+
 .map-msg {
   z-index: 1000;
   font-family: muchosanslight;
