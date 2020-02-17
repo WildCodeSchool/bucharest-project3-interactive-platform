@@ -110,23 +110,23 @@ class Navigation extends React.Component {
             <Container fluid style={{ margin: 0, padding: 0 }}>
                 <Row noGutters style={{ margin: 0, padding: 0 }}>
                     <Col>
-                        <Navbar bg="dark" expand="lg" className="nav">
+                        <Navbar expand="lg" className="nav">
                             <Navbar.Brand >
                             </Navbar.Brand>
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
                             {!this.props.isUserLogged ?
                                 <Navbar.Collapse id="basic-navbar-nav">
-                                    <Nav className=" nav-items">
-                                        <div className="nav-link one" onClick={this.showLogIn}>| Conectare</div>
-                                        <div className="nav-link two" onClick={this.showSignUp}>| Creeaza cont</div>
+                                    <Nav className="nav-items">
+                                        <div className="nav-link one" onClick={this.showLogIn}><i>Conectare</i></div>
+                                        <div className="nav-link two" onClick={this.showSignUp}><i>Creeaza cont</i></div>
 
 
                                     </Nav>
                                 </Navbar.Collapse> :
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className=" nav-items">
-                                        <Link className="nav-link one" onClick={this.disconnectUser}>Deconectare</Link>
+                                        <Link className="nav-link one" onClick={this.disconnectUser}><i>Deconectare</i></Link>
                                     </Nav>
                                 </Navbar.Collapse>
                             }
@@ -150,8 +150,7 @@ class Navigation extends React.Component {
                 <Row noGutters style={{ margin: 0, padding: 0 }}>
                     <Col>
                         <div className="logo-div">
-
-                            <Link to="/"><img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" width="274px" height="105px" className="logo-q" /></Link>
+                        <Link to="/"><img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" id="logo-q" /></Link>
                         </div>
                     </Col>
                 </Row>

@@ -26,17 +26,6 @@ class Parteners extends React.Component {
         })})
         .catch(err => console.log(`ERROR parteners-bk: ${err}`))
     }
-    //************************ */
-    // WE NEED TO PUT THIS IN PARTENER.JSON (backend): 
-    // {
-    //     "name": "Plantini",
-    //     "link": "https://www.plantini.ro/2-home?q=techir&tm_submit_search=",
-    //     "logo": "https://www.plantini.ro/img/farmacia-cu-plante-logo-1487323412.jpg?size=300",
-    //     "width": "100%",
-    //     "height": "100%"
-    // },
-    //************************ */
-
 
     render() {
        const parteners = this.state.parteners;

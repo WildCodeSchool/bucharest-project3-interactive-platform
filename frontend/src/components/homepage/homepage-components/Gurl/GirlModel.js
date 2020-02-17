@@ -1,12 +1,12 @@
 import React from 'react';
-import * as img from '../../../../assets/img/Kool_Gurl.jpg';
 import { Link, withRouter } from 'react-router-dom'
 import { Container, Row, Col, Modal } from 'react-bootstrap'
 import { Button } from 'react-bootstrap';
 import data from '../info_modal/my_fake_db';
 
-
-import * as check from '../../../../assets/img/hook-1425312.png'
+import * as img from '../../../../assets/img/background.png';
+import * as mobile from '../../../../assets/img/Mobile.png';
+import * as check from '../../../../assets/img/hook-1425312.png';
 
 
 
@@ -130,41 +130,38 @@ class GirlModel extends React.Component {
 
 
         return (
-            <Container >
-                <Row noGutters>
-                    <div className='model'>
-                        {!this.state.isHidden ?
-                            <div className={moveOrNot}>
-                                <img src={img} alt='model' className='gurl' />
 
-                                {this.props.categories ? this.props.categories.map((e, i) => {
-                                    return <div className={'spinner ' + e.category_name} key={i}
-                                        onMouseEnter={this.handleHover}
-                                        onMouseLeave={this.handleLeaveHover}
-                                    // onClick={() => this.handleClick(e)}
-                                    >
-                                        <div className="multi-ripple">
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                    </div>
-                                }) : null}
+            <div className='model'>
+                {/* <div className={moveOrNot}> */}
+                    <img className="background" src={img} alt="background" />
+                    <img className="mobile" src={mobile} alt="background" />
+                    {/* {this.props.categories ? this.props.categories.map((e, i) => {
+                        return <div className={'spinner ' + e.category_name} key={i}
+                            onMouseEnter={this.handleHover}
+                            onMouseLeave={this.handleLeaveHover}
+                        onClick={() => this.handleClick(e)}
+                        >
+                            <div className="multi-ripple">
+                                <div></div>
+                                <div></div>
                             </div>
-                            : null}
-
-                        <div className='info-g-first-bttn' variant="outline-secondary">Pozitioneaza cursorul pe punctele de pe model pentru mai multe detalii</div>
-                        <div className='info-g-second-bttn' variant="outline-secondary">Atinge punctele de pe model pentru mai multe detalii</div>
-                        <div className={contentClass} >
-                            <button onClick={this.changeClass}><a href="#" class="close-thik"></a></button>
-                            <img src={check} width="50px" height="50px" className="check" alt='check_img' />
-                            <p className="hover-text">{info}</p>
-                            <Button className="onhover-quiz-bttn" variant="outline-warning" onClick={this.prepareQuiz}>Participa si castiga</Button>
-                            <Button className="onhover-findoutMore-bttn" variant="outline-warning" href={link}><span className="bttn-text">Afla detalii</span></Button>
                         </div>
-                    </div>
+                    }) : null} */}
+                
+          
 
-                </Row>
-            </Container>
+                {/* <div className='info-g-first-bttn' variant="outline-secondary">Pozitioneaza cursorul pe punctele de pe model pentru mai multe detalii</div>
+                        <div className='info-g-second-bttn' variant="outline-secondary">Atinge punctele de pe model pentru mai multe detalii</div> */}
+                {/* <div className={contentClass} >
+                    <button onClick={this.changeClass}><a href="#" class="close-thik"></a></button>
+                    <img src={check} width="50px" height="50px" className="check" alt='check_img' />
+                    <p className="hover-text">{info}</p>
+                    <Button className="onhover-quiz-bttn" variant="outline-warning" onClick={this.prepareQuiz}>Participa si castiga</Button>
+                    <Button className="onhover-findoutMore-bttn" variant="outline-warning" href={link}><span className="bttn-text">Afla detalii</span></Button>
+                </div> */}
+
+            </div>
+
         );
     }
 }

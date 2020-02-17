@@ -132,31 +132,31 @@ class SignUp extends React.Component {
                                         name="name" value={this.state.name}
                                         placeholder="Nume complet"
                                         onChange={(event) => this.handleUserInput(event)}
-                                        style={{ borderColor: '#FFBF00'}} />
+                                        style={{ borderColor: 'black'}} />
                                 </div>
                                 <div className="form-group">
                                     <input type="email" className="form-control myinput"
                                         name="email" value={this.state.email}
                                         placeholder="Email"
                                         onChange={(event) => this.handleUserInput(event)} 
-                                        style={{ borderColor: '#FFBF00'}}/>
+                                        style={{ borderColor: 'black'}}/>
                                 </div>
                                 <div className="form-group">
                                     <input type="password" className="form-control myinput"
                                         name="password" value={this.state.password}
                                         placeholder="Parola"
                                         onChange={(event) => this.handleUserInput(event)}
-                                        style={{ borderColor: '#FFBF00'}} />
+                                        style={{ borderColor: 'black'}} />
                                 </div>
                                 <div className="form-group">
                                     <input type="password" className="form-control mySignUp-input"
                                         name="confirmPassword" value={this.state.confirmPassword}
                                         placeholder="Confirma parola"
                                         onChange={(event) => this.handleUserInput(event)} 
-                                        style={{ borderColor: '#FFBF00'}}/>
+                                        style={{ borderColor: 'black'}}/>
                                 </div>
                                 <Col>
-                                    <Button variant="outline-warning" className="submit" type="submit"
+                                    <Button variant="warning" className="submit" type="submit"
                                         disabled={!this.state.formValid}  >
                                         Creeare cont
                     </Button>
