@@ -92,13 +92,13 @@ class Login extends React.Component {
                     <Col>
                         <Form onSubmit={this.handleSubmit} className="form">
                             <Form.Group controlId="formBasicEmail">
-                                <Form.Control className="myinput" style={{ borderColor: '#FFBF00' }} onChange={this.onChangeEmail} type="email" placeholder="Email" />
+                                <Form.Control className="myinput" style={{ borderColor: 'black' }} onChange={this.onChangeEmail} type="email" placeholder="Email" />
                             </Form.Group>
                             <Form.Group controlId="formBasicPassword">
-                                <Form.Control className="myinput" style={{ borderColor: '#FFBF00' }} onChange={this.onChangePass} type="password" placeholder="Parola" />
+                                <Form.Control className="myinput" style={{ borderColor: 'black' }} onChange={this.onChangePass} type="password" placeholder="Parola" />
                             </Form.Group>
 
-                            <Button variant="outline-warning" className='submit' type="submit">
+                            <Button variant="warning" className='submit' type="submit">
                                 Logare
                                     </Button>
                         </Form>

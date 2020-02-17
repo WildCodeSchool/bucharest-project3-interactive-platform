@@ -1,24 +1,24 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 
-const widths = [
-    'width="289"',
+// const widths = [
+//     'width="289"',
 
-]
-const nationalParteners =
-    [
-        '',
-        '',
-        '<img className="n-partener"  width="410" height="76" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png" data-src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png" class="vc_single_image-img attachment-full lazyloaded" alt="" data-srcset="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png 410w, https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_300/https://techir.ro/wp-content/uploads/2020/01/farmacii4-300x56.png 300w" data-sizes="(max-width: 410px) 100vw, 410px" sizes="(max-width: 410px) 100vw, 410px" srcset="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png 410w, https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_300/https://techir.ro/wp-content/uploads/2020/01/farmacii4-300x56.png 300w">'
-    ]
+// ]
+// const nationalParteners =
+//     [
+//         '',
+//         '',
+//         '<img className="n-partener"  width="410" height="76" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png" data-src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png" class="vc_single_image-img attachment-full lazyloaded" alt="" data-srcset="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png 410w, https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_300/https://techir.ro/wp-content/uploads/2020/01/farmacii4-300x56.png 300w" data-sizes="(max-width: 410px) 100vw, 410px" sizes="(max-width: 410px) 100vw, 410px" srcset="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png 410w, https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_300/https://techir.ro/wp-content/uploads/2020/01/farmacii4-300x56.png 300w">'
+//     ]
 
-const nationalLinks = [
-    "",
-    "",
-    "",
-    ""
+// const nationalLinks = [
+//     "",
+//     "",
+//     "",
+//     ""
 
-]
+// ]
 
 class Distribution extends React.Component {
     constructor(props) {

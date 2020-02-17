@@ -3,39 +3,8 @@
   font-family: muchosans;
   src: url(../../../../assets/Mucho_Sans_Light.otf);
 }
-* {
-  box-sizing: border-box;
-}
-html,
-body,
-div,
-img {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-body {
-  line-height: 1;
-}
-.parteners-container {
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px;
-  justify-content: flex-end;
-  justify-content: space-evenly;
-  left: 3%;
-}
-.p-img {
-  margin: 33px;
-}
 
-.logo-container {
-  top: 100px;
-}
+
 
 
 
@@ -46,73 +15,167 @@ body {
 .parteners-title {
   font-size: 33px;
   font-family: muchosans;
+  position: absolute;
 }
-.partener {
+/* .partener {
   margin: 0 !important;
   padding: 0 !important;
-}
+} */
 @media (min-width: 0px) and (max-width: 400px) {
 .parteners-container {
-    top: 1600px;
+    top: 3300px!important;
     width: 80vw;
+    left: -4vw;
+  }
+  .parteners-title {
+    left: 18vw;
+    top: -80px;
+    width: 100%;
   }
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
   .parteners-container {
-    top: 2200px;
+    top: 3300px!important;
     width: 80vw;
-    left:4%;
+    left:3vw;
+  }
+  .parteners-title {
+    left: 19vw;
+    top: -40px;
   }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
   .parteners-container {
-    top: 2400px;
-    left: 4vw;
+    top: 3530px!important;
+    left: 9vw;
+    width: 70vw!important;
   }
   .parteners-title {
-    left: 160px;
+    left: 24vw;
     position: absolute;
     top: -60px;
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
   .parteners-container {
-    top: 2300px;
-    left: 0vw;
+    top:3080px!important;
+    left: 10%;
+    width: 70vw!important;
   }
 
   .parteners-title {
-    left: 36vw;
+    left: 37%;
     position: absolute;
     top: -70px;
   }
 }
 @media (min-width: 993px) and (max-width: 1382px) {
   .parteners-title {
-    left: 40% !important;
+    left: 27vw !important;
     position: absolute;
     top: -70px;
   }
   .parteners-container {
-    top: 2300px;
-    left:2vw;
-    width: 90vw;
+    top: 3100px!important;
+    left:11vw;
+    width: 69vw!important;
   }
 }
 
 @media (min-width: 1383px) {
   .parteners-container {
-    top: 2470px;
-    left: 12vw;
-    width: 70vw;
+    top: 3470px!important;
+    left: 19%;
+    width: 58vw!important;
   }
   .parteners-title {
-    left: 27vw !important;
-    position: absolute;
+    left: 17vw;
     top: -120px;
     font-size:66px;
-    width: 100vw;
   }
 }
+
+.parteners-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  padding: 0 4px;
+  top: 2400px;
+  width: 80vw;
+  position: relative;
+  align-content: center;
+}
+
+.partener {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.p-img {
+  max-width: 100%;
+  margin: 30px;
+  vertical-align: middle;
+  align-self: center!important;
+}
+@media screen and (max-width: 800px) {
+  .partener {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .partener {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+/* .row {
+  display: -ms-flexbox; /* IE10 */
+  /* display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  padding: 0 4px;
+  top: 2200px;
+  width: 60vw;
+  position: relative;
+} */
+
+/* Create four equal columns that sits next to each other */
+/* .column {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+} */
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+/* @media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+} */
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}  */

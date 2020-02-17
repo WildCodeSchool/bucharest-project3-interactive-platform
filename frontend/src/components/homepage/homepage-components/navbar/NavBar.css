@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One|Port+Lligat+Sans&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Julius+Sans+One|Port+Lligat+Sans&display=swap");
 @font-face {
   font-family: thirsty;
   src: url(../../../../assets/Thirsty.ttf);
@@ -7,9 +7,86 @@
   font-family: muchosanslight;
   src: url(../../../../assets/Mucho_Sans_Light.otf);
 }
-body {
-  width: 100%;
-  height: 100%;
+
+
+.logo-div {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  width: 100vw!important;
+  margin: 0 auto;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  padding: 0px;
+  align-items: baseline;
+  position: absolute;
+}
+img#logo-q {
+align-self: center;
+width: 178px;
+height:68px;
+}
+
+#basic-navbar-nav.navbar-collapse.collapse {
+  height: 80px !important;
+  font-family: muchosanslight;
+  border: yellow;
+}
+button.navbar-toggler{
+  background-color: darkgoldenrod;
+
+
+}
+.nav {
+  background-color: rgb(79,78,78);
+  width: 100vw!important;
+  height: 30px;
+}
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100vw!important;
+  
+}
+
+.nav-link {
+  color: lightgrey!important;
+  font-size: 17px;
+  cursor: pointer;
+  align-self: flex-end;
+  font-family: muchosanslight;
+  z-index: 100;
+
+}
+@media (max-width: 995px ) {
+  .nav {
+    height: 60px;
+  }
+}
+@media (min-width: 996px) {
+    #basic-navbar-nav.navbar-collapse.collapse {
+        height: 30px !important;
+        justify-content: flex-end;
+      }
+} */
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One|Port+Lligat+Sans&display=swap");
+@font-face {
+  font-family: thirsty;
+  src: url(../../../../assets/Thirsty.ttf);
+}
+@font-face {
+  font-family: muchosans;
+  src: url(../../../../assets/Mucho_Sans_Thin.otf);
+}
+@font-face {
+  font-family: muchosanslight;
+  src: url(../../../../assets/Mucho_Sans_Light.otf);
 }
 
 .logo-div {
@@ -27,6 +104,12 @@ body {
   padding: 0px;
   align-items: baseline;
 }
+img#logo-q {
+  align-self: center;
+  width: 178px;
+  height:68px;
+  }
+  
 
 #basic-navbar-nav.navbar-collapse.collapse {
   height: 80px !important;
@@ -35,10 +118,12 @@ body {
 }
 button.navbar-toggler{
   background-color: darkgoldenrod;
-
-
 }
-
+.nav {
+  background-color: rgb(79,78,78);
+  width: 100vw!important;
+  font-weight: none;
+}
 .navigation {
   display: flex;
   justify-content: flex-end;
@@ -46,11 +131,11 @@ button.navbar-toggler{
 }
 
 .nav-link {
-  color: lightgrey!important;
+  color: white!important;
+  font-weight: bold;
   font-size: 22px;
   cursor: pointer;
   float: left;
-  font-family: muchosanslight;
 }
 
 @media (min-width: 996px) {

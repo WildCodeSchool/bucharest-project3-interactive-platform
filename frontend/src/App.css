@@ -1,5 +1,5 @@
 
-html {
+/* html {
   height: 100%;
   box-sizing: border-box;
 }
@@ -14,26 +14,18 @@ body {
   margin: 0;
   padding-bottom: 6rem;
   min-height: 100%;
-}
+} */
 
-#page-container {
+/* #page-container {
   position: relative;
   min-height: 100vh;
 }
 
 #content-wrap {
   padding-bottom: 600px;    /* Footer height */
-}
+/* } */
 
-#footer {
-  position: block;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;           /* Footer height */
-}
+
 .snackFade-enter {
   opacity: 0;
 }
@@ -56,25 +48,23 @@ body {
   transition: opacity 300ms ease-out;
 }
 
-.wave,
-.wave2,
-.wave3 {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  z-index: 2000px;
+#root {
+  width: 100vw;
 }
-
+.wave1, .wave2, .wave3 {
+  position: relative!important;
+}
 .App {
-  position: relative;
   height: 100%;
-  width: 100%;
+  width: 100vw!important;
   margin: 0;
   padding: 0;
   left: 0%;
-  width: 100%;
+  position: relative;
 }
-
+#page-container {
+  width: 100%!important;
+}
 .form-control {
   border-radius: 10px;
   z-index: 1000;
@@ -116,148 +106,144 @@ body {
     left: 9%;
     top: 30px;
   }
-  svg.wave2 {
-    top: 845px;
-    left: -3%;
-    width: 110%;
+ 
+  .wave1 {
+    top: 1890px !important;
+    left: 3%;
+    width: 85vw;
+  }
+ .wave2 {
+    top: 3145px!important;
+    left: 4%;
+    width: 85vw;
     z-index: 2000;
   }
-  .wave {
-    top: 790px !important;
-    left: -3%;
-    width: 110%;
-  }
-  svg.wave3 {
-    top: 890px !important;
-    left: -3%;
-    width: 110%;
-  }
+ .wave3 {
+    top: 3390px !important;
+    left: 4%;
+    width: 85vw;
+  } 
 }
 
 @media (min-width: 401px) and (max-width: 599px) {
   .form {
     width: 60vw;
     left: 67%;
-    top: 10px;
+    top: 28px;
+  
   }
-  svg.wave2 {
-    top: 922px;
-    left: -3%;
-    width: 110%;
-    z-index: 2000;
+ .wave2 {
+    top: 3140px!important;
+    left: 7%;
+    width: 83vw!important;
   }
-  .wave {
-    top: 1399px;
-    left: -3%;
-    width: 110%;
+  .wave1 {
+    top: 1799px!important;
+    left: 7%;
+    width: 83vw!important;
   }
-  svg.wave3 {
-    top: 1590px;
-    left: -3%;
-    width: 110%;
+.wave3 {
+    top: 3290px!important;
+    left: 7%;
+    width: 83vw;
   }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
   .form {
-    width: 66vw;
+    width: 40vw;
     top: 20px;
-    left: 58%;
+    left: 56vw;
   }
   .myinput {
     height: 28px;
   }
-  .wave {
-    top: 1600px;
-    width: 103%;
-    left: -3%;
+  img.wave1 {
+    top: 2360px!important;
+    width: 70vw;
+    left: 14%;
   }
-  svg.wave2 {
-    top: 1010px;
-    left: -3%;
-    width: 103%;
-    z-index: 2000;
+  .wave2 {
+    top: 3400px;
+    width: 70vw;
+    left: 14%;
   }
-  svg.wave3 {
-    top: 1820px;
-    left: -3%;
-    width: 110%;
+ .wave3 {
+    top: 3600px;
+    width: 70vw;
+    left: 14%;
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
   .form {
-    width: 48vw;
-    top: 20px;
-    left: 76% !important;
+    width: 40vw;
+    top: 18px;
+    left:57vw;
   }
 
-  .wave {
-    top: 1600px;
-    width: 103%;
-    left: -3%;
+  .wave1 {
+    top: 1890px;
+    width: 72vw;
+    left: 13%;
   }
 
-  svg.wave2 {
-    top: 720px;
-    width: 103%;
-    left: -3%;
-    z-index: 2000;
+.wave2 {
+    top: 2950px;
+    width: 72vw;
+    left: 13%;
   }
-  svg.wave3 {
-    top: 1820px;
-    left: -3%;
-    width: 110%;
+.wave3 {
+    top: 3100px;
+    width: 72vw;
+    left: 13%;
   }
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {
   .form {
-    width: 38vw;
+    width: 29vw;
     top: 18px;
-    left: 60vw;
+    left: 68vw;
   }
-  .wave {
-    top: 1490px;
-    width: 103%;
-    left: -3%;
+  .wave1 {
+    top: 2090px;
+    width: 69vw;
+    left: 13%;
   }
 
-  svg.wave2 {
-    top: 723px;
-    width: 103%;
-    left: -3%;
-    z-index: 2000;
+.wave2 {
+    top: 2950px;
+    width: 69vw;
+    left: 13%;
   }
-  svg.wave3 {
-    top: 1680px;
-    left: -3%;
-    width: 110%;
+.wave3 {
+    top: 3100px;
+    width: 72vw;
+    left: 13%;
   }
 }
 
 @media (min-width: 1383px) {
   .form {
-    width: 28vw;
-    top: 20px;
-    left: 69vw;
+    width: 16vw;
+    top: 10px;
+    left: 81.5vw;
   }
-  .wave {
-    top: 1620px;
-    width: 103%;
-    left: -3%;
-  }
-
-  svg.wave2 {
-    top: 725px;
-    width: 103%;
-    left: -3%;
-    z-index: 2000;
+  .wave1 {
+    top: 2440px;
+    width: 60vw;
+    left: 19%;
   }
 
-  svg.wave3 {
-    top: 1899px;
-    left: -3%;
-    width: 110%;
+.wave2 {
+    top: 3250px;
+    width: 60vw;
+    left: 19%;
+  }
+.wave3 {
+    top: 3500px;
+    width: 60vw;
+    left: 19%;
   }
 }
