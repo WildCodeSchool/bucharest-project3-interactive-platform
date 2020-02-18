@@ -114,7 +114,7 @@ class Homepage extends React.Component {
                 <Distribution />
                 <img src={wave2} className="wave2" alt="techir-wave" />
                 <Parteners />
-                <img src={wave3} className="wave3" alt="techir-wave" />
+                {/* <img src={wave3} className="wave3" alt="techir-wave" /> */}
 
                 <Footer />
 

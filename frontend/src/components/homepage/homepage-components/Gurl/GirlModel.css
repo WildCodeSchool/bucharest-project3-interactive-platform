@@ -352,6 +352,7 @@
   position: absolute;
 }
 
+
 @media (min-width: 0px) and (max-width: 410px) {
   .hover-question {
     height: 280px;
@@ -389,8 +390,7 @@
     display: none;
   }
   div.model { 
-    width: 85vw;
-    
+    margin: 0px 0px 20px!important;
   }
 }
 .hover-text {
@@ -475,6 +475,7 @@
   }
   div.model { 
     width: 70vw;
+    left: 0%;
   }
 }
 

@@ -3,105 +3,87 @@
   src: url(../../../../assets/Mucho_Sans_Light.otf);
 }
 h3.national-dis-title {
-    font-family: muchosans;
-    position: relative;
     font-size: 44px;
-    
+}
+.distribution,
+.first-national-desc,
+h3.national-dis-title {
+  margin: 30px 0px 30px;
 }
 
 .distribution {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
-  justify-content: flex-end;
+  padding: 10px;
   justify-content: space-evenly;
-  left: 3%;
-height: auto;
+  height: auto;
 }
-.carturesti {
-  width: 410px;
-  height: 76px;
-}
+
 
 .n-partener {
   align-self: stretch;
 }
-.first-national-desc {
-position: relative!important;
+
+.first-national-desc,
+h3.national-dis-title {
+position: relative;
 font-family: muchosans;
 }
-.national {
-  position: relative;
-  width: 80vw;
+.first-national-desc,
+.national, 
+.distribution {
+  position: relative!important;
 }
 
 @media (min-width: 0px) and (max-width: 400px) {
-  .national {
-    width: 85vw!important;
-    left: -10px!important;
-  }
-  .carturesti {
-    width: 350px !important;
-    height: 76px;
-    width: 80vw!important;
-  }
-  .distribution {
-      /* top: 90px; */
-      left: 30px;
+  div.distribution {
+      left: 6vw;
+      width: 80vw!important;
   }
   h3.national-dis-title {
-      left: 19%!important;
-      font-size: 23px;
-      width: 100%!important;
-      /* top: 40px; */
+      left:20vw!important;
+      font-size: 20px;
   }
   .first-national-desc {
-      left: 12%!important;
+      left: 7vw!important;
       text-align: center;
-      font-size: 26px;
-      width: 80vw;
+      font-size: 22px;
+      width: 84vw;
   }
-  /* .first-national-desc {
-
-    top: 800px;
+  .n-partener {
+    margin: 20px 20px 0px 20px;
   }
-  .second-national-desc {
-    top: 1080px;
-  } */
 
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
-    .national {
-        width: 80vw;
-        left: 1%;
-      }
       .carturesti {
         width: 75vw !important;
         height: 76px;
       }
+
       .distribution {
-          left: 30px;
+          left: 0vw;
       }
+
+      .dm {
+        margin: 34px 0px 30px;
+      }
+
       h3.national-dis-title {
-          left: 15%;
+          left: 12vw;
           width: 100%;
           font-size: 29px;
       }
+      
       .first-national-desc, 
       .second-national-desc {
           left: 10%;
           text-align: center;
-          font-size: 26px;
-          width: 80vw;
+          font-size: 20px;
+          width: 76vw;
       }
-      /* .first-national-desc {
-        top: 840px;
-      }
-      .second-national-desc {
-          top: 1100px;
-      } */
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
@@ -114,7 +96,6 @@ font-family: muchosans;
         height: 76px;
       }
       .distribution {
-          /* top: 100px; */
           left: 50px;
       }
       h3.national-dis-title {
@@ -128,16 +109,9 @@ font-family: muchosans;
           font-size: 26px;
           width: 68vw;
       }
-      /* .first-national-desc {
-        top: 620px;
-      }
-      .second-national-desc {
-          top: 820px;
-      } */
 }
 @media (min-width: 769px) and (max-width: 992px) {
     .national {
-        /* top: 2200px; */
         width: 60vw;
       }
       .carturesti {
@@ -159,16 +133,9 @@ font-family: muchosans;
           font-size: 26px;
           width: 80vw;
       }
-      /* .first-national-desc {
-        top: 640px;
-      }
-      .second-national-desc {
-          top: 780px;
-      } */
 }
 @media (min-width: 993px) and (max-width: 1382px) {
     .national {
-        /* top: 2300px; */
         width: 80vw;
         left: 1%;
       }
@@ -177,12 +144,10 @@ font-family: muchosans;
         height: 76px;
       }
       .distribution {
-          /* top: 120px; */
           left: 10%;
       }
       h3.national-dis-title {
           left: 33%;
-          /* width: 100%; */
       }
       .first-national-desc, 
       .second-national-desc {
@@ -191,43 +156,26 @@ font-family: muchosans;
           font-size: 26px;
           width: 69vw;
       }
-      /* .first-national-desc {
-        top: 559px;
-      }
-      .second-national-desc {
-          top: 630px;
-      } */
+     
 }
 
 @media (min-width: 1383px) {
-    .national {
-        /* top: 2700px; */
-        width: 62vw;
-        left:19%
-      }
+  
       .carturesti {
         width: 350px !important;
         height: 76px;
       }
       .distribution {
-          /* top: 120px; */
           left: 0%;
+          width: 40vw;
       }
       h3.national-dis-title {
-          left: 30%;
-          /* width: 100%; */
       }
       .first-national-desc, 
       .second-national-desc {
           left: 2%;
           text-align: center;
           font-size: 26px;
-          width: 60vw;
       }
-      /* .first-national-desc {
-        top: 490px;
-      }
-      .second-national-desc {
-          top: 570px;
-      } */
+     
 }

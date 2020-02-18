@@ -56,15 +56,10 @@ body {
 }
 .App {
   height: 100%;
-  width: 100vw!important;
   margin: 0;
   padding: 0;
-  left: 0%;
-  position: relative;
 }
-#page-container {
-  width: 100%!important;
-}
+
 .form-control {
   border-radius: 10px;
   z-index: 1000;
@@ -99,7 +94,7 @@ body {
   font-size: 44px;
   padding-bottom: 5px;
 }
-/*login/signup form*/
+
 @media (min-width: 0px) and (max-width: 400px) {
   .form {
     width: 89vw;
@@ -107,19 +102,10 @@ body {
     top: 30px;
   }
  
-  .wave1 {
-    left: 3%;
-    width: 85vw;
+  .wave1,
+  .wave2 {
+    width: 95vw;
   }
- .wave2 {
-    left: 4%;
-    width: 85vw;
-    z-index: 2000;
-  }
- .wave3 {
-    left: 4%;
-    width: 85vw;
-  } 
 }
 
 @media (min-width: 401px) and (max-width: 599px) {
@@ -127,20 +113,14 @@ body {
     width: 60vw;
     left: 67%;
     top: 28px;
-  
   }
- .wave2 {
-    left: 7%;
-    width: 83vw!important;
+ 
+  .wave1,
+  .wave2 {
+    left: 0vw;
+    width: 92vw!important;
   }
-  .wave1 {
-    left: 7%;
-    width: 83vw!important;
-  }
-.wave3 {
-    left: 7%;
-    width: 83vw;
-  }
+
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
