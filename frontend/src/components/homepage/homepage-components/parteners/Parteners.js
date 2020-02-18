@@ -32,7 +32,7 @@ class Parteners extends React.Component {
        console.log(parteners);
         return (
            <React.Fragment>
-           <h6 className="parteners-title">Parteneri Online</h6>
+           <h6 className="parteners-title">PARTENERI ONLINE</h6>
                 <div className="parteners-container" >
                     {this.state.parteners.map(partener => (
                         <div className="partener">

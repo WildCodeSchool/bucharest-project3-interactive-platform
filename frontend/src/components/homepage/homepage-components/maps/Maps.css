@@ -81,23 +81,21 @@ a:hover {
 
 @media (min-width: 600px) and (max-width: 768px) {
   .gMap {
-    width: 70vw !important;
+    width: 72vw !important;
     height: 600px !important;
-    /* top: 1290px; */
-    left: 13%;
+    left: 14vw;
   }
-  .map-title {
-    /* top: 1000px; */
-    left: 13%;
-    font-size: 26px;
-    width: 68vw;
-  }
-  .map-msg {
-    /* top: 2030px; */
-    width: 68vw;
-    left: 13%;
-    font-size: 26px;
 
+  .map-title {
+    left: 16vw;
+    font-size: 26px;
+    width: 65vw;
+  }
+
+  .map-msg {
+    width: 68vw;
+    left: 15vw;
+    font-size: 25px;
   }
 }
 
@@ -105,20 +103,17 @@ a:hover {
   .gMap {
     width: 70vw !important;
     height: 600px !important;
-    /* top: 930px; */
-    left: 13%;
+    left: 15vw;
   }
   .map-title {
-    /* top: 610px; */
-    left: 13%;
-    font-size: 26px;
+    left: 15vw;
+    font-size: 24px;
     width: 68vw;
   }
   .map-msg {
-    /* top: 1600px; */
     width: 68vw;
-    left: 13%;
-    font-size: 26px;
+    left: 15vw;
+    font-size: 24px;
 
   }
 }
@@ -126,20 +121,17 @@ a:hover {
   .gMap {
     width:69vw !important;
     height: 700px!important;
-    /* top: 1040px;; */
-    left: 14%;
+    left:15vw;
   }
   .map-title {
-    /* top: 800px; */
-    left: 14%;
-    font-size: 30px;
-    width: 69vw;
+    left: 16vw;
+    font-size: 28px;
+    width: 67vw;
   }
   .map-msg {
-    /* top: 1800px; */
-    width: 69vw;
-    left: 14%;
-    font-size: 30px;
+    width: 66.5vw;
+    left: 16vw;
+    font-size: 28px;
 
   }
 }
@@ -148,21 +140,18 @@ a:hover {
   .gMap {
     width: 60vw !important;
     height: 700px !important;
-    /* top: 1300px; */
     align-self: center;
-    left: 19%;
+    left: 20vw;
   }
   .map-title {
-    /* top: 1020px; */
     align-self: center;
     font-size: 33px;
-    width: 60vw;
-    left: 19%;
+    width: 58vw;
+    left: 20vw;
   }
   .map-msg {
-    /* top: 2100px; */
     width: 60vw;
-    left: 19%;
+    left: 20vw;
     align-self: center;
     font-size: 33px;
   }

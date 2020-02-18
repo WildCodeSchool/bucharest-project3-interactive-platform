@@ -8,7 +8,7 @@ h3.national-dis-title {
 .distribution,
 .first-national-desc,
 h3.national-dis-title {
-  margin: 30px 0px 30px;
+  margin: 30px 0px 60px;
 }
 
 .distribution {
@@ -42,7 +42,7 @@ font-family: muchosans;
       width: 80vw!important;
   }
   h3.national-dis-title {
-      left:20vw!important;
+      left:17vw!important;
       font-size: 20px;
   }
   .first-national-desc {
@@ -51,7 +51,7 @@ font-family: muchosans;
       font-size: 22px;
       width: 84vw;
   }
-  .n-partener {
+  .n-partener, .catena {
     margin: 20px 20px 0px 20px;
   }
 
@@ -64,7 +64,8 @@ font-family: muchosans;
       }
 
       .distribution {
-          left: 0vw;
+          left: 11vw;
+          width: 70vw;
       }
 
       .dm {
@@ -72,89 +73,86 @@ font-family: muchosans;
       }
 
       h3.national-dis-title {
-          left: 12vw;
+          left:24vw;
           width: 100%;
           font-size: 29px;
       }
       
       .first-national-desc, 
       .second-national-desc {
-          left: 10%;
+          left: 16vw;
           text-align: center;
           font-size: 20px;
-          width: 76vw;
+          width: 70vw;
       }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
-    .national {
-        /* top: 2570px; */
-        width: 80vw;
-      }
       .carturesti {
         width: 350px !important;
         height: 76px;
+        margin: 50px 0px 50px;
       }
       .distribution {
-          left: 50px;
+          left: 8vw;
+          width: 80vw;
+      }
+      .dm {
+        margin: 0px;
       }
       h3.national-dis-title {
-          left: 20%;
+          left: 20vw;
           width: 100%;
       }
       .first-national-desc, 
       .second-national-desc {
-          left: 20%;
+          left: 18vw;
           text-align: center;
           font-size: 26px;
-          width: 68vw;
+          width: 64vw;
       }
 }
 @media (min-width: 769px) and (max-width: 992px) {
-    .national {
-        width: 60vw;
-      }
+   
       .carturesti {
         width: 350px !important;
         height: 76px;
+        margin: 40px 0px 0px;
       }
       .distribution {
-          top: 100px;
-          left: 30%;
+          left: 17vw;
+          width: 60vw
       }
       h3.national-dis-title {
-          left: 38%;
+          left: 24vw;
           width: 100%;
       }
-      .first-national-desc, 
-      .second-national-desc {
-          left: 15%;
+  
+      .first-national-desc{
+          left: 14vw;
           text-align: center;
-          font-size: 26px;
-          width: 80vw;
+          font-size: 20px;
+          width: 70vw;
       }
 }
 @media (min-width: 993px) and (max-width: 1382px) {
-    .national {
-        width: 80vw;
-        left: 1%;
-      }
       .carturesti {
         width: 350px !important;
         height: 76px;
       }
       .distribution {
-          left: 10%;
+          left: 14vw;
+          width: 70vw
       }
       h3.national-dis-title {
-          left: 33%;
+          left: 27vw;
       }
       .first-national-desc, 
       .second-national-desc {
-          left: 17%;
+          left: 15vw;
           text-align: center;
           font-size: 26px;
-          width: 69vw;
+          width: 66vw;
       }
      
 }
@@ -166,16 +164,18 @@ font-family: muchosans;
         height: 76px;
       }
       .distribution {
-          left: 0%;
-          width: 40vw;
+          left: 21vw;
+          width:60vw;
       }
       h3.national-dis-title {
+        left: 35vw;
       }
       .first-national-desc, 
       .second-national-desc {
-          left: 2%;
+          left: 19vw;
           text-align: center;
           font-size: 26px;
+          width: 60vw;
       }
      
 }

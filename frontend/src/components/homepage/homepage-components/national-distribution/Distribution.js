@@ -13,7 +13,7 @@ class Distribution extends React.Component {
                         <h3 className="national-dis-title">DISTRIBUTIE NATIONALA</h3>
                         <div className="distribution">
                             <a href="https://www.catena.ro" target="_blank">
-                                <img className="n-partener"  src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_289,h_86/https://techir.ro/wp-content/uploads/2020/01/farmacii1.png" data-src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_289,h_86/https://techir.ro/wp-content/uploads/2020/01/farmacii1.png" alt="" />
+                                <img className="n-partener catena"  src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_289,h_86/https://techir.ro/wp-content/uploads/2020/01/farmacii1.png" data-src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_289,h_86/https://techir.ro/wp-content/uploads/2020/01/farmacii1.png" alt="" />
                             </a>
                             <a href="https://www.dm-drogeriemarkt.ro/" target="_blank">
                                 <img  className="n-partener dm"  src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_142,h_94/https://techir.ro/wp-content/uploads/2020/01/farmacii2.png" data-src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_142,h_94/https://techir.ro/wp-content/uploads/2020/01/farmacii2.png" alt="" />                                </a>

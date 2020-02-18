@@ -132,18 +132,12 @@ body {
   .myinput {
     height: 28px;
   }
-  img.wave1 {
+ .wave1,
+ .wave2 {
     width: 70vw;
-    left: 14%;
+    left: 13vw;
   }
-  .wave2 {
-    width: 70vw;
-    left: 14%;
-  }
- .wave3 {
-    width: 70vw;
-    left: 14%;
-  }
+
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -153,18 +147,10 @@ body {
     left:57vw;
   }
 
-  .wave1 {
-    width: 72vw;
-    left: 13%;
-  }
-
-.wave2 {
-    width: 72vw;
-    left: 13%;
-  }
-.wave3 {
-    width: 72vw;
-    left: 13%;
+  .wave1,
+  .wave2 {
+    width: 75vw;
+    left: 10vw;
   }
 }
 
@@ -195,17 +181,10 @@ body {
     top: 10px;
     left: 81.5vw;
   }
-  .wave1 {
-    width: 60vw;
-    left: 19%;
+  .wave1, 
+  .wave2 {
+    width: 65vw;
+    left:16vw;
   }
 
-.wave2 {
-    width: 60vw;
-    left: 19%;
-  }
-.wave3 {
-    width: 60vw;
-    left: 19%;
-  }
 }
