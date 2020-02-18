@@ -1,30 +1,33 @@
-.admin-nav {
+/* .nav-container {
   position: relative;
-  font-family: muchoThin;
   width: 80vw;
-}
-.wave-admin { 
+} */
+/* .wave-admin { 
   position: relative;
   width: 104%;
   margin: 0;
   padding: 0;
+} */
+.nav-container {
+  position: relative;
 }
-
 
 @font-face {
   font-family: muchosanslight;
   src: url(../../../../assets/Mucho_Sans_Light.otf);
 }
 .nav-container {
-  min-width: 330px;
-  max-width: 720px;
+  position: relative;
+  font-family: muchoThin;
 }
+
 .custom-btn {
   width: 40%;
   margin: 3%;
   border-radius: 12px;
   text-align: center;
   font-family: muchosanslight;
+  position: relative;
 
 }
 .display-none {
@@ -33,8 +36,8 @@
 
 .quiz-admin-cards-container,
 .info-cards {
-  position: absolute;
-  top: 30vh;
+  position: relative;
+
 }
 
 #footerQ {
@@ -43,20 +46,19 @@
 }
 
 @media (min-width: 0px) and (max-width: 400px) {
-  .admin-nav {
-    top: 140px;
-    left: 6%;
+  .nav-container {
+    left: 3%;
   }
-  .wave-admin {
+  /* .wave-admin {
     top: 170px;
     left: -5px!important;
     width: 104%;
- } 
+ }  */
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
-  .admin-nav {
-    top: 150px;
+  .nav-container {
+
     left: 4%;
   }
   .wave-admin {
@@ -67,10 +69,7 @@
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
-  .admin-nav {
-    top: 20px;
-    left: 4%;
-  }
+ 
   .wave-admin {
     top: 40px;
     left: -20px!important;
@@ -79,7 +78,7 @@
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-  .admin-nav {
+  .nav-container {
     top: 20px;
     left: 15%;
   }
@@ -91,7 +90,7 @@
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {
-    .admin-nav {
+    .nav-container {
         top: 20px;
         left: 23%;
       }
@@ -103,7 +102,7 @@
 }
 
 @media (min-width: 1383px) {
-    .admin-nav {
+    .nav-container {
         top: 20px;
         left: 33%;
       }

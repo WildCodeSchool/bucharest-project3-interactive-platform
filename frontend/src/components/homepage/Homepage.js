@@ -18,6 +18,7 @@ import './homepage-components/parteners/Parteners.css';
 import './homepage-components/Gurl/GirlModel.css';
 import './homepage-components/signup/SignUp.css';
 import './homepage-components/maps/Maps.css';
+import './homepage-components/Gurl/Pulse.css';
 import './homepage-components/national-distribution/Distribution.css'
 // import * as wave1  from '../../assets/img/val-galben.png';
 import AdminPlatform from '../admin/AdminPlatform';

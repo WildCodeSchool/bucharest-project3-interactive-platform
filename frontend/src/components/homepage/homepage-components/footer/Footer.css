@@ -1,152 +1,137 @@
-
 #footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background-color: rgb(60, 56, 54);
+  color: white;
+  text-align: center;
+  display: flex;
+}
+
+.s-f,
+.t-f,
+.f-f,
+.f-i {
+  padding: 20px;
+}
+
+@media (min-width: 0px) and (max-width: 400px) {
+
+  #footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .f-f {
+    width: 100vw !important;
+  }
+
+  .s-f {
     width: 100vw;
-    background-color: rgb(60,56,54);
-    color: white;
-    text-align: center;  
-    display: flex; 
   }
 
-  .s-f, .t-f, .f-f, .f-i {
-      padding: 20px;
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+
+  #footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-@media (min-width:0px) and  (max-width: 400px) {
-    #footer { 
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .f-f {
-        width: 100vw!important;
-    }
-    .s-f {
-        width: 100vw;
-    }
+
+  .f-f {
+    width: 100vw !important;
+  }
+
+  .s-f {
+    width: 100vw;
+  }
+
 }
 
+@media (min-width: 601px) and (max-width: 768px) {
 
-@media (min-width: 401px) and  (max-width: 600px) {
-    #footer { 
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .f-f {
-        width: 100vw!important;
-    }
-    .s-f {
-        width: 100vw;
-    }
-  
-}
+  #footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-@media (min-width: 601px) and  (max-width: 768px) {
-    #footer { 
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .f-f {
-        width: 100vw!important;
-        font-size: 22px;
-    }
-    .s-f {
-        width: 90vw;
-        font-size: 22px;
-    }
+  .f-f {
+    width: 100vw !important;
+    font-size: 22px;
+  }
   
- 
+  .s-f {
+    width: 90vw;
+    font-size: 22px;
+  }
+
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-    #footer { 
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .f-f {
-        width: 100vw!important;
-        font-size: 22px;
-    }
-    .s-f {
-        width: 90vw;
-        font-size: 22px;
-    }
+
+  #footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .f-f {
+    width: 100vw !important;
+    font-size: 22px;
+  }
+
+  .s-f {
+    width: 90vw;
+    font-size: 22px;
+  }
+
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {
-    #footer { 
-        flex-direction: row;
-    }
-    .f-f {
-        width: 100vw!important;
-        font-size: 22px;
-        padding-top: 45px;
-    }
-    .s-f {
-        width: 90vw;
-        font-size: 22px;
-    }
-    .t-f {
-        padding-top: 70px!important;
-    }
+
+  #footer {
+    flex-direction: row;
+  }
+
+  .f-f {
+    width: 100vw !important;
+    font-size: 22px;
+    padding-top: 45px;
+  }
+
+  .s-f {
+    width: 90vw;
+    font-size: 22px;
+  }
+
+  .t-f {
+    padding-top: 70px !important;
+  }
 }
-@media(min-width: 1383px) { 
-    #footer { 
-        flex-direction: row;
-    }
-    .f-f {
-        width: 100vw!important;
-        font-size: 22px;
-        padding-top: 65px;
-        align-self: flex-start;
-    }
-    .s-f {
-        width: 90vw;
-        font-size: 22px;
-        align-self: center;
+@media (min-width: 1383px) {
+  #footer {
+    flex-direction: row;
+  }
 
-    }
-    .t-f {
-        margin: 60px;
-       
-    }
+  .f-f {
+    width: 100vw !important;
+    font-size: 22px;
+    padding-top: 65px;
+    align-self: flex-start;
+  }
+
+  .s-f {
+    width: 90vw;
+    font-size: 22px;
+    align-self: center;
+  }
+
+  .t-f {
+    margin: 60px;
+  }
 }
-
-/* @media(min-width: 1500px) {
-    #footer { 
-        flex-direction: row;
-    }
-    .f-f {
-        width: 100vw!important;
-        font-size: 22px;
-        padding-top: 65px;
-        align-self: flex-start;
-    }
-    .s-f {
-        width: 90vw;
-        font-size: 22px;
-        align-self: center;
-
-    }
-    .t-f {
-        margin: 60px 60px 60px 60px;
-       
-    } */
-/* } */
-
-
-
-
-/* #footer {
-position: absolute;
-right: 0;
-bottom: 0;
-left: 0;
-padding: 1rem;
-background-color: #efefef;
-text-align: center;
-} */

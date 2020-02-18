@@ -61,7 +61,7 @@ class InfoCard extends Component {
               <Form.Label>Link</Form.Label>
               <Form.Control
                 as="textarea"
-                rows="3"
+                rows="2"
                 placeholder={this.props.data.link}
                 onChange={event => this.handleLink(event)}
                 style={{ borderColor: '#FFBF00'}}

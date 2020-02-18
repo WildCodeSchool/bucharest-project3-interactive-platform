@@ -66,8 +66,7 @@ class AdminNav extends React.Component {
         return (
             <div>
                 <NavBar />
-                <Row className="admin-nav">
-                    <Col className='nav-container'>
+                <div className='nav-container'>
                         <Button variant="outline-warning" size="lg"
                             // style={this.state.descriptionBttnState ? this.descbtnStyleActive : this.descbtnStyleInactive}
                             className="admin-desc-bttn custom-btn"
@@ -81,8 +80,7 @@ class AdminNav extends React.Component {
                         >
                             Chestionar
                         </Button>
-                    </Col >
-                </Row >
+                    </div >
                 {/* {wave3} */}
                 {this.state.infoButton ? <EditInfoCards fetchData={{ ...this.props.fetchedDataInfo }} token={this.props.token} categories={this.props.categories} /> : null}
                 {this.state.quizzButton ? <QCards fetchData={{ ...this.props.fetchedDataQuiz }} token={this.props.token} categories={this.props.categories} /> : null}

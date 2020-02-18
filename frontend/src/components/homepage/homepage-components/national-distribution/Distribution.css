@@ -2,9 +2,11 @@
   font-family: muchosans;
   src: url(../../../../assets/Mucho_Sans_Light.otf);
 }
+
 h3.national-dis-title {
     font-size: 44px;
 }
+
 .distribution,
 .first-national-desc,
 h3.national-dis-title {
@@ -20,7 +22,6 @@ h3.national-dis-title {
   height: auto;
 }
 
-
 .n-partener {
   align-self: stretch;
 }
@@ -30,27 +31,32 @@ h3.national-dis-title {
 position: relative;
 font-family: muchosans;
 }
-.first-national-desc,
+
+
 .national, 
 .distribution {
   position: relative!important;
 }
 
 @media (min-width: 0px) and (max-width: 400px) {
+
   div.distribution {
       left: 6vw;
       width: 80vw!important;
   }
+
   h3.national-dis-title {
       left:17vw!important;
       font-size: 20px;
   }
+
   .first-national-desc {
       left: 7vw!important;
       text-align: center;
       font-size: 22px;
       width: 84vw;
   }
+
   .n-partener, .catena {
     margin: 20px 20px 0px 20px;
   }
@@ -58,6 +64,7 @@ font-family: muchosans;
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
+
       .carturesti {
         width: 75vw !important;
         height: 76px;
@@ -85,25 +92,31 @@ font-family: muchosans;
           font-size: 20px;
           width: 70vw;
       }
+
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
+
       .carturesti {
         width: 350px !important;
         height: 76px;
         margin: 50px 0px 50px;
       }
+
       .distribution {
           left: 8vw;
           width: 80vw;
       }
+
       .dm {
         margin: 0px;
       }
+
       h3.national-dis-title {
           left: 20vw;
           width: 100%;
       }
+
       .first-national-desc, 
       .second-national-desc {
           left: 18vw;
@@ -111,7 +124,9 @@ font-family: muchosans;
           font-size: 26px;
           width: 64vw;
       }
+
 }
+
 @media (min-width: 769px) and (max-width: 992px) {
    
       .carturesti {
@@ -119,10 +134,12 @@ font-family: muchosans;
         height: 76px;
         margin: 40px 0px 0px;
       }
+
       .distribution {
           left: 17vw;
           width: 60vw
       }
+
       h3.national-dis-title {
           left: 24vw;
           width: 100%;
@@ -134,19 +151,24 @@ font-family: muchosans;
           font-size: 20px;
           width: 70vw;
       }
+
 }
 @media (min-width: 993px) and (max-width: 1382px) {
+
       .carturesti {
         width: 350px !important;
         height: 76px;
       }
+
       .distribution {
           left: 14vw;
           width: 70vw
       }
+
       h3.national-dis-title {
           left: 27vw;
       }
+
       .first-national-desc, 
       .second-national-desc {
           left: 15vw;
@@ -154,7 +176,7 @@ font-family: muchosans;
           font-size: 26px;
           width: 66vw;
       }
-     
+
 }
 
 @media (min-width: 1383px) {
@@ -163,13 +185,16 @@ font-family: muchosans;
         width: 350px !important;
         height: 76px;
       }
+
       .distribution {
           left: 21vw;
           width:60vw;
       }
+
       h3.national-dis-title {
         left: 35vw;
       }
+
       .first-national-desc, 
       .second-national-desc {
           left: 19vw;

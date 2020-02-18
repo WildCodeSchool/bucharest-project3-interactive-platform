@@ -13,7 +13,7 @@ import Quiz from '../homepage/homepage-components/quiz/Quiz';
 
 import { connect } from 'react-redux';
 
-
+const wave = require('../../assets/img/val-galben.svg')
 class AdminPlatform extends React.Component {
     constructor(props) {
         super(props);
@@ -95,8 +95,7 @@ class AdminPlatform extends React.Component {
         return (
             <div className="admin-container">
                 <AdminNav fetchedDataQuiz={this.state.quizzData} categories={this.state.categories} token={this.props.token} fetchedDataInfo={this.state.infoData} choose={this.showCards} />
-
-
+                <img src={wave} className="admin-wave"/>
             </div>
         )
     }

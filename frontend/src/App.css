@@ -1,48 +1,31 @@
 
-/* html {
-  height: 100%;
-  box-sizing: border-box;
+@font-face {
+  font-family: thirsty;
+  src: url(./assets/Thirsty.ttf);
 }
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-body {
-  position: relative;
-  margin: 0;
-  padding-bottom: 6rem;
-  min-height: 100%;
-} */
-
-/* #page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-#content-wrap {
-  padding-bottom: 600px;    /* Footer height */
-/* } */
-
 
 .snackFade-enter {
   opacity: 0;
 }
+
 .snackFade-enter-active {
   opacity: 1;
   transition: opacity 300ms ease-out;
 }
+
 .snackFade-leave {
   opacity: 1;
 }
+
 .snackFade-leave-active {
   opacity: 0;
   transition: opacity 300ms ease-out;
 }
+
 .snackFade-appear {
   opacity: 1;
 }
+
 .snackFade-appear-active {
   opacity: 0;
   transition: opacity 300ms ease-out;
@@ -51,9 +34,11 @@ body {
 #root {
   width: 100vw;
 }
+
 .wave1, .wave2, .wave3 {
   position: relative!important;
 }
+
 .App {
   height: 100%;
   margin: 0;
@@ -64,11 +49,13 @@ body {
   border-radius: 10px;
   z-index: 1000;
 }
+
 .form {
   position: absolute;
   z-index: 100;
   align-items: center;
 }
+
 .submit {
   position: absolute;
   text-transform: uppercase;
@@ -82,10 +69,6 @@ body {
   z-index: 100;
 }
 
-@font-face {
-  font-family: thirsty;
-  src: url(./assets/Thirsty.ttf);
-}
 
 .modal-congrats {
   font-family: thirsty;
@@ -96,6 +79,7 @@ body {
 }
 
 @media (min-width: 0px) and (max-width: 400px) {
+
   .form {
     width: 89vw;
     left: 9%;
@@ -106,9 +90,11 @@ body {
   .wave2 {
     width: 95vw;
   }
+
 }
 
 @media (min-width: 401px) and (max-width: 599px) {
+
   .form {
     width: 60vw;
     left: 67%;
@@ -124,14 +110,17 @@ body {
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
+
   .form {
     width: 40vw;
     top: 20px;
     left: 56vw;
   }
+
   .myinput {
     height: 28px;
   }
+
  .wave1,
  .wave2 {
     width: 70vw;
@@ -141,6 +130,7 @@ body {
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
+
   .form {
     width: 40vw;
     top: 18px;
@@ -152,14 +142,17 @@ body {
     width: 75vw;
     left: 10vw;
   }
+
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {
+
   .form {
     width: 29vw;
     top: 18px;
     left: 68vw;
   }
+
   .wave1 {
     width: 69vw;
     left: 13%;
@@ -169,18 +162,22 @@ body {
     width: 69vw;
     left: 13%;
   }
+
 .wave3 {
     width: 72vw;
     left: 13%;
   }
+
 }
 
 @media (min-width: 1383px) {
+
   .form {
     width: 16vw;
     top: 10px;
     left: 81.5vw;
   }
+
   .wave1, 
   .wave2 {
     width: 65vw;

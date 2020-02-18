@@ -28,7 +28,8 @@
 .quiz-container {
   margin: 0;
   padding: 0;
-  width: 110%;
+  width: 100vw;
+  position: relative;
 }
 .quizWave {
   position: relative;
@@ -76,9 +77,9 @@ font-size: 33px;
 .quiz-desc,
 .q-question,
 .q-first-ans,
-.q-second-ans,
-.q-img  {
-  position: absolute;
+.q-second-ans, .q-img
+   {
+  position: relative;
 }
 .quiz-desc,
 .q-question,
@@ -107,7 +108,6 @@ font-size: 33px;
 .q-img {
   -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 0 10px;
   box-shadow: rgba(0, 0, 0, 0.8) 0 0 10px;
-  position: absolute;
 }
 
 .q-first-ans,
@@ -116,7 +116,7 @@ font-size: 33px;
 }
 .q-footer {
   width: 100%;
-  top: 70vh;
+ position: relative;
 }
 .q-img {
 
@@ -129,33 +129,33 @@ font-size: 33px;
    transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 
  }
+ .quiz-title, .q-question, .q-first-ans, .q-second-ans {
+   margin: 30px 0px 60px;
+ }
 @media (min-width:0px) and  (max-width: 400px) {
 
   .quiz-title {
-    top: 50px!important;
-    left:6vw!important;
+    left:22vw!important;
     width: 90vw;
     font-size: 40px;
    }
    
    .quiz-desc {
-     top: 170px!important;
-     left: 1%;
+     left:2vw;
      text-align: center;
      width: 90vw;
    }
+
   .qtitle {
-   top: 300px!important;
    left: 15%;
   }
   
   .qdesc {
-    top: 330px!important;
     left: 2%;
     text-align: center;
   }
+
   .q-question {
-    top:280px;
     width: 80vw!important;
     font-size: 20px;
     left: 9vw;
@@ -164,23 +164,20 @@ font-size: 33px;
   }
   
   .q-img {
-   top: 420px;
-    left: 10vw;
-    height: 208px;
-    width: 208px;
+    left: 15vw;
+    height: 190px;
+    width: 190px;
     z-index: 100;
 
   }
 
   
   .q-first-ans {
-    top: 700px;
-    left: 11%;
+    left: 6vw;
     width: 80vw;
   }
   .q-second-ans {
-    top: 760px;
-    left: 11%;
+    left: 6vw;
     width: 80vw;
   }
   div.q-footer {
@@ -205,72 +202,60 @@ font-size: 33px;
     left: 10%;
   }
   .mapq {
-    top:639px;
-    position: relative;  }
+    position: relative;
+  }
 }
 
 @media (min-width: 401px) and  (max-width: 600px) {
   
-  
   .quiz-title {
-    top: 50px!important;
     left:17vw!important;
     width: 90vw;
     font-size: 46px;
    }
    
    .quiz-desc {
-     top: 170px!important;
      left: 4vw;
      text-align: center;
      width: 90vw;
      font-size: 26px;
    }
+
   .qtitle {
-   top: 300px!important;
    left: 15%;
   }
   
   .qdesc {
-    top: 330px!important;
     left: 2%;
     text-align: center;
   }
   .q-question {
-    top:290px;
     width: 80vw!important;
     font-size: 20px;
     left: 9vw;
     position: relative;
     text-align: center;
     font-size: 28px;
+
   }
   
   .q-img {
-   top: 440px;
-    left: 22vw!important;
+    left: 17vw!important;
     height: 268px;
     width: 268px;
     z-index: 100;
-
   }
 
   
   .q-first-ans {
-    top: 770px;
     left: 11%;
     width: 80vw;
   }
   .q-second-ans {
-    top: 840px;
     left: 11%;
     width: 80vw;
   }
-  div.q-footer {
-    position: relative;
-    top: 400px!important;
-    width: 100vw;
-  }
+
 
   .quizWave {
     position: relative;
@@ -284,25 +269,21 @@ font-size: 33px;
   }
   .qdesc {
     width: 80vw;
-    top: 100px;
     left: 10%;
   }
   .mapq {
-    top:830px;
     position: relative;  }
 }
 
 @media (min-width: 601px) and  (max-width: 768px) {
     
   .quiz-title {
-    top: 50px!important;
     left:27vw!important;
     width: 90vw;
     font-size: 48px;
    }
    
    .quiz-desc {
-     top: 170px!important;
      left: 4vw;
      text-align: center;
      width: 90vw;
@@ -310,17 +291,14 @@ font-size: 33px;
 
    }
   .qtitle {
-   top: 300px!important;
    left: 15%;
   }
   
   .qdesc {
-    top: 330px!important;
     left: 2%;
     text-align: center;
   }
   .q-question {
-    top:270px;
     width: 80vw!important;
     font-size: 20px;
     left: 9vw;
@@ -331,7 +309,6 @@ font-size: 33px;
   }
   
   .q-img {
-   top: 390px;
     left: 27vw!important;
     height: 288px;
     width: 288px;
@@ -341,213 +318,188 @@ font-size: 33px;
 
   
   .q-first-ans {
-    top: 730px;
     left: 11%;
     width: 80vw;
   }
   .q-second-ans {
-    top: 790px;
     left: 11%;
     width: 80vw;
   }
   div.q-footer {
     position: relative;
-    top: 400px!important;
     width: 100vw;
   }
 
   .quizWave {
     position: relative;
-    top: 1000px;
     width: 100%;
   }
   .qtitle {
     font-size: 44px;
-    top: 50px;
     left: 10%;
   }
   .qdesc {
     width: 80vw;
-    top: 100px;
     left: 10%;
   }
   .mapq {
-    top:830px;
     position: relative;  }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
   .qtitle {
-    top: 100px!important;
     left: 36%;
     width: 90vw;
     font-size: 55px;
    }
    
    .qdesc {
-     top: 200px;
-     left: 23%;
-     text-align: center;
-     width: 50vw;
+     left: 20vw;
+     width: 60vw;
    }
   .quiz-title {
-    top: 60px;
     left:25%;
     font-size: 77px;
    }
    
    .quiz-desc {
-     top: 200px;
-     left: 40%;
-     font-size: 30px;
-     width: 45%;
-     text-align: center;
+     left: 45vw;
+     font-size: 22px;
+     width: 53vw;
+  
    }
    .q-question {
-     top: 330px;
-     width: 70%!important;
+     width: 50vw!important;
      font-size: 30px;
      left:45vw;
-     position: relative;
    }
    
    .q-img {
-     top: 250px;
-     left: 9%;
-     width: 30vw;
-     height: 30vw;
+     top: -200px;
+     left: 13vw;
+     width: 20vw;
+     height: 20vw;
    }
- 
-   
+
    .q-first-ans {
-     top: 420px;
-     left:48vw;
-     width: 60%;
+     left:45vw;
+     width: 50vw;
+     top: -230px;
    }
+
    .q-second-ans {
-    top: 490px;
-    left:48vw;
-    width: 60%;
+    left:45vw;
+    width: 50vw;
+    top: -260px;
    }
+
    .mapq {
-    top: 570px;
-    position: relative;  }
+    position: relative; 
+   }
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {
   
   .qtitle {
-    top: 100px!important;
     left: 36%;
     width: 90vw;
     font-size: 55px;
    }
    
    .qdesc {
-     top: 200px;
-     left: 23%;
-     text-align: center;
-     width: 50vw;
+     left: 20vw;
+     width: 60vw;
    }
   .quiz-title {
-    top: 90px;
-    left: 45%;
+    left:25%;
     font-size: 77px;
    }
    
    .quiz-desc {
-     top: 200px;
-     left: 40%;
-     font-size: 30px;
-     width: 45%;
-     text-align: center;
+     left: 45vw;
+     font-size: 22px;
+     width: 53vw;
+  
    }
    .q-question {
-     top: 330px;
-     width: 90%!important;
+     width: 50vw!important;
      font-size: 30px;
      left:45vw;
-     position: relative;
    }
    
    .q-img {
-     top: 170px;
-     left: 22%!important;
-     width: 20vw;
-     height: 20vw;
+     top: -200px;
+     left: 7vw;
+     width: 30vw;
+     height: 30vw;
    }
- 
-   
+
    .q-first-ans {
-     top: 420px;
-     left:48vw;
-     width: 520px;
+     left:45vw;
+     width: 50vw;
+     top: -430px;
    }
+
    .q-second-ans {
-    top: 490px;
-    left:48vw;
-    width: 520px;
+    left:45vw;
+    width: 50vw;
+    top: -460px;
    }
+
    .mapq {
-    top: 700px;
-    position: relative;  }
+    position: relative; 
+   }
 }
 
 @media(min-width: 1383px) { 
-  .mapq {
-    top: 700px;
-    position: relative;  }
   .qtitle {
-    top: 100px!important;
     left: 36%;
     width: 90vw;
     font-size: 55px;
    }
-  
+   
    .qdesc {
-     top: 200px;
-     left: 23%;
-     text-align: center;
-     width: 50vw;
+     left: 20vw;
+     width: 60vw;
    }
   .quiz-title {
-    top: 90px;
-    left: 45%;
+    left:33vw;
     font-size: 77px;
    }
    
    .quiz-desc {
-     top: 200px;
-     left: 40%;
-     font-size: 30px;
-     width: 40%;
-     text-align: center;
+     left: 45vw;
+     font-size: 22px;
+     width: 53vw;
+  
    }
    .q-question {
-     top: 330px;
-     width: 100%!important;
+     width: 50vw!important;
      font-size: 30px;
      left:45vw;
-     position: relative;
    }
    
    .q-img {
-     top: 170px;
-     left: 40%;
-     width: 20vw;
-     height: 20vw;
+     top: -120px;
+     left: 10vw;
+     width: 23vw;
+     height: 23vw;
    }
- 
-   
+
    .q-first-ans {
-     top: 420px;
-     left:48vw;
-     width: 520px;
+     left:45vw;
+     width: 50vw;
+     top: -430px;
    }
+
    .q-second-ans {
-    top: 490px;
-    left:48vw;
-    width: 520px;
+    left:45vw;
+    width: 50vw;
+    top: -460px;
+   }
+
+   .mapq {
+    position: relative; 
    }
   }
 /*modal*/
