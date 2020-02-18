@@ -15,7 +15,6 @@
   }
 @media (min-width:0px) and  (max-width: 400px) {
     #footer { 
-        top: 3500px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -31,7 +30,6 @@
 
 @media (min-width: 401px) and  (max-width: 600px) {
     #footer { 
-        top: 3420px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -47,7 +45,6 @@
 
 @media (min-width: 601px) and  (max-width: 768px) {
     #footer { 
-        top: 300px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -66,7 +63,6 @@
 
 @media (min-width: 769px) and (max-width: 992px) {
     #footer { 
-        top: 3200px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -83,7 +79,6 @@
 
 @media (min-width: 993px) and (max-width: 1382px) {
     #footer { 
-        top: 3400px;
         flex-direction: row;
     }
     .f-f {
@@ -101,7 +96,6 @@
 }
 @media(min-width: 1383px) { 
     #footer { 
-        top: 3800px!important;
         flex-direction: row;
     }
     .f-f {
@@ -124,7 +118,6 @@
 
 @media(min-width: 1500px) {
     #footer { 
-        top: 4600px;
         flex-direction: row;
     }
     .f-f {

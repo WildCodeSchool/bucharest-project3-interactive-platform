@@ -79,46 +79,46 @@ class Homepage extends React.Component {
                 )
             }
         }
-    // localStorage.getItem('userToken').length > 10 &&
-    // localStorage.getItem('userIsLogged') === '1'&&
-    // localStorage.getItem('userAccesLevel') === '1'&&
-    // this.props.history.push("/admin")
+        // localStorage.getItem('userToken').length > 10 &&
+        // localStorage.getItem('userIsLogged') === '1'&&
+        // localStorage.getItem('userAccesLevel') === '1'&&
+        // this.props.history.push("/admin")
 
-    fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/categories', {
-        method: 'GET',
-        headers: new Headers({
-            'Content-Type': 'application/json'
+        fetch('https://infinite-hamlet-17639.herokuapp.com/authentication/categories', {
+            method: 'GET',
+            headers: new Headers({
+                'Content-Type': 'application/json'
+            })
         })
-    })
-    .then(res => res.json())
-    .then(res =>   this.props.dispatch(
-        {
-            type: "SET_CATEGORIES",
-            categories: res
-        }
-    ))
-}
+            .then(res => res.json())
+            .then(res => this.props.dispatch(
+                {
+                    type: "SET_CATEGORIES",
+                    categories: res
+                }
+            ))
+    }
 
     render() {
         const showLogin = this.state.showLogin;
         const showSignup = this.state.showSignup;
 
         return (
-            <div className="homepage" id="page-container">
+            <React.Fragment>
                 <Navigation onClickLogin={this.toggleMoving} categories={this.state.categories} onClickSignup={this.toggleMoving} loginState={showLogin} signupState={showSignup} />
                 <GirlModel moveGirl={this.state.moveToTheRight} categories={this.props.categories} loginState={showLogin} signupState={showSignup} />
-              
-                    <Maps />
-                    <img src={wave1} className="wave1" alt="techir-wave"/>
-                
-                <Distribution/>
-                <img src={wave2} className="wave2" alt="techir-wave"/>
-           <Parteners />
-           <img src={wave3} className="wave3" alt="techir-wave"/>
+
+                <Maps />
+                <img src={wave1} className="wave1" alt="techir-wave" />
+
+                <Distribution />
+                <img src={wave2} className="wave2" alt="techir-wave" />
+                <Parteners />
+                <img src={wave3} className="wave3" alt="techir-wave" />
 
                 <Footer />
-                
-            </div>
+
+            </React.Fragment>
         )
     }
 }

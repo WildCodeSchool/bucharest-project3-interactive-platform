@@ -53,10 +53,7 @@ class GMap extends React.Component {
 
     render() {
         return (
-            <Container fluid>
-                <Row noGutters>
-                    <Col>
-                        <div className='mapz'>
+           <React.Fragment>
                             <p className="map-title">Pentru a afla locatia cea mai apropiata de tine si in care poti sa gasesti mai multe produse <a href="www.techir.ro">Techir</a>, poti studia harta noastra. Iti sugeram sa contactezi locatia aleasa telefonic pentru a verifica stocul produselor dorite.</p>
                             <Map google={this.props.google}
                                 zoom={7.1}
@@ -94,11 +91,7 @@ class GMap extends React.Component {
                             <p className="map-msg">Asteptam oricand, pe <span className="bold">office@techir.ro</span>, recomandarea ta cu locatii in care ai vrea sa gasesti brandul Techir.<br />
                                 Nu uita! Poti comanda oricand direct din <a href="www.techir.ro">magazinul nostru online</a> pentru a putea avea acces la toate produsele noastre miraculoase.</p>
 
-                        </div>
-                    </Col>
-                </Row>
-
-            </Container>
+                                </React.Fragment>
         )
     }
 }

@@ -1,24 +1,6 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 
-// const widths = [
-//     'width="289"',
-
-// ]
-// const nationalParteners =
-//     [
-//         '',
-//         '',
-//         '<img className="n-partener"  width="410" height="76" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png" data-src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png" class="vc_single_image-img attachment-full lazyloaded" alt="" data-srcset="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png 410w, https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_300/https://techir.ro/wp-content/uploads/2020/01/farmacii4-300x56.png 300w" data-sizes="(max-width: 410px) 100vw, 410px" sizes="(max-width: 410px) 100vw, 410px" srcset="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png 410w, https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_300/https://techir.ro/wp-content/uploads/2020/01/farmacii4-300x56.png 300w">'
-//     ]
-
-// const nationalLinks = [
-//     "",
-//     "",
-//     "",
-//     ""
-
-// ]
 
 class Distribution extends React.Component {
     constructor(props) {
@@ -27,9 +9,7 @@ class Distribution extends React.Component {
 
     render() {
         return (
-            <Container fluid>
-                <Row>
-                    <div className="national">
+            <React.Fragment>
                         <h3 className="national-dis-title">DISTRIBUTIE NATIONALA</h3>
                         <div className="distribution">
                             <a href="https://www.catena.ro" target="_blank">
@@ -44,11 +24,8 @@ class Distribution extends React.Component {
                                 <img className="n-partener carturesti" style={{margin:"50px"}} src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png" data-src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png" alt="" data-srcset="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png 410w, https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_300/https://techir.ro/wp-content/uploads/2020/01/farmacii4-300x56.png 300w" data-sizes="(max-width: 410px) 100vw, 410px" sizes="(max-width: 410px) 100vw, 410px" srcset="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_410/https://techir.ro/wp-content/uploads/2020/01/farmacii4.png 410w, https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_300/https://techir.ro/wp-content/uploads/2020/01/farmacii4-300x56.png 300w" />
                             </a>
                         </div>
-                        <p className="first-national-desc">Produsele Techir sunt distribuite national prin intermediul lanturilor de farmacii si magazinelor Catena, DM, Mega Image si Carturesti.</p>
-                        <p className="second-national-desc" >In aceste locatii gasesti doar o selectie de produse din gamele Techir</p>
-                    </div>
-                </Row>
-            </Container>
+                        <p className="first-national-desc">Produsele Techir sunt distribuite national prin intermediul lanturilor de farmacii si magazinelor Catena, DM, Mega Image si Carturesti. In aceste locatii gasesti doar o selectie de produse din gamele Techir</p>
+                        </React.Fragment>
         )
     }
 }

@@ -108,18 +108,15 @@ body {
   }
  
   .wave1 {
-    top: 1890px !important;
     left: 3%;
     width: 85vw;
   }
  .wave2 {
-    top: 3145px!important;
     left: 4%;
     width: 85vw;
     z-index: 2000;
   }
  .wave3 {
-    top: 3390px !important;
     left: 4%;
     width: 85vw;
   } 
@@ -133,17 +130,14 @@ body {
   
   }
  .wave2 {
-    top: 3140px!important;
     left: 7%;
     width: 83vw!important;
   }
   .wave1 {
-    top: 1799px!important;
     left: 7%;
     width: 83vw!important;
   }
 .wave3 {
-    top: 3290px!important;
     left: 7%;
     width: 83vw;
   }
@@ -159,17 +153,14 @@ body {
     height: 28px;
   }
   img.wave1 {
-    top: 2360px!important;
     width: 70vw;
     left: 14%;
   }
   .wave2 {
-    top: 3400px;
     width: 70vw;
     left: 14%;
   }
  .wave3 {
-    top: 3600px;
     width: 70vw;
     left: 14%;
   }
@@ -183,18 +174,15 @@ body {
   }
 
   .wave1 {
-    top: 1890px;
     width: 72vw;
     left: 13%;
   }
 
 .wave2 {
-    top: 2950px;
     width: 72vw;
     left: 13%;
   }
 .wave3 {
-    top: 3100px;
     width: 72vw;
     left: 13%;
   }
@@ -207,18 +195,15 @@ body {
     left: 68vw;
   }
   .wave1 {
-    top: 2090px;
     width: 69vw;
     left: 13%;
   }
 
 .wave2 {
-    top: 2950px;
     width: 69vw;
     left: 13%;
   }
 .wave3 {
-    top: 3100px;
     width: 72vw;
     left: 13%;
   }
@@ -231,18 +216,15 @@ body {
     left: 81.5vw;
   }
   .wave1 {
-    top: 2440px;
     width: 60vw;
     left: 19%;
   }
 
 .wave2 {
-    top: 3250px;
     width: 60vw;
     left: 19%;
   }
 .wave3 {
-    top: 3500px;
     width: 60vw;
     left: 19%;
   }

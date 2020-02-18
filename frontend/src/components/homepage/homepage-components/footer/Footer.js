@@ -9,10 +9,8 @@ class Footer extends React.Component {
     render() {
         return (
 
-            <Container fluid style={{ paddingLeft: 0, paddingRight: 0, marginLeft: 0, marginRight: 0 }}>
-                <Row noGutters>
-                    <Col>
-                        <footer className="footer-container" id="footer">
+            <React.Fragment>
+                        <footer id="footer">
                             <div className="f-f">
                                 <h5>CONTACT</h5>
                                 <p>SC TECHIRGHIOL FARMA COSMETICS SRL<br />
@@ -29,9 +27,7 @@ class Footer extends React.Component {
                             </div>
                         </footer>
                  
-                    </Col>
-                </Row>
-            </Container>
+                        </React.Fragment>
         );
     }
 }

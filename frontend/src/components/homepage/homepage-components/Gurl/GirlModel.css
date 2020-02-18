@@ -24,7 +24,6 @@
   position: absolute;
 }
  
-
 /* .model {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -620,14 +619,12 @@ div.model {
 
 img.background {
   top: 20px;
-  position: absolute;
   width: 100%;
   height: auto;
 }
 
 img.mobile {
   top: 30px;
-  position: absolute;
   width: 100%;
   height: auto;
 }

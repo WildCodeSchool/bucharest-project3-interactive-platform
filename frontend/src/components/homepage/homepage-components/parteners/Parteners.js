@@ -31,11 +31,9 @@ class Parteners extends React.Component {
        const parteners = this.state.parteners;
        console.log(parteners);
         return (
-        <Container fluid>
-        <Row noGutters>
-            <Col>
+           <React.Fragment>
+           <h6 className="parteners-title">Parteneri Online</h6>
                 <div className="parteners-container" >
-                    <h6 className="parteners-title">Parteneri Online</h6>
                     {this.state.parteners.map(partener => (
                         <div className="partener">
                             <a href={partener.link}>
@@ -44,9 +42,8 @@ class Parteners extends React.Component {
                         </div>
                     ))}
                 </div>
-            </Col>
-        </Row>
-    </Container>
+                </React.Fragment>
+            
         )
     }
 }

@@ -4,7 +4,7 @@
 }
 h3.national-dis-title {
     font-family: muchosans;
-    position: absolute;
+    position: relative;
     font-size: 44px;
     
 }
@@ -17,6 +17,7 @@ h3.national-dis-title {
   justify-content: flex-end;
   justify-content: space-evenly;
   left: 3%;
+height: auto;
 }
 .carturesti {
   width: 410px;
@@ -26,19 +27,17 @@ h3.national-dis-title {
 .n-partener {
   align-self: stretch;
 }
-.first-national-desc, 
-.second-national-desc {
-position: absolute;
+.first-national-desc {
+position: relative!important;
 font-family: muchosans;
 }
 .national {
-  position: absolute;
+  position: relative;
   width: 80vw;
 }
 
 @media (min-width: 0px) and (max-width: 400px) {
   .national {
-    top:2060px!important;
     width: 85vw!important;
     left: -10px!important;
   }
@@ -48,34 +47,33 @@ font-family: muchosans;
     width: 80vw!important;
   }
   .distribution {
-      top: 90px;
+      /* top: 90px; */
       left: 30px;
   }
   h3.national-dis-title {
       left: 19%!important;
       font-size: 23px;
       width: 100%!important;
-      top: 40px;
+      /* top: 40px; */
   }
-  .first-national-desc, 
-  .second-national-desc {
+  .first-national-desc {
       left: 12%!important;
       text-align: center;
       font-size: 26px;
       width: 80vw;
   }
-  .first-national-desc {
+  /* .first-national-desc {
+
     top: 800px;
   }
   .second-national-desc {
     top: 1080px;
-  }
+  } */
 
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
     .national {
-        top: 2000px;
         width: 80vw;
         left: 1%;
       }
@@ -84,11 +82,10 @@ font-family: muchosans;
         height: 76px;
       }
       .distribution {
-          top: 100px;
           left: 30px;
       }
       h3.national-dis-title {
-          left: 21%;
+          left: 15%;
           width: 100%;
           font-size: 29px;
       }
@@ -99,17 +96,17 @@ font-family: muchosans;
           font-size: 26px;
           width: 80vw;
       }
-      .first-national-desc {
+      /* .first-national-desc {
         top: 840px;
       }
       .second-national-desc {
           top: 1100px;
-      }
+      } */
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
     .national {
-        top: 2570px;
+        /* top: 2570px; */
         width: 80vw;
       }
       .carturesti {
@@ -117,7 +114,7 @@ font-family: muchosans;
         height: 76px;
       }
       .distribution {
-          top: 100px;
+          /* top: 100px; */
           left: 50px;
       }
       h3.national-dis-title {
@@ -131,16 +128,16 @@ font-family: muchosans;
           font-size: 26px;
           width: 68vw;
       }
-      .first-national-desc {
+      /* .first-national-desc {
         top: 620px;
       }
       .second-national-desc {
           top: 820px;
-      }
+      } */
 }
 @media (min-width: 769px) and (max-width: 992px) {
     .national {
-        top: 2200px;
+        /* top: 2200px; */
         width: 60vw;
       }
       .carturesti {
@@ -162,16 +159,16 @@ font-family: muchosans;
           font-size: 26px;
           width: 80vw;
       }
-      .first-national-desc {
+      /* .first-national-desc {
         top: 640px;
       }
       .second-national-desc {
           top: 780px;
-      }
+      } */
 }
 @media (min-width: 993px) and (max-width: 1382px) {
     .national {
-        top: 2300px;
+        /* top: 2300px; */
         width: 80vw;
         left: 1%;
       }
@@ -180,7 +177,7 @@ font-family: muchosans;
         height: 76px;
       }
       .distribution {
-          top: 120px;
+          /* top: 120px; */
           left: 10%;
       }
       h3.national-dis-title {
@@ -194,17 +191,17 @@ font-family: muchosans;
           font-size: 26px;
           width: 69vw;
       }
-      .first-national-desc {
+      /* .first-national-desc {
         top: 559px;
       }
       .second-national-desc {
           top: 630px;
-      }
+      } */
 }
 
 @media (min-width: 1383px) {
     .national {
-        top: 2700px;
+        /* top: 2700px; */
         width: 62vw;
         left:19%
       }
@@ -213,7 +210,7 @@ font-family: muchosans;
         height: 76px;
       }
       .distribution {
-          top: 120px;
+          /* top: 120px; */
           left: 0%;
       }
       h3.national-dis-title {
@@ -227,10 +224,10 @@ font-family: muchosans;
           font-size: 26px;
           width: 60vw;
       }
-      .first-national-desc {
+      /* .first-national-desc {
         top: 490px;
       }
       .second-national-desc {
           top: 570px;
-      }
+      } */
 }

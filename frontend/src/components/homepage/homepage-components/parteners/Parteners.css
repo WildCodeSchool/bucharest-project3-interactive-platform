@@ -15,7 +15,7 @@
 .parteners-title {
   font-size: 33px;
   font-family: muchosans;
-  position: absolute;
+  position: relative;
 }
 /* .partener {
   margin: 0 !important;
@@ -23,44 +23,37 @@
 } */
 @media (min-width: 0px) and (max-width: 400px) {
 .parteners-container {
-    top: 3300px!important;
     width: 80vw;
     left: -4vw;
   }
   .parteners-title {
     left: 18vw;
-    top: -80px;
     width: 100%;
   }
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
   .parteners-container {
-    top: 3300px!important;
     width: 80vw;
     left:3vw;
   }
   .parteners-title {
     left: 19vw;
-    top: -40px;
   }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
   .parteners-container {
-    top: 3530px!important;
     left: 9vw;
     width: 70vw!important;
   }
   .parteners-title {
     left: 24vw;
     position: absolute;
-    top: -60px;
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
   .parteners-container {
-    top:3080px!important;
     left: 10%;
     width: 70vw!important;
   }
@@ -68,17 +61,14 @@
   .parteners-title {
     left: 37%;
     position: absolute;
-    top: -70px;
   }
 }
 @media (min-width: 993px) and (max-width: 1382px) {
   .parteners-title {
     left: 27vw !important;
     position: absolute;
-    top: -70px;
   }
   .parteners-container {
-    top: 3100px!important;
     left:11vw;
     width: 69vw!important;
   }
@@ -86,24 +76,23 @@
 
 @media (min-width: 1383px) {
   .parteners-container {
-    top: 3470px!important;
     left: 19%;
     width: 58vw!important;
   }
   .parteners-title {
     left: 17vw;
-    top: -120px;
     font-size:66px;
   }
 }
-
+.parteners {
+  position: relative;
+}
 .parteners-container {
   display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; 
   flex-wrap: wrap;
   padding: 0 4px;
-  top: 2400px;
   width: 80vw;
   position: relative;
   align-content: center;
@@ -155,7 +144,6 @@
   max-width: 25%;
   padding: 0 4px;
 }
-
 .column img {
   margin-top: 8px;
   vertical-align: middle;

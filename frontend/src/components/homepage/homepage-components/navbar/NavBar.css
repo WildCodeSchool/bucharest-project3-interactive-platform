@@ -7,8 +7,6 @@
   font-family: muchosanslight;
   src: url(../../../../assets/Mucho_Sans_Light.otf);
 }
-
-
 .logo-div {
   background-color: white;
   margin: 0;
@@ -28,7 +26,6 @@ align-self: center;
 width: 178px;
 height:68px;
 }
-
 #basic-navbar-nav.navbar-collapse.collapse {
   height: 80px !important;
   font-family: muchosanslight;
@@ -36,8 +33,6 @@ height:68px;
 }
 button.navbar-toggler{
   background-color: darkgoldenrod;
-
-
 }
 .nav {
   background-color: rgb(79,78,78);
@@ -51,7 +46,6 @@ button.navbar-toggler{
   width: 100vw!important;
   
 }
-
 .nav-link {
   color: lightgrey!important;
   font-size: 17px;
@@ -59,7 +53,6 @@ button.navbar-toggler{
   align-self: flex-end;
   font-family: muchosanslight;
   z-index: 100;
-
 }
 @media (max-width: 995px ) {
   .nav {

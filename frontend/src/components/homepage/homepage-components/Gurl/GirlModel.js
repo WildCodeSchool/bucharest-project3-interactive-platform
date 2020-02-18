@@ -131,7 +131,7 @@ class GirlModel extends React.Component {
 
         return (
 
-            <div className='model'>
+            <div className="model">
                 {/* <div className={moveOrNot}> */}
                     <img className="background" src={img} alt="background" />
                     <img className="mobile" src={mobile} alt="background" />
@@ -152,15 +152,15 @@ class GirlModel extends React.Component {
 
                 {/* <div className='info-g-first-bttn' variant="outline-secondary">Pozitioneaza cursorul pe punctele de pe model pentru mai multe detalii</div>
                         <div className='info-g-second-bttn' variant="outline-secondary">Atinge punctele de pe model pentru mai multe detalii</div> */}
-                {/* <div className={contentClass} >
+                <div className={contentClass} >
                     <button onClick={this.changeClass}><a href="#" class="close-thik"></a></button>
                     <img src={check} width="50px" height="50px" className="check" alt='check_img' />
                     <p className="hover-text">{info}</p>
                     <Button className="onhover-quiz-bttn" variant="outline-warning" onClick={this.prepareQuiz}>Participa si castiga</Button>
                     <Button className="onhover-findoutMore-bttn" variant="outline-warning" href={link}><span className="bttn-text">Afla detalii</span></Button>
-                </div> */}
+                </div>
 
-            </div>
+                </div>
 
         );
     }
