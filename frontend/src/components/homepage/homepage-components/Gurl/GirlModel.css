@@ -3,6 +3,9 @@
   font-family: muchosanslight;
   src: url(../../../../assets/Mucho_Sans_Light.otf);
 }
+
+
+
 [class*="close-"] {
   color: #777;
   font: 14px/100% arial, sans-serif;
@@ -39,7 +42,7 @@ img.mobile {
 }
 
 .hover-question {
-  position: relative;
+  position: absolute;
   margin: 0;
   padding: 0;
   -webkit-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
@@ -52,7 +55,7 @@ img.mobile {
 .hover-text,
 .onhover-quiz-bttn,
 .onhover-findoutMore-bttn {
-  position: relative;
+  position: absolute;
   font-family: muchosanslight;
 }
 
@@ -150,15 +153,15 @@ img.mobile {
 
   .hover-question {
     height: auto;
-    width: 93vw;
-    left: 3%;
-    top: -400px;
+    width: 90vw;
+    left: 1.5vw;
+    top: 20px;
     background-color: white;
   }
 
   .hover-text {
-    width: 68vw;
-    left: 13vw;
+    width: 72vw;
+    left:8vw;
   }
 
   .check {
@@ -166,16 +169,15 @@ img.mobile {
   }
 
   .onhover-quiz-bttn {
-    left: 10%;
-    width: 120px;
+    left: 11vw;
+    width: 180px;
     font-size: 14px;
     height: 60px;
   }
 
   .onhover-findoutMore-bttn {
-    /* top: 200px; */
-    left: 15%;
-    width: 120px;
+    left: 11vw;
+    width: 180px;
     height: 60px;
   }
 
@@ -225,10 +227,9 @@ img.mobile {
 
   .hover-question {
     height: auto;
-    width: auto;
-    left: 2%;
-    top: -420px;
-    /* top: 380px; */
+    width: 80vw;
+    left: 0vw;
+    top: 80px;
     background-color: white;
   }
 
@@ -244,16 +245,15 @@ img.mobile {
 
   .onhover-quiz-bttn {
     /* top: 200px; */
-    left: 4%;
-    width: 120px;
+    left: 14vw;
+    width: 220px;
     font-size: 14px;
     height: 60px;
   }
 
   .onhover-findoutMore-bttn {
-    /* top: 200px; */
-    left: 5%;
-    width: 120px;
+    left: 14vw;
+    width: 220px;
     height: 60px;
   }
 
