@@ -12,6 +12,7 @@
 
 h3.national-dis-title {
   font-size: 44px;
+  padding: 55px;
 }
 
 .distribution,
@@ -28,6 +29,7 @@ h3.national-dis-title {
   justify-content: space-evenly;
   height: auto;
   text-align: center;
+  padding: 55px;
 }
 
 .n-partener {
@@ -38,6 +40,7 @@ h3.national-dis-title {
 h3.national-dis-title {
   position: relative;
   font-family: muchosans;
+  padding: 55px;
 }
 
 .national,
@@ -52,6 +55,7 @@ h3.national-dis-title {
 
   h3.national-dis-title {
     font-size: 20.5px;
+    
   }
 
   .first-national-desc {
@@ -60,12 +64,10 @@ h3.national-dis-title {
   }
 
   .n-partener {
-max-width: 300px;
-width: 100%; 
-height: auto; }
-  /* .catena {
-    margin: 20px 20px 0px 40px;
-  } */
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
@@ -90,7 +92,7 @@ height: auto; }
   .first-national-desc,
   .second-national-desc {
     font-size: 20px;
-    width: 70%;
+    width:97%;
   }
 }
 
@@ -125,18 +127,18 @@ height: auto; }
     width: 350px !important;
     height: 76px;
   }
-  .carturesti, .catena {
+  .carturesti,
+  .catena {
     width: 100% !important;
     height: auto;
   }
-
 
   .distribution {
     width: 60%;
   }
 
   h3.national-dis-title {
-    font-size:33px;
+    font-size: 33px;
   }
 
   .first-national-desc {
@@ -174,7 +176,7 @@ height: auto; }
   }
 
   .distribution {
-    width: 70%;
+    width: 60%;
   }
 
   h3.national-dis-title {

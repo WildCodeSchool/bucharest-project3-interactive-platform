@@ -2,14 +2,20 @@
   position: relative;
   width: 80vw;
 } */
-.wave-admin { 
+.admin-platform {
   position: relative;
-  width:50vw;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0px;
+}
+.wave-admin {
+  position: relative;
   margin: 0;
   padding: 0;
 }
 .nav-container {
   position: relative;
+ 
 }
 
 @font-face {
@@ -28,7 +34,6 @@
   text-align: center;
   font-family: muchosanslight;
   position: relative;
-
 }
 .display-none {
   display: none !important;
@@ -37,9 +42,12 @@
 .quiz-admin-cards-container,
 .info-cards {
   position: relative;
-
 }
-
+.admin-desc-bttn,
+.admin-quiz-bttn {
+  font-size: 100%;
+  border-radius: 0px;
+}
 #footerQ {
   position: relative;
   top: 100%;
@@ -49,66 +57,54 @@
   .nav-container {
     left: 3%;
   }
-  img.wave-admin {
-    top: 170px;
-    left: -5px!important;
-    width: 90vw!important;
- } 
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
   .nav-container {
-
-    left: 4%;
+    left: 5%;
   }
-  .wave-admin {
+  /* .wave-admin {
     top: 170px;
-    left: -15px!important;
+    left: -15px !important;
     width: 104%;
- } 
+  } */
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
- 
-  .wave-admin {
+  .nav-container {
+    left: 4%;
+  }
+  /* .wave-admin {
     top: 40px;
     left: -20px!important;
     width: 104%;
- } 
+ }  */
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
   .nav-container {
     top: 20px;
-    left: 15%;
+    left: 4.5%;
   }
-  .wave-admin {
-    top:25px;
-    left: -27px!important;
-    width: 104%;
- } 
 }
 
 @media (min-width: 993px) and (max-width: 1382px) {
-    .nav-container {
-        top: 20px;
-        left: 23%;
-      }
-      .wave-admin {
-        top:33px;
-        left: -29px!important;
-        width: 104%;
-     } 
+  .nav-container {
+    top: 20px;
+    left: 3%;
+  }
+  .wave-admin {
+    top: 33px;
+    left: -29px !important;
+    width: 104%;
+  }
 }
 
 @media (min-width: 1383px) {
-    .nav-container {
-        top: 20px;
-        left: 33%;
-      }
-      .wave-admin {
-        top:33px;
-        left: -59px!important;
-        width: 104%;
-     } 
+  .nav-container {
+    top: 20px;
+    left: 12%;
+    width: 80%;
+  }
+ 
 }

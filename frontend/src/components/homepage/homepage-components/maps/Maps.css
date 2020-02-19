@@ -164,24 +164,20 @@ a:hover {
 @media (min-width: 1383px) {
 
   .gMap {
-    width: 60vw !important;
+    width: 57% !important;
     height: 700px !important;
     align-self: center;
-    left: 20vw;
+    left: 22%;
   }
 
+  
+
+  .map-msg,
   .map-title {
+    width: 57%;
+    left: 22%;
     align-self: center;
-    font-size: 33px;
-    width: 58vw;
-    left: 20vw;
-  }
-
-  .map-msg {
-    width: 60vw;
-    left: 20vw;
-    align-self: center;
-    font-size: 33px;
+    font-size: 29px;
   }
 
 }

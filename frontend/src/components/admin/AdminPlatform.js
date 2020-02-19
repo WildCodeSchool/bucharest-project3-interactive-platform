@@ -95,7 +95,7 @@ class AdminPlatform extends React.Component {
         return (
             <div className="admin-container">
                 <AdminNav fetchedDataQuiz={this.state.quizzData} categories={this.state.categories} token={this.props.token} fetchedDataInfo={this.state.infoData} choose={this.showCards} />
-                <img src={wave} className="admin-wave"/>
+                {/* <img src={wave} className="admin-wave"/> */}
             </div>
         )
     }

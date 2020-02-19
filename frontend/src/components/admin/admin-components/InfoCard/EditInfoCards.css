@@ -31,64 +31,57 @@
 
   @media (min-width: 0px) and (max-width: 400px) {
  .info-cards , .quiz-admin-cards-container {
-    /* top: 470px!important; */
-    left: 10vw!important;
+    left:5%!important;
  }
   }
   
   @media (min-width: 401px) and (max-width: 600px) {
-    /* .info-cards , .quiz-admin-cards-container {
-        top: 470px!important;
-     } */
      .info-cards {
-        left: 6%!important;
+        left: 22%!important;
      }
      .quiz-admin-cards-container {
-         left: 4%;
+         left: 11%;
      }
   }
   
   @media (min-width: 601px) and (max-width: 768px) {
-    /* .info-cards , .quiz-admin-cards-container {
-        top: 370px!important;
-     } */
+ 
      .info-cards {
-        left: 15%!important;
+        left: 28%!important;
+        width: 80%;
      }
      .quiz-admin-cards-container {
-         left: 14%;
+         left: 24%;
      }
   
   }
   
   @media (min-width: 769px) and (max-width: 992px) {
-    /* .info-cards , .quiz-admin-cards-container {
-        top: 370px!important;
-     } */
+
      .info-cards,.quiz-admin-cards-container {
-        left: 1%!important;
+        left: 7.5%!important;
+        width: 90%;
      }
   }
   
   @media (min-width: 993px) and (max-width: 1382px) {
-    /* .info-cards , .quiz-admin-cards-container {
-        top: 400px!important;
-        
-     } */
+
      .info-cards,.quiz-admin-cards-container {
-        left: 2%!important;
-        width: 90%;
+      left: 9%!important;
+      width: 90%;
 
      }
     
   }
   
   @media (min-width: 1383px) {
-    /* .info-cards , .quiz-admin-cards-container {
-        top: 470px!important;
-     } */
-     .info-cards,.quiz-admin-cards-container {
+
+     .info-cards {
         left: 15%!important;
         width: 70%;
+     }
+     .quiz-admin-cards-container {
+      left: 18%!important;
+      width: 70%;
      }
   }

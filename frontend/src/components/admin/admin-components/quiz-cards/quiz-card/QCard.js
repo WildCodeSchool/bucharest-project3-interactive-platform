@@ -37,61 +37,60 @@ class QCard extends React.Component {
         console.log(this.state, this.props);
 
         return (
-            // <Col>
-            //     <Card style={{ width: '24rem', height: '29rem', borderColor: '#FFBF00' }}>
-            //         <Card.Body>
-            //             <Card.Title className="categ-card-title">Categoria: {this.props.category.category_name}.</Card.Title>
-            //             <FormControl
-            //                 className="ac-question"
-            //                 placeholder={this.props.data.question}
-            //                 aria-label="Question"
-            //                 aria-describedby="basic-addon1"
-            //                 name="question"
-            //                 style={{ borderColor: '#FFBF00' }}
-            //                 onChange={(event) => this.handleAdminInput(event)}
-            //                 as="textarea" rows="3"
-            //             />
-            //         </Card.Body>
-            //         <InputGroup className="mb-3  ac-f-ans">
-            //             <InputGroup.Prepend>
-            //                 <InputGroup.Checkbox onChange={() => this.setState({ correct: 1 })} aria-label="Checkbox for following text input" />
-            //             </InputGroup.Prepend>
-            //             <FormControl
-            //                 placeholder={this.props.data.answer1}
-            //                 aria-label="Username"
-            //                 aria-describedby="basic-addon1"
-            //                 name="firstAns"
-            //                 style={{ borderColor: '#FFBF00' }}
-            //                 onChange={(event) => this.handleAdminInput(event)}
-            //             />  </InputGroup>
-            //         <InputGroup className="mb-3  ac-s-ans">
-            //             <InputGroup.Prepend>
-            //                 <InputGroup.Checkbox onChange={() => this.setState({ correct: 2 })} aria-label="Checkbox for following text input" />
-            //             </InputGroup.Prepend>
-            //             <FormControl
-            //                 placeholder={this.props.data.answer2}
-            //                 aria-label="Username"
-            //                 aria-describedby="basic-addon1"
-            //                 name="secondAns"
-            //                 style={{ borderColor: '#FFBF00' }}
-            //                 onChange={(event) => this.handleAdminInput(event)}
-            //             /></InputGroup>
-            //         <Card.Title className="q-c-img-title">Link imagine:</Card.Title>
-            //         <FormControl
-            //             className="ac-img-src"
-            //             placeholder={this.props.data.image}
-            //             aria-label="Username"
-            //             aria-describedby="basic-addon1"
-            //             name="imgLink"
-            //             style={{ borderColor: '#FFBF00' }}
-            //             onChange={(event) => this.handleAdminInput(event)}
-            //         />
-            //         <Card.Body>
-            //             <Button variant="outline-warning" className="mySaveCardQuiz-bttn" style={{ width: "190px", borderRadius: '12px' }} type="submit" onClick={this.saveQuizQ}>Salveaza</Button>
-            //         </Card.Body>
-            //     </Card>
-            // </Col>
-            <div></div>
+            <Col>
+                <Card style={{ width: '22rem', height: '29rem', borderColor: '#FFBF00' }}>
+                    <Card.Body>
+                        <Card.Title className="categ-card-title">Categoria: {this.props.category.category_name}.</Card.Title>
+                        <FormControl
+                            className="ac-question"
+                            placeholder={this.props.data.question}
+                            aria-label="Question"
+                            aria-describedby="basic-addon1"
+                            name="question"
+                            style={{ borderColor: '#FFBF00' }}
+                            onChange={(event) => this.handleAdminInput(event)}
+                            as="textarea" rows="3"
+                        />
+                    </Card.Body>
+                    <InputGroup className="mb-3  ac-f-ans">
+                        <InputGroup.Prepend>
+                            <InputGroup.Checkbox onChange={() => this.setState({ correct: 1 })} aria-label="Checkbox for following text input" />
+                        </InputGroup.Prepend>
+                        <FormControl
+                            placeholder={this.props.data.answer1}
+                            aria-label="Username"
+                            aria-describedby="basic-addon1"
+                            name="firstAns"
+                            style={{ borderColor: '#FFBF00' }}
+                            onChange={(event) => this.handleAdminInput(event)}
+                        />  </InputGroup>
+                    <InputGroup className="mb-3  ac-s-ans">
+                        <InputGroup.Prepend>
+                            <InputGroup.Checkbox onChange={() => this.setState({ correct: 2 })} aria-label="Checkbox for following text input" />
+                        </InputGroup.Prepend>
+                        <FormControl
+                            placeholder={this.props.data.answer2}
+                            aria-label="Username"
+                            aria-describedby="basic-addon1"
+                            name="secondAns"
+                            style={{ borderColor: '#FFBF00' }}
+                            onChange={(event) => this.handleAdminInput(event)}
+                        /></InputGroup>
+                    <Card.Title className="q-c-img-title">Link imagine:</Card.Title>
+                    <FormControl
+                        className="ac-img-src"
+                        placeholder={this.props.data.image}
+                        aria-label="Username"
+                        aria-describedby="basic-addon1"
+                        name="imgLink"
+                        style={{ borderColor: '#FFBF00' }}
+                        onChange={(event) => this.handleAdminInput(event)}
+                    />
+                    <Card.Body>
+                        <Button variant="outline-warning" className="mySaveCardQuiz-bttn" style={{ width: "190px", borderRadius: '12px' }} type="submit" onClick={this.saveQuizQ}>Salveaza</Button>
+                    </Card.Body>
+                </Card>
+            </Col>
         )
     }
 }

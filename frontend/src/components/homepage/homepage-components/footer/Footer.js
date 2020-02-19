@@ -20,9 +20,9 @@ class Footer extends React.Component {
                             <i>TECHIR® este un proiect de suflet ce a luat nastere din dorinta de a valorifica resursele naturale neexploatate oferite de Lacul Techirghiol.</i>
                         </p>
                     </div>
-                    <div className="t-f">
-                        <img src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_266,h_147/https://techir.ro/wp-content/uploads/2019/11/slikafuter1.png" alt="produse-romanesti" />
-                    </div>
+                    {/* <div className="t-f"> */}
+                        <img  className="t-f" src="https://techir.ro/wp-content/uploads/2019/11/slikafuter1.png" alt="produse-romanesti" />
+                    {/* </div> */}
                 </footer>
             </React.Fragment>
         );
