@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom';
+import {  Switch, Route, withRouter } from 'react-router-dom';
 
 import Maps from './homepage-components/maps/Maps';
 import Navigation from './homepage-components/navbar/NavBar';

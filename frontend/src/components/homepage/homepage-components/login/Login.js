@@ -6,8 +6,6 @@ import { withRouter, BrowserRouter as Router } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 
-
-
 class Login extends React.Component {
     constructor(props) {
         super(props);
@@ -18,9 +16,9 @@ class Login extends React.Component {
         }
         this.onChangeEmail = this.onChangeEmail.bind(this)
         this.onChangePass = this.onChangePass.bind(this)
-
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
     onChangeEmail(e) {
         const email = e.target.value;
         this.setState({ email: email })
@@ -67,7 +65,6 @@ class Login extends React.Component {
                         this.props.history.push("/admin") :
                         this.props.history.push("/")
                 } else {
-                    console.log(res.msg)
                     this.props.dispatch(
                         {
                             type: "CREATE_LOGIN_SESSION",
@@ -80,9 +77,6 @@ class Login extends React.Component {
             .catch(error => console.log(error))
 
     }
-
-
-
 
     render() {
         return (

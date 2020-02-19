@@ -53,45 +53,44 @@ class GMap extends React.Component {
 
     render() {
         return (
-           <React.Fragment>
-                            <p className="map-title">Pentru a afla locatia cea mai apropiata de tine si in care poti sa gasesti mai multe produse <a href="www.techir.ro">Techir</a>, poti studia harta noastra. Iti sugeram sa contactezi locatia aleasa telefonic pentru a verifica stocul produselor dorite.</p>
-                            <Map google={this.props.google}
-                                zoom={7.1}
-                                className="gMap"
+            <React.Fragment>
+                <p className="map-title">Pentru a afla locatia cea mai apropiata de tine si in care poti sa gasesti mai multe produse <a href="www.techir.ro">Techir</a>, poti studia harta noastra. Iti sugeram sa contactezi locatia aleasa telefonic pentru a verifica stocul produselor dorite.</p>
+                <Map google={this.props.google}
+                    zoom={7.1}
+                    className="gMap"
 
-                                initialCenter={{
-                                    lat: 45.9,
-                                    lng: 25.11
-                                }}
-                            >
-                                {this.state.data ? this.state.data.map((e, i) => {
-                                    return <Marker
-                                        title={e.location_id}
-                                        key={i}
-                                        adress={e.adress}
-                                        telephone={e.telephone}
-                                        name={e.name}
-                                        position={{
-                                            lat: e.latitude,
-                                            lng: e.longitude
-                                        }}
-                                        onClick={this.onMarkerClick}
-                                    />
-                                }) : null}
-                                <InfoWindow
-                                    marker={this.state.activeMarker}
-                                    visible={this.state.showingInfoWindow}>
-                                    <div>
-                                        <h1>{this.state.selectedPlace.name}</h1>
-                                        <h3>{this.state.selectedPlace.adress}</h3>
-                                        <h3>{this.state.selectedPlace.telephone}</h3>
-                                    </div>
-                                </InfoWindow>
-                            </Map>
-                            <p className="map-msg">Asteptam oricand, pe <span className="bold">office@techir.ro</span>, recomandarea ta cu locatii in care ai vrea sa gasesti brandul Techir.<br />
-                                Nu uita! Poti comanda oricand direct din <a href="www.techir.ro">magazinul nostru online</a> pentru a putea avea acces la toate produsele noastre miraculoase.</p>
+                    initialCenter={{
+                        lat: 45.9,
+                        lng: 25.11
+                    }}
+                >
+                    {this.state.data ? this.state.data.map((e, i) =>
+                        <Marker
+                            key={i}
+                            adress={e.adress}
+                            telephone={e.telephone}
+                            name={e.name}
+                            position={{
+                                lat: e.latitude,
+                                lng: e.longitude
+                            }}
+                            onClick={this.onMarkerClick}
+                        />
+                    ) : null}
+                    <InfoWindow
+                        marker={this.state.activeMarker}
+                        visible={this.state.showingInfoWindow}>
+                        <div>
+                            <h1>{this.state.selectedPlace.name}</h1>
+                            <h3>{this.state.selectedPlace.adress}</h3>
+                            <h3>{this.state.selectedPlace.telephone}</h3>
+                        </div>
+                    </InfoWindow>
+                </Map>
+                <p className="map-msg">Asteptam oricand, pe <span className="bold">office@techir.ro</span>, recomandarea ta cu locatii in care ai vrea sa gasesti brandul Techir.<br />
+                    Nu uita! Poti comanda oricand direct din <a href="www.techir.ro">magazinul nostru online</a> pentru a putea avea acces la toate produsele noastre miraculoase.</p>
 
-                                </React.Fragment>
+            </React.Fragment>
         )
     }
 }
