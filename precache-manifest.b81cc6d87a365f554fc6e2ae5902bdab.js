@@ -1,35 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "442434c28e482081497d1340c17c9d69",
+    "revision": "db7f5233c0b089963e45fcc25ccb400e",
     "url": "/bucharest-project3-interactive-platform/index.html"
   },
   {
-    "revision": "55e80c5244014e4f1430",
+    "revision": "add0ffcea41b3943e805",
     "url": "/bucharest-project3-interactive-platform/static/css/2.17e5ed98.chunk.css"
   },
   {
-    "revision": "f1a4d8b59b34abf84583",
-    "url": "/bucharest-project3-interactive-platform/static/css/main.45141a5b.chunk.css"
+    "revision": "6e5d349a45262ac1861f",
+    "url": "/bucharest-project3-interactive-platform/static/css/main.ea503ad3.chunk.css"
   },
   {
-    "revision": "55e80c5244014e4f1430",
-    "url": "/bucharest-project3-interactive-platform/static/js/2.d33650b3.chunk.js"
+    "revision": "add0ffcea41b3943e805",
+    "url": "/bucharest-project3-interactive-platform/static/js/2.02146f40.chunk.js"
   },
   {
     "revision": "d342664d578042145f5010e743958e89",
-    "url": "/bucharest-project3-interactive-platform/static/js/2.d33650b3.chunk.js.LICENSE"
+    "url": "/bucharest-project3-interactive-platform/static/js/2.02146f40.chunk.js.LICENSE"
   },
   {
-    "revision": "f1a4d8b59b34abf84583",
-    "url": "/bucharest-project3-interactive-platform/static/js/main.974ef848.chunk.js"
+    "revision": "6e5d349a45262ac1861f",
+    "url": "/bucharest-project3-interactive-platform/static/js/main.abafd7a7.chunk.js"
   },
   {
     "revision": "effed892af4dc9a049a9",
     "url": "/bucharest-project3-interactive-platform/static/js/runtime-main.93642916.js"
   },
   {
-    "revision": "945ed563be641e46207dd658ad048cea",
-    "url": "/bucharest-project3-interactive-platform/static/media/Kool_Gurl.945ed563.jpg"
+    "revision": "01a56a6754797f07047da3ed3f44ced6",
+    "url": "/bucharest-project3-interactive-platform/static/media/Mobile.01a56a67.png"
   },
   {
     "revision": "fca82d41d141d0a9986e800ac0aa39b3",
@@ -48,6 +48,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bucharest-project3-interactive-platform/static/media/Thirsty.d87f34f1.ttf"
   },
   {
+    "revision": "752c13b0733bc3104e315cda60dc5be7",
+    "url": "/bucharest-project3-interactive-platform/static/media/background.752c13b0.png"
+  },
+  {
     "revision": "930c2b0f93e999482e6b8e2b8aa8e24e",
     "url": "/bucharest-project3-interactive-platform/static/media/brand-romanesc.930c2b0f.png"
   },
@@ -56,15 +60,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bucharest-project3-interactive-platform/static/media/hook-1425312.3c8da878.png"
   },
   {
-    "revision": "c2510a9258c41dfab15bde3b8a3c7e52",
-    "url": "/bucharest-project3-interactive-platform/static/media/logo_techir.c2510a92.png"
-  },
-  {
     "revision": "e66b7e22c7648601453da601833e24c2",
     "url": "/bucharest-project3-interactive-platform/static/media/make-account.e66b7e22.png"
   },
   {
     "revision": "54e8ba365f0c80ecf8addb2e66e751b6",
     "url": "/bucharest-project3-interactive-platform/static/media/produse-romanesti.54e8ba36.png"
+  },
+  {
+    "revision": "a84ab37a1073e95175cf2c83c6437bc2",
+    "url": "/bucharest-project3-interactive-platform/static/media/val-galben.a84ab37a.svg"
   }
 ]);
