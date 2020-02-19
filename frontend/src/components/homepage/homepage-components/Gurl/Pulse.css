@@ -10,35 +10,7 @@
     cursor: pointer;
   }
   
-  .masaj {
-    top: 48%;
-    left: 75%;
-  }
-  
-  .picioare {
-    top: 93%;
-    left: 54%;
-  }
-  
-  .par {
-    top: 4%;
-    left: 60%;
-  }
-  
-  .fata {
-    top: 15%;
-    left: 57%;
-  }
-  
-  .maini {
-    top: 78%;
-    left: 51%;
-  }
-  
-  .anticelulita {
-    top: 24%;
-    left: 49%;
-  }
+
   
   .loading {
     display: -webkit-box;

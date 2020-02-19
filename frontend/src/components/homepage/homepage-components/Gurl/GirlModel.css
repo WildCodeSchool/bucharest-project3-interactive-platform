@@ -39,7 +39,7 @@ img.mobile {
 }
 
 .hover-question {
-  position: absolute;
+  position: relative;
   margin: 0;
   padding: 0;
   -webkit-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
@@ -52,12 +52,12 @@ img.mobile {
 .hover-text,
 .onhover-quiz-bttn,
 .onhover-findoutMore-bttn {
-  position: absolute;
+  position: relative;
   font-family: muchosanslight;
 }
 
 #building-line-1 {
-  position: absolute;
+  position: relative;
   height: 50px;
   background: black;
   top: 270px;
@@ -69,16 +69,13 @@ img.mobile {
 }
 
 .check {
-  position: absolute;
+  position: relative;
   top: 10px;
   left: 10px;
 }
 
 .hover-text {
-  position: absolute;
-  top: 10px;
-  left: 64px;
-  width: 330px;
+  position: relative;
   font-family: "PT Serif", serif;
 }
 
@@ -93,23 +90,23 @@ img.mobile {
 }
 
 .onhover-quiz-bttn {
-  position: absolute;
-  top: 155px;
+  position: relative;
+  /* top: 155px;
   left: 33px;
-  width: 160px;
+  width: 160px; */
   border-radius: 13px;
 }
 
 .onhover-findoutMore-bttn {
-  position: absolute;
-  top: 155px;
+  position: relative;
+  /* top: 155px;
   left: 238px;
-  width: 160px;
+  width: 160px; */
   border-radius: 13px;
 }
 
 .bttn-text {
-  position: absolute;
+  position: relative;
 }
 .hover-text {
   text-align: center;
@@ -117,26 +114,57 @@ img.mobile {
 
 
 @media (min-width: 0px) and (max-width: 410px) {
+  .antireumatica {
+    top: 57vw;
+    left: 26vw;
+  }
+  
+  .picioare {
+    top: 125vw;
+    left: 23vw;
+  }
+  
+  .par {
+    top: 26vw;
+    left: 16vw;
+  }
+  
+  .ten {
+    top: 35vw;
+    left: 22vw;
+  }
+  
+  .maini {
+    top: 7vw;
+    left:19vw;
+  }
+  
+  .corp {
+    top: 86vw;
+    left: 27vw;
+  }
 
   .hover-question {
-    height: 280px;
+    height: auto;
     width: 93vw;
     left: 2%;
-    top: 380px;
+    top: -200px;
+    /* top: 380px; */
     background-color: white;
   }
 
   .hover-text {
     width: 66vw;
-    top: 20px;
+    left: 7vw;
+    /* top: 20px; */
   }
 
   .check {
-    top: 30px;
+   display: none;
   }
 
   .onhover-quiz-bttn {
-    top: 200px;
+    /* top: 200px; */
     left: 4%;
     width: 120px;
     font-size: 14px;
@@ -144,15 +172,15 @@ img.mobile {
   }
 
   .onhover-findoutMore-bttn {
-    top: 200px;
-    left: 53%;
+    /* top: 200px; */
+    left: 5%;
     width: 120px;
     height: 60px;
   }
 
   .bttn-text {
     left: 20%;
-    top: 20px;
+    /* top: 20px; */
   }
 
   img.background {
@@ -168,43 +196,74 @@ img.mobile {
 
 @media (min-width: 411px) and (max-width: 600px) {
 
+  .antireumatica {
+    top:43vw;
+    left: 12vw;
+  }
+  
+  .picioare {
+    top: 103vw;
+    left: 13vw;
+  }
+  
+  .par {
+    top:22vw;
+    left: 14vw;
+  }
+  
+  .ten {
+    top: 29vw;
+    left: 20vw;
+  }
+  
+  .maini {
+    top: 6vw;
+    left:17vw;
+  }
+  
+  .corp {
+    top: 60vw;
+    left: 23vw;
+  }
+
   .hover-question {
-    height: 280px;
-    width: 76vw;
-    left: 6%;
-    top: 30vh;
+    height: auto;
+    width: auto;
+    left: 2%;
+    top: -420px;
+    /* top: 380px; */
     background-color: white;
   }
 
   .hover-text {
-    width: 55vw;
-    top: 20px;
+    width: 66vw;
+    left: 7vw;
+    /* top: 20px; */
   }
 
   .check {
-    top: 30px;
+   display: none;
   }
 
   .onhover-quiz-bttn {
-    top: 160px;
-    left: 27%;
-    width: 160px;
+    /* top: 200px; */
+    left: 4%;
+    width: 120px;
     font-size: 14px;
-    height: 40px;
+    height: 60px;
   }
 
   .onhover-findoutMore-bttn {
-    top: 220px;
-    left: 27%;
-    width: 160px;
-    height: 40px;
+    /* top: 200px; */
+    left: 5%;
+    width: 120px;
+    height: 60px;
   }
 
   .bttn-text {
-    left: 30%;
-    top: 10px;
+    left: 20%;
+    /* top: 20px; */
   }
-
   img.background {
     display: none;
   }
@@ -217,7 +276,37 @@ img.mobile {
 
 @media (min-width: 601px) and (max-width: 768px) {
 
-  .hover-question {
+  .antireumatica {
+    top:43vw;
+    left: 11vw;
+  }
+  
+  .picioare {
+    top: 92vw;
+    left: 13vw;
+  }
+  
+  .par {
+    top:22vw;
+    left: 13vw;
+  }
+  
+  .ten {
+    top: 26vw;
+    left: 18vw;
+  }
+  
+  .maini {
+    top: 6vw;
+    left:16vw;
+  }
+  
+  .corp {
+    top: 58vw;
+    left: 23vw;
+  }
+
+  /* .hover-question {
     height: 200px;
     width: 62vw;
     left: 19%;
@@ -252,8 +341,45 @@ img.mobile {
   .bttn-text {
     left: 22%;
     top: 10px;
+  } */
+  .hover-question {
+    height: auto;
+    width: auto!important;
+    left: 2%;
+    top: -420px;
+    /* top: 380px; */
+    background-color: white;
   }
-  
+
+  .hover-text {
+    width: 66vw;
+    left: 7vw;
+    /* top: 20px; */
+  }
+
+  .check {
+   display: none;
+  }
+
+  .onhover-quiz-bttn {
+    /* top: 200px; */
+    left: 4%;
+    width: 120px;
+    font-size: 14px;
+    height: 60px;
+  }
+
+  .onhover-findoutMore-bttn {
+    /* top: 200px; */
+    left: 5%;
+    width: 120px;
+    height: 60px;
+  }
+
+  .bttn-text {
+    left: 20%;
+    /* top: 20px; */
+  }
   img.background {
    display: none;
   }
@@ -267,50 +393,74 @@ img.mobile {
 
 @media (min-width: 769px) and (max-width: 992px) {
 
-  .onhover-quiz-bttn {
-    top: 180px;
-    left: 20%;
-    width: 220px;
-    font-size: 16px !important;
-    height: 40px;
+  .antireumatica {
+    top:22vw;
+    left: 20vw;
+  }
+  
+  .picioare {
+    top: 40vw!important;
+    left:23vw;
+  }
+  
+  .par {
+    top:10vw;
+    left: 20vw;
+  }
+  
+  .ten {
+    top: 12vw;
+    left: 23vw;
+  }
+  
+  .maini {
+    top: 4vw;
+    left:21vw;
+  }
+  
+  .corp {
+    top:28vw;
+    left: 24vw;
   }
 
-  .onhover-findoutMore-bttn {
-    top: 230px;
-    left: 20%;
-    width: 220px;
-    height: 40px;
-  }
 
   .hover-question {
-    height: 300px !important;
-    width: 40vw;
-    left: 33%;
-    top: 400px;
+    height: auto;
+    width: auto;
+    left: 2%;
+    top: -420px;
+    /* top: 380px; */
     background-color: white;
   }
 
   .hover-text {
-    width: 30vw !important;
-    top: 24px !important;
+    width: 55vw;
+    left: 7vw;
+    /* top: 20px; */
   }
 
   .check {
-    top: 50px !important;
+   display: none;
+  }
+
+  .onhover-quiz-bttn {
+    /* top: 200px; */
+    left: 4%;
+    width: 120px;
+    font-size: 14px;
+    height: 60px;
+  }
+
+  .onhover-findoutMore-bttn {
+    /* top: 200px; */
+    left: 5%;
+    width: 120px;
+    height: 60px;
   }
 
   .bttn-text {
-    left: 33%;
-    top: 10px;
-  }
-
-  .hover-text {
-    width: 50vw;
-    top: 40px;
-  }
-
-  .check {
-    top: 40px;
+    left: 20%;
+    /* top: 20px; */
   }
 
   div.model { 
@@ -325,102 +475,157 @@ img.mobile {
 
 @media (min-width: 993px) and (max-width: 1382px) {
 
-  .hover-question {
-    height: 290px;
-    width: 33vw;
-    left: 43%;
-    top: 390px;
-    background-color: white;
+  .antireumatica {
+    top:22vw;
+    left: 20vw;
   }
   
+  .picioare {
+    top: 41vw;
+    left:23vw;
+  }
+  
+  .par {
+    top:11vw;
+    left: 20.5vw;
+  }
+  
+  .ten {
+    top: 13vw;
+    left: 23vw;
+  }
+  
+  .maini {
+    top: 4vw;
+    left:22vw;
+  }
+  
+  .corp {
+    top:28vw;
+    left: 25vw;
+  }
+
+  .hover-question {
+    height: auto;
+    width: auto;
+    left: 2%;
+    top: -420px;
+    /* top: 380px; */
+    background-color: white;
+  }
+
   .hover-text {
-    width: 23vw !important ;
-  }
-
-  .onhover-quiz-bttn {
-    top: 180px;
-    left: 26%;
-    width: 190px;
-    font-size: 16px;
-    height: 40px;
-  }
-
-  .onhover-findoutMore-bttn {
-    top: 230px;
-    left: 26%;
-    width: 190px;
-    height: 40px;
-  }
-
-  .bttn-text {
-    left: 34%;
-    top: 10px;
-  }
-
-  .hover-text {
-    width: 50vw;
-    top: 40px;
+    width: 55vw;
+    left: 7vw;
+    /* top: 20px; */
   }
 
   .check {
-    top: 40px;
+   display: none;
   }
 
-  div.model { 
-    width: 70vw;
+  .onhover-quiz-bttn {
+    /* top: 200px; */
+    left: 4%;
+    width: 120px;
+    font-size: 14px;
+    height: 60px;
   }
 
-  img.mobile {
-    display: none;
+  .onhover-findoutMore-bttn {
+    /* top: 200px; */
+    left: 5%;
+    width: 120px;
+    height: 60px;
+  }
+
+  .bttn-text {
+    left: 20%;
+    /* top: 20px; */
   }
 
 }
 
 @media (min-width: 1383px) {
 
-  .hover-text {
-    width: 19vw;
-    top: 30px;
-  }
 
-  .check {
-    top: 40px;
-  }
-
-  .onhover-quiz-bttn {
-    top: 124px;
-    left: 23%;
-    width: 240px;
-    font-size: 16px;
-    height: 50px;
-  }
-
-  .onhover-findoutMore-bttn {
-    top: 185px;
-    left: 23%;
-    width: 240px;
-    height: 50px;
+  .antireumatica {
+    top:19vw;
+    left: 17.5vw;
   }
   
+  .picioare {
+    top: 35.5vw;
+    left: 18vw;
+  }
+  
+  .par {
+    top:9vw;
+    left: 18.5vw;
+  }
+  
+  .ten {
+    top: 11.5vw;
+    left: 20vw;
+  }
+  
+  .maini {
+    top: 4vw;
+    left:19vw;
+  }
+  
+  .corp {
+    top:25vw;
+    left: 21vw;
+  }
+
+
   .hover-question {
-    height: 260px !important;
-    width: 23% !important;
-    left: 49% !important;
-    top: 33vh !important;
+    height: auto;
+    width: auto;
+    left: 2%;
+    top: -420px;
+    /* top: 380px; */
     background-color: white;
   }
 
-  .bttn-text {
-    left: 36%;
-    top: 10px;
+  .hover-text {
+    width: 55vw;
+    left: 7vw;
+    /* top: 20px; */
   }
+
+  .check {
+   display: none;
+  }
+
+  .onhover-quiz-bttn {
+    /* top: 200px; */
+    left: 4%;
+    width: 120px;
+    font-size: 14px;
+    height: 60px;
+  }
+
+  .onhover-findoutMore-bttn {
+    /* top: 200px; */
+    left: 5%;
+    width: 120px;
+    height: 60px;
+  }
+
+  .bttn-text {
+    left: 20%;
+    /* top: 20px; */
+  }
+  
 
   div.model { 
     width: 60vw;
   }
 
-  img.mobile {
-    display: none;
+  .mobile {
+    display: none!important;
   }
 
 }
