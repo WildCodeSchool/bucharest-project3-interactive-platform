@@ -128,7 +128,7 @@ class GirlModel extends React.Component {
                     <img src={check} width="50px" height="50px" className="check" alt='check_img' />
                     <p className="hover-text">{info}</p>
                     <Button className="onhover-quiz-bttn" variant="outline-warning" onClick={this.prepareQuiz}>Participa si castiga</Button>
-                    <Button className="onhover-findoutMore-bttn" variant="outline-warning" href={link}><span className="bttn-text">Afla detalii</span></Button>
+                    <Button className="onhover-findoutMore-bttn" variant="outline-warning" href={link}>Afla detalii</Button>
                 </div>
 
                 </div>

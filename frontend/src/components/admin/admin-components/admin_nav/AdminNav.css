@@ -2,12 +2,12 @@
   position: relative;
   width: 80vw;
 } */
-/* .wave-admin { 
+.wave-admin { 
   position: relative;
-  width: 104%;
+  width:50vw;
   margin: 0;
   padding: 0;
-} */
+}
 .nav-container {
   position: relative;
 }
@@ -49,11 +49,11 @@
   .nav-container {
     left: 3%;
   }
-  /* .wave-admin {
+  img.wave-admin {
     top: 170px;
     left: -5px!important;
-    width: 104%;
- }  */
+    width: 90vw!important;
+ } 
 }
 
 @media (min-width: 401px) and (max-width: 600px) {

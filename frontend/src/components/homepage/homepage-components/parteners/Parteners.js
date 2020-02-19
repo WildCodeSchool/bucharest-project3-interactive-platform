@@ -31,18 +31,18 @@ class Parteners extends React.Component {
        const parteners = this.state.parteners;
        console.log(parteners);
         return (
-           <React.Fragment>
+           <div className="parteners">
            <h6 className="parteners-title">PARTENERI ONLINE</h6>
                 <div className="parteners-container" >
                     {this.state.parteners.map(partener => (
-                        <div className="partener">
-                            <a href={partener.link}>
+                        // <div>
+                            <a className="partener" href={partener.link}>
                                 <img className="p-img" src={partener.logo} alt={partener.name}/>
                             </a>
-                        </div>
+                        // </div>
                     ))}
                 </div>
-                </React.Fragment>
+                </div>
             
         )
     }

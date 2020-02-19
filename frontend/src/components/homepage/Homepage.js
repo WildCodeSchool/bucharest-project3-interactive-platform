@@ -105,8 +105,7 @@ class Homepage extends React.Component {
         const showSignup = this.state.showSignup;
 
         return (
-            <React.Fragment>
-                <Navigation onClickLogin={this.toggleMoving} categories={this.state.categories} onClickSignup={this.toggleMoving} loginState={showLogin} signupState={showSignup} />
+<div className="homepage-container">               <Navigation onClickLogin={this.toggleMoving} categories={this.state.categories} onClickSignup={this.toggleMoving} loginState={showLogin} signupState={showSignup} />
                 <GirlModel moveGirl={this.state.moveToTheRight} categories={this.props.categories} loginState={showLogin} signupState={showSignup} />
 
                 <Maps />
@@ -119,7 +118,7 @@ class Homepage extends React.Component {
 
                 <Footer />
 
-            </React.Fragment>
+                </div> 
         )
     }
 }

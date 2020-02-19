@@ -8,10 +8,19 @@
   src: url(../../../../assets/MuchoSans.rar);
 }
 
+
+#mapcontainer {
+  position: relative;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center; 
+}
 .gMap {
   position: relative!important;
   z-index: 100;
   display: 1 1 100%;
+  
  
 }
 
@@ -40,13 +49,13 @@ a:hover {
 }
 
 .map-title {
-  text-align: center;
+  font-size: 22px;
   font-family: muchosanslight;
+  text-align: center !important;
 }
 
 .map-msg {
   font-size: 22px;
-  z-index: 1000;
   font-family: muchosanslight;
   text-align: center !important;
 }
@@ -54,63 +63,55 @@ a:hover {
 @media (min-width: 0px) and (max-width: 399px) {
 
   .gMap {
-    width: 100vw!important;
+    width: 100%!important;
     height: 600px!important;
-    align-self:center;
   }
 
-  .map-title {
-    font-size: 22px;
-    width: 83vw;
-    left: 6%;
-  }
-
-  .map-msg {
-    width: 85vw;
+  .map-msg, .map-title {
+    width: 80%;
     left: 6%;
   }
 
 }
 
 @media (min-width: 400px) and (max-width: 599px) {
-
+/* 
   .map-title {
-    left:11vw;
     font-size: 22px;
-    width: 76vw;
-  }
-
+    width: 76%;
+  } */
   .gMap {
-    width: 79vw !important;
+    width: 79% !important;
     height: 500px !important;
-    left: 10%;
+    left: 9%;
   }
 
-  .map-msg {
+  .map-msg, .map-title {
     font-size: 19px;
-    left:13vw;
-    width: 70vw;
+    left:13%;
+    width: 70%;
   }
+  
 
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
 
   .gMap {
-    width: 72vw !important;
+    width: 72% !important;
     height: 600px !important;
-    left: 14vw;
+    left: 14%;
   }
 
   .map-title {
-    left: 16vw;
+    left: 16%;
     font-size: 26px;
-    width: 65vw;
+    width: 65%;
   }
 
   .map-msg {
-    width: 68vw;
-    left: 15vw;
+    width: 68%;
+    left: 15%;
     font-size: 25px;
   }
 
@@ -119,19 +120,19 @@ a:hover {
 @media (min-width: 769px) and (max-width: 992px) {
 
   .gMap {
-    width: 70vw !important;
+    width: 70% !important;
     height: 600px !important;
-    left: 15vw;
+    left: 15%;
   }
 
   .map-title {
-    left: 15vw;
+    left: 15%;
     font-size: 24px;
-    width: 68vw;
+    width: 68%;
   }
 
   .map-msg {
-    width: 68vw;
+    width: 68%;
     left: 15vw;
     font-size: 24px;
   }

@@ -2,24 +2,32 @@
   font-family: muchosans;
   src: url(../../../../assets/Mucho_Sans_Light.otf);
 }
+.distribution-container {
+  width: 100vw;
+  position: relative;
+  margin: 0 auto;
+  padding: 0px;
+  text-align: center;
+}
 
 h3.national-dis-title {
-    font-size: 44px;
+  font-size: 44px;
 }
 
 .distribution,
 .first-national-desc,
 h3.national-dis-title {
   margin: 30px 0px 60px;
+  margin: 0 auto;
 }
 
 .distribution {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
   justify-content: space-evenly;
   height: auto;
+  text-align: center;
 }
 
 .n-partener {
@@ -28,185 +36,154 @@ h3.national-dis-title {
 
 .first-national-desc,
 h3.national-dis-title {
-position: relative;
-font-family: muchosans;
-
+  position: relative;
+  font-family: muchosans;
 }
 
-
-.national, 
+.national,
 .distribution {
-  position: relative!important;
+  position: relative !important;
 }
 
 @media (min-width: 0px) and (max-width: 400px) {
-
   div.distribution {
-      left: 6vw;
-      width: 80vw!important;
+    width: 80% !important;
   }
 
   h3.national-dis-title {
-      left:17vw!important;
-      font-size: 20.5px;
-      width: 60vw!important;
+    font-size: 20.5px;
   }
 
   .first-national-desc {
-      left: 7vw!important;
-      text-align: center;
-      font-size: 22px;
-      width: 84vw;
+    font-size: 22px;
+    width: 84%;
   }
 
-  .n-partener, .catena {
-    margin: 20px 20px 0px 20px;
-  }
-
+  .n-partener {
+max-width: 300px;
+width: 100%; 
+height: auto; }
+  /* .catena {
+    margin: 20px 20px 0px 40px;
+  } */
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
+  .carturesti {
+    width: 350px !important;
+    height: 76px;
+  }
 
-      .carturesti {
-        width: 75vw !important;
-        height: 76px;
-      }
+  .distribution {
+    margin: 0 auto;
+    width: 70%;
+  }
 
-      .distribution {
-          left: 11vw;
-          width: 70vw;
-      }
+  .dm {
+    margin: 34px 0px 30px;
+  }
 
-      .dm {
-        margin: 34px 0px 30px;
-      }
+  h3.national-dis-title {
+    font-size: 29px;
+  }
 
-      h3.national-dis-title {
-          left: 17vw;
-          width: 80vw;
-          font-size: 29px;
-      }
-      
-      .first-national-desc, 
-      .second-national-desc {
-          left: 10vw;
-          text-align: center;
-          font-size: 20px;
-          width: 70vw;
-      }
-
+  .first-national-desc,
+  .second-national-desc {
+    font-size: 20px;
+    width: 70%;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
+  .carturesti {
+    width: 350px !important;
+    height: 76px;
+  }
+  .distribution {
+    width: 70%;
+  }
 
-      .carturesti {
-        width: 350px !important;
-        height: 76px;
-        margin: 50px 0px 50px;
-      }
+  .dm {
+    margin: 60px;
+  }
 
-      .distribution {
-          left: 13.5vw;
-          width: 70vw;
-      }
+  h3.national-dis-title {
+    width: 60%;
+    font-size: 25px;
+  }
 
-      .dm {
-        margin: 60px;
-      }
-
-      h3.national-dis-title {
-          left: 28vw;
-          width: 60vw;
-          font-size: 25px;
-      }
-
-      .first-national-desc, 
-      .second-national-desc {
-          left: 18vw;
-          text-align: center;
-          font-size: 26px;
-          width: 64vw;
-      }
-
+  .first-national-desc,
+  .second-national-desc {
+    text-align: center;
+    font-size: 26px;
+    width: 64%;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-   
-      .carturesti {
-        width: 350px !important;
-        height: 76px;
-        margin: 40px 0px 0px;
-      }
+  .carturesti {
+    width: 350px !important;
+    height: 76px;
+  }
+  .carturesti, .catena {
+    width: 100% !important;
+    height: auto;
+  }
 
-      .distribution {
-          left: 17vw;
-          width: 60vw;
-      }
 
-      h3.national-dis-title {
-          left: 24vw;
-          width: 60vw;
-      }
-  
-      .first-national-desc{
-          left: 14vw;
-          text-align: center;
-          font-size: 20px;
-          width: 70vw;
-      }
+  .distribution {
+    width: 60%;
+  }
 
+  h3.national-dis-title {
+    font-size:33px;
+  }
+
+  .first-national-desc {
+    text-align: center;
+    font-size: 18px;
+    width: 60%;
+  }
 }
 @media (min-width: 993px) and (max-width: 1382px) {
+  .carturesti {
+    width: 350px !important;
+    height: 76px;
+  }
 
-      .carturesti {
-        width: 350px !important;
-        height: 76px;
-      }
+  .distribution {
+    width: 60%;
+  }
 
-      .distribution {
-          left: 14vw;
-          width: 70vw;
-      }
+  h3.national-dis-title {
+    font-size: 25px;
+  }
 
-      h3.national-dis-title {
-          left: 37vw;
-          width: 50vw;
-          font-size: 27px;
-      }
-
-      .first-national-desc, 
-      .second-national-desc {
-          left: 15vw;
-          text-align: center;
-          font-size: 26px;
-          width: 66vw;
-      }
-
+  .first-national-desc,
+  .second-national-desc {
+    text-align: center;
+    font-size: 26px;
+    width: 66%;
+  }
 }
 
 @media (min-width: 1383px) {
-  
-      .carturesti {
-        width: 350px !important;
-        height: 76px;
-      }
+  .carturesti {
+    width: 350px !important;
+    height: 76px;
+  }
 
-      .distribution {
-          left: 21vw;
-          width:60vw;
-      }
+  .distribution {
+    width: 70%;
+  }
 
-      h3.national-dis-title {
-        left: 35vw;
-        width: 60vw;
-      }
+  h3.national-dis-title {
+  }
 
-      .first-national-desc, 
-      .second-national-desc {
-          left: 19vw;
-          text-align: center;
-          font-size: 26px;
-          width: 60vw;
-      }
-     
+  .first-national-desc,
+  .second-national-desc {
+    text-align: center;
+    font-size: 26px;
+    width: 60%;
+  }
 }
