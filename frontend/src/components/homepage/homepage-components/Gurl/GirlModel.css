@@ -28,14 +28,14 @@ div.model {
   width: 100vw;
 }
 
-img.background {
+img#background {
   width: 100%;
   height: auto;
   margin: 0 auto;
   display: block;
 }
 
-img.mobile {
+img#mobile {
   display: block;
   margin: 0 auto;
 
@@ -175,7 +175,7 @@ img.mobile {
 
 
 
-  img.background {
+  img#background {
     display: none;
   }
 
@@ -240,7 +240,7 @@ img.mobile {
     font-size: 14px;
   }
 
-  img.background {
+  img#background {
     display: none;
   }
 
@@ -345,7 +345,7 @@ img.mobile {
     left: 20%;
     /* top: 20px; */
   }
-  img.background {
+  img#background {
     display: none;
   }
 
@@ -418,7 +418,7 @@ img.mobile {
     width: 70%;
   }
 
-  img.mobile {
+  #mobile-img {
     display: none;
   }
 }
@@ -484,7 +484,7 @@ img.mobile {
     width: 70vw;
   }
 
-  .mobile {
+ #mobile-img {
     display: none;
   }
 }
@@ -549,7 +549,7 @@ img.mobile {
     width: 60vw;
   }
 
-  .mobile {
-    display: none !important;
+  img#mobile-img {
+    display: none;
   }
 }

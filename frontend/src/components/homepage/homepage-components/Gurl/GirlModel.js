@@ -104,8 +104,8 @@ class GirlModel extends React.Component {
         return (
             <div className="model">
                 {/* <div className={moveOrNot}> */}
-                    <img className="background" src={img} alt="background" />
-                    <img className="mobile" src={mobile} alt="background" />
+                    <img className="background" id="background"src={img} alt="background" />
+                    <img className="mobile" id="mobile-img"src={mobile} alt="background" />
                     {this.props.categories ? this.props.categories.map((e, i) => {
                         return <div className={'spinner ' + e.category_name} key={i}
                             onMouseEnter={this.handleHover}
