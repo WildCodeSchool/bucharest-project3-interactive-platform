@@ -12,7 +12,6 @@
 #mapcontainer {
   position: relative;
   width: 100vw;
-  margin: 0 auto;
   padding: 0;
   text-align: center; 
 }
@@ -20,6 +19,7 @@
   position: relative!important;
   z-index: 100;
   display: 1 1 100%;
+display: block;
   
  
 }
@@ -46,6 +46,8 @@ a:hover {
 .gMap {
   position: relative;
   margin: 30px 0px 50px;
+  margin: 0 auto;
+
 }
 
 .map-title {
@@ -69,7 +71,6 @@ a:hover {
 
   .map-msg, .map-title {
     width: 80%;
-    left: 6%;
   }
 
 }
@@ -83,12 +84,12 @@ a:hover {
   .gMap {
     width: 79% !important;
     height: 500px !important;
-    left: 9%;
+    /* left: 9%; */
   }
 
   .map-msg, .map-title {
     font-size: 19px;
-    left:13%;
+    /* left:13%; */
     width: 70%;
   }
   
@@ -100,18 +101,18 @@ a:hover {
   .gMap {
     width: 72% !important;
     height: 600px !important;
-    left: 14%;
+    /* left: 14%; */
   }
 
   .map-title {
-    left: 16%;
+    /* left: 16%; */
     font-size: 26px;
     width: 65%;
   }
 
   .map-msg {
     width: 68%;
-    left: 15%;
+    /* left: 15%; */
     font-size: 25px;
   }
 
@@ -122,18 +123,18 @@ a:hover {
   .gMap {
     width: 70% !important;
     height: 600px !important;
-    left: 15%;
+    /* left: 15%; */
   }
 
   .map-title {
-    left: 15%;
+    /* left: 15%; */
     font-size: 24px;
     width: 68%;
   }
 
   .map-msg {
     width: 68%;
-    left: 15vw;
+    /* left: 15vw; */
     font-size: 24px;
   }
 
@@ -144,18 +145,18 @@ a:hover {
   .gMap {
     width:69vw !important;
     height: 700px!important;
-    left:15vw;
+    /* left:15vw; */
   }
 
   .map-title {
-    left: 16vw;
+    /* left: 16vw; */
     font-size: 28px;
     width: 67vw;
   }
 
   .map-msg {
     width: 66.5vw;
-    left: 16vw;
+    /* left: 16vw; */
     font-size: 28px;
   }
 
@@ -167,7 +168,7 @@ a:hover {
     width: 57% !important;
     height: 700px !important;
     align-self: center;
-    left: 22%;
+    /* left: 22%; */
   }
 
   
@@ -175,7 +176,7 @@ a:hover {
   .map-msg,
   .map-title {
     width: 57%;
-    left: 22%;
+    /* left: 22%; */
     align-self: center;
     font-size: 29px;
   }
