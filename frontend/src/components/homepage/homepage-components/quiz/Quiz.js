@@ -106,8 +106,10 @@ class Quiz extends React.Component {
     const modal = this.state.modalData ? this.state.modalData : null;
 
     return (
-      <div className="quiz-container" fluid>
+      <div id="quiz-container">
+        <div className="nav-q">
         <Navigation />
+        </div>
         {this.props.isUserLogged ?  <Row noGutters>
           <Col>
             <h1 className="quiz-title">{title}</h1>
@@ -129,14 +131,15 @@ class Quiz extends React.Component {
                     <Maps />
                 </div>  
           </Col>
-        </Row> : <Row noGutters> <Col>
+        </Row> :
+        <div className="quiz-no-container">
         <h1 className="qtitle">{title}</h1>
             <h6 className="qdesc">Pentru a participa la chestionar si pentru a castiga, va rugam sa va creeati cont sau sa va logati!</h6>
-        </Col>
-          </Row>}
+            </div>
+       }
        
         <Row>
-        <img src={quizWave} className="quizWave"/>
+        {/* <img src={quizWave} className="quizWave"/> */}
           <div className="q-footer">
           <Footer/>
           </div>
