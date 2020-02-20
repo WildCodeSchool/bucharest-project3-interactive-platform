@@ -51,12 +51,13 @@ height:' 100%'}}
                 <div style={{transform:'translateY(7%)'}}>
                     <h3 className='q-question' style={{marginBottom:'6%'}}>{this.props.desc}</h3>
                     <h3 className='q-question'>{this.props.question}</h3>
-                    <div style={{display:'flex', flexDirection:'column'}}>
+                    <div style={{display:'flex', flexDirection:'column', padding: '50px'}}>
                     <Button
                         variant={this.state.showSuccess ? "success" : "outline-warning"}
                         onClick={this.handleSuccess}
                         size="lg"
                         block
+                        style={{padding: "10px"}}
                     >
                         {this.props.answer1}
                     </Button>
@@ -65,6 +66,7 @@ height:' 100%'}}
                         onClick={this.handleFailure}
                         size="lg"
                         block
+                        style={{padding: "10px"}}
                     >
                         {this.props.answer2}
                     </Button>
@@ -98,10 +100,10 @@ height:' 100%'}}
                         </Modal.Body>
                         <Modal.Footer>
                             <img
-                                src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png"
+                                src="https://techir.ro/wp-content/uploads/2019/11/logo_techir.png"
                                 alt="logo"
                                 className="modal-logo"
-                                width="274px" height="105px" 
+                                // width="274px" height="105px" 
                             />
                         </Modal.Footer>
                     </Modal>

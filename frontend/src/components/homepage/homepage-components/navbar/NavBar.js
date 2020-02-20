@@ -7,9 +7,7 @@ import Login from '../login/Login';
 import Signup from '../signup/SignUp';
 import SignUp from "../signup/SignUp";
 
-
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-
 
 import { connect } from 'react-redux';
 import * as loginIcon from '../../../../assets/img/login.png';
@@ -34,21 +32,17 @@ class Navigation extends React.Component {
 
     showLogIn(event) {
         event.preventDefault();
-
         this.setState({
             isShownLogin: !this.state.isShownLogin,
             isShownSignup: false,
         })
-
     }
 
     showSignUp(event) {
         event.preventDefault();
-
         this.setState({
             isShownSignup: !this.state.isShownSignup,
             isShownLogin: false
-
         })
     }
 
@@ -151,7 +145,7 @@ class Navigation extends React.Component {
                 <Row noGutters style={{ margin: 0, padding: 0 }}>
                     <Col>
                         <div className="logo-div">
-                        <Link to="/"><img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" id="logo-q" /></Link>
+                        <Link to="/"><img src="https://techir.ro/wp-content/uploads/2019/11/logo_techir.png" id="logo-q" /></Link>
                         </div>
                     </Col>
                 </Row>
