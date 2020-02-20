@@ -35,23 +35,25 @@ class Question extends React.Component {
         })
     }
     render() {
-        console.log(this.props)
         return (
-            <div className="quiz-q-container">
-                <h3 className="q-question">
-                    {this.props.question}
-                </h3>
-                <img
-                    className="q-img"
+            <div style={{display:'flex',justifyContent:'center', alignItems:'center'}}>
+                <div style={{display:'flex'}}>
+                <img style={{objectFit: 'cover',
+width: '100%',
+height:' 100%'}}
+                    // className="q-img"
+                  
                     src={this.props.image}
                     alt="question"
-                    
-                >
-                </img>
-             
+                />
+                </div>
+            
+                <div style={{transform:'translateY(7%)'}}>
+                    <h3 className='q-question' style={{marginBottom:'6%'}}>{this.props.desc}</h3>
+                    <h3 className='q-question'>{this.props.question}</h3>
+                    <div style={{display:'flex', flexDirection:'column'}}>
                     <Button
                         variant={this.state.showSuccess ? "success" : "outline-warning"}
-                        className="q-first-ans"
                         onClick={this.handleSuccess}
                         size="lg"
                         block
@@ -61,20 +63,15 @@ class Question extends React.Component {
                     <Button
                         variant={this.state.showFailure ? "danger" : "outline-warning"}
                         onClick={this.handleFailure}
-                        className="q-second-ans"
                         size="lg"
                         block
                     >
                         {this.props.answer2}
                     </Button>
-                    {/* <QuizModal show={this.state.showSuccess} handleClose={this.handleSuccessClose}
-                    title={this.props.modalSuccessTitle}  description={this.props.modalSuccessDescription}
-                    lastMessage={this.props.modalSuccessLastMessage} 
-                    />
-                     <QuizModal show={this.state.showFailure} handleClose={this.handleFailureClose}
-                    title={this.props.modalFailureTitle}  description={this.props.modalFailureDescription}
-                    lastMessage={this.props.modalFailureLastMessage} 
-                    /> */}
+                    </div>
+                </div>
+     
+        
                     <Modal className='modal'
                         show={this.state.showSuccess}
                         onHide={this.handleSuccess}

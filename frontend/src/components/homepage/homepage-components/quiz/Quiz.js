@@ -110,10 +110,10 @@ class Quiz extends React.Component {
         <div className="nav-q">
         <Navigation />
         </div>
-        {this.props.isUserLogged ?  <Row noGutters>
-          <Col>
-            <h1 className="quiz-title">{title}</h1>
-            <h6 className="quiz-desc">{desc}</h6>
+        {this.props.isUserLogged ? 
+         <div className='actualQuizz' style={{display:'flex', justifyContent:'center', flexDirection:'column'}}>
+            <h1 className="quiz-title" style={{textAlign:'center'}}>{title}</h1>
+     
             <Question
               question={question}
               image={image}
@@ -126,24 +126,21 @@ class Quiz extends React.Component {
               modalFailureTitle={this.state.modalData.failureTitle}
               modalFailureDescription={this.state.modalData.failureDesc}
               modalFailureLastMessage={this.state.modalData.failureLastMessage} 
+              desc={desc}
             /> 
             <div className="mapq">
                     <Maps />
                 </div>  
-          </Col>
-        </Row> :
+          </div>
+     :
         <div className="quiz-no-container">
         <h1 className="qtitle">{title}</h1>
             <h6 className="qdesc">Pentru a participa la chestionar si pentru a castiga, va rugam sa va creeati cont sau sa va logati!</h6>
             </div>
        }
-       
-        <Row>
-        {/* <img src={quizWave} className="quizWave"/> */}
-          <div className="q-footer">
+   
           <Footer/>
-          </div>
-          </Row>
+       
       </div>
     );
   }
