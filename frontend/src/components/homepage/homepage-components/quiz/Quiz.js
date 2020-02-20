@@ -106,7 +106,7 @@ class Quiz extends React.Component {
     const modal = this.state.modalData ? this.state.modalData : null;
 
     return (
-      <Container className="quiz-container" fluid>
+      <div className="quiz-container" fluid>
         <Navigation />
         {this.props.isUserLogged ?  <Row noGutters>
           <Col>
@@ -141,7 +141,7 @@ class Quiz extends React.Component {
           <Footer/>
           </div>
           </Row>
-      </Container>
+      </div>
     );
   }
 }

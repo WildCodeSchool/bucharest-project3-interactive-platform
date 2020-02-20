@@ -45,8 +45,8 @@ a:hover {
 .map-msg,
 .gMap {
   position: relative;
-  margin: 30px 0px 50px;
   margin: 0 auto;
+  padding: 44px;
 
 }
 

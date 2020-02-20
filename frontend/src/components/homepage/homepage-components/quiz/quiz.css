@@ -28,13 +28,12 @@
 .quiz-container {
   margin: 0;
   padding: 0;
-  width: 100vw;
+
   position: relative;
 }
 .quizWave {
   position: relative;
   width:93%!important;
-  top: 700px;
   left: -2%;
   margin: 0;
   padding: 0;
@@ -117,6 +116,7 @@ font-size: 33px;
 .q-footer {
   width: 100%;
  position: relative;
+ padding-top: 700px;
 }
 .q-img {
 
@@ -135,15 +135,15 @@ font-size: 33px;
 @media (min-width:0px) and  (max-width: 400px) {
 
   .quiz-title {
-    left:22vw!important;
-    width: 90vw;
+    left:22%!important;
+    width: 90%;
     font-size: 40px;
    }
    
    .quiz-desc {
-     left:2vw;
+     left:2%;
      text-align: center;
-     width: 90vw;
+     width: 90%;
    }
 
   .qtitle {
@@ -156,15 +156,15 @@ font-size: 33px;
   }
 
   .q-question {
-    width: 80vw!important;
+    width: 80%!important;
     font-size: 20px;
-    left: 9vw;
+    left: 9%;
     position: relative;
     text-align: center;
   }
   
   .q-img {
-    left: 15vw;
+    left: 15%;
     height: 190px;
     width: 190px;
     z-index: 100;
@@ -173,17 +173,17 @@ font-size: 33px;
 
   
   .q-first-ans {
-    left: 6vw;
-    width: 80vw;
+    left: 6%;
+    width: 80%;
   }
   .q-second-ans {
-    left: 6vw;
-    width: 80vw;
+    left: 6%;
+    width: 80%;
   }
   div.q-footer {
     position: relative;
     top: 400px!important;
-    width: 100vw;
+    width: 100%;
   }
 
   .quizWave {
@@ -197,7 +197,7 @@ font-size: 33px;
     left: 10%;
   }
   .qdesc {
-    width: 80vw;
+    width: 80%;
     top: 100px;
     left: 10%;
   }
@@ -209,15 +209,15 @@ font-size: 33px;
 @media (min-width: 401px) and  (max-width: 600px) {
   
   .quiz-title {
-    left:17vw!important;
-    width: 90vw;
+    left:17%!important;
+    width: 90%;
     font-size: 46px;
    }
    
    .quiz-desc {
-     left: 4vw;
+     left: 4%;
      text-align: center;
-     width: 90vw;
+     width: 90%;
      font-size: 26px;
    }
 
@@ -230,9 +230,9 @@ font-size: 33px;
     text-align: center;
   }
   .q-question {
-    width: 80vw!important;
+    width: 80%!important;
     font-size: 20px;
-    left: 9vw;
+    left: 9%;
     position: relative;
     text-align: center;
     font-size: 28px;
@@ -240,7 +240,7 @@ font-size: 33px;
   }
   
   .q-img {
-    left: 17vw!important;
+    left: 17%!important;
     height: 268px;
     width: 268px;
     z-index: 100;
@@ -249,11 +249,11 @@ font-size: 33px;
   
   .q-first-ans {
     left: 11%;
-    width: 80vw;
+    width: 80%;
   }
   .q-second-ans {
     left: 11%;
-    width: 80vw;
+    width: 80%;
   }
 
 
@@ -268,7 +268,7 @@ font-size: 33px;
     left: 10%;
   }
   .qdesc {
-    width: 80vw;
+    width: 80%;
     left: 10%;
   }
   .mapq {
@@ -278,15 +278,15 @@ font-size: 33px;
 @media (min-width: 601px) and  (max-width: 768px) {
     
   .quiz-title {
-    left:27vw!important;
-    width: 90vw;
+    left:27%!important;
+    width: 90%;
     font-size: 48px;
    }
    
    .quiz-desc {
-     left: 4vw;
+     left: 4%;
      text-align: center;
-     width: 90vw;
+     width: 90%;
      font-size: 26px!important;
 
    }
@@ -299,9 +299,9 @@ font-size: 33px;
     text-align: center;
   }
   .q-question {
-    width: 80vw!important;
+    width: 80%!important;
     font-size: 20px;
-    left: 9vw;
+    left: 9%;
     position: relative;
     text-align: center;
     font-size: 28px!important;
@@ -309,7 +309,7 @@ font-size: 33px;
   }
   
   .q-img {
-    left: 27vw!important;
+    left: 27%!important;
     height: 288px;
     width: 288px;
     z-index: 100;
@@ -319,15 +319,15 @@ font-size: 33px;
   
   .q-first-ans {
     left: 11%;
-    width: 80vw;
+    width: 80%;
   }
   .q-second-ans {
     left: 11%;
-    width: 80vw;
+    width: 80%;
   }
   div.q-footer {
     position: relative;
-    width: 100vw;
+    width: 100%;
   }
 
   .quizWave {
@@ -339,7 +339,7 @@ font-size: 33px;
     left: 10%;
   }
   .qdesc {
-    width: 80vw;
+    width: 80%;
     left: 10%;
   }
   .mapq {
@@ -349,13 +349,13 @@ font-size: 33px;
 @media (min-width: 769px) and (max-width: 992px) {
   .qtitle {
     left: 36%;
-    width: 90vw;
+    width: 90%;
     font-size: 55px;
    }
    
    .qdesc {
-     left: 20vw;
-     width: 60vw;
+     left: 20%;
+     width: 60%;
    }
   .quiz-title {
     left:25%;
@@ -363,33 +363,33 @@ font-size: 33px;
    }
    
    .quiz-desc {
-     left: 45vw;
+     left: 45%;
      font-size: 22px;
-     width: 53vw;
+     width: 53%;
   
    }
    .q-question {
-     width: 50vw!important;
+     width: 50%!important;
      font-size: 30px;
-     left:45vw;
+     left:45%;
    }
    
    .q-img {
      top: -200px;
-     left: 13vw;
-     width: 20vw;
-     height: 20vw;
+     left: 13%;
+     width: 20%;
+     height: 20%;
    }
 
    .q-first-ans {
-     left:45vw;
-     width: 50vw;
+     left:45%;
+     width: 50%;
      top: -230px;
    }
 
    .q-second-ans {
-    left:45vw;
-    width: 50vw;
+    left:45%;
+    width: 50%;
     top: -260px;
    }
 
@@ -402,13 +402,13 @@ font-size: 33px;
   
   .qtitle {
     left: 36%;
-    width: 90vw;
+    width: 90%;
     font-size: 55px;
    }
    
    .qdesc {
-     left: 20vw;
-     width: 60vw;
+     left: 20%;
+     width: 60%;
    }
   .quiz-title {
     left:25%;
@@ -416,33 +416,33 @@ font-size: 33px;
    }
    
    .quiz-desc {
-     left: 45vw;
+     left: 45%;
      font-size: 22px;
-     width: 53vw;
+     width: 53%;
   
    }
    .q-question {
-     width: 50vw!important;
+     width: 50%!important;
      font-size: 30px;
-     left:45vw;
+     left:45%;
    }
    
    .q-img {
      top: -200px;
-     left: 7vw;
-     width: 30vw;
-     height: 30vw;
+     left: 7%;
+     width: 30%;
+     height: 30%;
    }
 
    .q-first-ans {
-     left:45vw;
-     width: 50vw;
+     left:45%;
+     width: 50%;
      top: -430px;
    }
 
    .q-second-ans {
-    left:45vw;
-    width: 50vw;
+    left:45%;
+    width: 50%;
     top: -460px;
    }
 
@@ -454,47 +454,47 @@ font-size: 33px;
 @media(min-width: 1383px) { 
   .qtitle {
     left: 36%;
-    width: 90vw;
+    width: 90%;
     font-size: 55px;
    }
    
    .qdesc {
-     left: 20vw;
-     width: 60vw;
+     left: 20%;
+     width: 60%;
    }
   .quiz-title {
-    left:33vw;
+    left:33%;
     font-size: 77px;
    }
    
    .quiz-desc {
-     left: 45vw;
+     left: 45%;
      font-size: 22px;
-     width: 53vw;
+     width: 53%;
   
    }
    .q-question {
-     width: 50vw!important;
+     width: 50%!important;
      font-size: 30px;
-     left:45vw;
+     left:45%;
    }
    
    .q-img {
      top: -120px;
-     left: 10vw;
-     width: 23vw;
-     height: 23vw;
+     left: 10%;
+     width: 23%;
+     height: 23%;
    }
 
    .q-first-ans {
-     left:45vw;
-     width: 50vw;
+     left:45%;
+     width: 50%;
      top: -430px;
    }
 
    .q-second-ans {
-    left:45vw;
-    width: 50vw;
+    left:45%;
+    width: 50%;
     top: -460px;
    }
 
