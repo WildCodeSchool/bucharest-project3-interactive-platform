@@ -67,27 +67,26 @@ class AdminNav extends React.Component {
             <div className="admin-container">
                 <NavBar />
                 <div className='nav-container'>
+                    <div className='nav-buttons'>
                         <Button variant="outline-warning" size="lg"
-                            // style={this.state.descriptionBttnState ? this.descbtnStyleActive : this.descbtnStyleInactive}
                             className="admin-desc-bttn custom-btn"
                             onClick={this.handleDescription}
                         >
                             Descrieri
                         </Button>
                         <Button variant="outline-warning" onClick={this.handleQuiz}
-                            // style={this.state.quizBttnState ? this.quizbtnStyleActive : this.quizbtnStyleInactive}
                             size="lg" className="admin-quiz-bttn custom-btn"
                         >
                             Chestionar
                         </Button>
-                   
-                {/* {wave3} */}
-                {this.state.infoButton ? <EditInfoCards fetchData={{ ...this.props.fetchedDataInfo }} token={this.props.token} categories={this.props.categories} /> : null}
-                {this.state.quizzButton ? <QCards fetchData={{ ...this.props.fetchedDataQuiz }} token={this.props.token} categories={this.props.categories} /> : null}
+                    </div >
+
+                    {this.state.infoButton ? <EditInfoCards fetchData={{ ...this.props.fetchedDataInfo }} token={this.props.token} categories={this.props.categories} /> : null}
+                    {this.state.quizzButton ? <QCards fetchData={{ ...this.props.fetchedDataQuiz }} token={this.props.token} categories={this.props.categories} /> : null}
                 </div >
-                    <div id="footerQ">
+                <div id="footerQ">
                     <Footer/>
-                    </div>
+                </div>
             </div>
         )
     }

@@ -1,6 +1,6 @@
 .admin-platform {
   position: relative;
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   padding: 0px;
 }
@@ -11,9 +11,17 @@
   padding: 0;
 }
 
-.nav-container {
-  position: relative;
-  margin: 0 auto;
+.nav-buttons{
+  width:100%
+}
+
+.nav-container,
+.nav-content {
+  display: flex;
+  justify-content:center;
+  /* align-items:center; */
+  text-align:center;
+  flex-direction: column;
 }
 
 @font-face {
@@ -21,7 +29,7 @@
   src: url(../../../../assets/Mucho_Sans_Light.otf);
 }
 .nav-container {
-  position: relative;
+  /* position: relative; */
   font-family: muchoThin;
 }
 
@@ -109,11 +117,11 @@ display: block;
   }
 }
 
-@media (min-width: 1383px) {
+/* @media (min-width: 1383px) {
   .nav-container {
     top: 20px;
-    /* left: 12%; */
+
     width: 80%;
   }
  
-}
+} */
