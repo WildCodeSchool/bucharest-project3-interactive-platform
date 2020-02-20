@@ -64,7 +64,7 @@ class AdminNav extends React.Component {
         console.log(this.props);
        
         return (
-            <div>
+            <div className="admin-container">
                 <NavBar />
                 <div className='nav-container'>
                         <Button variant="outline-warning" size="lg"
@@ -80,10 +80,14 @@ class AdminNav extends React.Component {
                         >
                             Chestionar
                         </Button>
-                    </div >
+                   
                 {/* {wave3} */}
                 {this.state.infoButton ? <EditInfoCards fetchData={{ ...this.props.fetchedDataInfo }} token={this.props.token} categories={this.props.categories} /> : null}
                 {this.state.quizzButton ? <QCards fetchData={{ ...this.props.fetchedDataQuiz }} token={this.props.token} categories={this.props.categories} /> : null}
+                </div >
+                    <div id="footerQ">
+                    <Footer/>
+                    </div>
             </div>
         )
     }

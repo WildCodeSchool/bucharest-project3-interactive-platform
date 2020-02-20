@@ -44,7 +44,7 @@ class InfoCard extends Component {
     console.log(this.props.token);
     
     return (
-      <Card style={{ width: "18rem", borderColor: '#FFBF00'}}>
+      <Card style={{ borderColor: '#FFBF00'}}>
         <Card.Body>
           <Card.Title>Categoria: {this.props.category.category_name}</Card.Title>
           <Form>
@@ -69,7 +69,7 @@ class InfoCard extends Component {
               />
             </Form.Group>
           </Form>
-          <Button variant="outline-warning" style={{ width: "190px", borderRadius: '12px' }} onClick={this.hanndleSubmit}>
+          <Button variant="outline-warning" onClick={this.hanndleSubmit}>
             Salveaza
           </Button>
         </Card.Body>

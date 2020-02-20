@@ -31,35 +31,37 @@
 
   @media (min-width: 0px) and (max-width: 400px) {
  .info-cards , .quiz-admin-cards-container {
-    left:5%!important;
+width:100%;
  }
   }
   
   @media (min-width: 401px) and (max-width: 600px) {
-     .info-cards {
-        left: 22%!important;
-     }
-     .quiz-admin-cards-container {
-         left: 11%;
-     }
+   .info-cards , .quiz-admin-cards-container {
+      width:60%;
+      left: 17%;
+       }
   }
   
   @media (min-width: 601px) and (max-width: 768px) {
  
-     .info-cards {
-        left: 28%!important;
-        width: 80%;
+     .info-cards, .quiz-admin-cards-container {
+        width:90%;
      }
-     .quiz-admin-cards-container {
+     /* .quiz-admin-cards-container {
          left: 24%;
+     } */
+     .card {
+        min-width: 200px;
      }
   
   }
-  
+  .card {
+   min-width: 200px;
+}
   @media (min-width: 769px) and (max-width: 992px) {
 
      .info-cards,.quiz-admin-cards-container {
-        left: 7.5%!important;
+        left: 2%!important;
         width: 90%;
      }
   }
@@ -68,10 +70,11 @@
 
      .info-cards,.quiz-admin-cards-container {
       left: 9%!important;
-      width: 90%;
-
+      width: 70%;
      }
-    
+    div.card {
+       width: 300px!important;
+    }
   }
   
   @media (min-width: 1383px) {

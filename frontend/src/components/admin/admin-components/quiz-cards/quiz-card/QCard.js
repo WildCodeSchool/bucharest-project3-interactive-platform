@@ -37,8 +37,8 @@ class QCard extends React.Component {
         console.log(this.state, this.props);
 
         return (
-            <Col>
-                <Card style={{ width: '22rem', height: '29rem', borderColor: '#FFBF00' }}>
+
+                <Card style={{  borderColor: '#FFBF00' }}>
                     <Card.Body>
                         <Card.Title className="categ-card-title">Categoria: {this.props.category.category_name}.</Card.Title>
                         <FormControl
@@ -87,10 +87,10 @@ class QCard extends React.Component {
                         onChange={(event) => this.handleAdminInput(event)}
                     />
                     <Card.Body>
-                        <Button variant="outline-warning" className="mySaveCardQuiz-bttn" style={{ width: "190px", borderRadius: '12px' }} type="submit" onClick={this.saveQuizQ}>Salveaza</Button>
+                        <Button variant="outline-warning" className="mySaveCardQuiz-bttn" style={{  borderRadius: '12px' }} type="submit" onClick={this.saveQuizQ}>Salveaza</Button>
                     </Card.Body>
                 </Card>
-            </Col>
+           
         )
     }
 }

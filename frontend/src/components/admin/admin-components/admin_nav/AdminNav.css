@@ -30,7 +30,7 @@
 .custom-btn {
   width: 40%;
   margin: 3%;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   text-align: center;
   font-family: muchosanslight;
   position: relative;
@@ -50,12 +50,21 @@
 }
 #footerQ {
   position: relative;
-  top: 100%;
 }
-
+.admin-container {
+position: relative;
+width: 100vw;
+margin: 0 auto;
+}
+#footerQ {
+  top: 200px;
+}
 @media (min-width: 0px) and (max-width: 400px) {
   .nav-container {
-    left: 3%;
+    left: 5%;
+  }
+  #footerQ {
+    top: 200px;
   }
 }
 

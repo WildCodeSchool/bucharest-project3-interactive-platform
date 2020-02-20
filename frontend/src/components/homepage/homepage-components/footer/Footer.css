@@ -155,12 +155,14 @@ div.s-f {
   }
 
   .f-f {
-    width: 100% !important;
-    padding-top: 65px;
+    width: 90% !important;
+    padding-top: 22px;
     align-self: flex-start;
+    left: 0px;
   }
 
   .s-f {
+    padding-top:12px;
     width: 90%;
     align-self: center;
   }
