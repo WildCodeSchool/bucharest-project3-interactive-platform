@@ -136,6 +136,7 @@ class Navigation extends React.Component {
                 <ReactCSSTransitionGroup
                     transitionName={'snackFade'}
                     transitionEnter={300}
+                    transitionEnterTimeout={null}
                     transitionLeave={300}
                     transitionAppear={true}
                 >
