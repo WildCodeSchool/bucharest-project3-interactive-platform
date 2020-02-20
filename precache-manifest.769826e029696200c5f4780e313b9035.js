@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "db7f5233c0b089963e45fcc25ccb400e",
+    "revision": "21e4e98aa1f0cb9569792b93934e45b8",
     "url": "/bucharest-project3-interactive-platform/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bucharest-project3-interactive-platform/static/css/2.17e5ed98.chunk.css"
   },
   {
-    "revision": "6e5d349a45262ac1861f",
-    "url": "/bucharest-project3-interactive-platform/static/css/main.ea503ad3.chunk.css"
+    "revision": "ff3afada7e9814c360e4",
+    "url": "/bucharest-project3-interactive-platform/static/css/main.4f043f59.chunk.css"
   },
   {
     "revision": "add0ffcea41b3943e805",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bucharest-project3-interactive-platform/static/js/2.02146f40.chunk.js.LICENSE"
   },
   {
-    "revision": "6e5d349a45262ac1861f",
-    "url": "/bucharest-project3-interactive-platform/static/js/main.abafd7a7.chunk.js"
+    "revision": "ff3afada7e9814c360e4",
+    "url": "/bucharest-project3-interactive-platform/static/js/main.85e3a30e.chunk.js"
   },
   {
     "revision": "effed892af4dc9a049a9",
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bucharest-project3-interactive-platform/static/media/Thirsty.d87f34f1.ttf"
   },
   {
-    "revision": "752c13b0733bc3104e315cda60dc5be7",
-    "url": "/bucharest-project3-interactive-platform/static/media/background.752c13b0.png"
+    "revision": "635849230f0134a5e2f7af732e48bafd",
+    "url": "/bucharest-project3-interactive-platform/static/media/background.63584923.png"
   },
   {
     "revision": "930c2b0f93e999482e6b8e2b8aa8e24e",
