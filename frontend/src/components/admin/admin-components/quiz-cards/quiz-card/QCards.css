@@ -6,76 +6,38 @@
 .admin-container {
 margin: 0 auto;
 padding: 0;
+width: 100%;
 text-align: center;
+display: block;
 }
 
 .ac-question {
   position: relative;
-  /* width: 320px; */
-  /* top: 77px; */
-  /* left: 9px; */
 }
 
 .ac-f-ans {
   position: relative;
-  /* top: 200px; */
-  /* width: 330px !important; */
-  /* left: 8px; */
 }
 
 .ac-s-ans {
   position: relative;
-  /* top: 260px; */
-  /* width: 330px !important; */
-  /* left: 8px; */
 }
 
 .q-c-img-title {
   position: relative;
-  /* top: 319px; */
-  /* width: 330px !important; */
-  /* left: 19px; */
   font-family: 6px;
   font-family: muchoThin;
 }
 
 .ac-img-src {
   position: relative;
-  /* top: 350px; */
-  /* width: 330px !important; */
-  /* left: 8px; */
 }
 
 .mySaveCardQuiz-bttn {
   position: relative;
-  /* top: 401px; */
-  /* left: 22%; */
   font-family: muchoThin;
 }
 
 * {
   box-sizing: border-box;
 }
-
-/* html,
-body,
-div,
-img {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-} */
-/* .quiz-admin-cards-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  font-family: muchoThin;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px;
-  justify-content: flex-end;
-  justify-content: space-evenly;
-} */

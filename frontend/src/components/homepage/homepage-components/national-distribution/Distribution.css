@@ -3,7 +3,7 @@
   src: url(../../../../assets/Mucho_Sans_Light.otf);
 }
 .distribution-container {
-  width: 100vw;
+  /* width: 100vw; */
   position: relative;
   margin: 0 auto;
   padding: 0px;

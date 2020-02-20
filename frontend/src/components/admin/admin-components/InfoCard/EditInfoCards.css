@@ -1,90 +1,89 @@
 @font-face {
-   font-family: muchoThin;
-   src: url(../../../../assets/Mucho_Sans_Thin.otf);
- }
- @font-face {
-   font-family: thirsty;
-   src: url(../../../../assets/Thirsty.ttf);
- }
- @font-face {
-   font-family: muchosanslight;
-   src: url(../../../../assets/Mucho_Sans_Light.otf);
- }
- .info-cards{
-    text-align: center;
-
- }
- .card {
-    position: relative;
-     margin: 30px 0px 30px;
-     font-family: muchosanslight;
- }
-
- .quiz-admin-cards-container {
-    position: relative;
+  font-family: muchoThin;
+  src: url(../../../../assets/Mucho_Sans_Thin.otf);
 }
- @font-face {
-    font-family: muchosanslight;
-    src: url(../../../../assets/Mucho_Sans_Thin.otf);
-  }
+@font-face {
+  font-family: thirsty;
+  src: url(../../../../assets/Thirsty.ttf);
+}
+@font-face {
+  font-family: muchosanslight;
+  src: url(../../../../assets/Mucho_Sans_Light.otf);
+}
+.info-cards {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+.card {
+  position: relative;
+  font-family: muchosanslight;
+  margin: 13px;
+  margin: 0 auto;
+  display: block;
+}
 
+.quiz-admin-cards-container {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+}
+@font-face {
+  font-family: muchosanslight;
+  src: url(../../../../assets/Mucho_Sans_Thin.otf);
+}
 
-  @media (min-width: 0px) and (max-width: 400px) {
- .info-cards , .quiz-admin-cards-container {
-width:100%;
- }
+@media (min-width: 0px) and (max-width: 400px) {
+  .info-cards,
+  .quiz-admin-cards-container {
+    width: 100%;
   }
-  
-  @media (min-width: 401px) and (max-width: 600px) {
-   .info-cards , .quiz-admin-cards-container {
-      width:60%;
-      left: 17%;
-       }
+  .card { 
+   width: 80%;
+}
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+  .info-cards,
+  .quiz-admin-cards-container {
+    width: 60%;
   }
-  
-  @media (min-width: 601px) and (max-width: 768px) {
  
-     .info-cards, .quiz-admin-cards-container {
-        width:90%;
-     }
-     /* .quiz-admin-cards-container {
-         left: 24%;
-     } */
-     .card {
-        min-width: 200px;
-     }
-  
-  }
-  .card {
-   min-width: 200px;
 }
-  @media (min-width: 769px) and (max-width: 992px) {
 
-     .info-cards,.quiz-admin-cards-container {
-        left: 2%!important;
-        width: 90%;
-     }
+@media (min-width: 601px) and (max-width: 768px) {
+  .info-cards,
+  .quiz-admin-cards-container {
+    width: 90%;
   }
   
-  @media (min-width: 993px) and (max-width: 1382px) {
-
-     .info-cards,.quiz-admin-cards-container {
-      left: 9%!important;
-      width: 70%;
-     }
-    div.card {
-       width: 300px!important;
-    }
+  .card {
+    min-width:300px;
   }
-  
-  @media (min-width: 1383px) {
-
-     .info-cards {
-        left: 15%!important;
-        width: 70%;
-     }
-     .quiz-admin-cards-container {
-      left: 18%!important;
-      width: 70%;
-     }
+}
+.card {
+  min-width: 200px;
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .info-cards,
+  .quiz-admin-cards-container {
+    width: 60%;
   }
+}
+
+@media (min-width: 993px) and (max-width: 1382px) {
+  .info-cards,
+  .quiz-admin-cards-container {
+    width: 50%;
+  }
+
+}
+
+@media (min-width: 1383px) {
+  .info-cards {
+    width: 70%;
+  }
+  .quiz-admin-cards-container {
+    width: 70%;
+  }
+}

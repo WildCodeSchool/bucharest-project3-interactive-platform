@@ -2,7 +2,7 @@
   position: relative;
   left: 0;
   bottom: 0;
-  width: 100vw;
+  /* width: 100vw; */
   background-color: rgb(60, 56, 54);
   color: white;
   text-align: center;

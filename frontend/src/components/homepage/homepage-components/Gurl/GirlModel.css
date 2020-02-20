@@ -31,9 +31,13 @@ div.model {
 img.background {
   width: 100%;
   height: auto;
+  margin: 0 auto;
+  display: block;
 }
 
 img.mobile {
+  display: block;
+  margin: 0 auto;
 
   width: 100%;
   height: auto;
