@@ -3,6 +3,11 @@
   src: url(../../../../../assets/Mucho_Sans_Thin.otf);
 }
 
+.firstans, .secondans {
+  position: relative;
+  width:70%;
+}
+
 .admin-container {
 margin: 0 auto;
 padding: 0;
@@ -17,10 +22,13 @@ display: block;
 
 .ac-f-ans {
   position: relative;
+  width: 90%;
 }
 
 .ac-s-ans {
   position: relative;
+  width: 90%;
+
 }
 
 .q-c-img-title {

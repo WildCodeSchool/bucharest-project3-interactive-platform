@@ -23,7 +23,9 @@
 }
 .modal-logo {
   position: relative;
-  left: -22%!important;
+  display: flex;
+  align-self: center;
+  left: -133px;
 }
 .quiz-container, .quiz-no-container {
   margin: 0;
@@ -108,6 +110,7 @@ text-align: center;
 .quiz-title {
   z-index: 10;
   font-weight: none;
+  font-size: 5vw;
 }
 
 .quiz-desc {
@@ -127,12 +130,41 @@ text-align: center;
   width: 100%;
  position: relative;
 }
-.q-img {
-
-   transition: box-shadow .3s;
-   transition: transform .2s; /* Animation */
+.q-qimg:hover {
+transform: scale(1.2)
 
  }
+ .quiz-wave {
+   position: relative;
+   width:71%;
+   display: flex;
+   align-self: center;
+   margin-top: 33px;
+ }
+ .q-question {
+   padding:11px;
+ }
+
+ @media (max-width: 900px) {
+  .q-question {
+    font-size: 3vw
+  }
+ }
+ @media (min-width: 900px) {
+   .quiz-question {
+     width: 60%;
+     align-self: center;
+   }
+  .q-question {
+    font-size: 2vw
+  }
+ }
+ /* .actualQuizz {
+  display:'flex';
+  justify-content:'center';
+  flex-direction:'column';
+ }
+ 
 
  @media (min-width:0px) and  (max-width: 400px) { 
     .qtitle {
@@ -144,6 +176,8 @@ text-align: center;
      width: 88%;
      padding-top: 38px;
    }
+   .quiz-title {
+    font-size: 11vw; }
   }
   @media (min-width:401px) and  (max-width: 600px) { 
     .qtitle {
@@ -155,6 +189,8 @@ text-align: center;
      width: 88%;
      padding-top: 78px;
    }
+   .quiz-title {
+    font-size: 11vw; }
   }
   @media (min-width:601px) and  (max-width: 768px) { 
     .qtitle {
@@ -166,6 +202,8 @@ text-align: center;
      width: 88%;
      padding-top: 78px;
    }
+   .quiz-title {
+    font-size: 11vw; }
   }
   @media (min-width:769px) and  (max-width: 992px) { 
     .qtitle {
@@ -177,6 +215,8 @@ text-align: center;
      width: 88%;
      padding-top: 78px;
    }
+   .quiz-title {
+    font-size: 6vw; }
   }
   @media (min-width:993px) and  (max-width: 1382px) { 
     .qtitle {
@@ -188,6 +228,8 @@ text-align: center;
      width: 88%;
      padding-top: 148px;
    }
+   .quiz-title {
+    font-size: 6vw; }
   }
   @media (min-width:1383px) { 
     .qtitle {
@@ -199,6 +241,8 @@ text-align: center;
      width: 58%;
      padding-top: 78px;
    }
+   .quiz-title {
+    font-size: 5vw; }
   }
  /* }
  .quiz-title, .q-question, .q-first-ans, .q-second-ans {

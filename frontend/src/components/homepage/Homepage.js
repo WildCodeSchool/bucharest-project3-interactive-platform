@@ -1,9 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom';
 
 import Maps from './homepage-components/maps/Maps';
 import Navigation from './homepage-components/navbar/NavBar';
-import Quiz from './homepage-components/quiz/Quiz';
 import Footer from './homepage-components/footer/Footer';
 import GirlModel from './homepage-components/Gurl/GirlModel';
 import Parteners from './homepage-components/parteners/Parteners';
@@ -20,13 +18,10 @@ import './homepage-components/signup/SignUp.css';
 import './homepage-components/maps/Maps.css';
 import './homepage-components/Gurl/Pulse.css';
 import './homepage-components/national-distribution/Distribution.css'
-// import * as wave1  from '../../assets/img/val-galben.png';
-import AdminPlatform from '../admin/AdminPlatform';
 import { connect } from 'react-redux';
 
 const wave1 = require('../../assets/img/val-galben.svg');
 const wave2 = require('../../assets/img/val-galben.svg');
-const wave3 = require('../../assets/img/val-galben.svg');
 
 class Homepage extends React.Component {
     constructor(props) {

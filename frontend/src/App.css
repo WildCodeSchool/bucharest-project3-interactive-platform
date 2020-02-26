@@ -3,7 +3,10 @@
   font-family: thirsty;
   src: url(./assets/Thirsty.ttf);
 }
-
+.formErrors {
+  position: relative;
+  display: flex;
+}
 .snackFade-enter {
   opacity: 0;
 }

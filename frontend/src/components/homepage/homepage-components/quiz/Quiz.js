@@ -1,11 +1,10 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import { withRouter, BrowserRouter as Router } from "react-router-dom";
 import Question from "./Question";
 import Navigation from "../navbar/NavBar";
-import Footer from "../footer/Footer";
 import { connect } from 'react-redux';
 import Maps from '../maps/Maps';
+import Footer from '../footer/Footer';
 const quizWave = require('../../../../assets/img/val-galben.svg')
 
 
@@ -128,6 +127,7 @@ class Quiz extends React.Component {
               modalFailureLastMessage={this.state.modalData.failureLastMessage} 
               desc={desc}
             /> 
+            <img src={quizWave} alt="techir-wave" className="quiz-wave" />
             <div className="mapq">
                     <Maps />
                 </div>  
@@ -139,7 +139,7 @@ class Quiz extends React.Component {
             </div>
        }
    
-          {/* <Footer/> */}
+          <Footer/>
        
       </div>
     );

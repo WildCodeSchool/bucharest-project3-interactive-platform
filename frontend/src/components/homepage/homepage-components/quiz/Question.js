@@ -36,12 +36,12 @@ class Question extends React.Component {
     }
     render() {
         return (
-            <div style={{display:'flex',justifyContent:'center', alignItems:'center'}}>
+            <div className="quiz-question"style={{display:'flex',justifyContent:'center', alignItems:'center'}}>
                 <div style={{display:'flex'}}>
                 <img style={{objectFit: 'cover',
 width: '100%',
-height:' 100%'}}
-                    // className="q-img"
+height:' auto'}}
+                    className="q-qimg"
                   
                     src={this.props.image}
                     alt="question"
@@ -49,9 +49,9 @@ height:' 100%'}}
                 </div>
             
                 <div style={{transform:'translateY(7%)'}}>
-                    <h3 className='q-question' style={{marginBottom:'6%'}}>{this.props.desc}</h3>
+                    <h3 className='q-question' style={{marginBottom:'100'}}>{this.props.desc}</h3>
                     <h3 className='q-question'>{this.props.question}</h3>
-                    <div style={{display:'flex', flexDirection:'column', padding: '50px'}}>
+                    <div style={{display:'flex', flexDirection:'column', padding: '40px'}}>
                     <Button
                         variant={this.state.showSuccess ? "success" : "outline-warning"}
                         onClick={this.handleSuccess}
@@ -99,12 +99,7 @@ height:' 100%'}}
                             </div>
                         </Modal.Body>
                         <Modal.Footer>
-                            <img
-                                src="https://techir.ro/wp-content/uploads/2019/11/logo_techir.png"
-                                alt="logo"
-                                className="modal-logo"
-                                // width="274px" height="105px" 
-                            />
+                        <img className="modal-logo" src="https://techir.ro/wp-content/uploads/2019/11/logo_techir.png" alt="logo" width="40%" height="auto" style={{position: 'relative'}}/>
                         </Modal.Footer>
                     </Modal>
                     <Modal className='modal'
@@ -123,7 +118,7 @@ height:' 100%'}}
                             </p>
                         </Modal.Body>
                         <Modal.Footer>
-                            <img className="modal-logo" src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" alt="logo" width="274px" height="105px"/>
+                            <img className="modal-logo" src="https://techir.ro/wp-content/uploads/2019/11/logo_techir.png" alt="logo" width="40%" height="auto" style={{position: 'relative'}}/>
                         </Modal.Footer>
                     </Modal>
             </div>
