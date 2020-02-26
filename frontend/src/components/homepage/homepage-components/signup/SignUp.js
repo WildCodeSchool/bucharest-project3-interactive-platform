@@ -121,10 +121,8 @@ class SignUp extends React.Component {
 
     render() {
         return (
-            <Container fluid style={{margin: 0, padding: 0}}>
-         
-                <Row noGutters style={{margin: 0, padding: 0}}>
-                    <Col>
+            <div className="form-container">
+                 
                         <div id='user-form' >
                             <Form onSubmit={this.handleSubmit} className="form" >
                                 <div className="form-group">
@@ -166,9 +164,7 @@ class SignUp extends React.Component {
                                 <FormErrors formErrors={this.state.formErrors} />
                             </div>
                         </div>
-                    </Col>
-                </Row>
-            </Container>
+                      </div>
 
         )
     }

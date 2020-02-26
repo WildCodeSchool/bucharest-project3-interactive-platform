@@ -86,10 +86,8 @@ class Login extends React.Component {
 
     render() {
         return (
-            <Container fluid style={{ margin: 0, padding: 0 }}>
+            <div className="form-container">
                 {/* {this.props.isActive ? */}
-                <Row noGutters style={{ margin: 0, padding: 0 }}>
-                    <Col>
                         <Form onSubmit={this.handleSubmit} className="form">
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Control className="myinput" style={{ borderColor: 'black' }} onChange={this.onChangeEmail} type="email" placeholder="Email" />
@@ -102,10 +100,9 @@ class Login extends React.Component {
                                 Logare
                                     </Button>
                         </Form>
-                    </Col>
-                </Row>
-                {/* // : null} */}
-            </Container>
+
+                        </div>
+              
         );
     }
 }

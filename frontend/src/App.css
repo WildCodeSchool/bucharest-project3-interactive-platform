@@ -52,30 +52,49 @@
 }
 
 .form-control {
-  border-radius: 10px;
+  /* border-radius: 10px; */
   z-index: 1000;
 }
 
 .form {
   position: absolute;
-  z-index: 100;
+  z-index: 10;
   align-items: center;
+  box-shadow: 0 0.2px 0.2px rgba(0,0,0,0.12), 
+  0 1px 1px rgba(0,0,0,0.12), 
+  0 1px 1px rgba(0,0,0,0.12), 
+  0 2px 2px rgba(0,0,0,0.12),
+  0 4px 4px rgba(0,0,0,0.12);
+}
+form:hover {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+  0 2px 2px rgba(0,0,0,0.12), 
+  0 4px 4px rgba(0,0,0,0.12), 
+  0 8px 8px rgba(0,0,0,0.12),
+  0 16px 16px rgba(0,0,0,0.12);
+
 }
 
 .submit {
-  position: absolute;
+  position: relative;
   text-transform: uppercase;
-  padding: 5px;
-  border-radius: 10px;
   cursor: pointer;
   font-size: 12px;
   height: 35px;
-  width: 130px;
-  left: 30%;
+  width: 100%;
   z-index: 100;
 }
 
+.form-container {
+  width: 91vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: auto;
 
+  align-content: center;
+}
 .modal-congrats {
   font-family: thirsty;
   left: 30%;
@@ -87,11 +106,24 @@
 @media (min-width: 0px) and (max-width: 400px) {
 
   .form {
-    width: 89vw;
-    left: 9%;
-    top: 30px;
+    height: auto;
+    background-color: white;
+    width: 100%;
+    top: -10px;
+    left: 2.2%;
   }
- 
+ .form-control {
+  width: 90%;
+  left: 5%;
+  top: 11px;
+  align-self: center;
+  position: relative;
+ }
+ .submit {
+   width: 80%;
+   left: 6%;
+   margin: 11px;
+ }
   .wave1,
   .wave2 {
     width: 95%;
@@ -101,12 +133,27 @@
 }
 
 @media (min-width: 401px) and (max-width: 599px) {
-
   .form {
-    width: 60vw;
-    left: 67%;
-    top: 28px;
+    height: auto;
+    background-color: white;
+    width: 60%;
+    top: -10px;
+    left: 23%;
   }
+
+ .form-control {
+  width: 90%;
+  left: 5%;
+  top: 11px;
+  align-self: center;
+  position: relative;
+ }
+ 
+ .submit {
+   width: 80%;
+   left: 4.6%;
+   margin: 11px;
+ }
  
   .wave1,
   .wave2 {
@@ -118,12 +165,29 @@
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
-
   .form {
-    width: 40vw;
-    top: 20px;
+    height: auto;
+    background-color: white;
+    width: 40%;
+    background-color: white;
+    top: -10px;
     left: 56vw;
   }
+ 
+
+ .form-control {
+  width: 90%;
+  left: 5%;
+  top: 11px;
+  align-self: center;
+  position: relative;
+ }
+ 
+ .submit {
+   width: 80%;
+   left: 4.6%;
+   margin: 11px;
+ }
 
   .myinput {
     height: 28px;
@@ -135,18 +199,33 @@
     margin: 0 auto;
     left: 4%;
   }
-
-
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-
   .form {
-    width: 40vw;
-    top: 18px;
-    left:57vw;
+    height: auto;
+    background-color: white;
+    width: 30%;
+    background-color: white;
+    top: -33px;
+    left:73%;
   }
+ 
 
+ .form-control {
+  width: 90%;
+  left: 5%;
+  top: 11px;
+  align-self: center;
+  position: relative;
+ }
+ 
+ .submit {
+   width: 80%;
+   left: 4.6%;
+   margin: 11px;
+ }
+ 
   .wave1,
   .wave2 {
     width: 88%;
@@ -158,9 +237,34 @@
 @media (min-width: 993px) and (max-width: 1382px) {
 
   .form {
-    width: 29vw;
-    top: 18px;
-    left: 68vw;
+    height: auto;
+    background-color: white;
+    width: 30%;
+    background-color: white;
+    top: -33px;
+    left:73%;
+  }
+ 
+
+ .form-control {
+  width: 90%;
+  left: 5%;
+  top: 11px;
+  align-self: center;
+  position: relative;
+ }
+ 
+ .submit {
+   width: 80%;
+   left: 4.6%;
+   margin: 11px;
+ }
+ 
+  .wave1,
+  .wave2 {
+    width: 88%;
+    margin: 0 auto;
+    left: 5%;
   }
 
   .wave1,
@@ -174,9 +278,34 @@
 @media (min-width: 1383px) {
 
   .form {
-    width: 16vw;
-    top: 10px;
-    left: 81.5vw;
+    height: auto;
+    background-color: white;
+    width: 20%;
+    background-color: white;
+    top: -33px;
+    left:86%;
+  }
+ 
+
+ .form-control {
+  width: 90%;
+  left: 5%;
+  top: 11px;
+  align-self: center;
+  position: relative;
+ }
+ 
+ .submit {
+   width: 80%;
+   left: 4.6%;
+   margin: 11px;
+ }
+ 
+  .wave1,
+  .wave2 {
+    width: 88%;
+    margin: 0 auto;
+    left: 5%;
   }
 
   .wave1, 

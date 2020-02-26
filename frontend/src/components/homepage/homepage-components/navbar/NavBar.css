@@ -35,6 +35,8 @@ img#logo-q {
 #basic-navbar-nav.navbar-collapse.collapse {
   height: 80px !important;
   font-family: muchosanslight;
+  text-decoration: none;
+  font-weight: none;
   border: yellow;
 }
 button.navbar-toggler {
@@ -52,17 +54,28 @@ button.navbar-toggler {
 
 .nav-link {
   color: white!important;
-  font-weight: bold;
   font-size: 22px;
   cursor: pointer;
   float: left;
+  padding-bottom: 13px;
 }
 
 @media (min-width: 996px) {
 
     #basic-navbar-nav.navbar-collapse.collapse {
-        height: 30px !important;
+        height: 40px !important;
         justify-content: flex-end;
+        font-family: muchosanslight;
       }
       
+}
+
+@media (max-width: 996px) {
+
+  #basic-navbar-nav.navbar-collapse.collapse {
+      height: 120px !important;
+      justify-content: flex-end;
+      font-family: muchosanslight;
+    }
+    
 }

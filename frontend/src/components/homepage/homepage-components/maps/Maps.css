@@ -66,6 +66,7 @@ a:hover {
   .gMap {
     width: 90%!important;
     height: 600px!important;
+    z-index: 0;
   }
 
   .map-msg, .map-title {

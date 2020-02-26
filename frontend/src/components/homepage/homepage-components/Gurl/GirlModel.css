@@ -45,13 +45,18 @@ img#mobile {
 
 .hover-question {
   position: absolute;
-  margin: 0;
   padding: 0;
   -webkit-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
   -moz-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
   box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
   display: block;
-  z-index: 100;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+.close-thik {
+  align-self: flex-start;
+  width: 20px!important
 }
 
 .hover-text,
@@ -133,7 +138,7 @@ img#mobile {
 
   .ten {
     top: 35vw;
-    left: 25vw;
+    left: 22vw;
   }
 
   .maini {
@@ -149,7 +154,8 @@ img#mobile {
   .hover-question {
     height: auto;
     width: 90%;
-    left: 3%;
+    left: 5%;
+    margin: 0 auto;
     top: 50px;
     background-color: white;
   }
@@ -170,10 +176,6 @@ img#mobile {
     height: auto;
     font-size: 14px;
   }
-
- 
-
-
 
   img#background {
     display: none;
@@ -218,10 +220,11 @@ img#mobile {
   .hover-question {
     height: auto;
     width: 90%;
-    left: 5%;
-    top:60px;
+    margin: 0 auto!important;
+    top:180px;
     background-color: white;
     font-size: 15px;
+    left: 5%;
   }
 
   .hover-text {
@@ -284,49 +287,15 @@ img#mobile {
     left: 23vw;
   }
 
-  /* .hover-question {
-    height: 200px;
-    width: 62vw;
-    left: 19%;
-    top: 30vh;
-    background-color: white;
-  }
-
-  .onhover-quiz-bttn {
-    top: 129px;
-    left: 10%;
-    width: 160px;
-    font-size: 14px;
-    height: 40px;
-  }
-
-  .onhover-findoutMore-bttn {
-    top: 129px;
-    left: 54%;
-    width: 160px;
-    height: 40px;
-  }
-
-  .hover-text {
-    width: 48vw;
-    top: 20px;
-  }
-
-  .check {
-    top: 40px;
-  }
-
-  .bttn-text {
-    left: 22%;
-    top: 10px;
-  } */
   .hover-question {
     height: auto;
     width: 77%;
-    left: 12%;
-    top: 180px;
+    margin: 0 auto;
+    top: 230px;
     background-color: white;
+    left: 11.8%;
   }
+
   .hover-text {
     width: 90%;
     left: 5%;
@@ -343,12 +312,10 @@ img#mobile {
     font-size: 14px;
   }
 
- 
-
   .bttn-text {
     left: 20%;
-    /* top: 20px; */
   }
+
   img#background {
     display: none;
   }
@@ -357,10 +324,12 @@ img#mobile {
     width: 70%;
     left: 0%;
   }
+
   img {
     width: 100%;
     margin: 0 auto;
   }
+
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -396,9 +365,9 @@ img#mobile {
 
   .hover-question {
     height: auto;
-    width: 60%;
-    left:37%;
-    top: 70px;
+    width: 44%;
+    left:19%;
+    top: 19px;
     background-color: white;
   }
 
@@ -415,8 +384,8 @@ img#mobile {
   }
 
   .hover-text {
-    width: 83%;
-    left: 8%;
+    width: 82%;
+    left: 8.5%;
   }
  
   div.model {
@@ -461,8 +430,8 @@ img#mobile {
 
   .hover-question {
     height: auto;
-    max-width: 50%;
-    left:37%;
+    max-width: 34%;
+    left:33%;
     top: 70px;
     background-color: white;
   }
