@@ -65,9 +65,8 @@ class Login extends React.Component {
                     localStorage.setItem('userIsLogged', '1')
                     res.user.acces_level === 1 ?
                         this.props.history.push("/admin") :
-                        this.props.history.push("/")
+                        this.props.history.push("/quiz")
                 } else {
-                    console.log(res.msg)
                     this.props.dispatch(
                         {
                             type: "CREATE_LOGIN_SESSION",

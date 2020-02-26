@@ -5,7 +5,6 @@ class Footer extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
                 <footer id="footer">
                     <div className="f-f">
                         <h5>CONTACT</h5>
@@ -17,15 +16,12 @@ class Footer extends React.Component {
                     <div className="s-f">
                         <img className="f-i" src={miracol}
                             alt="miracolul-vine-la-tine" />
-                        <p>
+                        <p style={{paddingTop: '33px'}}>
                             <i>TECHIR® este un proiect de suflet ce a luat nastere din dorinta de a valorifica resursele naturale neexploatate oferite de Lacul Techirghiol.</i>
                         </p>
                     </div>
-                    {/* <div className="t-f"> */}
                         <img  className="t-f" src={"https://techir.ro/wp-content/uploads/2019/11/slikafuter1.png"} alt="produse-romanesti" />
-                    {/* </div> */}
                 </footer>
-            </React.Fragment>
         );
     }
 };

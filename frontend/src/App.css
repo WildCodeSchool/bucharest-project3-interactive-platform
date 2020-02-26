@@ -46,13 +46,11 @@
 }
 
 .App {
-  /* height: 100%; */
   margin: 0;
   padding: 0;
 }
 
 .form-control {
-  /* border-radius: 10px; */
   z-index: 1000;
 }
 
@@ -260,12 +258,12 @@ form:hover {
    margin: 11px;
  }
  
-  .wave1,
+  /* .wave1,
   .wave2 {
     width: 88%;
     margin: 0 auto;
     left: 5%;
-  }
+  } */
 
   .wave1,
   .wave2  {
@@ -294,24 +292,16 @@ form:hover {
   align-self: center;
   position: relative;
  }
- 
+
  .submit {
    width: 80%;
    left: 4.6%;
    margin: 11px;
  }
- 
-  .wave1,
-  .wave2 {
-    width: 88%;
-    margin: 0 auto;
-    left: 5%;
-  }
-
   .wave1, 
   .wave2 {
     width: 65%;
-    left:17%;
+    left:16%!important;
   }
 
 }

@@ -9,16 +9,11 @@
   display: flex;
   margin: 0 auto;
 }
-
-.t-f {
+.f-f, .s-f, .f-i, .t-f {
+  position: relative;
   width: 100%;
-  max-width: 250px;
-  height: 100%;
-  margin: 10px 20px 20px 7px
-}
-.f-f
- {
-  margin: 10px 10px 10px;
+  height: auto;
+  
 }
 
 @media (min-width: 0px) and (max-width: 400px) {
@@ -29,9 +24,16 @@
     align-items: center;
   }
 
-  .f-f,
-  .s-f {
-    width: 100% !important;
+  .f-f, .s-f {
+    align-self: center;
+    width: 80%;
+    height: auto;
+    padding-top: 20px;
+  }
+  .f-i, .t-f {
+    align-self: center;
+    width: 50%;
+    height: auto;
   }
 
 }
@@ -44,13 +46,18 @@
     align-items: center;
   }
 
-  .f-f {
-    width: 100% !important;
+  .f-f, .s-f {
+    align-self: center;
+    width: 80%;
+    height: auto;
+    padding-top: 20px;
+  }
+  .f-i, .t-f {
+    align-self: center;
+    width: 50%;
+    height: auto;
   }
 
-  .s-f {
-    width: 80%;
-  }
   
 
 }
@@ -62,8 +69,18 @@
     justify-content: center;
     align-items: center;
   }
-
   .f-f, .s-f {
+    align-self: center;
+    width: 80%;
+    height: auto;
+    padding-top: 20px;
+  }
+  .f-i, .t-f {
+    align-self: center;
+    width: 25%;
+    height: auto;
+  }
+  /* .f-f, .s-f {
     font-size: 22px;
   }
 
@@ -74,7 +91,7 @@
   .s-f {
     width: 80%;
   
-  }
+  } */
 
 }
 
@@ -85,20 +102,16 @@
     justify-content: center;
     align-items: center;
   }
-
-  .f-f,
-  .s-f {
-    font-size: 22px;
-    /* align-self: center!important; */
+  .f-f, .s-f {
+    align-self: center;
+    width: 80%;
+    height: auto;
+    padding-top: 20px;
   }
-
-  .f-f {
-    width: 80% !important;
-  }
-
-  .s-f {
-    width: 60%;
-    left:-5%;
+  .f-i, .t-f {
+    align-self: center;
+    width: 25%;
+    height: auto;
   }
 
 }
@@ -108,7 +121,20 @@
   #footer {
     flex-direction: row;
   }
-div.s-f {
+  .f-f {
+    padding-top: 80px;
+  }
+  .f-i {
+    width: 40%;
+    height: auto;
+    padding-top: 50px;
+  }
+  .t-f {
+    width: 25%;
+    height: auto;
+    padding: 50px;
+  }
+/* div.s-f {
   margin: 0px 0px 0px 60px;
 
 }
@@ -138,8 +164,7 @@ div.s-f {
 
   .t-f {
     /* padding-top: 70px !important; */
-    left: 20%!important;
-  }
+ 
 
 }
 
@@ -149,26 +174,19 @@ div.s-f {
     flex-direction: row;
   }
 
-  .f-f,
-  .s-f {
-    font-size: 22px;
-  }
-
   .f-f {
-    width: 90% !important;
-    padding-top: 22px;
-    align-self: flex-start;
-    left: 0px;
+    padding-top: 80px;
+  
   }
-
-  .s-f {
-    padding-top:12px;
-    width: 90%;
-    align-self: center;
+  .f-i {
+    width: 40%;
+    height: auto;
+    padding-top: 50px;
   }
-
   .t-f {
-    margin: 60px;
+    width: 25%;
+    height: auto;
+    padding: 50px;
   }
 
 }
