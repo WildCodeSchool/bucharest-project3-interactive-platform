@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/bucharest-project3-interactive-platform/static/css/main.da64762b.chunk.css",
-    "main.js": "/bucharest-project3-interactive-platform/static/js/main.6ad20ebe.chunk.js",
-    "main.js.map": "/bucharest-project3-interactive-platform/static/js/main.6ad20ebe.chunk.js.map",
+    "main.css": "/bucharest-project3-interactive-platform/static/css/main.ca6e9e6d.chunk.css",
+    "main.js": "/bucharest-project3-interactive-platform/static/js/main.0c016d23.chunk.js",
+    "main.js.map": "/bucharest-project3-interactive-platform/static/js/main.0c016d23.chunk.js.map",
     "runtime-main.js": "/bucharest-project3-interactive-platform/static/js/runtime-main.93642916.js",
     "runtime-main.js.map": "/bucharest-project3-interactive-platform/static/js/runtime-main.93642916.js.map",
     "static/css/2.17e5ed98.chunk.css": "/bucharest-project3-interactive-platform/static/css/2.17e5ed98.chunk.css",
-    "static/js/2.283c3f83.chunk.js": "/bucharest-project3-interactive-platform/static/js/2.283c3f83.chunk.js",
-    "static/js/2.283c3f83.chunk.js.map": "/bucharest-project3-interactive-platform/static/js/2.283c3f83.chunk.js.map",
+    "static/js/2.ce93305b.chunk.js": "/bucharest-project3-interactive-platform/static/js/2.ce93305b.chunk.js",
+    "static/js/2.ce93305b.chunk.js.map": "/bucharest-project3-interactive-platform/static/js/2.ce93305b.chunk.js.map",
     "index.html": "/bucharest-project3-interactive-platform/index.html",
-    "precache-manifest.b0404f2567d00439bb8f81fb2fd42bbc.js": "/bucharest-project3-interactive-platform/precache-manifest.b0404f2567d00439bb8f81fb2fd42bbc.js",
+    "precache-manifest.7a222883bfaa601445cbeb8222298b6d.js": "/bucharest-project3-interactive-platform/precache-manifest.7a222883bfaa601445cbeb8222298b6d.js",
     "service-worker.js": "/bucharest-project3-interactive-platform/service-worker.js",
     "static/css/2.17e5ed98.chunk.css.map": "/bucharest-project3-interactive-platform/static/css/2.17e5ed98.chunk.css.map",
-    "static/css/main.da64762b.chunk.css.map": "/bucharest-project3-interactive-platform/static/css/main.da64762b.chunk.css.map",
-    "static/js/2.283c3f83.chunk.js.LICENSE": "/bucharest-project3-interactive-platform/static/js/2.283c3f83.chunk.js.LICENSE",
+    "static/css/main.ca6e9e6d.chunk.css.map": "/bucharest-project3-interactive-platform/static/css/main.ca6e9e6d.chunk.css.map",
+    "static/js/2.ce93305b.chunk.js.LICENSE": "/bucharest-project3-interactive-platform/static/js/2.ce93305b.chunk.js.LICENSE",
     "static/media/Mobile.png": "/bucharest-project3-interactive-platform/static/media/Mobile.01a56a67.png",
     "static/media/Maps.css": "/bucharest-project3-interactive-platform/static/media/MuchoSans.fca82d41.rar",
     "static/media/AdminNav.css": "/bucharest-project3-interactive-platform/static/media/Mucho_Sans_Light.79d97cd6.otf",
@@ -29,8 +29,8 @@
   "entrypoints": [
     "static/js/runtime-main.93642916.js",
     "static/css/2.17e5ed98.chunk.css",
-    "static/js/2.283c3f83.chunk.js",
-    "static/css/main.da64762b.chunk.css",
-    "static/js/main.6ad20ebe.chunk.js"
+    "static/js/2.ce93305b.chunk.js",
+    "static/css/main.ca6e9e6d.chunk.css",
+    "static/js/main.0c016d23.chunk.js"
   ]
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/bucharest-project3-interactive-platform/precache-manifest.b0404f2567d00439bb8f81fb2fd42bbc.js"
+  "/bucharest-project3-interactive-platform/precache-manifest.7a222883bfaa601445cbeb8222298b6d.js"
 );
 
 self.addEventListener('message', (event) => {
