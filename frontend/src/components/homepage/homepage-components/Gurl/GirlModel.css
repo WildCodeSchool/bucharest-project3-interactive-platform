@@ -25,7 +25,7 @@ div.model {
   padding: 0;
   position: relative;
   left: 0px;
-  width: 100vw;
+  width: 100%;
 }
 
 img#background {
@@ -39,7 +39,7 @@ img#mobile {
   display: block;
   margin: 0 auto;
 
-  width: 100%;
+  /* width: 70%; */
   height: auto;
 }
 
@@ -179,9 +179,9 @@ img#mobile {
     display: none;
   }
 
-  /* div.model {
-    margin: 0px 0px 0px !important;
-  } */
+  img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 411px) and (max-width: 600px) {
@@ -246,6 +246,10 @@ img#mobile {
 
   div.model {
     width: 80%;
+  }
+  img {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -352,6 +356,10 @@ img#mobile {
   div.model {
     width: 70%;
     left: 0%;
+  }
+  img {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 

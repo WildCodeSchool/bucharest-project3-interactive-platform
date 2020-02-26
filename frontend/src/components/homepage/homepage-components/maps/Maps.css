@@ -19,7 +19,7 @@
   position: relative!important;
   z-index: 100;
   display: 1 1 100%;
-display: block;
+  display: block;
   
  
 }
@@ -46,7 +46,7 @@ a:hover {
 .gMap {
   position: relative;
   margin: 0 auto;
-  padding: 44px;
+  /* padding: 44px; */
 
 }
 
@@ -65,55 +65,43 @@ a:hover {
 @media (min-width: 0px) and (max-width: 399px) {
 
   .gMap {
-    width: 100%!important;
+    width: 90%!important;
     height: 600px!important;
   }
 
   .map-msg, .map-title {
-    width: 80%;
+    width: 100%!important;
+    font-size: 6vw;
+    padding: 22px;
   }
 
 }
 
 @media (min-width: 400px) and (max-width: 599px) {
-/* 
-  .map-title {
-    font-size: 22px;
-    width: 76%;
-  } */
   .gMap {
     width: 79% !important;
     height: 500px !important;
-    /* left: 9%; */
   }
 
   .map-msg, .map-title {
-    font-size: 19px;
-    /* left:13%; */
-    width: 70%;
+    width: 100%!important;
+    font-size: 4vw;
+    padding: 66px;
   }
-  
 
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
 
   .gMap {
-    width: 72% !important;
+    width: 69% !important;
     height: 600px !important;
-    /* left: 14%; */
   }
 
-  .map-title {
-    /* left: 16%; */
-    font-size: 26px;
-    width: 65%;
-  }
-
-  .map-msg {
-    width: 68%;
-    /* left: 15%; */
-    font-size: 25px;
+  .map-msg, .map-title {
+    width: 90%!important;
+    font-size: 3vw!important;
+    padding: 66px;
   }
 
 }
@@ -143,21 +131,17 @@ a:hover {
 @media (min-width: 993px) and (max-width: 1382px) {
 
   .gMap {
-    width:69vw !important;
+    width:69% !important;
     height: 700px!important;
     /* left:15vw; */
   }
 
+  .map-msg,
   .map-title {
-    /* left: 16vw; */
-    font-size: 28px;
-    width: 67vw;
-  }
-
-  .map-msg {
-    width: 66.5vw;
-    /* left: 16vw; */
-    font-size: 28px;
+    width: 60%!important;
+    font-size: 29px;
+    padding-top: 69px;
+    padding-bottom: 69px;
   }
 
 }
@@ -165,7 +149,7 @@ a:hover {
 @media (min-width: 1383px) {
 
   .gMap {
-    width: 57% !important;
+    width: 60% !important;
     height: 700px !important;
     align-self: center;
     /* left: 22%; */
@@ -175,10 +159,10 @@ a:hover {
 
   .map-msg,
   .map-title {
-    width: 57%;
-    /* left: 22%; */
-    align-self: center;
+    width: 60%!important;
     font-size: 29px;
+    padding-top: 69px;
+    padding-bottom: 69px;
   }
 
 }

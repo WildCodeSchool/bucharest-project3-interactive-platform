@@ -139,7 +139,7 @@ class Quiz extends React.Component {
             </div>
        }
    
-          <Footer/>
+          {/* <Footer/> */}
        
       </div>
     );

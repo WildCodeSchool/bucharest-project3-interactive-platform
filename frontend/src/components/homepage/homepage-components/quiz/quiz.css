@@ -25,11 +25,13 @@
   position: relative;
   left: -22%!important;
 }
-.quiz-container {
+.quiz-container, .quiz-no-container {
   margin: 0;
   padding: 0;
   width: 100vw;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .quizWave {
   position: relative;
@@ -48,12 +50,20 @@
 }
 .qtitle {
   position: relative;
-  font-size: 99px;
+  display: block;
+  font-size: 8vw;
+  margin: 0 auto;
+  padding-top: 55px;
+  text-align: center;
 }
 
 .qdesc {
 position: relative;
-font-size: 33px;
+font-size:2vw;
+margin: 0 auto;
+padding-top: 111px;
+font-family: muchosanslight;
+text-align: center;
 }
 .modal-p {
   top: 190px;
@@ -124,7 +134,72 @@ font-size: 33px;
 
  }
 
-
+ @media (min-width:0px) and  (max-width: 400px) { 
+    .qtitle {
+     font-size: 11vw;
+     padding-top: 28px;
+   } 
+   .qdesc {
+     font-size: 8vw;
+     width: 88%;
+     padding-top: 38px;
+   }
+  }
+  @media (min-width:401px) and  (max-width: 600px) { 
+    .qtitle {
+     font-size: 11vw;
+     padding-top: 48px;
+   } 
+   .qdesc {
+     font-size: 6vw;
+     width: 88%;
+     padding-top: 78px;
+   }
+  }
+  @media (min-width:601px) and  (max-width: 768px) { 
+    .qtitle {
+     font-size: 9vw;
+     padding-top: 48px;
+   } 
+   .qdesc {
+     font-size: 4vw;
+     width: 88%;
+     padding-top: 78px;
+   }
+  }
+  @media (min-width:769px) and  (max-width: 992px) { 
+    .qtitle {
+     font-size: 9vw;
+     padding-top: 48px;
+   } 
+   .qdesc {
+     font-size: 4vw;
+     width: 88%;
+     padding-top: 78px;
+   }
+  }
+  @media (min-width:993px) and  (max-width: 1382px) { 
+    .qtitle {
+     font-size: 5vw;
+     padding-top: 48px;
+   } 
+   .qdesc {
+     font-size: 3vw;
+     width: 88%;
+     padding-top: 148px;
+   }
+  }
+  @media (min-width:1383px) { 
+    .qtitle {
+     font-size: 3.5vw;
+     padding-top: 48px;
+   } 
+   .qdesc {
+     font-size: 2vw;
+     width: 58%;
+     padding-top: 78px;
+   }
+  }
  /* }
  .quiz-title, .q-question, .q-first-ans, .q-second-ans {
    margin: 30px 0px 60px;

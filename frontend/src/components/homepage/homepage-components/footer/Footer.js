@@ -1,4 +1,5 @@
 import React from 'react';
+import * as miracol from '../../../../assets/img/miracolul-1.png'
 
 class Footer extends React.Component {
 
@@ -14,14 +15,14 @@ class Footer extends React.Component {
                         <p>Telefon: 0799 832 447 | Email: office@techir.ro</p>
                     </div>
                     <div className="s-f">
-                        <img className="f-i" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_166,h_93/https://techir.ro/wp-content/uploads/2019/11/miracolul-1.png"
+                        <img className="f-i" src={miracol}
                             alt="miracolul-vine-la-tine" />
                         <p>
                             <i>TECHIR® este un proiect de suflet ce a luat nastere din dorinta de a valorifica resursele naturale neexploatate oferite de Lacul Techirghiol.</i>
                         </p>
                     </div>
                     {/* <div className="t-f"> */}
-                        <img  className="t-f" src="https://techir.ro/wp-content/uploads/2019/11/slikafuter1.png" alt="produse-romanesti" />
+                        <img  className="t-f" src={"https://techir.ro/wp-content/uploads/2019/11/slikafuter1.png"} alt="produse-romanesti" />
                     {/* </div> */}
                 </footer>
             </React.Fragment>
