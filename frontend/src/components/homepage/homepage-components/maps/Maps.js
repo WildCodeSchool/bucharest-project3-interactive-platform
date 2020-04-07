@@ -97,4 +97,4 @@ class GMap extends React.Component {
     }
 }
 
-export default GoogleApiWrapper({ apiKey: ('AIzaSyAI7nWxzjV64pxGJ1p8SmjTeV-1LW2XlTA') })(GMap)
+export default GoogleApiWrapper({ apiKey: ('sample-api-key') })(GMap)
